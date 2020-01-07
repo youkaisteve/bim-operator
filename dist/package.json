@@ -1,12 +1,12 @@
 {
   "name": "bim-operator",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "a pack of bim operations",
   "files": [
     "dist"
   ],
-  "main": "./dist/index.js",
-  "types": "./dist/index.d.ts",
+  "main": "index.js",
+  "types": "index.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "rm -fr ./dist && tsc -p tsconfig.dev.json",
