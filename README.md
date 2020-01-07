@@ -33,4 +33,4 @@ process();
 
 bimface
 
-## [API](./doc)
+## [API](./doc/README.md)
