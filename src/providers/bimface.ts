@@ -51,11 +51,28 @@ export default class Bimface implements IBimOperation {
       );
     });
   }
+  /**
+   * 获取楼层
+   */
   getFloors(): Promise<Floor[]> {
     return new Promise(resolve => {
       this.viewer3D.getFloors(resolve);
     });
   }
+  /**
+   * 获取单个模型的楼层（在集成模型中使用）
+   * @param fileId 模型文件id
+   */
+  getFloorsbyFileId(fileId: String) {
+    return new Promise(resolve => {
+      this.viewer3D.getFloorsbyFileId(fileId, resolve);
+    });
+  }
+  /**
+   * 根据条件查询构件
+   * @param {Object} confition 查询条件
+   * @param {String} confition.fileId 模型文件id
+   */
   getComponentByCondition(confition: any): Promise<Component[]> {
     if (!confition.fileId) {
       throw new Error('fileId不能为空');
