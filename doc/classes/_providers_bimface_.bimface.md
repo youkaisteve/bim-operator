@@ -24,6 +24,7 @@ bimface操作
 
 * [getComponentByCondition](_providers_bimface_.bimface.md#getcomponentbycondition)
 * [getFloors](_providers_bimface_.bimface.md#getfloors)
+* [getFloorsbyFileId](_providers_bimface_.bimface.md#getfloorsbyfileid)
 * [loadModel](_providers_bimface_.bimface.md#loadmodel)
 
 ## Properties
@@ -32,7 +33,7 @@ bimface操作
 
 • **app**: *any*
 
-*Defined in [providers/bimface.ts:11](https://github.com/youkaisteve/bim-operator/blob/7f44a37/src/providers/bimface.ts#L11)*
+*Defined in [providers/bimface.ts:11](https://github.com/youkaisteve/bim-operator/blob/e68d6d4/src/providers/bimface.ts#L11)*
 
 bimface相关对象
 
@@ -42,7 +43,7 @@ ___
 
 • **viewer2D**: *any*
 
-*Defined in [providers/bimface.ts:13](https://github.com/youkaisteve/bim-operator/blob/7f44a37/src/providers/bimface.ts#L13)*
+*Defined in [providers/bimface.ts:13](https://github.com/youkaisteve/bim-operator/blob/e68d6d4/src/providers/bimface.ts#L13)*
 
 ___
 
@@ -50,7 +51,7 @@ ___
 
 • **viewer3D**: *any*
 
-*Defined in [providers/bimface.ts:12](https://github.com/youkaisteve/bim-operator/blob/7f44a37/src/providers/bimface.ts#L12)*
+*Defined in [providers/bimface.ts:12](https://github.com/youkaisteve/bim-operator/blob/e68d6d4/src/providers/bimface.ts#L12)*
 
 ## Methods
 
@@ -60,13 +61,15 @@ ___
 
 *Implementation of [IBimOperation](../interfaces/_interface_.ibimoperation.md)*
 
-*Defined in [providers/bimface.ts:59](https://github.com/youkaisteve/bim-operator/blob/7f44a37/src/providers/bimface.ts#L59)*
+*Defined in [providers/bimface.ts:76](https://github.com/youkaisteve/bim-operator/blob/e68d6d4/src/providers/bimface.ts#L76)*
+
+根据条件查询构件
 
 **Parameters:**
 
-Name | Type |
------- | ------ |
-`confition` | any |
+Name | Type | Description |
+------ | ------ | ------ |
+`confition` | any | 查询条件 |
 
 **Returns:** *Promise‹[Component](../interfaces/_interface_.component.md)[]›*
 
@@ -78,9 +81,31 @@ ___
 
 *Implementation of [IBimOperation](../interfaces/_interface_.ibimoperation.md)*
 
-*Defined in [providers/bimface.ts:54](https://github.com/youkaisteve/bim-operator/blob/7f44a37/src/providers/bimface.ts#L54)*
+*Defined in [providers/bimface.ts:57](https://github.com/youkaisteve/bim-operator/blob/e68d6d4/src/providers/bimface.ts#L57)*
+
+获取楼层
 
 **Returns:** *Promise‹[Floor](../interfaces/_interface_.floor.md)[]›*
+
+___
+
+###  getFloorsbyFileId
+
+▸ **getFloorsbyFileId**(`fileId`: String): *Promise‹unknown›*
+
+*Implementation of [IBimOperation](../interfaces/_interface_.ibimoperation.md)*
+
+*Defined in [providers/bimface.ts:66](https://github.com/youkaisteve/bim-operator/blob/e68d6d4/src/providers/bimface.ts#L66)*
+
+获取单个模型的楼层（在集成模型中使用）
+
+**Parameters:**
+
+Name | Type | Description |
+------ | ------ | ------ |
+`fileId` | String | 模型文件id  |
+
+**Returns:** *Promise‹unknown›*
 
 ___
 
@@ -90,7 +115,7 @@ ___
 
 *Implementation of [IBimOperation](../interfaces/_interface_.ibimoperation.md)*
 
-*Defined in [providers/bimface.ts:21](https://github.com/youkaisteve/bim-operator/blob/7f44a37/src/providers/bimface.ts#L21)*
+*Defined in [providers/bimface.ts:21](https://github.com/youkaisteve/bim-operator/blob/e68d6d4/src/providers/bimface.ts#L21)*
 
 加载模型
 
