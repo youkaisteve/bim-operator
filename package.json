@@ -3,15 +3,14 @@
   "version": "1.0.9",
   "description": "a pack of bim operations",
   "files": [
-    "dist",
-    "src"
+    "build"
   ],
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "main": "build/index.js",
+  "types": "build/index.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "rm -fr ./dist && tsc -p tsconfig.dev.json",
-    "build": "rm -fr ./dist && tsc -p tsconfig.prod.json",
+    "build": "rm -fr ./build && tsc -p tsconfig.prod.json",
     "pub": "npm run build && git commit -am upgrade && git push && npm version patch && git push && npm publish"
   },
   "devDependencies": {
