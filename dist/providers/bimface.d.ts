@@ -5,5 +5,6 @@ export default class Bimface implements IBimOperation {
     viewer2D: any;
     loadModel(options: any): Promise<void>;
     getFloors(): Promise<Floor[]>;
+    getFloorsbyFileId(fileId: String): Promise<unknown>;
     getComponentByCondition(confition: any): Promise<Component[]>;
 }

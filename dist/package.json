@@ -1,7 +1,10 @@
 {
   "name": "bim-operator",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "a pack of bim operations",
+  "files": [
+    "dist"
+  ],
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "scripts": {
@@ -12,15 +15,21 @@
   },
   "devDependencies": {
     "@types/node": "^10.5.5",
-    "typescript": "^3.5.0",
     "ts-node": "^8.3.0",
     "tslib": "^1.8.1",
     "tslint": "^5.11.0",
-    "tslint-midway-contrib": "1"
+    "tslint-midway-contrib": "1",
+    "typedoc": "^0.15.6",
+    "typedoc-plugin-markdown": "^2.2.16",
+    "typescript": "^3.5.0"
   },
   "keywords": [
     "bim"
   ],
+  "repository": {
+    "type": "git",
+    "url": "git@cmisgitlab01:ibuild/bim-operator.git"
+  },
   "author": "steve.k.you",
   "license": "MIT"
 }

@@ -83,6 +83,12 @@ var Bimface = (function () {
             _this.viewer3D.getFloors(resolve);
         });
     };
+    Bimface.prototype.getFloorsbyFileId = function (fileId) {
+        var _this = this;
+        return new Promise(function (resolve) {
+            _this.viewer3D.getFloorsbyFileId(fileId, resolve);
+        });
+    };
     Bimface.prototype.getComponentByCondition = function (confition) {
         var _this = this;
         if (!confition.fileId) {

@@ -13,5 +13,6 @@ export interface Component extends ModelBase {
 export interface IBimOperation {
     loadModel(options: any): Promise<void>;
     getFloors(): Promise<Array<Floor>>;
+    getFloorsbyFileId(fileId: String): any;
     getComponentByCondition(confition: any): Promise<Array<Component>>;
 }
