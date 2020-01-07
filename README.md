@@ -25,8 +25,12 @@ async function process() {
   console.log(floors);
   // ...
 }
+
+process();
 ```
 
 ## 支持的供应商
 
 bimface
+
+## [API](./doc)
