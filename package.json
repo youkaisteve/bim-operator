@@ -11,7 +11,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "rm -fr ./dist && tsc -p tsconfig.dev.json",
-    "build": "rm -fr ./dist && tsc -p tsconfig.prod.json && cp package.json ./dist/",
+    "build": "rm -fr ./dist && tsc -p tsconfig.prod.json",
     "pub": "npm run build && git commit -am upgrade && git push && npm version patch && git push && npm publish"
   },
   "devDependencies": {
