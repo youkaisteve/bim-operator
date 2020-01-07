@@ -11,7 +11,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "rm -fr ./dist && tsc -p tsconfig.dev.json",
     "build": "rm -fr ./build && tsc -p tsconfig.prod.json",
-    "pub": "npm run build && git commit -am upgrade && git push && npm version patch && git push && npm publish"
+    "pub": "npm run build && git commit -am upgrade && git push && npm version patch && git push && npm publish",
+    "doc": "npx typedoc --plugin typedoc-plugin-markdown --out ./doc ./src/ --module commonjs"
   },
   "devDependencies": {
     "@types/node": "^10.5.5",
