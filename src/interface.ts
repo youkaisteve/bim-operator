@@ -53,7 +53,11 @@ export interface IBimOperation {
    * 获取所有楼层
    */
   getFloors(): Promise<Array<Floor>>;
-
+  /**
+   * 获取单个模型的楼层（在集成模型中使用）
+   * @param fileId 单个模型的id
+   */
+  getFloorsbyFileId(fileId: String);
   /**
    * 根据条件获取构件
    * @param confition 查询条件，不同厂商之间可能会有差别
