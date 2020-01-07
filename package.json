@@ -28,7 +28,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git@gitee.com:youkaisteve/bim-operator.git"
+    "url": "git@cmisgitlab01:ibuild/bim-operator.git"
   },
   "author": "steve.k.you",
   "license": "MIT"
