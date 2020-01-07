@@ -63,4 +63,39 @@ export interface IBimOperation {
    * @param confition 查询条件，不同厂商之间可能会有差别
    */
   getComponentByCondition(confition: any): Promise<Array<Component>>;
+  /**
+   * 开启3d锚点功能
+   * @param position 
+   */
+  turn3dMarkerOn(): void;
+  /**
+   * 关闭3d锚点功能
+   */
+  turn3dMarkerOff(): void;
+  /**
+   * 设置3d锚点样式
+   */
+  set3dMarkerStyle(config: Marker3dStyle): void;
+  /**
+   * 清空3d锚点
+   */
+  clear3dMarker(): void;
+}
+
+/**
+ * 3d锚点样式
+ */
+export interface Marker3dStyle {
+  /**
+   * icon图片路径
+   */
+  src: string;
+  /**
+   * icon尺寸
+   */
+  size?: number;
+  /**
+   * 提示内容
+   */
+  tooltip?: string;
 }

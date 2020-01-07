@@ -39,6 +39,12 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var remote_load_1 = require("../util/remote-load");
 var Bimface = (function () {
     function Bimface() {
+        this.marker3DStyle = {
+            src: "http://static.bimface.com/resources/3DMarker/warner/warner_red.png",
+            size: 30,
+            tooltip: ""
+        };
+        this.is3dMarkerOn = false;
     }
     Bimface.prototype.loadModel = function (options) {
         return __awaiter(this, void 0, void 0, function () {
@@ -53,10 +59,10 @@ var Bimface = (function () {
                         _a.label = 2;
                     case 2:
                         if (!options.domId) {
-                            throw new Error('domId missing');
+                            throw new Error("domId missing");
                         }
                         if (!options.viewToken) {
-                            throw new Error('viewToken missing');
+                            throw new Error("viewToken missing");
                         }
                         return [2, new Promise(function (resolve, reject) {
                                 var loaderConfig = new window.BimfaceSDKLoaderConfig();
@@ -92,11 +98,63 @@ var Bimface = (function () {
     Bimface.prototype.getComponentByCondition = function (confition) {
         var _this = this;
         if (!confition.fileId) {
-            throw new Error('fileId不能为空');
+            throw new Error("fileId不能为空");
         }
         return new Promise(function (resolve) {
             _this.viewer3D.getElementByConditions(confition.fileId, confition, resolve);
         });
+    };
+    Bimface.prototype.turn3dMarkerOn = function () {
+        var _this = this;
+        if (!this.marker3D) {
+            var markerConfig = new window.Glodon.Bimface.Plugins.Marker3D.Marker3DContainerConfig();
+            markerConfig.viewer = this.viewer3D;
+            this.marker3D = new window.Glodon.Bimface.Plugins.Marker3D.Marker3DContainer(markerConfig);
+            this.viewer3D.addEventListener(window.Glodon.Bimface.Viewer.Viewer3DEvent.MouseClicked, function (objectData) {
+                if (_this.is3dMarkerOn && objectData && objectData.objectId) {
+                    var marker3d = _this.add3dMarker(objectData.worldPosition);
+                    marker3d.onClick(function (marker) { return _this.remove3dMarker(marker.id); });
+                }
+            });
+        }
+        this.is3dMarkerOn = true;
+    };
+    Bimface.prototype.turn3dMarkerOff = function () {
+        if (this.is3dMarkerOn && this.marker3D) {
+            this.marker3D.clear();
+            this.is3dMarkerOn = false;
+        }
+    };
+    Bimface.prototype.set3dMarkerStyle = function (config) {
+        if (Object.prototype.toString.call(config) !== "[object Object]") {
+            throw new Error("请传入对象");
+        }
+        var src = config.src, size = config.size, tooltip = config.tooltip;
+        if (typeof src === "string") {
+            this.marker3DStyle.src = src;
+        }
+        if (typeof size === "number") {
+            this.marker3DStyle.size = size;
+        }
+        if (typeof tooltip === "string") {
+            this.marker3DStyle.tooltip = tooltip;
+        }
+    };
+    Bimface.prototype.clear3dMarker = function () {
+        this.marker3D && this.marker3D.clear();
+    };
+    Bimface.prototype.add3dMarker = function (position) {
+        var marker3dConfig = new window.Glodon.Bimface.Plugins.Marker3D.Marker3DConfig();
+        marker3dConfig.worldPosition = position;
+        marker3dConfig.src = this.marker3DStyle.src;
+        marker3dConfig.size = this.marker3DStyle.size;
+        marker3dConfig.tooltip = this.marker3DStyle.tooltip;
+        var marker3d = new window.Glodon.Bimface.Plugins.Marker3D.Marker3D(marker3dConfig);
+        this.marker3D.addItem(marker3d);
+        return marker3d;
+    };
+    Bimface.prototype.remove3dMarker = function (markerId) {
+        this.marker3D.removeItemById(markerId);
     };
     return Bimface;
 }());
