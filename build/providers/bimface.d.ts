@@ -14,6 +14,8 @@ export default class Bimface implements IBimOperation {
     turn3dMarkerOff(): void;
     set3dMarkerStyle(config: any): void;
     clear3dMarker(): void;
+    markButton(text: string, callback: Function): any;
+    insertToolbar(buttons: Object[]): void;
     private add3dMarker;
     private remove3dMarker;
 }

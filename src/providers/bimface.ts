@@ -47,15 +47,15 @@ export default class Bimface implements IBimOperation {
       loaderConfig.viewToken = options.viewToken;
       window.BimfaceSDKLoader.load(
         loaderConfig,
-        () => {
+        (viewMetaData) => {
           var domShow = document.getElementById(options.domId);
           var webAppConfig = new window.Glodon.Bimface.Application.WebApplication3DConfig();
           webAppConfig.domElement = domShow;
           this.app = new window.Glodon.Bimface.Application.WebApplication3D(
             webAppConfig
           );
-          this.app.addView(options.viewToken);
           this.viewer3D = this.app.getViewer();
+          this.app.addView(viewMetaData.viewToken);
           resolve();
         },
         error => {
@@ -153,6 +153,34 @@ export default class Bimface implements IBimOperation {
    */
   clear3dMarker() {
     this.marker3D && this.marker3D.clear();
+  }
+
+  /**
+   * 创建按钮
+   */
+  makeButton(text: string, callback: Function) {
+    var btnConfig = new window.Glodon.Bimface.UI.Button.ButtonConfig();
+    var btn = new window.Glodon.Bimface.UI.Button.Button(btnConfig);
+    //设置新增按钮的样式
+    btn.setHtml(
+      `<button style="width: 50px; height:50px; left: -8px; top: -8px; position: relative; color: white; font-size: 18px;background: rgba(0, 0, 0, 0);opacity: 0.6;border: none;">${text}</button>`
+    );
+    //设置按钮的点击事件
+    btn.addEventListener("Click", callback);
+    return btn;
+  }
+
+  /**
+   * 插入工具按钮
+   * @param position
+   */
+  insertButtons(buttons: Object[]) {
+    console.log("buttons", buttons)
+    const toolbar = this.app.getToolbar("MainToolbar");
+    const len = buttons.length;
+    for (let i = 0; i < len; i++) {
+      toolbar.insertControl(i, buttons[i]);
+    }
   }
 
   /**
