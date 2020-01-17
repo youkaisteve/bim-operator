@@ -67,13 +67,13 @@ var Bimface = (function () {
                         return [2, new Promise(function (resolve, reject) {
                                 var loaderConfig = new window.BimfaceSDKLoaderConfig();
                                 loaderConfig.viewToken = options.viewToken;
-                                window.BimfaceSDKLoader.load(loaderConfig, function () {
+                                window.BimfaceSDKLoader.load(loaderConfig, function (viewMetaData) {
                                     var domShow = document.getElementById(options.domId);
                                     var webAppConfig = new window.Glodon.Bimface.Application.WebApplication3DConfig();
                                     webAppConfig.domElement = domShow;
                                     _this.app = new window.Glodon.Bimface.Application.WebApplication3D(webAppConfig);
-                                    _this.app.addView(options.viewToken);
                                     _this.viewer3D = _this.app.getViewer();
+                                    _this.app.addView(viewMetaData.viewToken);
                                     resolve();
                                 }, function (error) {
                                     reject(error);
@@ -120,10 +120,7 @@ var Bimface = (function () {
         this.is3dMarkerOn = true;
     };
     Bimface.prototype.turn3dMarkerOff = function () {
-        if (this.is3dMarkerOn && this.marker3D) {
-            this.marker3D.clear();
-            this.is3dMarkerOn = false;
-        }
+        this.is3dMarkerOn = false;
     };
     Bimface.prototype.set3dMarkerStyle = function (config) {
         if (Object.prototype.toString.call(config) !== "[object Object]") {
@@ -142,6 +139,21 @@ var Bimface = (function () {
     };
     Bimface.prototype.clear3dMarker = function () {
         this.marker3D && this.marker3D.clear();
+    };
+    Bimface.prototype.markButton = function (text, callback) {
+        var btnConfig = new window.Glodon.Bimface.UI.Button.ButtonConfig();
+        var btn = new window.Glodon.Bimface.UI.Button.Button(btnConfig);
+        btn.setHtml("<button style=\"width: 50px; height:50px; left: -8px; top: -8px; position: relative; color: white; font-size: 18px;background: rgba(0, 0, 0, 0);opacity: 0.6;border: none;\">" + text + "</button>");
+        btn.addEventListener("Click", callback);
+        return btn;
+    };
+    Bimface.prototype.insertToolbar = function (buttons) {
+        console.log("buttons", buttons);
+        var toolbar = this.app.getToolbar("MainToolbar");
+        var len = buttons.length;
+        for (var i = 0; i < len; i++) {
+            toolbar.insertControl(i, buttons[i]);
+        }
     };
     Bimface.prototype.add3dMarker = function (position) {
         var marker3dConfig = new window.Glodon.Bimface.Plugins.Marker3D.Marker3DConfig();

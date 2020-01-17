@@ -80,6 +80,14 @@ export interface IBimOperation {
    * 清空3d锚点
    */
   clear3dMarker(): void;
+  /**
+   * 创建按钮
+   */
+  makeButton(text: string, callback: Function): Object;
+  /**
+   * 插入按钮
+   */
+  insertButtons(buttons: Object[]): void;
 }
 
 /**
