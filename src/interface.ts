@@ -67,7 +67,7 @@ export interface IBimOperation {
    * 开启3d锚点功能
    * @param position 
    */
-  turn3dMarkerOn(onAdd?: Function, onRemove?: Function): void;
+  turn3dMarkerOn(): void;
   /**
    * 关闭3d锚点功能
    */

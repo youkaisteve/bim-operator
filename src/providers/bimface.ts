@@ -99,10 +99,14 @@ export default class Bimface implements IBimOperation {
     });
   }
 
+  getAllMarkers() {
+    return this.marker3D.getAllItems();
+  }
+
   /**
    * 开始3d锚点功能
    */
-  turn3dMarkerOn(onAdd?: Function, onRemove?: Function) {
+  turn3dMarkerOn() {
     if (!this.marker3D) {
       const markerConfig = new window.Glodon.Bimface.Plugins.Marker3D.Marker3DContainerConfig();
       markerConfig.viewer = this.viewer3D;
@@ -114,11 +118,9 @@ export default class Bimface implements IBimOperation {
         objectData => {
           if (this.is3dMarkerOn && objectData && objectData.objectId) {
             const marker3d = this.add3dMarker(objectData.worldPosition);
-            typeof onAdd === "function" && onAdd(marker3d);
             marker3d.onClick(marker => {
               if (this.is3dMarkerOn) {
                 this.remove3dMarker(marker.id);
-                typeof onRemove === "function" && onRemove(marker);
               }
             });
           }
@@ -182,5 +184,118 @@ export default class Bimface implements IBimOperation {
    */
   private remove3dMarker(markerId: number) {
     this.marker3D.removeItemById(markerId);
+  }
+
+  private leadManager: LeadLabelManager = new LeadLabelManager(this);
+
+  getAllLeadLabels() {
+    return this.leadManager.getAllItems();
+  }
+
+  turnLeadLabelOn() {
+    this.leadManager.turnLeadLabelOn();
+  }
+
+  turnLeadLabelOff() {
+    this.leadManager.turnLeadLabelOff();
+  }
+
+  clearLeadLabel() {
+    this.leadManager.clearLeadLabel();
+  }
+
+  addLeadLabel(text: string) {
+    this.leadManager.addLeadLabel(text);
+  }
+}
+
+// 引线管理器
+class LeadLabelManager {
+  private bimface: any = null;
+  private data: any = null;
+  private _drawable: any = null;
+  private isOn = false;
+
+  private get viewer() {
+    return this.bimface.viewer3D;
+  }
+
+  private get drawable() {
+    if (this._drawable) {
+      return this._drawable;
+    } else {
+      var drawableConfig = new window.Glodon.Bimface.Plugins.Drawable.DrawableContainerConfig();
+      drawableConfig.viewer = this.viewer;
+      drawableConfig.maxNum = 10;
+      let drawable = new window.Glodon.Bimface.Plugins.Drawable.DrawableContainer(
+        drawableConfig
+      );
+      this._drawable = drawable;
+      return drawable;
+    }
+  }
+
+  constructor(bimface) {
+    this.bimface = bimface;
+  }
+
+  turnLeadLabelOn() {
+    if (!this.isOn) {
+      this.viewer.addEventListener(
+        window.Glodon.Bimface.Application.WebApplication3DEvent
+          .ComponentsSelectionChanged,
+        data => {
+          this.data = data;
+          this.addLeadLabel("12312");
+        }
+      );
+    }
+    this.isOn = true;
+  }
+
+  turnLeadLabelOff() {
+    this.data = {};
+    this.isOn = false;
+  }
+
+  getAllItems() {
+    return this.drawable.getAllItems();
+  }
+
+  clearLeadLabel() {
+    this.drawable.clear();
+    this.data = {};
+    var drawableConfig = new window.Glodon.Bimface.Plugins.Drawable.DrawableContainerConfig();
+    drawableConfig.viewer = this.viewer;
+    drawableConfig.maxNum = 10;
+    let drawable = new window.Glodon.Bimface.Plugins.Drawable.DrawableContainer(
+      drawableConfig
+    );
+    this._drawable = drawable;
+  }
+
+  addLeadLabel(text: string) {
+    if (!text.trim()) {
+      return false;
+    }
+    //引线标签的配置类
+    var config = new window.Glodon.Bimface.Plugins.Drawable.LeadLabelConfig();
+    //引线标签的内容
+    config.text = text;
+    //引线标签关联的构件
+    config.objectId = this.data.componentId;
+    //引线标签的世界坐标
+    config.worldPosition = this.data.worldPosition;
+    //引线标签的视图
+    config.viewer = this.viewer;
+
+    var label = new window.Glodon.Bimface.Plugins.Drawable.LeadLabel(config);
+
+    //引线标签的左键点击事件
+    label.onClick(item => {
+      this.drawable.removeItemById(item.id);
+    });
+    this.drawable.addItem(label);
+    this.data = {};
   }
 }

@@ -45,6 +45,7 @@ var Bimface = (function () {
             tooltip: ""
         };
         this.is3dMarkerOn = false;
+        this.leadManager = new LeadLabelManager(this);
     }
     Bimface.prototype.loadModel = function (options) {
         return __awaiter(this, void 0, void 0, function () {
@@ -104,7 +105,10 @@ var Bimface = (function () {
             _this.viewer3D.getElementByConditions(confition.fileId, confition, resolve);
         });
     };
-    Bimface.prototype.turn3dMarkerOn = function (onAdd, onRemove) {
+    Bimface.prototype.getAllMarkers = function () {
+        return this.marker3D.getAllItems();
+    };
+    Bimface.prototype.turn3dMarkerOn = function () {
         var _this = this;
         if (!this.marker3D) {
             var markerConfig = new window.Glodon.Bimface.Plugins.Marker3D.Marker3DContainerConfig();
@@ -113,11 +117,9 @@ var Bimface = (function () {
             this.viewer3D.addEventListener(window.Glodon.Bimface.Viewer.Viewer3DEvent.MouseClicked, function (objectData) {
                 if (_this.is3dMarkerOn && objectData && objectData.objectId) {
                     var marker3d = _this.add3dMarker(objectData.worldPosition);
-                    typeof onAdd === "function" && onAdd(marker3d);
                     marker3d.onClick(function (marker) {
                         if (_this.is3dMarkerOn) {
                             _this.remove3dMarker(marker.id);
-                            typeof onRemove === "function" && onRemove(marker);
                         }
                     });
                 }
@@ -159,6 +161,99 @@ var Bimface = (function () {
     Bimface.prototype.remove3dMarker = function (markerId) {
         this.marker3D.removeItemById(markerId);
     };
+    Bimface.prototype.getAllLeadLabels = function () {
+        return this.leadManager.getAllItems();
+    };
+    Bimface.prototype.turnLeadLabelOn = function () {
+        this.leadManager.turnLeadLabelOn();
+    };
+    Bimface.prototype.turnLeadLabelOff = function () {
+        this.leadManager.turnLeadLabelOff();
+    };
+    Bimface.prototype.clearLeadLabel = function () {
+        this.leadManager.clearLeadLabel();
+    };
+    Bimface.prototype.saveLeadLabel = function (text) {
+        this.leadManager.saveLeadLabel(text);
+    };
     return Bimface;
 }());
 exports.default = Bimface;
+var LeadLabelManager = (function () {
+    function LeadLabelManager(bimface) {
+        this.bimface = null;
+        this.data = null;
+        this._drawable = null;
+        this.isOn = false;
+        this.bimface = bimface;
+    }
+    Object.defineProperty(LeadLabelManager.prototype, "viewer", {
+        get: function () {
+            return this.bimface.viewer3D;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(LeadLabelManager.prototype, "drawable", {
+        get: function () {
+            if (this._drawable) {
+                return this._drawable;
+            }
+            else {
+                var drawableConfig = new window.Glodon.Bimface.Plugins.Drawable.DrawableContainerConfig();
+                drawableConfig.viewer = this.viewer;
+                drawableConfig.maxNum = 10;
+                var drawable = new window.Glodon.Bimface.Plugins.Drawable.DrawableContainer(drawableConfig);
+                this._drawable = drawable;
+                return drawable;
+            }
+        },
+        enumerable: true,
+        configurable: true
+    });
+    LeadLabelManager.prototype.turnLeadLabelOn = function () {
+        var _this = this;
+        if (!this.isOn) {
+            this.viewer.addEventListener(window.Glodon.Bimface.Application.WebApplication3DEvent
+                .ComponentsSelectionChanged, function (data) {
+                _this.data = data;
+                _this.saveLeadLabel("12312");
+            });
+        }
+        this.isOn = true;
+    };
+    LeadLabelManager.prototype.turnLeadLabelOff = function () {
+        this.data = {};
+        this.isOn = false;
+    };
+    LeadLabelManager.prototype.getAllItems = function () {
+        return this.drawable.getAllItems();
+    };
+    LeadLabelManager.prototype.clearLeadLabel = function () {
+        this.drawable.clear();
+        this.data = {};
+        var drawableConfig = new window.Glodon.Bimface.Plugins.Drawable.DrawableContainerConfig();
+        drawableConfig.viewer = this.viewer;
+        drawableConfig.maxNum = 10;
+        var drawable = new window.Glodon.Bimface.Plugins.Drawable.DrawableContainer(drawableConfig);
+        this._drawable = drawable;
+    };
+    LeadLabelManager.prototype.saveLeadLabel = function (text) {
+        var _this = this;
+        if (!text.trim()) {
+            return false;
+        }
+        var config = new window.Glodon.Bimface.Plugins.Drawable.LeadLabelConfig();
+        config.text = text;
+        config.objectId = this.data.componentId;
+        config.worldPosition = this.data.worldPosition;
+        config.viewer = this.viewer;
+        var label = new window.Glodon.Bimface.Plugins.Drawable.LeadLabel(config);
+        label.onClick(function (item) {
+            _this.drawable.removeItemById(item.id);
+        });
+        this.drawable.addItem(label);
+        this.data = {};
+    };
+    return LeadLabelManager;
+}());
