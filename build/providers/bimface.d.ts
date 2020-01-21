@@ -10,10 +10,17 @@ export default class Bimface implements IBimOperation {
     getFloors(): Promise<Floor[]>;
     getFloorsbyFileId(fileId: String): Promise<unknown>;
     getComponentByCondition(confition: any): Promise<Component[]>;
-    turn3dMarkerOn(onAdd?: Function, onRemove?: Function): void;
+    getAllMarkers(): any;
+    turn3dMarkerOn(): void;
     turn3dMarkerOff(): void;
     set3dMarkerStyle(config: any): void;
     clear3dMarker(): void;
     private add3dMarker;
     private remove3dMarker;
+    private leadManager;
+    getAllLeadLabels(): any;
+    turnLeadLabelOn(): void;
+    turnLeadLabelOff(): void;
+    clearLeadLabel(): void;
+    saveLeadLabel(text: string): void;
 }
