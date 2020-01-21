@@ -104,7 +104,7 @@ var Bimface = (function () {
             _this.viewer3D.getElementByConditions(confition.fileId, confition, resolve);
         });
     };
-    Bimface.prototype.turn3dMarkerOn = function () {
+    Bimface.prototype.turn3dMarkerOn = function (onAdd, onRemove) {
         var _this = this;
         if (!this.marker3D) {
             var markerConfig = new window.Glodon.Bimface.Plugins.Marker3D.Marker3DContainerConfig();
@@ -113,7 +113,13 @@ var Bimface = (function () {
             this.viewer3D.addEventListener(window.Glodon.Bimface.Viewer.Viewer3DEvent.MouseClicked, function (objectData) {
                 if (_this.is3dMarkerOn && objectData && objectData.objectId) {
                     var marker3d = _this.add3dMarker(objectData.worldPosition);
-                    marker3d.onClick(function (marker) { return _this.remove3dMarker(marker.id); });
+                    typeof onAdd === "function" && onAdd(marker3d);
+                    marker3d.onClick(function (marker) {
+                        if (_this.is3dMarkerOn) {
+                            _this.remove3dMarker(marker.id);
+                            typeof onRemove === "function" && onRemove(marker);
+                        }
+                    });
                 }
             });
         }
@@ -139,21 +145,6 @@ var Bimface = (function () {
     };
     Bimface.prototype.clear3dMarker = function () {
         this.marker3D && this.marker3D.clear();
-    };
-    Bimface.prototype.markButton = function (text, callback) {
-        var btnConfig = new window.Glodon.Bimface.UI.Button.ButtonConfig();
-        var btn = new window.Glodon.Bimface.UI.Button.Button(btnConfig);
-        btn.setHtml("<button style=\"width: 50px; height:50px; left: -8px; top: -8px; position: relative; color: white; font-size: 18px;background: rgba(0, 0, 0, 0);opacity: 0.6;border: none;\">" + text + "</button>");
-        btn.addEventListener("Click", callback);
-        return btn;
-    };
-    Bimface.prototype.insertToolbar = function (buttons) {
-        console.log("buttons", buttons);
-        var toolbar = this.app.getToolbar("MainToolbar");
-        var len = buttons.length;
-        for (var i = 0; i < len; i++) {
-            toolbar.insertControl(i, buttons[i]);
-        }
     };
     Bimface.prototype.add3dMarker = function (position) {
         var marker3dConfig = new window.Glodon.Bimface.Plugins.Marker3D.Marker3DConfig();
