@@ -47,7 +47,7 @@ export default class Bimface implements IBimOperation {
       loaderConfig.viewToken = options.viewToken;
       window.BimfaceSDKLoader.load(
         loaderConfig,
-        (viewMetaData) => {
+        viewMetaData => {
           var domShow = document.getElementById(options.domId);
           var webAppConfig = new window.Glodon.Bimface.Application.WebApplication3DConfig();
           webAppConfig.domElement = domShow;
@@ -102,7 +102,7 @@ export default class Bimface implements IBimOperation {
   /**
    * 开始3d锚点功能
    */
-  turn3dMarkerOn() {
+  turn3dMarkerOn(onAdd?: Function, onRemove?: Function) {
     if (!this.marker3D) {
       const markerConfig = new window.Glodon.Bimface.Plugins.Marker3D.Marker3DContainerConfig();
       markerConfig.viewer = this.viewer3D;
@@ -114,7 +114,13 @@ export default class Bimface implements IBimOperation {
         objectData => {
           if (this.is3dMarkerOn && objectData && objectData.objectId) {
             const marker3d = this.add3dMarker(objectData.worldPosition);
-            marker3d.onClick(marker => this.remove3dMarker(marker.id));
+            typeof onAdd === "function" && onAdd(marker3d);
+            marker3d.onClick(marker => {
+              if (this.is3dMarkerOn) {
+                this.remove3dMarker(marker.id);
+                typeof onRemove === "function" && onRemove(marker);
+              }
+            });
           }
         }
       );
@@ -153,34 +159,6 @@ export default class Bimface implements IBimOperation {
    */
   clear3dMarker() {
     this.marker3D && this.marker3D.clear();
-  }
-
-  /**
-   * 创建按钮
-   */
-  makeButton(text: string, callback: Function) {
-    var btnConfig = new window.Glodon.Bimface.UI.Button.ButtonConfig();
-    var btn = new window.Glodon.Bimface.UI.Button.Button(btnConfig);
-    //设置新增按钮的样式
-    btn.setHtml(
-      `<button style="width: 50px; height:50px; left: -8px; top: -8px; position: relative; color: white; font-size: 18px;background: rgba(0, 0, 0, 0);opacity: 0.6;border: none;">${text}</button>`
-    );
-    //设置按钮的点击事件
-    btn.addEventListener("Click", callback);
-    return btn;
-  }
-
-  /**
-   * 插入工具按钮
-   * @param position
-   */
-  insertButtons(buttons: Object[]) {
-    console.log("buttons", buttons)
-    const toolbar = this.app.getToolbar("MainToolbar");
-    const len = buttons.length;
-    for (let i = 0; i < len; i++) {
-      toolbar.insertControl(i, buttons[i]);
-    }
   }
 
   /**

@@ -67,7 +67,7 @@ export interface IBimOperation {
    * 开启3d锚点功能
    * @param position 
    */
-  turn3dMarkerOn(): void;
+  turn3dMarkerOn(onAdd?: Function, onRemove?: Function): void;
   /**
    * 关闭3d锚点功能
    */
@@ -80,14 +80,6 @@ export interface IBimOperation {
    * 清空3d锚点
    */
   clear3dMarker(): void;
-  /**
-   * 创建按钮
-   */
-  makeButton(text: string, callback: Function): Object;
-  /**
-   * 插入按钮
-   */
-  insertButtons(buttons: Object[]): void;
 }
 
 /**
