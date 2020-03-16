@@ -1,4 +1,4 @@
-[bim-operator - v1.0.10](README.md) › [Globals](globals.md)
+[bim-operator](README.md) › [Globals](globals.md)
 
 # 支持的供应商
 
