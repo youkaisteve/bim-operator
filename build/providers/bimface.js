@@ -39,13 +39,6 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var remote_load_1 = require("../util/remote-load");
 var Bimface = (function () {
     function Bimface() {
-        this.marker3DStyle = {
-            src: "http://static.bimface.com/resources/3DMarker/warner/warner_red.png",
-            size: 30,
-            tooltip: ""
-        };
-        this.is3dMarkerOn = false;
-        this.leadManager = new LeadLabelManager(this);
     }
     Bimface.prototype.loadModel = function (options) {
         return __awaiter(this, void 0, void 0, function () {
@@ -60,10 +53,10 @@ var Bimface = (function () {
                         _a.label = 2;
                     case 2:
                         if (!options.domId) {
-                            throw new Error("domId missing");
+                            throw new Error('domId missing');
                         }
                         if (!options.viewToken) {
-                            throw new Error("viewToken missing");
+                            throw new Error('viewToken missing');
                         }
                         return [2, new Promise(function (resolve, reject) {
                                 var loaderConfig = new window.BimfaceSDKLoaderConfig();
@@ -99,7 +92,7 @@ var Bimface = (function () {
     Bimface.prototype.getComponentByCondition = function (confition) {
         var _this = this;
         if (!confition.fileId) {
-            throw new Error("fileId不能为空");
+            throw new Error('fileId不能为空');
         }
         return new Promise(function (resolve) {
             _this.viewer3D.getElementByConditions(confition.fileId, confition, resolve);
@@ -109,151 +102,35 @@ var Bimface = (function () {
         return this.marker3D.getAllItems();
     };
     Bimface.prototype.turn3dMarkerOn = function () {
-        var _this = this;
         if (!this.marker3D) {
             var markerConfig = new window.Glodon.Bimface.Plugins.Marker3D.Marker3DContainerConfig();
             markerConfig.viewer = this.viewer3D;
             this.marker3D = new window.Glodon.Bimface.Plugins.Marker3D.Marker3DContainer(markerConfig);
-            this.viewer3D.addEventListener(window.Glodon.Bimface.Viewer.Viewer3DEvent.MouseClicked, function (objectData) {
-                if (_this.is3dMarkerOn && objectData && objectData.objectId) {
-                    var marker3d = _this.add3dMarker(objectData.worldPosition);
-                    marker3d.onClick(function (marker) {
-                        if (_this.is3dMarkerOn) {
-                            _this.remove3dMarker(marker.id);
-                        }
-                    });
-                }
-            });
-        }
-        this.is3dMarkerOn = true;
-    };
-    Bimface.prototype.turn3dMarkerOff = function () {
-        this.is3dMarkerOn = false;
-    };
-    Bimface.prototype.set3dMarkerStyle = function (config) {
-        if (Object.prototype.toString.call(config) !== "[object Object]") {
-            throw new Error("请传入对象");
-        }
-        var src = config.src, size = config.size, tooltip = config.tooltip;
-        if (typeof src === "string") {
-            this.marker3DStyle.src = src;
-        }
-        if (typeof size === "number") {
-            this.marker3DStyle.size = size;
-        }
-        if (typeof tooltip === "string") {
-            this.marker3DStyle.tooltip = tooltip;
         }
     };
     Bimface.prototype.clear3dMarker = function () {
         this.marker3D && this.marker3D.clear();
     };
-    Bimface.prototype.add3dMarker = function (position) {
+    Bimface.prototype.add3dMarker = function (marker) {
+        this.turn3dMarkerOn();
         var marker3dConfig = new window.Glodon.Bimface.Plugins.Marker3D.Marker3DConfig();
-        marker3dConfig.worldPosition = position;
-        marker3dConfig.src = this.marker3DStyle.src;
-        marker3dConfig.size = this.marker3DStyle.size;
-        marker3dConfig.tooltip = this.marker3DStyle.tooltip;
+        marker3dConfig.id = marker.id;
+        marker3dConfig.worldPosition = marker.worldPosition;
+        marker3dConfig.src = marker.src;
+        marker3dConfig.size = marker.size;
+        marker3dConfig.tooltip = marker.tooltip;
+        marker3dConfig.tooltipStyle = marker.tooltipStyle;
         var marker3d = new window.Glodon.Bimface.Plugins.Marker3D.Marker3D(marker3dConfig);
+        if (marker.onClick)
+            marker3d.onClick(marker.onClick);
+        if (marker.onHover)
+            marker3d.onHover(marker.onHover);
         this.marker3D.addItem(marker3d);
-        return marker3d;
+        return marker3d.getId();
     };
     Bimface.prototype.remove3dMarker = function (markerId) {
         this.marker3D.removeItemById(markerId);
     };
-    Bimface.prototype.getAllLeadLabels = function () {
-        return this.leadManager.getAllItems();
-    };
-    Bimface.prototype.turnLeadLabelOn = function () {
-        this.leadManager.turnLeadLabelOn();
-    };
-    Bimface.prototype.turnLeadLabelOff = function () {
-        this.leadManager.turnLeadLabelOff();
-    };
-    Bimface.prototype.clearLeadLabel = function () {
-        this.leadManager.clearLeadLabel();
-    };
-    Bimface.prototype.saveLeadLabel = function (text) {
-        this.leadManager.saveLeadLabel(text);
-    };
     return Bimface;
 }());
 exports.default = Bimface;
-var LeadLabelManager = (function () {
-    function LeadLabelManager(bimface) {
-        this.bimface = null;
-        this.data = null;
-        this._drawable = null;
-        this.isOn = false;
-        this.bimface = bimface;
-    }
-    Object.defineProperty(LeadLabelManager.prototype, "viewer", {
-        get: function () {
-            return this.bimface.viewer3D;
-        },
-        enumerable: true,
-        configurable: true
-    });
-    Object.defineProperty(LeadLabelManager.prototype, "drawable", {
-        get: function () {
-            if (this._drawable) {
-                return this._drawable;
-            }
-            else {
-                var drawableConfig = new window.Glodon.Bimface.Plugins.Drawable.DrawableContainerConfig();
-                drawableConfig.viewer = this.viewer;
-                drawableConfig.maxNum = 10;
-                var drawable = new window.Glodon.Bimface.Plugins.Drawable.DrawableContainer(drawableConfig);
-                this._drawable = drawable;
-                return drawable;
-            }
-        },
-        enumerable: true,
-        configurable: true
-    });
-    LeadLabelManager.prototype.turnLeadLabelOn = function () {
-        var _this = this;
-        if (!this.isOn) {
-            this.viewer.addEventListener(window.Glodon.Bimface.Application.WebApplication3DEvent
-                .ComponentsSelectionChanged, function (data) {
-                _this.data = data;
-                _this.saveLeadLabel("12312");
-            });
-        }
-        this.isOn = true;
-    };
-    LeadLabelManager.prototype.turnLeadLabelOff = function () {
-        this.data = {};
-        this.isOn = false;
-    };
-    LeadLabelManager.prototype.getAllItems = function () {
-        return this.drawable.getAllItems();
-    };
-    LeadLabelManager.prototype.clearLeadLabel = function () {
-        this.drawable.clear();
-        this.data = {};
-        var drawableConfig = new window.Glodon.Bimface.Plugins.Drawable.DrawableContainerConfig();
-        drawableConfig.viewer = this.viewer;
-        drawableConfig.maxNum = 10;
-        var drawable = new window.Glodon.Bimface.Plugins.Drawable.DrawableContainer(drawableConfig);
-        this._drawable = drawable;
-    };
-    LeadLabelManager.prototype.saveLeadLabel = function (text) {
-        var _this = this;
-        if (!text.trim()) {
-            return false;
-        }
-        var config = new window.Glodon.Bimface.Plugins.Drawable.LeadLabelConfig();
-        config.text = text;
-        config.objectId = this.data.componentId;
-        config.worldPosition = this.data.worldPosition;
-        config.viewer = this.viewer;
-        var label = new window.Glodon.Bimface.Plugins.Drawable.LeadLabel(config);
-        label.onClick(function (item) {
-            _this.drawable.removeItemById(item.id);
-        });
-        this.drawable.addItem(label);
-        this.data = {};
-    };
-    return LeadLabelManager;
-}());
