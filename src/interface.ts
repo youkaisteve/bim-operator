@@ -112,11 +112,11 @@ export interface Marker3D {
     /**
      * 点击事件
      */
-    onClick: Function;
+    onClick?: Function;
     /**
      * hover事件
      */
-    onHover: Function;
+    onHover?: Function;
 }
 
 /**

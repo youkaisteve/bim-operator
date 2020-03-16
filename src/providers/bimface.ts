@@ -115,10 +115,10 @@ export default class Bimface implements IBimOperation {
         const marker3dConfig = new window.Glodon.Bimface.Plugins.Marker3D.Marker3DConfig();
         marker3dConfig.id = marker.id;
         marker3dConfig.worldPosition = marker.worldPosition;
-        marker3dConfig.src = marker.src;
-        marker3dConfig.size = marker.size;
-        marker3dConfig.tooltip = marker.tooltip;
-        marker3dConfig.tooltipStyle = marker.tooltipStyle;
+        marker3dConfig.src = marker.src || '';
+        if (marker.size > 0) marker3dConfig.size = marker.size;
+        marker3dConfig.tooltip = marker.tooltip || '';
+        marker3dConfig.tooltipStyle = marker.tooltipStyle || null;
         const marker3d = new window.Glodon.Bimface.Plugins.Marker3D.Marker3D(marker3dConfig);
         if (marker.onClick) marker3d.onClick(marker.onClick);
         if (marker.onHover) marker3d.onHover(marker.onHover);
