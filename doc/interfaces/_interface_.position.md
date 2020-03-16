@@ -1,4 +1,4 @@
-[bim-operator - v1.0.10](../README.md) › [Globals](../globals.md) › ["interface"](../modules/_interface_.md) › [Position](_interface_.position.md)
+[bim-operator - v1.0.12](../README.md) › [Globals](../globals.md) › ["interface"](../modules/_interface_.md) › [Position](_interface_.position.md)
 
 # Interface: Position
 
@@ -22,7 +22,7 @@
 
 • **x**: *number*
 
-*Defined in [interface.ts:129](https://github.com/youkaisteve/bim-operator/blob/93030cf/src/interface.ts#L129)*
+*Defined in [interface.ts:129](https://github.com/youkaisteve/bim-operator/blob/fa51e78/src/interface.ts#L129)*
 
 x
 
@@ -32,7 +32,7 @@ ___
 
 • **y**: *number*
 
-*Defined in [interface.ts:133](https://github.com/youkaisteve/bim-operator/blob/93030cf/src/interface.ts#L133)*
+*Defined in [interface.ts:133](https://github.com/youkaisteve/bim-operator/blob/fa51e78/src/interface.ts#L133)*
 
 y
 
@@ -42,6 +42,6 @@ ___
 
 • **z**? : *string*
 
-*Defined in [interface.ts:137](https://github.com/youkaisteve/bim-operator/blob/93030cf/src/interface.ts#L137)*
+*Defined in [interface.ts:137](https://github.com/youkaisteve/bim-operator/blob/fa51e78/src/interface.ts#L137)*
 
 z
