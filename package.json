@@ -1,36 +1,36 @@
 {
-  "name": "bim-operator",
-  "version": "1.0.11",
-  "description": "a pack of bim operations",
-  "files": [
-    "build"
-  ],
-  "main": "build/index.js",
-  "types": "build/index.d.ts",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "rm -fr ./dist && tsc -p tsconfig.dev.json",
-    "build": "rm -fr ./build && tsc -p tsconfig.prod.json",
-    "pub": "npm run build && git commit -am upgrade && git push && npm version patch && git push && npm publish",
-    "doc": "npx typedoc --plugin typedoc-plugin-markdown --out ./doc ./src/ --module commonjs"
-  },
-  "devDependencies": {
-    "@types/node": "^10.5.5",
-    "ts-node": "^8.3.0",
-    "tslib": "^1.8.1",
-    "tslint": "^5.11.0",
-    "tslint-midway-contrib": "1",
-    "typedoc": "^0.15.6",
-    "typedoc-plugin-markdown": "^2.2.16",
-    "typescript": "^3.5.0"
-  },
-  "keywords": [
-    "bim"
-  ],
-  "repository": {
-    "type": "git",
-    "url": "git@github.com:youkaisteve/bim-operator.git"
-  },
-  "author": "steve.k.you",
-  "license": "MIT"
+    "name": "bim-operator",
+    "version": "1.0.10",
+    "description": "a pack of bim operations",
+    "files": [
+        "build"
+    ],
+    "main": "build/index.js",
+    "types": "build/index.d.ts",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "dev": "rm -fr ./dist && tsc -p tsconfig.dev.json",
+        "build": "rm -fr ./build && tsc -p tsconfig.prod.json",
+        "pub": "npm run build && git commit -am upgrade && git push && npm version patch && git push && npm publish",
+        "doc": "npx typedoc --plugin typedoc-plugin-markdown --out ./doc ./src/ --module commonjs"
+    },
+    "devDependencies": {
+        "@types/node": "^10.5.5",
+        "ts-node": "^8.3.0",
+        "tslib": "^1.8.1",
+        "tslint": "^5.11.0",
+        "tslint-midway-contrib": "1",
+        "typedoc": "^0.15.6",
+        "typedoc-plugin-markdown": "^2.2.16",
+        "typescript": "^3.5.0"
+    },
+    "keywords": [
+        "bim"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "git@github.com:youkaisteve/bim-operator.git"
+    },
+    "author": "steve.k.you",
+    "license": "MIT"
 }
