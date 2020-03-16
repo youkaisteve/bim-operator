@@ -1,4 +1,4 @@
-[bim-operator - v1.0.2](../README.md) › [Globals](../globals.md) › ["interface"](../modules/_interface_.md) › [ModelBase](_interface_.modelbase.md)
+[bim-operator - v1.0.10](../README.md) › [Globals](../globals.md) › ["interface"](../modules/_interface_.md) › [ModelBase](_interface_.modelbase.md)
 
 # Interface: ModelBase
 
@@ -25,7 +25,7 @@
 
 • **fileId**: *String*
 
-*Defined in [interface.ts:8](https://github.com/youkaisteve/bim-operator/blob/e68d6d4/src/interface.ts#L8)*
+*Defined in [interface.ts:8](https://github.com/youkaisteve/bim-operator/blob/93030cf/src/interface.ts#L8)*
 
 单模型id
 
@@ -35,6 +35,6 @@ ___
 
 • **integrateId**? : *String*
 
-*Defined in [interface.ts:12](https://github.com/youkaisteve/bim-operator/blob/e68d6d4/src/interface.ts#L12)*
+*Defined in [interface.ts:12](https://github.com/youkaisteve/bim-operator/blob/93030cf/src/interface.ts#L12)*
 
 组合模型id

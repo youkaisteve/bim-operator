@@ -1,4 +1,4 @@
-[bim-operator - v1.0.2](../README.md) › [Globals](../globals.md) › ["interface"](../modules/_interface_.md) › [Component](_interface_.component.md)
+[bim-operator - v1.0.10](../README.md) › [Globals](../globals.md) › ["interface"](../modules/_interface_.md) › [Component](_interface_.component.md)
 
 # Interface: Component
 
@@ -25,7 +25,7 @@
 
 • **componentId**: *String | Number*
 
-*Defined in [interface.ts:36](https://github.com/youkaisteve/bim-operator/blob/e68d6d4/src/interface.ts#L36)*
+*Defined in [interface.ts:36](https://github.com/youkaisteve/bim-operator/blob/93030cf/src/interface.ts#L36)*
 
 构件id
 
@@ -35,7 +35,7 @@ ___
 
 • **componentName**: *String*
 
-*Defined in [interface.ts:40](https://github.com/youkaisteve/bim-operator/blob/e68d6d4/src/interface.ts#L40)*
+*Defined in [interface.ts:40](https://github.com/youkaisteve/bim-operator/blob/93030cf/src/interface.ts#L40)*
 
 构件名称
 
@@ -47,7 +47,7 @@ ___
 
 *Inherited from [ModelBase](_interface_.modelbase.md).[fileId](_interface_.modelbase.md#fileid)*
 
-*Defined in [interface.ts:8](https://github.com/youkaisteve/bim-operator/blob/e68d6d4/src/interface.ts#L8)*
+*Defined in [interface.ts:8](https://github.com/youkaisteve/bim-operator/blob/93030cf/src/interface.ts#L8)*
 
 单模型id
 
@@ -59,6 +59,6 @@ ___
 
 *Inherited from [ModelBase](_interface_.modelbase.md).[integrateId](_interface_.modelbase.md#optional-integrateid)*
 
-*Defined in [interface.ts:12](https://github.com/youkaisteve/bim-operator/blob/e68d6d4/src/interface.ts#L12)*
+*Defined in [interface.ts:12](https://github.com/youkaisteve/bim-operator/blob/93030cf/src/interface.ts#L12)*
 
 组合模型id
