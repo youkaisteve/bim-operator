@@ -1,4 +1,4 @@
-[bim-operator - v1.0.10](../README.md) › [Globals](../globals.md) › ["providers/bimface"](_providers_bimface_.md)
+[bim-operator - v1.0.12](../README.md) › [Globals](../globals.md) › ["providers/bimface"](_providers_bimface_.md)
 
 # External module: "providers/bimface"
 
