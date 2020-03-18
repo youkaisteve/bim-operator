@@ -19,6 +19,7 @@ export default class Bimface implements IBimOperation {
      * @param {string} options.viewToken 访问认证token
      * @param {string} options.url js-sdk地址
      * @param {string} options.domId dom id
+     * @param {Object} options.viewConfig 视图的配置
      */
     async loadModel(options: any): Promise<void> {
         if (options.url && !window.BimfaceSDKLoaderConfig) {
@@ -42,6 +43,9 @@ export default class Bimface implements IBimOperation {
                     var domShow = document.getElementById(options.domId);
                     var webAppConfig = new window.Glodon.Bimface.Application.WebApplication3DConfig();
                     webAppConfig.domElement = domShow;
+                    if (options.viewConfig) {
+                        webAppConfig = { ...webAppConfig, ...options.viewConfig };
+                    }
                     this.app = new window.Glodon.Bimface.Application.WebApplication3D(webAppConfig);
                     this.viewer3D = this.app.getViewer();
                     this.app.addView(viewMetaData.viewToken);
