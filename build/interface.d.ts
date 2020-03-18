@@ -26,8 +26,8 @@ export interface Marker3D {
     size?: number;
     tooltip?: string;
     tooltipStyle?: Object;
-    onClick: Function;
-    onHover: Function;
+    onClick?: Function;
+    onHover?: Function;
 }
 export interface Position {
     x: number;

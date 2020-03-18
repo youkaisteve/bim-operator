@@ -1,4 +1,15 @@
 "use strict";
+var __assign = (this && this.__assign) || function () {
+    __assign = Object.assign || function(t) {
+        for (var s, i = 1, n = arguments.length; i < n; i++) {
+            s = arguments[i];
+            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
+                t[p] = s[p];
+        }
+        return t;
+    };
+    return __assign.apply(this, arguments);
+};
 var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
     function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
     return new (P || (P = Promise))(function (resolve, reject) {
@@ -65,6 +76,9 @@ var Bimface = (function () {
                                     var domShow = document.getElementById(options.domId);
                                     var webAppConfig = new window.Glodon.Bimface.Application.WebApplication3DConfig();
                                     webAppConfig.domElement = domShow;
+                                    if (options.viewConfig) {
+                                        webAppConfig = __assign(__assign({}, webAppConfig), options.viewConfig);
+                                    }
                                     _this.app = new window.Glodon.Bimface.Application.WebApplication3D(webAppConfig);
                                     _this.viewer3D = _this.app.getViewer();
                                     _this.app.addView(viewMetaData.viewToken);
@@ -112,14 +126,17 @@ var Bimface = (function () {
         this.marker3D && this.marker3D.clear();
     };
     Bimface.prototype.add3dMarker = function (marker) {
+        if (marker === undefined)
+            throw new Error("marker can't be null");
         this.turn3dMarkerOn();
         var marker3dConfig = new window.Glodon.Bimface.Plugins.Marker3D.Marker3DConfig();
         marker3dConfig.id = marker.id;
         marker3dConfig.worldPosition = marker.worldPosition;
-        marker3dConfig.src = marker.src;
-        marker3dConfig.size = marker.size;
-        marker3dConfig.tooltip = marker.tooltip;
-        marker3dConfig.tooltipStyle = marker.tooltipStyle;
+        marker3dConfig.src = marker.src || '';
+        if (marker.size)
+            marker3dConfig.size = marker.size;
+        marker3dConfig.tooltip = marker.tooltip || '';
+        marker3dConfig.tooltipStyle = marker.tooltipStyle || null;
         var marker3d = new window.Glodon.Bimface.Plugins.Marker3D.Marker3D(marker3dConfig);
         if (marker.onClick)
             marker3d.onClick(marker.onClick);

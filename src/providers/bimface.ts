@@ -114,13 +114,15 @@ export default class Bimface implements IBimOperation {
      * 添加3d锚点
      */
     public add3dMarker(marker: Marker3D) {
+        if (marker === undefined) throw new Error("marker can't be null");
+
         this.turn3dMarkerOn();
 
         const marker3dConfig = new window.Glodon.Bimface.Plugins.Marker3D.Marker3DConfig();
         marker3dConfig.id = marker.id;
         marker3dConfig.worldPosition = marker.worldPosition;
         marker3dConfig.src = marker.src || '';
-        if (marker.size > 0) marker3dConfig.size = marker.size;
+        if (marker.size) marker3dConfig.size = marker.size;
         marker3dConfig.tooltip = marker.tooltip || '';
         marker3dConfig.tooltipStyle = marker.tooltipStyle || null;
         const marker3d = new window.Glodon.Bimface.Plugins.Marker3D.Marker3D(marker3dConfig);
