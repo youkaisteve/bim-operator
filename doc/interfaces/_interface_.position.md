@@ -22,7 +22,7 @@
 
 • **x**: *number*
 
-*Defined in [interface.ts:129](https://github.com/youkaisteve/bim-operator/blob/fa51e78/src/interface.ts#L129)*
+*Defined in [interface.ts:129](https://github.com/youkaisteve/bim-operator/blob/00e3b96/src/interface.ts#L129)*
 
 x
 
@@ -32,7 +32,7 @@ ___
 
 • **y**: *number*
 
-*Defined in [interface.ts:133](https://github.com/youkaisteve/bim-operator/blob/fa51e78/src/interface.ts#L133)*
+*Defined in [interface.ts:133](https://github.com/youkaisteve/bim-operator/blob/00e3b96/src/interface.ts#L133)*
 
 y
 
@@ -42,6 +42,6 @@ ___
 
 • **z**? : *string*
 
-*Defined in [interface.ts:137](https://github.com/youkaisteve/bim-operator/blob/fa51e78/src/interface.ts#L137)*
+*Defined in [interface.ts:137](https://github.com/youkaisteve/bim-operator/blob/00e3b96/src/interface.ts#L137)*
 
 z
