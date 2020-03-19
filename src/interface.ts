@@ -79,6 +79,12 @@ export interface IBimOperation {
      * 清除所有3D标记
      */
     clear3dMarker(): void;
+    /**
+     * 设置场景显示大小
+     * @param width 宽度
+     * @param height 高度
+     */
+    resize(width?: number, height?: number);
 }
 
 /**
