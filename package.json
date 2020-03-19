@@ -12,7 +12,7 @@
         "dev": "rm -fr ./dist && tsc -p tsconfig.dev.json",
         "build": "rm -fr ./build && tsc -p tsconfig.prod.json",
         "pub": "npm version patch && git push && npm publish",
-        "doc": "npx typedoc --plugin typedoc-plugin-markdown --readme ./README.md --out ./doc ./src/ --module commonjs"
+        "doc": "npx typedoc --plugin typedoc-plugin-markdown --out ./doc ./src/ --module commonjs"
     },
     "devDependencies": {
         "@types/node": "^10.5.5",

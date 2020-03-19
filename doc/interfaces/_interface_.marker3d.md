@@ -27,7 +27,7 @@
 
 • **id**: *string*
 
-*Defined in [interface.ts:91](https://github.com/youkaisteve/bim-operator/blob/562edb8/src/interface.ts#L91)*
+*Defined in [interface.ts:97](https://github.com/youkaisteve/bim-operator/blob/cc1e1ce/src/interface.ts#L97)*
 
 id
 
@@ -37,7 +37,7 @@ ___
 
 • **onClick**? : *Function*
 
-*Defined in [interface.ts:115](https://github.com/youkaisteve/bim-operator/blob/562edb8/src/interface.ts#L115)*
+*Defined in [interface.ts:121](https://github.com/youkaisteve/bim-operator/blob/cc1e1ce/src/interface.ts#L121)*
 
 点击事件
 
@@ -47,7 +47,7 @@ ___
 
 • **onHover**? : *Function*
 
-*Defined in [interface.ts:119](https://github.com/youkaisteve/bim-operator/blob/562edb8/src/interface.ts#L119)*
+*Defined in [interface.ts:125](https://github.com/youkaisteve/bim-operator/blob/cc1e1ce/src/interface.ts#L125)*
 
 hover事件
 
@@ -57,7 +57,7 @@ ___
 
 • **size**? : *number*
 
-*Defined in [interface.ts:103](https://github.com/youkaisteve/bim-operator/blob/562edb8/src/interface.ts#L103)*
+*Defined in [interface.ts:109](https://github.com/youkaisteve/bim-operator/blob/cc1e1ce/src/interface.ts#L109)*
 
 icon尺寸
 
@@ -67,7 +67,7 @@ ___
 
 • **src**: *string*
 
-*Defined in [interface.ts:99](https://github.com/youkaisteve/bim-operator/blob/562edb8/src/interface.ts#L99)*
+*Defined in [interface.ts:105](https://github.com/youkaisteve/bim-operator/blob/cc1e1ce/src/interface.ts#L105)*
 
 icon图片路径
 
@@ -77,7 +77,7 @@ ___
 
 • **tooltip**? : *string*
 
-*Defined in [interface.ts:107](https://github.com/youkaisteve/bim-operator/blob/562edb8/src/interface.ts#L107)*
+*Defined in [interface.ts:113](https://github.com/youkaisteve/bim-operator/blob/cc1e1ce/src/interface.ts#L113)*
 
 提示内容
 
@@ -87,7 +87,7 @@ ___
 
 • **tooltipStyle**? : *Object*
 
-*Defined in [interface.ts:111](https://github.com/youkaisteve/bim-operator/blob/562edb8/src/interface.ts#L111)*
+*Defined in [interface.ts:117](https://github.com/youkaisteve/bim-operator/blob/cc1e1ce/src/interface.ts#L117)*
 
 tooltip样式
 
@@ -97,6 +97,6 @@ ___
 
 • **worldPosition**: *[Position](_interface_.position.md)*
 
-*Defined in [interface.ts:95](https://github.com/youkaisteve/bim-operator/blob/562edb8/src/interface.ts#L95)*
+*Defined in [interface.ts:101](https://github.com/youkaisteve/bim-operator/blob/cc1e1ce/src/interface.ts#L101)*
 
 位置
