@@ -23,6 +23,7 @@
 * [getFloorsbyFileId](_interface_.ibimoperation.md#getfloorsbyfileid)
 * [loadModel](_interface_.ibimoperation.md#loadmodel)
 * [remove3dMarker](_interface_.ibimoperation.md#remove3dmarker)
+* [resize](_interface_.ibimoperation.md#resize)
 
 ## Methods
 
@@ -30,7 +31,7 @@
 
 ▸ **add3dMarker**(`marker`: [Marker3D](_interface_.marker3d.md)): *string*
 
-*Defined in [interface.ts:72](https://github.com/youkaisteve/bim-operator/blob/562edb8/src/interface.ts#L72)*
+*Defined in [interface.ts:72](https://github.com/youkaisteve/bim-operator/blob/cc1e1ce/src/interface.ts#L72)*
 
 添加3D标记
 
@@ -50,7 +51,7 @@ ___
 
 ▸ **clear3dMarker**(): *void*
 
-*Defined in [interface.ts:81](https://github.com/youkaisteve/bim-operator/blob/562edb8/src/interface.ts#L81)*
+*Defined in [interface.ts:81](https://github.com/youkaisteve/bim-operator/blob/cc1e1ce/src/interface.ts#L81)*
 
 清除所有3D标记
 
@@ -62,7 +63,7 @@ ___
 
 ▸ **getComponentByCondition**(`confition`: any): *Promise‹Array‹[Component](_interface_.component.md)››*
 
-*Defined in [interface.ts:65](https://github.com/youkaisteve/bim-operator/blob/562edb8/src/interface.ts#L65)*
+*Defined in [interface.ts:65](https://github.com/youkaisteve/bim-operator/blob/cc1e1ce/src/interface.ts#L65)*
 
 根据条件获取构件
 
@@ -80,7 +81,7 @@ ___
 
 ▸ **getFloors**(): *Promise‹Array‹[Floor](_interface_.floor.md)››*
 
-*Defined in [interface.ts:55](https://github.com/youkaisteve/bim-operator/blob/562edb8/src/interface.ts#L55)*
+*Defined in [interface.ts:55](https://github.com/youkaisteve/bim-operator/blob/cc1e1ce/src/interface.ts#L55)*
 
 获取所有楼层
 
@@ -92,7 +93,7 @@ ___
 
 ▸ **getFloorsbyFileId**(`fileId`: String): *any*
 
-*Defined in [interface.ts:60](https://github.com/youkaisteve/bim-operator/blob/562edb8/src/interface.ts#L60)*
+*Defined in [interface.ts:60](https://github.com/youkaisteve/bim-operator/blob/cc1e1ce/src/interface.ts#L60)*
 
 获取单个模型的楼层（在集成模型中使用）
 
@@ -110,7 +111,7 @@ ___
 
 ▸ **loadModel**(`options`: any): *Promise‹void›*
 
-*Defined in [interface.ts:51](https://github.com/youkaisteve/bim-operator/blob/562edb8/src/interface.ts#L51)*
+*Defined in [interface.ts:51](https://github.com/youkaisteve/bim-operator/blob/cc1e1ce/src/interface.ts#L51)*
 
 加载模型
 
@@ -128,7 +129,7 @@ ___
 
 ▸ **remove3dMarker**(`markerId`: string): *void*
 
-*Defined in [interface.ts:77](https://github.com/youkaisteve/bim-operator/blob/562edb8/src/interface.ts#L77)*
+*Defined in [interface.ts:77](https://github.com/youkaisteve/bim-operator/blob/cc1e1ce/src/interface.ts#L77)*
 
 清空3d锚点
 
@@ -139,3 +140,22 @@ Name | Type |
 `markerId` | string |
 
 **Returns:** *void*
+
+___
+
+###  resize
+
+▸ **resize**(`width?`: number, `height?`: number): *any*
+
+*Defined in [interface.ts:87](https://github.com/youkaisteve/bim-operator/blob/cc1e1ce/src/interface.ts#L87)*
+
+设置场景显示大小
+
+**Parameters:**
+
+Name | Type | Description |
+------ | ------ | ------ |
+`width?` | number | 宽度 |
+`height?` | number | 高度  |
+
+**Returns:** *any*
