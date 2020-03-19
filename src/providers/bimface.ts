@@ -110,6 +110,10 @@ export default class Bimface implements IBimOperation {
         this.marker3D && this.marker3D.clear();
     }
 
+    resize(width?: number, height?: number) {
+        this.viewer3D.resize(width, height);
+    }
+
     /**
      * 添加3d锚点
      */
