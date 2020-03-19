@@ -1,6 +1,6 @@
-[bim-operator - v1.0.12](README.md) › [Globals](globals.md)
+[bim-operator - v1.0.13](README.md) › [Globals](globals.md)
 
-# bim-operator - v1.0.12
+# bim-operator - v1.0.13
 
 ## Index
 
