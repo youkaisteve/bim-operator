@@ -11,6 +11,7 @@ export default class Bimface implements IBimOperation {
     getAllMarkers(): any;
     private turn3dMarkerOn;
     clear3dMarker(): void;
+    resize(width?: number, height?: number): void;
     add3dMarker(marker: Marker3D): any;
     remove3dMarker(markerId: string): void;
 }

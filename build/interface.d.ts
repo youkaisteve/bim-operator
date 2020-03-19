@@ -18,6 +18,7 @@ export interface IBimOperation {
     add3dMarker(marker: Marker3D): string;
     remove3dMarker(markerId: string): void;
     clear3dMarker(): void;
+    resize(width?: number, height?: number): any;
 }
 export interface Marker3D {
     id: string;

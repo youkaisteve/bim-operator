@@ -125,6 +125,9 @@ var Bimface = (function () {
     Bimface.prototype.clear3dMarker = function () {
         this.marker3D && this.marker3D.clear();
     };
+    Bimface.prototype.resize = function (width, height) {
+        this.viewer3D.resize(width, height);
+    };
     Bimface.prototype.add3dMarker = function (marker) {
         if (marker === undefined)
             throw new Error("marker can't be null");
