@@ -9,9 +9,11 @@ export default class Bimface implements IBimOperation {
     getFloorsbyFileId(fileId: String): Promise<unknown>;
     getComponentByCondition(confition: any): Promise<Component[]>;
     getAllMarkers(): any;
-    private turn3dMarkerOn;
-    clear3dMarker(): void;
-    resize(width?: number, height?: number): void;
     add3dMarker(marker: Marker3D): any;
     remove3dMarker(markerId: string): void;
+    clear3dMarker(): void;
+    getViewPoint(): any;
+    setViewPoint(): void;
+    resize(width?: number, height?: number): void;
+    private turn3dMarkerOn;
 }

@@ -63,7 +63,6 @@ export interface IBimOperation {
      * @param confition 查询条件，不同厂商之间可能会有差别
      */
     getComponentByCondition(confition: any): Promise<Array<Component>>;
-
     /**
      * 添加3D标记
      * @param marker 位置信息
@@ -79,6 +78,14 @@ export interface IBimOperation {
      * 清除所有3D标记
      */
     clear3dMarker(): void;
+    /**
+     * 获取视点
+     */
+    getViewPoint(): any;
+    /**
+     * 设置视点
+     */
+    setViewPoint(): any;
     /**
      * 设置场景显示大小
      * @param width 宽度
