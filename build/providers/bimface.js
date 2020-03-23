@@ -115,19 +115,6 @@ var Bimface = (function () {
     Bimface.prototype.getAllMarkers = function () {
         return this.marker3D.getAllItems();
     };
-    Bimface.prototype.turn3dMarkerOn = function () {
-        if (!this.marker3D) {
-            var markerConfig = new window.Glodon.Bimface.Plugins.Marker3D.Marker3DContainerConfig();
-            markerConfig.viewer = this.viewer3D;
-            this.marker3D = new window.Glodon.Bimface.Plugins.Marker3D.Marker3DContainer(markerConfig);
-        }
-    };
-    Bimface.prototype.clear3dMarker = function () {
-        this.marker3D && this.marker3D.clear();
-    };
-    Bimface.prototype.resize = function (width, height) {
-        this.viewer3D.resize(width, height);
-    };
     Bimface.prototype.add3dMarker = function (marker) {
         if (marker === undefined)
             throw new Error("marker can't be null");
@@ -150,6 +137,25 @@ var Bimface = (function () {
     };
     Bimface.prototype.remove3dMarker = function (markerId) {
         this.marker3D.removeItemById(markerId);
+    };
+    Bimface.prototype.clear3dMarker = function () {
+        this.marker3D && this.marker3D.clear();
+    };
+    Bimface.prototype.getViewPoint = function () {
+        return this.viewer3D.getCameraStatus();
+    };
+    Bimface.prototype.setViewPoint = function () {
+        throw new Error('Method not implemented.');
+    };
+    Bimface.prototype.resize = function (width, height) {
+        this.viewer3D.resize(width, height);
+    };
+    Bimface.prototype.turn3dMarkerOn = function () {
+        if (!this.marker3D) {
+            var markerConfig = new window.Glodon.Bimface.Plugins.Marker3D.Marker3DContainerConfig();
+            markerConfig.viewer = this.viewer3D;
+            this.marker3D = new window.Glodon.Bimface.Plugins.Marker3D.Marker3DContainer(markerConfig);
+        }
     };
     return Bimface;
 }());

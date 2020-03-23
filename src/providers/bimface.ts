@@ -93,31 +93,9 @@ export default class Bimface implements IBimOperation {
     }
 
     /**
-     * 开始3d锚点功能
-     */
-    private turn3dMarkerOn() {
-        if (!this.marker3D) {
-            const markerConfig = new window.Glodon.Bimface.Plugins.Marker3D.Marker3DContainerConfig();
-            markerConfig.viewer = this.viewer3D;
-            this.marker3D = new window.Glodon.Bimface.Plugins.Marker3D.Marker3DContainer(markerConfig);
-        }
-    }
-
-    /**
-     * 清空3d锚点
-     */
-    clear3dMarker() {
-        this.marker3D && this.marker3D.clear();
-    }
-
-    resize(width?: number, height?: number) {
-        this.viewer3D.resize(width, height);
-    }
-
-    /**
      * 添加3d锚点
      */
-    public add3dMarker(marker: Marker3D) {
+    add3dMarker(marker: Marker3D) {
         if (marker === undefined) throw new Error("marker can't be null");
 
         this.turn3dMarkerOn();
@@ -139,8 +117,37 @@ export default class Bimface implements IBimOperation {
     /**
      * 移除3d锚点
      */
-    public remove3dMarker(markerId: string) {
+    remove3dMarker(markerId: string) {
         this.marker3D.removeItemById(markerId);
+    }
+
+    /**
+     * 清空3d锚点
+     */
+    clear3dMarker() {
+        this.marker3D && this.marker3D.clear();
+    }
+
+    getViewPoint() {
+        return this.viewer3D.getCameraStatus();
+    }
+    setViewPoint() {
+        throw new Error('Method not implemented.');
+    }
+
+    resize(width?: number, height?: number) {
+        this.viewer3D.resize(width, height);
+    }
+
+    /**
+     * 开始3d锚点功能
+     */
+    private turn3dMarkerOn() {
+        if (!this.marker3D) {
+            const markerConfig = new window.Glodon.Bimface.Plugins.Marker3D.Marker3DContainerConfig();
+            markerConfig.viewer = this.viewer3D;
+            this.marker3D = new window.Glodon.Bimface.Plugins.Marker3D.Marker3DContainer(markerConfig);
+        }
     }
 
     // private leadManager: LeadLabelManager = new LeadLabelManager(this);
