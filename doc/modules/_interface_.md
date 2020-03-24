@@ -1,4 +1,4 @@
-[bim-operator - v1.0.13](../README.md) › [Globals](../globals.md) › ["interface"](_interface_.md)
+[bim-operator - v1.0.15](../README.md) › [Globals](../globals.md) › ["interface"](_interface_.md)
 
 # External module: "interface"
 
@@ -12,3 +12,4 @@
 * [Marker3D](../interfaces/_interface_.marker3d.md)
 * [ModelBase](../interfaces/_interface_.modelbase.md)
 * [Position](../interfaces/_interface_.position.md)
+* [ViewPoint](../interfaces/_interface_.viewpoint.md)

@@ -1,4 +1,4 @@
-[bim-operator - v1.0.13](../README.md) › [Globals](../globals.md) › ["interface"](../modules/_interface_.md) › [Marker3D](_interface_.marker3d.md)
+[bim-operator - v1.0.15](../README.md) › [Globals](../globals.md) › ["interface"](../modules/_interface_.md) › [Marker3D](_interface_.marker3d.md)
 
 # Interface: Marker3D
 
@@ -27,7 +27,7 @@
 
 • **id**: *string*
 
-*Defined in [interface.ts:97](https://github.com/youkaisteve/bim-operator/blob/cc1e1ce/src/interface.ts#L97)*
+*Defined in [interface.ts:107](https://github.com/youkaisteve/bim-operator/blob/21eefcc/src/interface.ts#L107)*
 
 id
 
@@ -37,7 +37,7 @@ ___
 
 • **onClick**? : *Function*
 
-*Defined in [interface.ts:121](https://github.com/youkaisteve/bim-operator/blob/cc1e1ce/src/interface.ts#L121)*
+*Defined in [interface.ts:131](https://github.com/youkaisteve/bim-operator/blob/21eefcc/src/interface.ts#L131)*
 
 点击事件
 
@@ -47,7 +47,7 @@ ___
 
 • **onHover**? : *Function*
 
-*Defined in [interface.ts:125](https://github.com/youkaisteve/bim-operator/blob/cc1e1ce/src/interface.ts#L125)*
+*Defined in [interface.ts:135](https://github.com/youkaisteve/bim-operator/blob/21eefcc/src/interface.ts#L135)*
 
 hover事件
 
@@ -57,7 +57,7 @@ ___
 
 • **size**? : *number*
 
-*Defined in [interface.ts:109](https://github.com/youkaisteve/bim-operator/blob/cc1e1ce/src/interface.ts#L109)*
+*Defined in [interface.ts:119](https://github.com/youkaisteve/bim-operator/blob/21eefcc/src/interface.ts#L119)*
 
 icon尺寸
 
@@ -67,7 +67,7 @@ ___
 
 • **src**: *string*
 
-*Defined in [interface.ts:105](https://github.com/youkaisteve/bim-operator/blob/cc1e1ce/src/interface.ts#L105)*
+*Defined in [interface.ts:115](https://github.com/youkaisteve/bim-operator/blob/21eefcc/src/interface.ts#L115)*
 
 icon图片路径
 
@@ -77,7 +77,7 @@ ___
 
 • **tooltip**? : *string*
 
-*Defined in [interface.ts:113](https://github.com/youkaisteve/bim-operator/blob/cc1e1ce/src/interface.ts#L113)*
+*Defined in [interface.ts:123](https://github.com/youkaisteve/bim-operator/blob/21eefcc/src/interface.ts#L123)*
 
 提示内容
 
@@ -87,7 +87,7 @@ ___
 
 • **tooltipStyle**? : *Object*
 
-*Defined in [interface.ts:117](https://github.com/youkaisteve/bim-operator/blob/cc1e1ce/src/interface.ts#L117)*
+*Defined in [interface.ts:127](https://github.com/youkaisteve/bim-operator/blob/21eefcc/src/interface.ts#L127)*
 
 tooltip样式
 
@@ -97,6 +97,6 @@ ___
 
 • **worldPosition**: *[Position](_interface_.position.md)*
 
-*Defined in [interface.ts:101](https://github.com/youkaisteve/bim-operator/blob/cc1e1ce/src/interface.ts#L101)*
+*Defined in [interface.ts:111](https://github.com/youkaisteve/bim-operator/blob/21eefcc/src/interface.ts#L111)*
 
 位置
