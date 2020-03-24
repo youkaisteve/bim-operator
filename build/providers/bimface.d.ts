@@ -1,4 +1,9 @@
-import { IBimOperation, Floor, Component, Marker3D, ViewPoint } from '../interface';
+import { IBimOperation } from '../interface';
+import Component from '../model/component';
+import Marker3D from '../model/marker_3d';
+import ViewPoint from '../model/view_point';
+import Floor from '../model/floor';
+import { IsolateOption } from '../enums';
 export default class Bimface implements IBimOperation {
     app: any;
     viewer3D: any;
@@ -6,7 +11,7 @@ export default class Bimface implements IBimOperation {
     marker3D: any;
     loadModel(options: any): Promise<void>;
     getFloors(): Promise<Floor[]>;
-    getFloorsbyFileId(fileId: String): Promise<unknown>;
+    getFloorsbyFileId(fileId: String): Promise<Array<Floor>>;
     getComponentByCondition(confition: any): Promise<Component[]>;
     getAllMarkers(): any;
     add3dMarker(marker: Marker3D): any;
@@ -14,6 +19,7 @@ export default class Bimface implements IBimOperation {
     clear3dMarker(): void;
     getViewPoint(options: any): Promise<ViewPoint>;
     setViewPoint(viewPoint: ViewPoint): void;
+    isolateComponent(componentIds: String[], option: IsolateOption): void;
     resize(width?: number, height?: number): void;
     private turn3dMarkerOn;
 }

@@ -22,6 +22,7 @@
 * [getFloors](_interface_.ibimoperation.md#getfloors)
 * [getFloorsbyFileId](_interface_.ibimoperation.md#getfloorsbyfileid)
 * [getViewPoint](_interface_.ibimoperation.md#getviewpoint)
+* [isolateComponent](_interface_.ibimoperation.md#isolatecomponent)
 * [loadModel](_interface_.ibimoperation.md#loadmodel)
 * [remove3dMarker](_interface_.ibimoperation.md#remove3dmarker)
 * [resize](_interface_.ibimoperation.md#resize)
@@ -31,9 +32,9 @@
 
 ###  add3dMarker
 
-▸ **add3dMarker**(`marker`: [Marker3D](_interface_.marker3d.md)): *string*
+▸ **add3dMarker**(`marker`: [Marker3D](_model_marker_3d_.marker3d.md)): *string*
 
-*Defined in [interface.ts:71](https://github.com/youkaisteve/bim-operator/blob/21eefcc/src/interface.ts#L71)*
+*Defined in [interface.ts:35](https://github.com/youkaisteve/bim-operator/blob/a40aa4f/src/interface.ts#L35)*
 
 添加3D标记
 
@@ -41,7 +42,7 @@
 
 Name | Type | Description |
 ------ | ------ | ------ |
-`marker` | [Marker3D](_interface_.marker3d.md) | 位置信息 |
+`marker` | [Marker3D](_model_marker_3d_.marker3d.md) | 位置信息 |
 
 **Returns:** *string*
 
@@ -53,7 +54,7 @@ ___
 
 ▸ **clear3dMarker**(): *void*
 
-*Defined in [interface.ts:80](https://github.com/youkaisteve/bim-operator/blob/21eefcc/src/interface.ts#L80)*
+*Defined in [interface.ts:44](https://github.com/youkaisteve/bim-operator/blob/a40aa4f/src/interface.ts#L44)*
 
 清除所有3D标记
 
@@ -63,9 +64,9 @@ ___
 
 ###  getComponentByCondition
 
-▸ **getComponentByCondition**(`confition`: any): *Promise‹Array‹[Component](_interface_.component.md)››*
+▸ **getComponentByCondition**(`confition`: any): *Promise‹Array‹[Component](_model_component_.component.md)››*
 
-*Defined in [interface.ts:65](https://github.com/youkaisteve/bim-operator/blob/21eefcc/src/interface.ts#L65)*
+*Defined in [interface.ts:29](https://github.com/youkaisteve/bim-operator/blob/a40aa4f/src/interface.ts#L29)*
 
 根据条件获取构件
 
@@ -75,27 +76,27 @@ Name | Type | Description |
 ------ | ------ | ------ |
 `confition` | any | 查询条件，不同厂商之间可能会有差别  |
 
-**Returns:** *Promise‹Array‹[Component](_interface_.component.md)››*
+**Returns:** *Promise‹Array‹[Component](_model_component_.component.md)››*
 
 ___
 
 ###  getFloors
 
-▸ **getFloors**(): *Promise‹Array‹[Floor](_interface_.floor.md)››*
+▸ **getFloors**(): *Promise‹Array‹[Floor](_model_floor_.floor.md)››*
 
-*Defined in [interface.ts:55](https://github.com/youkaisteve/bim-operator/blob/21eefcc/src/interface.ts#L55)*
+*Defined in [interface.ts:19](https://github.com/youkaisteve/bim-operator/blob/a40aa4f/src/interface.ts#L19)*
 
 获取所有楼层
 
-**Returns:** *Promise‹Array‹[Floor](_interface_.floor.md)››*
+**Returns:** *Promise‹Array‹[Floor](_model_floor_.floor.md)››*
 
 ___
 
 ###  getFloorsbyFileId
 
-▸ **getFloorsbyFileId**(`fileId`: String): *any*
+▸ **getFloorsbyFileId**(`fileId`: String): *Promise‹Array‹[Floor](_model_floor_.floor.md)››*
 
-*Defined in [interface.ts:60](https://github.com/youkaisteve/bim-operator/blob/21eefcc/src/interface.ts#L60)*
+*Defined in [interface.ts:24](https://github.com/youkaisteve/bim-operator/blob/a40aa4f/src/interface.ts#L24)*
 
 获取单个模型的楼层（在集成模型中使用）
 
@@ -105,15 +106,15 @@ Name | Type | Description |
 ------ | ------ | ------ |
 `fileId` | String | 单个模型的id  |
 
-**Returns:** *any*
+**Returns:** *Promise‹Array‹[Floor](_model_floor_.floor.md)››*
 
 ___
 
 ###  getViewPoint
 
-▸ **getViewPoint**(`options`: any): *Promise‹[ViewPoint](_interface_.viewpoint.md)›*
+▸ **getViewPoint**(`options`: any): *Promise‹[ViewPoint](_model_view_point_.viewpoint.md)›*
 
-*Defined in [interface.ts:87](https://github.com/youkaisteve/bim-operator/blob/21eefcc/src/interface.ts#L87)*
+*Defined in [interface.ts:51](https://github.com/youkaisteve/bim-operator/blob/a40aa4f/src/interface.ts#L51)*
 
 获取视点
 
@@ -123,7 +124,26 @@ Name | Type | Description |
 ------ | ------ | ------ |
 `options` | any | 视点参数 |
 
-**Returns:** *Promise‹[ViewPoint](_interface_.viewpoint.md)›*
+**Returns:** *Promise‹[ViewPoint](_model_view_point_.viewpoint.md)›*
+
+___
+
+###  isolateComponent
+
+▸ **isolateComponent**(`componentIds`: Array‹String›, `option`: [IsolateOption](../enums/_enums_.isolateoption.md)): *void*
+
+*Defined in [interface.ts:59](https://github.com/youkaisteve/bim-operator/blob/a40aa4f/src/interface.ts#L59)*
+
+隔离构件
+
+**Parameters:**
+
+Name | Type |
+------ | ------ |
+`componentIds` | Array‹String› |
+`option` | [IsolateOption](../enums/_enums_.isolateoption.md) |
+
+**Returns:** *void*
 
 ___
 
@@ -131,7 +151,7 @@ ___
 
 ▸ **loadModel**(`options`: any): *Promise‹void›*
 
-*Defined in [interface.ts:51](https://github.com/youkaisteve/bim-operator/blob/21eefcc/src/interface.ts#L51)*
+*Defined in [interface.ts:15](https://github.com/youkaisteve/bim-operator/blob/a40aa4f/src/interface.ts#L15)*
 
 加载模型
 
@@ -149,7 +169,7 @@ ___
 
 ▸ **remove3dMarker**(`markerId`: string): *void*
 
-*Defined in [interface.ts:76](https://github.com/youkaisteve/bim-operator/blob/21eefcc/src/interface.ts#L76)*
+*Defined in [interface.ts:40](https://github.com/youkaisteve/bim-operator/blob/a40aa4f/src/interface.ts#L40)*
 
 清空3d锚点
 
@@ -165,9 +185,9 @@ ___
 
 ###  resize
 
-▸ **resize**(`width?`: number, `height?`: number): *any*
+▸ **resize**(`width?`: number, `height?`: number): *void*
 
-*Defined in [interface.ts:97](https://github.com/youkaisteve/bim-operator/blob/21eefcc/src/interface.ts#L97)*
+*Defined in [interface.ts:65](https://github.com/youkaisteve/bim-operator/blob/a40aa4f/src/interface.ts#L65)*
 
 设置场景显示大小
 
@@ -178,15 +198,15 @@ Name | Type | Description |
 `width?` | number | 宽度 |
 `height?` | number | 高度  |
 
-**Returns:** *any*
+**Returns:** *void*
 
 ___
 
 ###  setViewPoint
 
-▸ **setViewPoint**(`viewPoint`: [ViewPoint](_interface_.viewpoint.md)): *any*
+▸ **setViewPoint**(`viewPoint`: [ViewPoint](_model_view_point_.viewpoint.md)): *void*
 
-*Defined in [interface.ts:91](https://github.com/youkaisteve/bim-operator/blob/21eefcc/src/interface.ts#L91)*
+*Defined in [interface.ts:55](https://github.com/youkaisteve/bim-operator/blob/a40aa4f/src/interface.ts#L55)*
 
 设置视点
 
@@ -194,6 +214,6 @@ ___
 
 Name | Type |
 ------ | ------ |
-`viewPoint` | [ViewPoint](_interface_.viewpoint.md) |
+`viewPoint` | [ViewPoint](_model_view_point_.viewpoint.md) |
 
-**Returns:** *any*
+**Returns:** *void*

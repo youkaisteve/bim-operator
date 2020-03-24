@@ -1,5 +1,5 @@
 import { IBimOperation } from './interface';
-export { IBimOperation, Floor, Component } from './interface';
+export { IBimOperation } from './interface';
 export declare const ProviderType: {
     BIMFACE: string;
 };

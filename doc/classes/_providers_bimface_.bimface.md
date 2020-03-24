@@ -30,6 +30,7 @@ bimface操作
 * [getFloors](_providers_bimface_.bimface.md#getfloors)
 * [getFloorsbyFileId](_providers_bimface_.bimface.md#getfloorsbyfileid)
 * [getViewPoint](_providers_bimface_.bimface.md#getviewpoint)
+* [isolateComponent](_providers_bimface_.bimface.md#isolatecomponent)
 * [loadModel](_providers_bimface_.bimface.md#loadmodel)
 * [remove3dMarker](_providers_bimface_.bimface.md#remove3dmarker)
 * [resize](_providers_bimface_.bimface.md#resize)
@@ -42,7 +43,7 @@ bimface操作
 
 • **app**: *any*
 
-*Defined in [providers/bimface.ts:11](https://github.com/youkaisteve/bim-operator/blob/21eefcc/src/providers/bimface.ts#L11)*
+*Defined in [providers/bimface.ts:16](https://github.com/youkaisteve/bim-operator/blob/a40aa4f/src/providers/bimface.ts#L16)*
 
 bimface相关对象
 
@@ -52,7 +53,7 @@ ___
 
 • **marker3D**: *any*
 
-*Defined in [providers/bimface.ts:14](https://github.com/youkaisteve/bim-operator/blob/21eefcc/src/providers/bimface.ts#L14)*
+*Defined in [providers/bimface.ts:19](https://github.com/youkaisteve/bim-operator/blob/a40aa4f/src/providers/bimface.ts#L19)*
 
 ___
 
@@ -60,7 +61,7 @@ ___
 
 • **viewer2D**: *any*
 
-*Defined in [providers/bimface.ts:13](https://github.com/youkaisteve/bim-operator/blob/21eefcc/src/providers/bimface.ts#L13)*
+*Defined in [providers/bimface.ts:18](https://github.com/youkaisteve/bim-operator/blob/a40aa4f/src/providers/bimface.ts#L18)*
 
 ___
 
@@ -68,17 +69,17 @@ ___
 
 • **viewer3D**: *any*
 
-*Defined in [providers/bimface.ts:12](https://github.com/youkaisteve/bim-operator/blob/21eefcc/src/providers/bimface.ts#L12)*
+*Defined in [providers/bimface.ts:17](https://github.com/youkaisteve/bim-operator/blob/a40aa4f/src/providers/bimface.ts#L17)*
 
 ## Methods
 
 ###  add3dMarker
 
-▸ **add3dMarker**(`marker`: [Marker3D](../interfaces/_interface_.marker3d.md)): *any*
+▸ **add3dMarker**(`marker`: [Marker3D](../interfaces/_model_marker_3d_.marker3d.md)): *any*
 
 *Implementation of [IBimOperation](../interfaces/_interface_.ibimoperation.md)*
 
-*Defined in [providers/bimface.ts:98](https://github.com/youkaisteve/bim-operator/blob/21eefcc/src/providers/bimface.ts#L98)*
+*Defined in [providers/bimface.ts:103](https://github.com/youkaisteve/bim-operator/blob/a40aa4f/src/providers/bimface.ts#L103)*
 
 添加3d锚点
 
@@ -86,7 +87,7 @@ ___
 
 Name | Type |
 ------ | ------ |
-`marker` | [Marker3D](../interfaces/_interface_.marker3d.md) |
+`marker` | [Marker3D](../interfaces/_model_marker_3d_.marker3d.md) |
 
 **Returns:** *any*
 
@@ -98,7 +99,7 @@ ___
 
 *Implementation of [IBimOperation](../interfaces/_interface_.ibimoperation.md)*
 
-*Defined in [providers/bimface.ts:127](https://github.com/youkaisteve/bim-operator/blob/21eefcc/src/providers/bimface.ts#L127)*
+*Defined in [providers/bimface.ts:132](https://github.com/youkaisteve/bim-operator/blob/a40aa4f/src/providers/bimface.ts#L132)*
 
 清空3d锚点
 
@@ -110,7 +111,7 @@ ___
 
 ▸ **getAllMarkers**(): *any*
 
-*Defined in [providers/bimface.ts:91](https://github.com/youkaisteve/bim-operator/blob/21eefcc/src/providers/bimface.ts#L91)*
+*Defined in [providers/bimface.ts:96](https://github.com/youkaisteve/bim-operator/blob/a40aa4f/src/providers/bimface.ts#L96)*
 
 **Returns:** *any*
 
@@ -118,11 +119,11 @@ ___
 
 ###  getComponentByCondition
 
-▸ **getComponentByCondition**(`confition`: any): *Promise‹[Component](../interfaces/_interface_.component.md)[]›*
+▸ **getComponentByCondition**(`confition`: any): *Promise‹[Component](../interfaces/_model_component_.component.md)[]›*
 
 *Implementation of [IBimOperation](../interfaces/_interface_.ibimoperation.md)*
 
-*Defined in [providers/bimface.ts:82](https://github.com/youkaisteve/bim-operator/blob/21eefcc/src/providers/bimface.ts#L82)*
+*Defined in [providers/bimface.ts:87](https://github.com/youkaisteve/bim-operator/blob/a40aa4f/src/providers/bimface.ts#L87)*
 
 根据条件查询构件
 
@@ -132,31 +133,31 @@ Name | Type | Description |
 ------ | ------ | ------ |
 `confition` | any | 查询条件 |
 
-**Returns:** *Promise‹[Component](../interfaces/_interface_.component.md)[]›*
+**Returns:** *Promise‹[Component](../interfaces/_model_component_.component.md)[]›*
 
 ___
 
 ###  getFloors
 
-▸ **getFloors**(): *Promise‹[Floor](../interfaces/_interface_.floor.md)[]›*
+▸ **getFloors**(): *Promise‹[Floor](../interfaces/_model_floor_.floor.md)[]›*
 
 *Implementation of [IBimOperation](../interfaces/_interface_.ibimoperation.md)*
 
-*Defined in [providers/bimface.ts:63](https://github.com/youkaisteve/bim-operator/blob/21eefcc/src/providers/bimface.ts#L63)*
+*Defined in [providers/bimface.ts:68](https://github.com/youkaisteve/bim-operator/blob/a40aa4f/src/providers/bimface.ts#L68)*
 
 获取楼层
 
-**Returns:** *Promise‹[Floor](../interfaces/_interface_.floor.md)[]›*
+**Returns:** *Promise‹[Floor](../interfaces/_model_floor_.floor.md)[]›*
 
 ___
 
 ###  getFloorsbyFileId
 
-▸ **getFloorsbyFileId**(`fileId`: String): *Promise‹unknown›*
+▸ **getFloorsbyFileId**(`fileId`: String): *Promise‹Array‹[Floor](../interfaces/_model_floor_.floor.md)››*
 
 *Implementation of [IBimOperation](../interfaces/_interface_.ibimoperation.md)*
 
-*Defined in [providers/bimface.ts:72](https://github.com/youkaisteve/bim-operator/blob/21eefcc/src/providers/bimface.ts#L72)*
+*Defined in [providers/bimface.ts:77](https://github.com/youkaisteve/bim-operator/blob/a40aa4f/src/providers/bimface.ts#L77)*
 
 获取单个模型的楼层（在集成模型中使用）
 
@@ -166,17 +167,17 @@ Name | Type | Description |
 ------ | ------ | ------ |
 `fileId` | String | 模型文件id  |
 
-**Returns:** *Promise‹unknown›*
+**Returns:** *Promise‹Array‹[Floor](../interfaces/_model_floor_.floor.md)››*
 
 ___
 
 ###  getViewPoint
 
-▸ **getViewPoint**(`options`: any): *Promise‹[ViewPoint](../interfaces/_interface_.viewpoint.md)›*
+▸ **getViewPoint**(`options`: any): *Promise‹[ViewPoint](../interfaces/_model_view_point_.viewpoint.md)›*
 
 *Implementation of [IBimOperation](../interfaces/_interface_.ibimoperation.md)*
 
-*Defined in [providers/bimface.ts:131](https://github.com/youkaisteve/bim-operator/blob/21eefcc/src/providers/bimface.ts#L131)*
+*Defined in [providers/bimface.ts:136](https://github.com/youkaisteve/bim-operator/blob/a40aa4f/src/providers/bimface.ts#L136)*
 
 **Parameters:**
 
@@ -184,7 +185,24 @@ Name | Type |
 ------ | ------ |
 `options` | any |
 
-**Returns:** *Promise‹[ViewPoint](../interfaces/_interface_.viewpoint.md)›*
+**Returns:** *Promise‹[ViewPoint](../interfaces/_model_view_point_.viewpoint.md)›*
+
+___
+
+###  isolateComponent
+
+▸ **isolateComponent**(`componentIds`: String[], `option`: [IsolateOption](../enums/_enums_.isolateoption.md)): *void*
+
+*Defined in [providers/bimface.ts:160](https://github.com/youkaisteve/bim-operator/blob/a40aa4f/src/providers/bimface.ts#L160)*
+
+**Parameters:**
+
+Name | Type |
+------ | ------ |
+`componentIds` | String[] |
+`option` | [IsolateOption](../enums/_enums_.isolateoption.md) |
+
+**Returns:** *void*
 
 ___
 
@@ -194,7 +212,7 @@ ___
 
 *Implementation of [IBimOperation](../interfaces/_interface_.ibimoperation.md)*
 
-*Defined in [providers/bimface.ts:24](https://github.com/youkaisteve/bim-operator/blob/21eefcc/src/providers/bimface.ts#L24)*
+*Defined in [providers/bimface.ts:29](https://github.com/youkaisteve/bim-operator/blob/a40aa4f/src/providers/bimface.ts#L29)*
 
 加载模型
 
@@ -214,7 +232,7 @@ ___
 
 *Implementation of [IBimOperation](../interfaces/_interface_.ibimoperation.md)*
 
-*Defined in [providers/bimface.ts:120](https://github.com/youkaisteve/bim-operator/blob/21eefcc/src/providers/bimface.ts#L120)*
+*Defined in [providers/bimface.ts:125](https://github.com/youkaisteve/bim-operator/blob/a40aa4f/src/providers/bimface.ts#L125)*
 
 移除3d锚点
 
@@ -234,7 +252,7 @@ ___
 
 *Implementation of [IBimOperation](../interfaces/_interface_.ibimoperation.md)*
 
-*Defined in [providers/bimface.ts:154](https://github.com/youkaisteve/bim-operator/blob/21eefcc/src/providers/bimface.ts#L154)*
+*Defined in [providers/bimface.ts:164](https://github.com/youkaisteve/bim-operator/blob/a40aa4f/src/providers/bimface.ts#L164)*
 
 **Parameters:**
 
@@ -249,17 +267,17 @@ ___
 
 ###  setViewPoint
 
-▸ **setViewPoint**(`viewPoint`: [ViewPoint](../interfaces/_interface_.viewpoint.md)): *void*
+▸ **setViewPoint**(`viewPoint`: [ViewPoint](../interfaces/_model_view_point_.viewpoint.md)): *void*
 
 *Implementation of [IBimOperation](../interfaces/_interface_.ibimoperation.md)*
 
-*Defined in [providers/bimface.ts:150](https://github.com/youkaisteve/bim-operator/blob/21eefcc/src/providers/bimface.ts#L150)*
+*Defined in [providers/bimface.ts:156](https://github.com/youkaisteve/bim-operator/blob/a40aa4f/src/providers/bimface.ts#L156)*
 
 **Parameters:**
 
 Name | Type |
 ------ | ------ |
-`viewPoint` | [ViewPoint](../interfaces/_interface_.viewpoint.md) |
+`viewPoint` | [ViewPoint](../interfaces/_model_view_point_.viewpoint.md) |
 
 **Returns:** *void*
 
@@ -269,7 +287,7 @@ ___
 
 ▸ **turn3dMarkerOn**(): *void*
 
-*Defined in [providers/bimface.ts:161](https://github.com/youkaisteve/bim-operator/blob/21eefcc/src/providers/bimface.ts#L161)*
+*Defined in [providers/bimface.ts:171](https://github.com/youkaisteve/bim-operator/blob/a40aa4f/src/providers/bimface.ts#L171)*
 
 开始3d锚点功能
 

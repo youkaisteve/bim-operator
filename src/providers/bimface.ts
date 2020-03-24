@@ -1,5 +1,10 @@
-import { IBimOperation, Floor, Component, Marker3D, ViewPoint } from '../interface';
+import { IBimOperation } from '../interface';
 import remoteLoad from '../util/remote-load';
+import Component from '../model/component';
+import Marker3D from '../model/marker_3d';
+import ViewPoint from '../model/view_point';
+import Floor from '../model/floor';
+import { IsolateOption } from '../enums';
 
 /**
  * bimface操作
@@ -69,7 +74,7 @@ export default class Bimface implements IBimOperation {
      * 获取单个模型的楼层（在集成模型中使用）
      * @param fileId 模型文件id
      */
-    getFloorsbyFileId(fileId: String) {
+    getFloorsbyFileId(fileId: String): Promise<Array<Floor>> {
         return new Promise(resolve => {
             this.viewer3D.getFloorsbyFileId(fileId, resolve);
         });
@@ -147,8 +152,13 @@ export default class Bimface implements IBimOperation {
             });
         });
     }
+
     setViewPoint(viewPoint: ViewPoint) {
         if (viewPoint && viewPoint.cameraStatus) this.viewer3D.setCameraStatus(viewPoint.cameraStatus);
+    }
+
+    isolateComponent(componentIds: String[], option: IsolateOption): void {
+        this.viewer3D.isolateComponentsById(componentIds, option);
     }
 
     resize(width?: number, height?: number) {

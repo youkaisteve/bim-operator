@@ -165,6 +165,9 @@ var Bimface = (function () {
         if (viewPoint && viewPoint.cameraStatus)
             this.viewer3D.setCameraStatus(viewPoint.cameraStatus);
     };
+    Bimface.prototype.isolateComponent = function (componentIds, option) {
+        this.viewer3D.isolateComponentsById(componentIds, option);
+    };
     Bimface.prototype.resize = function (width, height) {
         this.viewer3D.resize(width, height);
     };
