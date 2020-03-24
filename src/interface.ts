@@ -1,44 +1,8 @@
-/**
- * 模型基础信息
- */
-export interface ModelBase {
-    /**
-     * 单模型id
-     */
-    fileId: String;
-    /**
-     * 组合模型id
-     */
-    integrateId?: String;
-}
-
-/**
- * 楼层信息
- */
-export interface Floor extends ModelBase {
-    /**
-     * 楼层id
-     */
-    floorId: String | Number;
-    /**
-     * 楼层名称
-     */
-    floorName: String;
-}
-
-/**
- * 构件信息
- */
-export interface Component extends ModelBase {
-    /**
-     * 构件id
-     */
-    componentId: String | Number;
-    /**
-     * 构件名称
-     */
-    componentName: String;
-}
+import Floor from './model/floor';
+import Component from './model/component';
+import ViewPoint from './model/view_point';
+import Marker3D from './model/marker_3d';
+import { IsolateOption } from './enums';
 
 /**
  * 模型操作接口
@@ -57,7 +21,7 @@ export interface IBimOperation {
      * 获取单个模型的楼层（在集成模型中使用）
      * @param fileId 单个模型的id
      */
-    getFloorsbyFileId(fileId: String);
+    getFloorsbyFileId(fileId: String): Promise<Array<Floor>>;
     /**
      * 根据条件获取构件
      * @param confition 查询条件，不同厂商之间可能会有差别
@@ -88,78 +52,15 @@ export interface IBimOperation {
     /**
      * 设置视点
      */
-    setViewPoint(viewPoint: ViewPoint): any;
+    setViewPoint(viewPoint: ViewPoint): void;
+    /**
+     * 隔离构件
+     */
+    isolateComponent(componentIds: Array<String>, option: IsolateOption): void;
     /**
      * 设置场景显示大小
      * @param width 宽度
      * @param height 高度
      */
-    resize(width?: number, height?: number);
-}
-
-/**
- * 3D标记
- */
-export interface Marker3D {
-    /**
-     * id
-     */
-    id: string;
-    /**
-     * 位置
-     */
-    worldPosition: Position;
-    /**
-     * icon图片路径
-     */
-    src: string;
-    /**
-     * icon尺寸
-     */
-    size?: number;
-    /**
-     * 提示内容
-     */
-    tooltip?: string;
-    /**
-     * tooltip样式
-     */
-    tooltipStyle?: Object;
-    /**
-     * 点击事件
-     */
-    onClick?: Function;
-    /**
-     * hover事件
-     */
-    onHover?: Function;
-}
-
-/**
- * 模型位置信息
- */
-export interface Position {
-    /**
-     * x
-     */
-    x: number;
-    /**
-     * y
-     */
-    y: number;
-    /**
-     * z
-     */
-    z?: string;
-}
-
-export interface ViewPoint {
-    /**
-     * 视点的相机状态
-     */
-    cameraStatus: Object;
-    /**
-     * 视点的缩略图(base64——data:image/png;base64,xxxx)
-     */
-    thumbnail: any;
+    resize(width?: number, height?: number): void;
 }

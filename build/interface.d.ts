@@ -1,43 +1,18 @@
-export interface ModelBase {
-    fileId: String;
-    integrateId?: String;
-}
-export interface Floor extends ModelBase {
-    floorId: String | Number;
-    floorName: String;
-}
-export interface Component extends ModelBase {
-    componentId: String | Number;
-    componentName: String;
-}
+import Floor from './model/floor';
+import Component from './model/component';
+import ViewPoint from './model/view_point';
+import Marker3D from './model/marker_3d';
+import { IsolateOption } from './enums';
 export interface IBimOperation {
     loadModel(options: any): Promise<void>;
     getFloors(): Promise<Array<Floor>>;
-    getFloorsbyFileId(fileId: String): any;
+    getFloorsbyFileId(fileId: String): Promise<Array<Floor>>;
     getComponentByCondition(confition: any): Promise<Array<Component>>;
     add3dMarker(marker: Marker3D): string;
     remove3dMarker(markerId: string): void;
     clear3dMarker(): void;
     getViewPoint(options: any): Promise<ViewPoint>;
-    setViewPoint(viewPoint: ViewPoint): any;
-    resize(width?: number, height?: number): any;
-}
-export interface Marker3D {
-    id: string;
-    worldPosition: Position;
-    src: string;
-    size?: number;
-    tooltip?: string;
-    tooltipStyle?: Object;
-    onClick?: Function;
-    onHover?: Function;
-}
-export interface Position {
-    x: number;
-    y: number;
-    z?: string;
-}
-export interface ViewPoint {
-    cameraStatus: Object;
-    thumbnail: any;
+    setViewPoint(viewPoint: ViewPoint): void;
+    isolateComponent(componentIds: Array<String>, option: IsolateOption): void;
+    resize(width?: number, height?: number): void;
 }
