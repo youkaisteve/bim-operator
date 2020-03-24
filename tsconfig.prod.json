@@ -4,6 +4,6 @@
         "outDir": "./build",
         "removeComments": true,
         "sourceMap": false,
-        "declaration": false
+        "declaration": true
     }
 }
