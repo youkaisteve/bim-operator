@@ -80,12 +80,15 @@ export interface IBimOperation {
     clear3dMarker(): void;
     /**
      * 获取视点
+     * @param {Object} options 视点参数
+     * @param {Object} options.color 颜色,如#FFFFFF
+     * @param {number} options.opacity 不透明度
      */
-    getViewPoint(): any;
+    getViewPoint(options): Promise<ViewPoint>;
     /**
      * 设置视点
      */
-    setViewPoint(): any;
+    setViewPoint(viewPoint: ViewPoint): any;
     /**
      * 设置场景显示大小
      * @param width 宽度
@@ -148,4 +151,15 @@ export interface Position {
      * z
      */
     z?: string;
+}
+
+export interface ViewPoint {
+    /**
+     * 视点的相机状态
+     */
+    cameraStatus: Object;
+    /**
+     * 视点的缩略图(base64——data:image/png;base64,xxxx)
+     */
+    thumbnail: any;
 }

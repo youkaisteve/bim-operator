@@ -141,11 +141,29 @@ var Bimface = (function () {
     Bimface.prototype.clear3dMarker = function () {
         this.marker3D && this.marker3D.clear();
     };
-    Bimface.prototype.getViewPoint = function () {
-        return this.viewer3D.getCameraStatus();
+    Bimface.prototype.getViewPoint = function (options) {
+        var _this = this;
+        var cameraStatus = this.viewer3D.getCameraStatus();
+        var color;
+        if (options && options.color) {
+            color = new window.Glodon.Web.Graphics.Color(options.color, options.opacity || 0);
+        }
+        else {
+            color = new window.Glodon.Web.Graphics.Color(0, 0, 0, 0);
+        }
+        return new Promise(function (resolve) {
+            return _this.viewer3D.createSnapshotAsync(color, function (data) {
+                var viewPoint = {
+                    cameraStatus: cameraStatus,
+                    thumbnail: data
+                };
+                resolve(viewPoint);
+            });
+        });
     };
-    Bimface.prototype.setViewPoint = function () {
-        throw new Error('Method not implemented.');
+    Bimface.prototype.setViewPoint = function (viewPoint) {
+        if (viewPoint && viewPoint.cameraStatus)
+            this.viewer3D.setCameraStatus(viewPoint.cameraStatus);
     };
     Bimface.prototype.resize = function (width, height) {
         this.viewer3D.resize(width, height);

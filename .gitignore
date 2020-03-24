@@ -14,3 +14,4 @@ run/
 .tsbuildinfo.*
 .vscode
 dist
+build/package.json

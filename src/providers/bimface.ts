@@ -1,4 +1,4 @@
-import { IBimOperation, Floor, Component, Marker3D } from '../interface';
+import { IBimOperation, Floor, Component, Marker3D, ViewPoint } from '../interface';
 import remoteLoad from '../util/remote-load';
 
 /**
@@ -128,11 +128,27 @@ export default class Bimface implements IBimOperation {
         this.marker3D && this.marker3D.clear();
     }
 
-    getViewPoint() {
-        return this.viewer3D.getCameraStatus();
+    getViewPoint(options): Promise<ViewPoint> {
+        const cameraStatus = this.viewer3D.getCameraStatus();
+        let color;
+        if (options && options.color) {
+            color = new window.Glodon.Web.Graphics.Color(options.color, options.opacity || 0);
+        } else {
+            color = new window.Glodon.Web.Graphics.Color(0, 0, 0, 0);
+        }
+
+        return new Promise(resolve => {
+            return this.viewer3D.createSnapshotAsync(color, data => {
+                const viewPoint: ViewPoint = {
+                    cameraStatus: cameraStatus,
+                    thumbnail: data
+                };
+                resolve(viewPoint);
+            });
+        });
     }
-    setViewPoint() {
-        throw new Error('Method not implemented.');
+    setViewPoint(viewPoint: ViewPoint) {
+        if (viewPoint && viewPoint.cameraStatus) this.viewer3D.setCameraStatus(viewPoint.cameraStatus);
     }
 
     resize(width?: number, height?: number) {
