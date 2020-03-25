@@ -1,9 +1,9 @@
 import Floor from './model/floor';
-import Component from './model/component';
 import ViewPoint from './model/view_point';
 import Marker3D from './model/marker_3d';
 import { IsolateOption } from './enums';
 import { ComponentFilter } from './model/filter';
+import { HighlightOption } from './model';
 
 /**
  * 模型操作接口
@@ -25,9 +25,9 @@ export interface IBimOperation {
     getFloorsbyFileId(fileId: String): Promise<Array<Floor>>;
     /**
      * 根据条件获取构件
-     * @param confition 查询条件，不同厂商之间可能会有差别
+     * @param conditions 查询条件，不同厂商之间可能会有差别
      */
-    getComponentByCondition(fileId: String, confition: Array<ComponentFilter>): Promise<Array<Component>>;
+    getComponentByCondition(fileId: String, conditions: Array<ComponentFilter>): Promise<Array<String>>;
     /**
      * 添加3D标记
      * @param marker 位置信息
@@ -46,8 +46,8 @@ export interface IBimOperation {
     /**
      * 获取视点
      * @param {Object} options 视点参数
-     * @param {Object} options.color 颜色,如#FFFFFF
-     * @param {number} options.opacity 不透明度
+     * @param {String}} options.color 颜色,如#FFFFFF
+     * @param {number} options.opacity 不透明度,默认为0，即透明
      */
     getViewPoint(options): Promise<ViewPoint>;
     /**
@@ -66,6 +66,18 @@ export interface IBimOperation {
      * 清空隔离
      */
     clearIsolation();
+    /**
+     * 突出构件
+     * @param componentIds 构件ids
+     * @param options 高亮选项
+     */
+    highlightComponents(componentIds: String[], options: HighlightOption): void;
+
+    /**
+     * 清除所有高亮构件
+     */
+    clearAllHighlightComponents();
+
     /**
      * 设置场景显示大小
      * @param width 宽度

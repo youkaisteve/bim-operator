@@ -1,12 +1,12 @@
 import { IBimOperation } from '../interface';
 import remoteLoad from '../util/remote-load';
-import Component from '../model/component';
 import Marker3D from '../model/marker_3d';
 import ViewPoint from '../model/view_point';
 import Floor from '../model/floor';
 import { IsolateOption } from '../enums';
 import { ComponentFilter } from '../model/filter';
 import needRender from '../decorators/render';
+import { HighlightOption } from '../model';
 
 /**
  * bimface操作
@@ -84,14 +84,15 @@ export default class Bimface implements IBimOperation {
     /**
      * 根据条件查询构件
      * @param {String} fileId 模型id
-     * @param {Array<ComponentFilter>} confition 查询条件
+     * @param {Array<ComponentFilter>} conditions 查询条件
      */
-    async getComponentByCondition(fileId: String, confition: Array<ComponentFilter>): Promise<Component[]> {
+    async getComponentByCondition(fileId: String, conditions: Array<ComponentFilter>): Promise<String[]> {
         if (!fileId) {
             throw new Error('fileId不能为空');
         }
+
         return new Promise(resolve => {
-            this.viewer3D.getElementByConditions(fileId, confition, resolve);
+            this.viewer3D.getElementByConditions(fileId, conditions, resolve);
         });
     }
 
@@ -166,12 +167,32 @@ export default class Bimface implements IBimOperation {
 
     @needRender()
     isolateComponentByCondition(conditions: Array<ComponentFilter>, option: IsolateOption): void {
+        console.log(conditions);
         this.viewer3D.isolateComponentsByObjectData(conditions, option);
     }
 
     @needRender()
     clearIsolation() {
         this.viewer3D.clearIsolation();
+    }
+
+    @needRender()
+    highlightComponents(componentIds: String[], options: HighlightOption) {
+        this.viewer3D.enableBlinkComponents(true);
+        if (componentIds && componentIds.length > 0) {
+            if (options) {
+                this.viewer3D.setBlinkColor(
+                    new window.Glodon.Web.Graphics.Color(options.color || '#FF0000', options.opacity || 0.8)
+                );
+                this.viewer3D.setBlinkIntervalTime(options.intervalTime || 200);
+            }
+            this.viewer3D.addBlinkComponentsById(componentIds);
+        }
+    }
+
+    @needRender()
+    clearAllHighlightComponents() {
+        this.viewer3D.clearAllBlinkComponents();
     }
 
     resize(width?: number, height?: number) {
@@ -188,6 +209,25 @@ export default class Bimface implements IBimOperation {
             this.marker3D = new window.Glodon.Bimface.Plugins.Marker3D.Marker3DContainer(markerConfig);
         }
     }
+
+    // /**
+    //  * 生成条件
+    //  * @param filters 条件对象
+    //  */
+    // private transferComponentFilter(filters: Array<ComponentFilter>) {
+    //     const result: Object[] = [];
+    //     if (filters && filters.length > 0) {
+    //         filters.forEach(filter => {
+    //             if (Reflect.ownKeys(filter).length > 0) {
+    //                 const temp: Object = {};
+    //                 if (filter.categoryId) temp['categoryId'] = filter.categoryId;
+    //                 if (filter.levelName) temp['levelName'] = filter.levelName;
+    //                 result.push(temp);
+    //             }
+    //         });
+    //     }
+    //     return result;
+    // }
 
     // private leadManager: LeadLabelManager = new LeadLabelManager(this);
 
