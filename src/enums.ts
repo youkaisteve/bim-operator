@@ -5,9 +5,9 @@ export enum IsolateOption {
     /**
      * 隐藏其他构件
      */
-    HideOthers,
+    HideOthers = 'HideOthers',
     /**
      * 半透明其他构件
      */
-    MakeOthersTranslucent
+    MakeOthersTranslucent = 'MakeOthersTranslucent'
 }

@@ -122,7 +122,7 @@ var Bimface = (function () {
             });
         });
     };
-    Bimface.prototype.getComponentByCondition = function (fileId, confition) {
+    Bimface.prototype.getComponentByCondition = function (fileId, conditions) {
         return __awaiter(this, void 0, void 0, function () {
             var _this = this;
             return __generator(this, function (_a) {
@@ -130,7 +130,7 @@ var Bimface = (function () {
                     throw new Error('fileId不能为空');
                 }
                 return [2, new Promise(function (resolve) {
-                        _this.viewer3D.getElementByConditions(fileId, confition, resolve);
+                        _this.viewer3D.getElementByConditions(fileId, conditions, resolve);
                     })];
             });
         });
@@ -196,10 +196,24 @@ var Bimface = (function () {
         this.viewer3D.isolateComponentsById(componentIds, option);
     };
     Bimface.prototype.isolateComponentByCondition = function (conditions, option) {
+        console.log(conditions);
         this.viewer3D.isolateComponentsByObjectData(conditions, option);
     };
     Bimface.prototype.clearIsolation = function () {
         this.viewer3D.clearIsolation();
+    };
+    Bimface.prototype.highlightComponents = function (componentIds, options) {
+        this.viewer3D.enableBlinkComponents(true);
+        if (componentIds && componentIds.length > 0) {
+            if (options) {
+                this.viewer3D.setBlinkColor(new window.Glodon.Web.Graphics.Color(options.color || '#FF0000', options.opacity || 0.8));
+                this.viewer3D.setBlinkIntervalTime(options.intervalTime || 200);
+            }
+            this.viewer3D.addBlinkComponentsById(componentIds);
+        }
+    };
+    Bimface.prototype.clearAllHighlightComponents = function () {
+        this.viewer3D.clearAllBlinkComponents();
     };
     Bimface.prototype.resize = function (width, height) {
         this.viewer3D.resize(width, height);
@@ -220,13 +234,13 @@ var Bimface = (function () {
     __decorate([
         render_1.default(),
         __metadata("design:type", Function),
-        __metadata("design:paramtypes", [Array, Number]),
+        __metadata("design:paramtypes", [Array, String]),
         __metadata("design:returntype", void 0)
     ], Bimface.prototype, "isolateComponent", null);
     __decorate([
         render_1.default(),
         __metadata("design:type", Function),
-        __metadata("design:paramtypes", [Array, Number]),
+        __metadata("design:paramtypes", [Array, String]),
         __metadata("design:returntype", void 0)
     ], Bimface.prototype, "isolateComponentByCondition", null);
     __decorate([
@@ -235,6 +249,18 @@ var Bimface = (function () {
         __metadata("design:paramtypes", []),
         __metadata("design:returntype", void 0)
     ], Bimface.prototype, "clearIsolation", null);
+    __decorate([
+        render_1.default(),
+        __metadata("design:type", Function),
+        __metadata("design:paramtypes", [Array, Object]),
+        __metadata("design:returntype", void 0)
+    ], Bimface.prototype, "highlightComponents", null);
+    __decorate([
+        render_1.default(),
+        __metadata("design:type", Function),
+        __metadata("design:paramtypes", []),
+        __metadata("design:returntype", void 0)
+    ], Bimface.prototype, "clearAllHighlightComponents", null);
     return Bimface;
 }());
 exports.default = Bimface;
