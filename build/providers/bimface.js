@@ -10,6 +10,15 @@ var __assign = (this && this.__assign) || function () {
     };
     return __assign.apply(this, arguments);
 };
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
 var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
     function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
     return new (P || (P = Promise))(function (resolve, reject) {
@@ -48,6 +57,8 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var remote_load_1 = require("../util/remote-load");
+var enums_1 = require("../enums");
+var render_1 = require("../decorators/render");
 var Bimface = (function () {
     function Bimface() {
     }
@@ -92,24 +103,36 @@ var Bimface = (function () {
         });
     };
     Bimface.prototype.getFloors = function () {
-        var _this = this;
-        return new Promise(function (resolve) {
-            _this.viewer3D.getFloors(resolve);
+        return __awaiter(this, void 0, void 0, function () {
+            var _this = this;
+            return __generator(this, function (_a) {
+                return [2, new Promise(function (resolve) {
+                        _this.viewer3D.getFloors(resolve);
+                    })];
+            });
         });
     };
     Bimface.prototype.getFloorsbyFileId = function (fileId) {
-        var _this = this;
-        return new Promise(function (resolve) {
-            _this.viewer3D.getFloorsbyFileId(fileId, resolve);
+        return __awaiter(this, void 0, void 0, function () {
+            var _this = this;
+            return __generator(this, function (_a) {
+                return [2, new Promise(function (resolve) {
+                        _this.viewer3D.getFloorsbyFileId(fileId, resolve);
+                    })];
+            });
         });
     };
-    Bimface.prototype.getComponentByCondition = function (confition) {
-        var _this = this;
-        if (!confition.fileId) {
-            throw new Error('fileId不能为空');
-        }
-        return new Promise(function (resolve) {
-            _this.viewer3D.getElementByConditions(confition.fileId, confition, resolve);
+    Bimface.prototype.getComponentByCondition = function (fileId, confition) {
+        return __awaiter(this, void 0, void 0, function () {
+            var _this = this;
+            return __generator(this, function (_a) {
+                if (!fileId) {
+                    throw new Error('fileId不能为空');
+                }
+                return [2, new Promise(function (resolve) {
+                        _this.viewer3D.getElementByConditions(fileId, confition, resolve);
+                    })];
+            });
         });
     };
     Bimface.prototype.getAllMarkers = function () {
@@ -142,22 +165,26 @@ var Bimface = (function () {
         this.marker3D && this.marker3D.clear();
     };
     Bimface.prototype.getViewPoint = function (options) {
-        var _this = this;
-        var cameraStatus = this.viewer3D.getCameraStatus();
-        var color;
-        if (options && options.color) {
-            color = new window.Glodon.Web.Graphics.Color(options.color, options.opacity || 0);
-        }
-        else {
-            color = new window.Glodon.Web.Graphics.Color(0, 0, 0, 0);
-        }
-        return new Promise(function (resolve) {
-            return _this.viewer3D.createSnapshotAsync(color, function (data) {
-                var viewPoint = {
-                    cameraStatus: cameraStatus,
-                    thumbnail: data
-                };
-                resolve(viewPoint);
+        return __awaiter(this, void 0, void 0, function () {
+            var cameraStatus, color;
+            var _this = this;
+            return __generator(this, function (_a) {
+                cameraStatus = this.viewer3D.getCameraStatus();
+                if (options && options.color) {
+                    color = new window.Glodon.Web.Graphics.Color(options.color, options.opacity || 0);
+                }
+                else {
+                    color = new window.Glodon.Web.Graphics.Color(0, 0, 0, 0);
+                }
+                return [2, new Promise(function (resolve) {
+                        return _this.viewer3D.createSnapshotAsync(color, function (data) {
+                            var viewPoint = {
+                                cameraStatus: cameraStatus,
+                                thumbnail: data
+                            };
+                            resolve(viewPoint);
+                        });
+                    })];
             });
         });
     };
@@ -167,6 +194,12 @@ var Bimface = (function () {
     };
     Bimface.prototype.isolateComponent = function (componentIds, option) {
         this.viewer3D.isolateComponentsById(componentIds, option);
+    };
+    Bimface.prototype.isolateComponentByCondition = function (conditions, option) {
+        this.viewer3D.isolateComponentsByObjectData(conditions, option);
+    };
+    Bimface.prototype.clearIsolation = function () {
+        this.viewer3D.clearIsolation();
     };
     Bimface.prototype.resize = function (width, height) {
         this.viewer3D.resize(width, height);
@@ -178,6 +211,30 @@ var Bimface = (function () {
             this.marker3D = new window.Glodon.Bimface.Plugins.Marker3D.Marker3DContainer(markerConfig);
         }
     };
+    __decorate([
+        render_1.default(),
+        __metadata("design:type", Function),
+        __metadata("design:paramtypes", [Object]),
+        __metadata("design:returntype", void 0)
+    ], Bimface.prototype, "add3dMarker", null);
+    __decorate([
+        render_1.default(),
+        __metadata("design:type", Function),
+        __metadata("design:paramtypes", [Array, Number]),
+        __metadata("design:returntype", void 0)
+    ], Bimface.prototype, "isolateComponent", null);
+    __decorate([
+        render_1.default(),
+        __metadata("design:type", Function),
+        __metadata("design:paramtypes", [Array, Number]),
+        __metadata("design:returntype", void 0)
+    ], Bimface.prototype, "isolateComponentByCondition", null);
+    __decorate([
+        render_1.default(),
+        __metadata("design:type", Function),
+        __metadata("design:paramtypes", []),
+        __metadata("design:returntype", void 0)
+    ], Bimface.prototype, "clearIsolation", null);
     return Bimface;
 }());
 exports.default = Bimface;

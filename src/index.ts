@@ -2,6 +2,9 @@ import Bimface from './providers/bimface';
 import { IBimOperation } from './interface';
 
 export { IBimOperation } from './interface';
+
+export { IsolateOption } from './enums';
+
 /**
  * Bim供应商
  */
