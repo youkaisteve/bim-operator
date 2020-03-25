@@ -5,6 +5,8 @@ import Marker3D from '../model/marker_3d';
 import ViewPoint from '../model/view_point';
 import Floor from '../model/floor';
 import { IsolateOption } from '../enums';
+import { ComponentFilter } from '../model/filter';
+import needRender from '../decorators/render';
 
 /**
  * bimface操作
@@ -65,7 +67,7 @@ export default class Bimface implements IBimOperation {
     /**
      * 获取楼层
      */
-    getFloors(): Promise<Floor[]> {
+    async getFloors(): Promise<Floor[]> {
         return new Promise(resolve => {
             this.viewer3D.getFloors(resolve);
         });
@@ -74,22 +76,22 @@ export default class Bimface implements IBimOperation {
      * 获取单个模型的楼层（在集成模型中使用）
      * @param fileId 模型文件id
      */
-    getFloorsbyFileId(fileId: String): Promise<Array<Floor>> {
+    async getFloorsbyFileId(fileId: String): Promise<Array<Floor>> {
         return new Promise(resolve => {
             this.viewer3D.getFloorsbyFileId(fileId, resolve);
         });
     }
     /**
      * 根据条件查询构件
-     * @param {Object} confition 查询条件
-     * @param {String} confition.fileId 模型文件id
+     * @param {String} fileId 模型id
+     * @param {Array<ComponentFilter>} confition 查询条件
      */
-    getComponentByCondition(confition: any): Promise<Component[]> {
-        if (!confition.fileId) {
+    async getComponentByCondition(fileId: String, confition: Array<ComponentFilter>): Promise<Component[]> {
+        if (!fileId) {
             throw new Error('fileId不能为空');
         }
         return new Promise(resolve => {
-            this.viewer3D.getElementByConditions(confition.fileId, confition, resolve);
+            this.viewer3D.getElementByConditions(fileId, confition, resolve);
         });
     }
 
@@ -100,6 +102,7 @@ export default class Bimface implements IBimOperation {
     /**
      * 添加3d锚点
      */
+    @needRender()
     add3dMarker(marker: Marker3D) {
         if (marker === undefined) throw new Error("marker can't be null");
 
@@ -125,7 +128,6 @@ export default class Bimface implements IBimOperation {
     remove3dMarker(markerId: string) {
         this.marker3D.removeItemById(markerId);
     }
-
     /**
      * 清空3d锚点
      */
@@ -133,7 +135,7 @@ export default class Bimface implements IBimOperation {
         this.marker3D && this.marker3D.clear();
     }
 
-    getViewPoint(options): Promise<ViewPoint> {
+    async getViewPoint(options): Promise<ViewPoint> {
         const cameraStatus = this.viewer3D.getCameraStatus();
         let color;
         if (options && options.color) {
@@ -157,8 +159,19 @@ export default class Bimface implements IBimOperation {
         if (viewPoint && viewPoint.cameraStatus) this.viewer3D.setCameraStatus(viewPoint.cameraStatus);
     }
 
+    @needRender()
     isolateComponent(componentIds: String[], option: IsolateOption): void {
         this.viewer3D.isolateComponentsById(componentIds, option);
+    }
+
+    @needRender()
+    isolateComponentByCondition(conditions: Array<ComponentFilter>, option: IsolateOption): void {
+        this.viewer3D.isolateComponentsByObjectData(conditions, option);
+    }
+
+    @needRender()
+    clearIsolation() {
+        this.viewer3D.clearIsolation();
     }
 
     resize(width?: number, height?: number) {

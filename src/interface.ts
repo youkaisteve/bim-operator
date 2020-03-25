@@ -3,6 +3,7 @@ import Component from './model/component';
 import ViewPoint from './model/view_point';
 import Marker3D from './model/marker_3d';
 import { IsolateOption } from './enums';
+import { ComponentFilter } from './model/filter';
 
 /**
  * 模型操作接口
@@ -26,7 +27,7 @@ export interface IBimOperation {
      * 根据条件获取构件
      * @param confition 查询条件，不同厂商之间可能会有差别
      */
-    getComponentByCondition(confition: any): Promise<Array<Component>>;
+    getComponentByCondition(fileId: String, confition: Array<ComponentFilter>): Promise<Array<Component>>;
     /**
      * 添加3D标记
      * @param marker 位置信息
@@ -57,6 +58,14 @@ export interface IBimOperation {
      * 隔离构件
      */
     isolateComponent(componentIds: Array<String>, option: IsolateOption): void;
+    /**
+     * 根据条件隔离构件
+     */
+    isolateComponentByCondition(conditions: Array<ComponentFilter>, option: IsolateOption): void;
+    /**
+     * 清空隔离
+     */
+    clearIsolation();
     /**
      * 设置场景显示大小
      * @param width 宽度
