@@ -1,24 +1,36 @@
-import { IBimOperation } from '../interface';
-import remoteLoad from '../util/remote-load';
-import Marker3D from '../model/marker_3d';
-import ViewPoint from '../model/view_point';
-import Floor from '../model/floor';
-import { IsolateOption } from '../enums';
-import { ComponentFilter } from '../model/filter';
-import needRender from '../decorators/render';
-import { HighlightOption } from '../model';
+import { IBim3DModel, IMarker } from '../../interface';
+import remoteLoad from '../../util/remote-load';
+import ViewPoint from '../../model/view_point';
+import Floor from '../../model/floor';
+import { IsolateOption } from '../../enums';
+import { ComponentFilter } from '../../model/filter';
+import needRender from '../../decorators/render';
+import { HighlightOption } from '../../model';
+import BimfaceMarker from './bimface_marker';
+
+const MARKER_FIELD = Symbol('Bimface#MarkerFiled');
 
 /**
  * bimface操作
  */
-export default class Bimface implements IBimOperation {
+export default class Bimface3DModel implements IBim3DModel {
     /**
      * bimface相关对象
      */
     app: any;
     viewer3D: any;
-    viewer2D: any;
-    marker3D: any;
+    [MARKER_FIELD]: IMarker;
+
+    /**
+     * 3D标注器
+     */
+    get marker(): IMarker {
+        if (!this.viewer3D) {
+            throw new Error('Please init 3D Model first =>>>>>> IBimOperation.loadModel');
+        }
+        if (!this[MARKER_FIELD]) this[MARKER_FIELD] = new BimfaceMarker(this.viewer3D);
+        return this[MARKER_FIELD];
+    }
 
     /**
      * 加载模型
@@ -94,46 +106,6 @@ export default class Bimface implements IBimOperation {
         return new Promise(resolve => {
             this.viewer3D.getElementByConditions(fileId, conditions, resolve);
         });
-    }
-
-    getAllMarkers() {
-        return this.marker3D.getAllItems();
-    }
-
-    /**
-     * 添加3d锚点
-     */
-    @needRender()
-    add3dMarker(marker: Marker3D) {
-        if (marker === undefined) throw new Error("marker can't be null");
-
-        this.turn3dMarkerOn();
-
-        const marker3dConfig = new window.Glodon.Bimface.Plugins.Marker3D.Marker3DConfig();
-        marker3dConfig.id = marker.id;
-        marker3dConfig.worldPosition = marker.worldPosition;
-        marker3dConfig.src = marker.src || '';
-        if (marker.size) marker3dConfig.size = marker.size;
-        marker3dConfig.tooltip = marker.tooltip || '';
-        marker3dConfig.tooltipStyle = marker.tooltipStyle || null;
-        const marker3d = new window.Glodon.Bimface.Plugins.Marker3D.Marker3D(marker3dConfig);
-        if (marker.onClick) marker3d.onClick(marker.onClick);
-        if (marker.onHover) marker3d.onHover(marker.onHover);
-        this.marker3D.addItem(marker3d);
-        return marker3d.getId();
-    }
-
-    /**
-     * 移除3d锚点
-     */
-    remove3dMarker(markerId: string) {
-        this.marker3D.removeItemById(markerId);
-    }
-    /**
-     * 清空3d锚点
-     */
-    clear3dMarker() {
-        this.marker3D && this.marker3D.clear();
     }
 
     async getViewPoint(options): Promise<ViewPoint> {
@@ -213,17 +185,6 @@ export default class Bimface implements IBimOperation {
 
     resize(width?: number, height?: number) {
         this.viewer3D.resize(width, height);
-    }
-
-    /**
-     * 开始3d锚点功能
-     */
-    private turn3dMarkerOn() {
-        if (!this.marker3D) {
-            const markerConfig = new window.Glodon.Bimface.Plugins.Marker3D.Marker3DContainerConfig();
-            markerConfig.viewer = this.viewer3D;
-            this.marker3D = new window.Glodon.Bimface.Plugins.Marker3D.Marker3DContainer(markerConfig);
-        }
     }
 
     // /**
