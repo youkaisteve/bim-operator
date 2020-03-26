@@ -3,10 +3,10 @@
     "version": "1.0.17",
     "description": "a pack of bim operations",
     "files": [
-        "build"
+        "build/**/*.*"
     ],
-    "main": "build/index.js",
-    "types": "build/index.d.ts",
+    "main": "index.js",
+    "types": "index.d.ts",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
         "dev": "rm -fr ./dist && tsc -p tsconfig.dev.json",
