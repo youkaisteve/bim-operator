@@ -1,7 +1,7 @@
 import Floor from './model/floor';
 import ViewPoint from './model/view_point';
 import Marker3D from './model/marker_3d';
-import { IsolateOption } from './enums';
+import { IsolateOption, DrawingDisplayMode } from './enums';
 import { ComponentFilter } from './model/filter';
 import { HighlightOption } from './model';
 
@@ -122,4 +122,18 @@ export interface IMarker {
 /**
  * Bim图纸操作
  */
-export interface IBimDrawing {}
+export interface IBimDrawing {
+    /**
+     * 加载模型
+     * @param options 选项，厂商不同配置会有差别
+     */
+    load(options: any): Promise<void>;
+    /**
+     * 设置展示模式
+     * @param model 模式
+     * @param customOptions 选项
+     * @param {String}} customOptions.color 颜色,如#FFFFFF
+     * @param {number} customOptions.opacity 不透明度,默认为0，即透明
+     */
+    setDisplayMode(model: DrawingDisplayMode, customOptions: any): void;
+}

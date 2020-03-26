@@ -1,11 +1,12 @@
 import { IBim3DModel, IMarker } from '../../interface';
+import BimfaceBase from './bimface_base';
 import ViewPoint from '../../model/view_point';
 import Floor from '../../model/floor';
 import { IsolateOption } from '../../enums';
 import { ComponentFilter } from '../../model/filter';
 import { HighlightOption } from '../../model';
 declare const MARKER_FIELD: unique symbol;
-export default class Bimface3DModel implements IBim3DModel {
+export default class Bimface3DModel extends BimfaceBase implements IBim3DModel {
     app: any;
     viewer3D: any;
     [MARKER_FIELD]: IMarker;

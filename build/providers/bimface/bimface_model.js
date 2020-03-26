@@ -1,4 +1,17 @@
 "use strict";
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
 var __assign = (this && this.__assign) || function () {
     __assign = Object.assign || function(t) {
         for (var s, i = 1, n = arguments.length; i < n; i++) {
@@ -56,13 +69,15 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
     }
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-var remote_load_1 = require("../../util/remote-load");
+var bimface_base_1 = require("./bimface_base");
 var enums_1 = require("../../enums");
 var render_1 = require("../../decorators/render");
 var bimface_marker_1 = require("./bimface_marker");
 var MARKER_FIELD = Symbol('Bimface#MarkerFiled');
-var Bimface3DModel = (function () {
+var Bimface3DModel = (function (_super) {
+    __extends(Bimface3DModel, _super);
     function Bimface3DModel() {
+        return _super !== null && _super.apply(this, arguments) || this;
     }
     Object.defineProperty(Bimface3DModel.prototype, "marker", {
         get: function () {
@@ -78,40 +93,25 @@ var Bimface3DModel = (function () {
     });
     Bimface3DModel.prototype.loadModel = function (options) {
         return __awaiter(this, void 0, void 0, function () {
-            var _this = this;
+            var viewMetaData, domShow, webAppConfig;
             return __generator(this, function (_a) {
                 switch (_a.label) {
-                    case 0:
-                        if (!(options.url && !window.BimfaceSDKLoaderConfig)) return [3, 2];
-                        return [4, remote_load_1.default(options.url)];
+                    case 0: return [4, this.initSDK()];
                     case 1:
                         _a.sent();
-                        _a.label = 2;
+                        return [4, this.loadSDK(options)];
                     case 2:
-                        if (!options.domId) {
-                            throw new Error('domId missing');
+                        viewMetaData = _a.sent();
+                        domShow = document.getElementById(options.domId);
+                        webAppConfig = new window.Glodon.Bimface.Application.WebApplication3DConfig();
+                        webAppConfig.domElement = domShow;
+                        if (options.viewConfig) {
+                            webAppConfig = __assign(__assign({}, webAppConfig), options.viewConfig);
                         }
-                        if (!options.viewToken) {
-                            throw new Error('viewToken missing');
-                        }
-                        return [2, new Promise(function (resolve, reject) {
-                                var loaderConfig = new window.BimfaceSDKLoaderConfig();
-                                loaderConfig.viewToken = options.viewToken;
-                                window.BimfaceSDKLoader.load(loaderConfig, function (viewMetaData) {
-                                    var domShow = document.getElementById(options.domId);
-                                    var webAppConfig = new window.Glodon.Bimface.Application.WebApplication3DConfig();
-                                    webAppConfig.domElement = domShow;
-                                    if (options.viewConfig) {
-                                        webAppConfig = __assign(__assign({}, webAppConfig), options.viewConfig);
-                                    }
-                                    _this.app = new window.Glodon.Bimface.Application.WebApplication3D(webAppConfig);
-                                    _this.viewer3D = _this.app.getViewer();
-                                    _this.app.addView(viewMetaData.viewToken);
-                                    resolve();
-                                }, function (error) {
-                                    reject(error);
-                                });
-                            })];
+                        this.app = new window.Glodon.Bimface.Application.WebApplication3D(webAppConfig);
+                        this.viewer3D = this.app.getViewer();
+                        this.app.addView(viewMetaData.viewToken);
+                        return [2];
                 }
             });
         });
@@ -251,5 +251,5 @@ var Bimface3DModel = (function () {
         __metadata("design:returntype", void 0)
     ], Bimface3DModel.prototype, "clearHighlightComponents", null);
     return Bimface3DModel;
-}());
+}(bimface_base_1.default));
 exports.default = Bimface3DModel;

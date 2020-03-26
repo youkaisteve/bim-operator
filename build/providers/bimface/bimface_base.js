@@ -1,28 +1,4 @@
 "use strict";
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = function (d, b) {
-        extendStatics = Object.setPrototypeOf ||
-            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
-        return extendStatics(d, b);
-    };
-    return function (d, b) {
-        extendStatics(d, b);
-        function __() { this.constructor = d; }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-    };
-})();
-var __assign = (this && this.__assign) || function () {
-    __assign = Object.assign || function(t) {
-        for (var s, i = 1, n = arguments.length; i < n; i++) {
-            s = arguments[i];
-            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
-                t[p] = s[p];
-        }
-        return t;
-    };
-    return __assign.apply(this, arguments);
-};
 var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
     function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
     return new (P || (P = Promise))(function (resolve, reject) {
@@ -60,46 +36,52 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
     }
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-var bimface_base_1 = require("./bimface_base");
-var enums_1 = require("../../enums");
-var BimfaceDrawing = (function (_super) {
-    __extends(BimfaceDrawing, _super);
-    function BimfaceDrawing() {
-        return _super !== null && _super.apply(this, arguments) || this;
+var remote_load_1 = require("../../util/remote-load");
+var consts_1 = require("../../consts");
+var BimfaceBase = (function () {
+    function BimfaceBase() {
     }
-    BimfaceDrawing.prototype.load = function (options) {
+    BimfaceBase.prototype.initSDK = function () {
         return __awaiter(this, void 0, void 0, function () {
-            var viewMetaData, dom4Show, webAppConfig;
             return __generator(this, function (_a) {
                 switch (_a.label) {
-                    case 0: return [4, this.initSDK()];
+                    case 0:
+                        if (!!window.BimfaceSDKLoaderConfig) return [3, 2];
+                        return [4, remote_load_1.default(consts_1.BIMFACE_JS_SDK)];
                     case 1:
                         _a.sent();
-                        return [4, this.loadSDK(options)];
-                    case 2:
-                        viewMetaData = _a.sent();
-                        dom4Show = document.getElementById(options.domId);
-                        webAppConfig = new window.Glodon.Bimface.Application.WebApplicationDrawingConfig();
-                        webAppConfig.domElement = dom4Show;
-                        webAppConfig.drawingUrl = viewMetaData.drawingUrl;
-                        webAppConfig.viewToken = viewMetaData.viewToken;
-                        if (options.viewConfig) {
-                            webAppConfig = __assign(__assign({}, webAppConfig), options.viewConfig);
-                        }
-                        this.app = new window.Glodon.Bimface.Application.WebApplicationDrawing(webAppConfig);
-                        this.app.load(viewMetaData.viewToken);
-                        this.viewer2D = this.app.getViewer();
-                        return [2];
+                        _a.label = 2;
+                    case 2: return [2];
                 }
             });
         });
     };
-    BimfaceDrawing.prototype.setDisplayMode = function (model, customOptions) {
-        this.viewer2D.setDisplayMode(model);
-        if (model === enums_1.DrawingDisplayMode.Custom && customOptions) {
-            this.viewer2D.setGlobalColor(new window.Glodon.Web.Graphics.Color(customOptions.color, customOptions.opacity));
+    BimfaceBase.prototype.loadSDK = function (options) {
+        return __awaiter(this, void 0, void 0, function () {
+            return __generator(this, function (_a) {
+                if (!options.domId) {
+                    throw new Error('domId missing');
+                }
+                if (!options.viewToken) {
+                    throw new Error('viewToken missing');
+                }
+                this.dispose(options);
+                return [2, new Promise(function (resolve, reject) {
+                        var loaderConfig = new window.BimfaceSDKLoaderConfig();
+                        loaderConfig.viewToken = options.viewToken;
+                        window.BimfaceSDKLoader.load(loaderConfig, resolve, reject);
+                    })];
+            });
+        });
+    };
+    BimfaceBase.prototype.dispose = function (options) {
+        if (options && options.domId) {
+            var dom = document.getElementById(options.domId);
+            if (dom) {
+                dom.innerHTML = '';
+            }
         }
     };
-    return BimfaceDrawing;
-}(bimface_base_1.default));
-exports.default = BimfaceDrawing;
+    return BimfaceBase;
+}());
+exports.default = BimfaceBase;

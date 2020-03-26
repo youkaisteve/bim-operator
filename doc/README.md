@@ -16,19 +16,30 @@ npm i bim-operator --save
 
 ```js
 import getProvider, { ProviderType } from 'bim-operator';
-const bimface = getProvider(ProviderType.BIMFACE);
 
-bimface
-    .loadModel({
-        viewToken: '<your viewtoken>',
-        url: 'https://static.bimface.com/api/BimfaceSDKLoader/BimfaceSDKLoader@latest-release.js',
-        domId: '<your html dom id>'
-    })
-    .then(async () => {
-        const floors = await this.bimface.getFloors();
-        console.log(floors);
-        // ...
-    });
+const provider = getProvider(ProviderType.BIMFACE);
+// 获取3D模型操作对象
+this.bim3DModel = provider.bim3DModel;
+// 获取3D模型操作对象
+this.bimDrawing = provider.bimDrawing;
+
+// 加载模型
+await this.bim3DModel.loadModel({
+    viewToken: '<your view token>',
+    domId: '<html dom id>',
+    viewConfig: {
+        // 支持hover
+        enableHover: true,
+        // 右键
+        enableToggleContextMenuDisplay: true
+    }
+});
+
+// 加载图纸
+await this.bimDrawing.load({
+    viewToken: '<your view token>',
+    domId: '<html dom id>'
+});
 ```
 
 ## 支持的供应商
