@@ -18,6 +18,10 @@ export interface IBimOperation {
     isolateComponentByCondition(conditions: Array<ComponentFilter>, option: IsolateOption): void;
     clearIsolation(): any;
     highlightComponents(componentIds: String[], options: HighlightOption): void;
-    clearAllHighlightComponents(): any;
+    clearHighlightComponents(componentIds?: String[]): any;
+    selectComponents(componentIds: String[]): void;
+    selectComponentsByCondition(conditions: Array<ComponentFilter>): void;
+    clearSelectedComponents(): void;
+    getSelectedComponents(): String[];
     resize(width?: number, height?: number): void;
 }

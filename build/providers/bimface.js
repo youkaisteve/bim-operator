@@ -212,8 +212,25 @@ var Bimface = (function () {
             this.viewer3D.addBlinkComponentsById(componentIds);
         }
     };
-    Bimface.prototype.clearAllHighlightComponents = function () {
-        this.viewer3D.clearAllBlinkComponents();
+    Bimface.prototype.clearHighlightComponents = function (componentIds) {
+        if (componentIds && componentIds.length > 0) {
+            this.viewer3D.clearBlinkComponentsById(componentIds);
+        }
+        else {
+            this.viewer3D.clearAllBlinkComponents();
+        }
+    };
+    Bimface.prototype.selectComponents = function (componentIds) {
+        this.viewer3D.setSelectedComponentsById(componentIds);
+    };
+    Bimface.prototype.selectComponentsByCondition = function (conditions) {
+        this.viewer3D.setSelectedComponentsByObjectData(conditions);
+    };
+    Bimface.prototype.clearSelectedComponents = function () {
+        this.viewer3D.clearSelectedComponents();
+    };
+    Bimface.prototype.getSelectedComponents = function () {
+        return this.viewer3D.getSelectedComponents();
     };
     Bimface.prototype.resize = function (width, height) {
         this.viewer3D.resize(width, height);
@@ -258,9 +275,9 @@ var Bimface = (function () {
     __decorate([
         render_1.default(),
         __metadata("design:type", Function),
-        __metadata("design:paramtypes", []),
+        __metadata("design:paramtypes", [Array]),
         __metadata("design:returntype", void 0)
-    ], Bimface.prototype, "clearAllHighlightComponents", null);
+    ], Bimface.prototype, "clearHighlightComponents", null);
     return Bimface;
 }());
 exports.default = Bimface;

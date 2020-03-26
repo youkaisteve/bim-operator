@@ -191,8 +191,24 @@ export default class Bimface implements IBimOperation {
     }
 
     @needRender()
-    clearAllHighlightComponents() {
-        this.viewer3D.clearAllBlinkComponents();
+    clearHighlightComponents(componentIds?: String[]) {
+        if (componentIds && componentIds.length > 0) {
+            this.viewer3D.clearBlinkComponentsById(componentIds);
+        } else {
+            this.viewer3D.clearAllBlinkComponents();
+        }
+    }
+    selectComponents(componentIds: String[]) {
+        this.viewer3D.setSelectedComponentsById(componentIds);
+    }
+    selectComponentsByCondition(conditions: Array<ComponentFilter>) {
+        this.viewer3D.setSelectedComponentsByObjectData(conditions);
+    }
+    clearSelectedComponents() {
+        this.viewer3D.clearSelectedComponents();
+    }
+    getSelectedComponents() {
+        return this.viewer3D.getSelectedComponents();
     }
 
     resize(width?: number, height?: number) {
