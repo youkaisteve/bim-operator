@@ -8,7 +8,16 @@ import { HighlightOption } from './model';
 /**
  * 模型操作接口
  */
-export interface IBimOperation {
+export interface IBimOperator {
+    bim3DModel: IBim3DModel;
+    bimDrawing: IBimDrawing;
+}
+
+/**
+ * 3D模型操作
+ */
+export interface IBim3DModel {
+    marker: IMarker;
     /**
      * 加载模型
      * @param options 选项，厂商不同配置会有差别
@@ -28,21 +37,6 @@ export interface IBimOperation {
      * @param conditions 查询条件，不同厂商之间可能会有差别
      */
     getComponentByCondition(fileId: String, conditions: Array<ComponentFilter>): Promise<Array<String>>;
-    /**
-     * 添加3D标记
-     * @param marker 位置信息
-     * @return 3d标记id
-     */
-    add3dMarker(marker: Marker3D): string;
-    /**
-     * 清空3d锚点
-     * @param marker 3D标记
-     */
-    remove3dMarker(markerId: string): void;
-    /**
-     * 清除所有3D标记
-     */
-    clear3dMarker(): void;
     /**
      * 获取视点
      * @param {Object} options 视点参数
@@ -102,3 +96,30 @@ export interface IBimOperation {
      */
     resize(width?: number, height?: number): void;
 }
+
+/**
+ * 3D标注类
+ */
+export interface IMarker {
+    getAllMarkers(): Marker3D[];
+    /**
+     * 添加3D标记
+     * @param marker 位置信息
+     * @return 3d标记id
+     */
+    add3dMarker(marker: Marker3D): string;
+    /**
+     * 清空3d锚点
+     * @param marker 3D标记
+     */
+    remove3dMarker(markerId: string): void;
+    /**
+     * 清除所有3D标记
+     */
+    clear3dMarker(): void;
+}
+
+/**
+ * Bim图纸操作
+ */
+export interface IBimDrawing {}

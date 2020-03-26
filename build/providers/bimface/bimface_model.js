@@ -56,13 +56,27 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
     }
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-var remote_load_1 = require("../util/remote-load");
-var enums_1 = require("../enums");
-var render_1 = require("../decorators/render");
-var Bimface = (function () {
-    function Bimface() {
+var remote_load_1 = require("../../util/remote-load");
+var enums_1 = require("../../enums");
+var render_1 = require("../../decorators/render");
+var bimface_marker_1 = require("./bimface_marker");
+var MARKER_FIELD = Symbol('Bimface#MarkerFiled');
+var Bimface3DModel = (function () {
+    function Bimface3DModel() {
     }
-    Bimface.prototype.loadModel = function (options) {
+    Object.defineProperty(Bimface3DModel.prototype, "marker", {
+        get: function () {
+            if (!this.viewer3D) {
+                throw new Error('Please init 3D Model first =>>>>>> IBimOperation.loadModel');
+            }
+            if (!this[MARKER_FIELD])
+                this[MARKER_FIELD] = new bimface_marker_1.default(this.viewer3D);
+            return this[MARKER_FIELD];
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Bimface3DModel.prototype.loadModel = function (options) {
         return __awaiter(this, void 0, void 0, function () {
             var _this = this;
             return __generator(this, function (_a) {
@@ -102,7 +116,7 @@ var Bimface = (function () {
             });
         });
     };
-    Bimface.prototype.getFloors = function () {
+    Bimface3DModel.prototype.getFloors = function () {
         return __awaiter(this, void 0, void 0, function () {
             var _this = this;
             return __generator(this, function (_a) {
@@ -112,7 +126,7 @@ var Bimface = (function () {
             });
         });
     };
-    Bimface.prototype.getFloorsbyFileId = function (fileId) {
+    Bimface3DModel.prototype.getFloorsbyFileId = function (fileId) {
         return __awaiter(this, void 0, void 0, function () {
             var _this = this;
             return __generator(this, function (_a) {
@@ -122,7 +136,7 @@ var Bimface = (function () {
             });
         });
     };
-    Bimface.prototype.getComponentByCondition = function (fileId, conditions) {
+    Bimface3DModel.prototype.getComponentByCondition = function (fileId, conditions) {
         return __awaiter(this, void 0, void 0, function () {
             var _this = this;
             return __generator(this, function (_a) {
@@ -135,36 +149,7 @@ var Bimface = (function () {
             });
         });
     };
-    Bimface.prototype.getAllMarkers = function () {
-        return this.marker3D.getAllItems();
-    };
-    Bimface.prototype.add3dMarker = function (marker) {
-        if (marker === undefined)
-            throw new Error("marker can't be null");
-        this.turn3dMarkerOn();
-        var marker3dConfig = new window.Glodon.Bimface.Plugins.Marker3D.Marker3DConfig();
-        marker3dConfig.id = marker.id;
-        marker3dConfig.worldPosition = marker.worldPosition;
-        marker3dConfig.src = marker.src || '';
-        if (marker.size)
-            marker3dConfig.size = marker.size;
-        marker3dConfig.tooltip = marker.tooltip || '';
-        marker3dConfig.tooltipStyle = marker.tooltipStyle || null;
-        var marker3d = new window.Glodon.Bimface.Plugins.Marker3D.Marker3D(marker3dConfig);
-        if (marker.onClick)
-            marker3d.onClick(marker.onClick);
-        if (marker.onHover)
-            marker3d.onHover(marker.onHover);
-        this.marker3D.addItem(marker3d);
-        return marker3d.getId();
-    };
-    Bimface.prototype.remove3dMarker = function (markerId) {
-        this.marker3D.removeItemById(markerId);
-    };
-    Bimface.prototype.clear3dMarker = function () {
-        this.marker3D && this.marker3D.clear();
-    };
-    Bimface.prototype.getViewPoint = function (options) {
+    Bimface3DModel.prototype.getViewPoint = function (options) {
         return __awaiter(this, void 0, void 0, function () {
             var cameraStatus, color;
             var _this = this;
@@ -188,21 +173,21 @@ var Bimface = (function () {
             });
         });
     };
-    Bimface.prototype.setViewPoint = function (viewPoint) {
+    Bimface3DModel.prototype.setViewPoint = function (viewPoint) {
         if (viewPoint && viewPoint.cameraStatus)
             this.viewer3D.setCameraStatus(viewPoint.cameraStatus);
     };
-    Bimface.prototype.isolateComponent = function (componentIds, option) {
+    Bimface3DModel.prototype.isolateComponent = function (componentIds, option) {
         this.viewer3D.isolateComponentsById(componentIds, option);
     };
-    Bimface.prototype.isolateComponentByCondition = function (conditions, option) {
+    Bimface3DModel.prototype.isolateComponentByCondition = function (conditions, option) {
         console.log(conditions);
         this.viewer3D.isolateComponentsByObjectData(conditions, option);
     };
-    Bimface.prototype.clearIsolation = function () {
+    Bimface3DModel.prototype.clearIsolation = function () {
         this.viewer3D.clearIsolation();
     };
-    Bimface.prototype.highlightComponents = function (componentIds, options) {
+    Bimface3DModel.prototype.highlightComponents = function (componentIds, options) {
         this.viewer3D.enableBlinkComponents(true);
         if (componentIds && componentIds.length > 0) {
             if (options) {
@@ -212,7 +197,7 @@ var Bimface = (function () {
             this.viewer3D.addBlinkComponentsById(componentIds);
         }
     };
-    Bimface.prototype.clearHighlightComponents = function (componentIds) {
+    Bimface3DModel.prototype.clearHighlightComponents = function (componentIds) {
         if (componentIds && componentIds.length > 0) {
             this.viewer3D.clearBlinkComponentsById(componentIds);
         }
@@ -220,64 +205,51 @@ var Bimface = (function () {
             this.viewer3D.clearAllBlinkComponents();
         }
     };
-    Bimface.prototype.selectComponents = function (componentIds) {
+    Bimface3DModel.prototype.selectComponents = function (componentIds) {
         this.viewer3D.setSelectedComponentsById(componentIds);
     };
-    Bimface.prototype.selectComponentsByCondition = function (conditions) {
+    Bimface3DModel.prototype.selectComponentsByCondition = function (conditions) {
         this.viewer3D.setSelectedComponentsByObjectData(conditions);
     };
-    Bimface.prototype.clearSelectedComponents = function () {
+    Bimface3DModel.prototype.clearSelectedComponents = function () {
         this.viewer3D.clearSelectedComponents();
     };
-    Bimface.prototype.getSelectedComponents = function () {
+    Bimface3DModel.prototype.getSelectedComponents = function () {
         return this.viewer3D.getSelectedComponents();
     };
-    Bimface.prototype.resize = function (width, height) {
+    Bimface3DModel.prototype.resize = function (width, height) {
         this.viewer3D.resize(width, height);
     };
-    Bimface.prototype.turn3dMarkerOn = function () {
-        if (!this.marker3D) {
-            var markerConfig = new window.Glodon.Bimface.Plugins.Marker3D.Marker3DContainerConfig();
-            markerConfig.viewer = this.viewer3D;
-            this.marker3D = new window.Glodon.Bimface.Plugins.Marker3D.Marker3DContainer(markerConfig);
-        }
-    };
-    __decorate([
-        render_1.default(),
-        __metadata("design:type", Function),
-        __metadata("design:paramtypes", [Object]),
-        __metadata("design:returntype", void 0)
-    ], Bimface.prototype, "add3dMarker", null);
     __decorate([
         render_1.default(),
         __metadata("design:type", Function),
         __metadata("design:paramtypes", [Array, String]),
         __metadata("design:returntype", void 0)
-    ], Bimface.prototype, "isolateComponent", null);
+    ], Bimface3DModel.prototype, "isolateComponent", null);
     __decorate([
         render_1.default(),
         __metadata("design:type", Function),
         __metadata("design:paramtypes", [Array, String]),
         __metadata("design:returntype", void 0)
-    ], Bimface.prototype, "isolateComponentByCondition", null);
+    ], Bimface3DModel.prototype, "isolateComponentByCondition", null);
     __decorate([
         render_1.default(),
         __metadata("design:type", Function),
         __metadata("design:paramtypes", []),
         __metadata("design:returntype", void 0)
-    ], Bimface.prototype, "clearIsolation", null);
+    ], Bimface3DModel.prototype, "clearIsolation", null);
     __decorate([
         render_1.default(),
         __metadata("design:type", Function),
         __metadata("design:paramtypes", [Array, Object]),
         __metadata("design:returntype", void 0)
-    ], Bimface.prototype, "highlightComponents", null);
+    ], Bimface3DModel.prototype, "highlightComponents", null);
     __decorate([
         render_1.default(),
         __metadata("design:type", Function),
         __metadata("design:paramtypes", [Array]),
         __metadata("design:returntype", void 0)
-    ], Bimface.prototype, "clearHighlightComponents", null);
-    return Bimface;
+    ], Bimface3DModel.prototype, "clearHighlightComponents", null);
+    return Bimface3DModel;
 }());
-exports.default = Bimface;
+exports.default = Bimface3DModel;

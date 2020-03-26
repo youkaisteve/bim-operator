@@ -1,9 +1,9 @@
-import Bimface from './providers/bimface';
-import { IBimOperation } from './interface';
+import BimfaceOperator from './providers/bimface_operator';
+import { IBimOperator } from './interface';
 
-export { IBimOperation } from './interface';
-
-export { IsolateOption } from './enums';
+export * from './interface';
+export * from './enums';
+export * from './model';
 
 /**
  * Bim供应商
@@ -16,10 +16,10 @@ export const ProviderType = {
  * 获取供应商操作类
  * @param provider 提供方名字，@see {@link ProviderType}
  */
-export default function getProvider(provider: String): IBimOperation {
+export default function getProvider(provider: String): IBimOperator {
     switch (provider) {
         case ProviderType.BIMFACE:
-            return new Bimface();
+            return new BimfaceOperator();
         default:
             throw new Error(`provider [${provider}] not found`);
     }
