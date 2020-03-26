@@ -1,5 +1,5 @@
 import { IBim3DModel, IMarker } from '../../interface';
-import remoteLoad from '../../util/remote-load';
+import BimfaceBase from './bimface_base';
 import ViewPoint from '../../model/view_point';
 import Floor from '../../model/floor';
 import { IsolateOption } from '../../enums';
@@ -13,7 +13,7 @@ const MARKER_FIELD = Symbol('Bimface#MarkerFiled');
 /**
  * bimface操作
  */
-export default class Bimface3DModel implements IBim3DModel {
+export default class Bimface3DModel extends BimfaceBase implements IBim3DModel {
     /**
      * bimface相关对象
      */
@@ -41,40 +41,18 @@ export default class Bimface3DModel implements IBim3DModel {
      * @param {Object} options.viewConfig 视图的配置
      */
     async loadModel(options: any): Promise<void> {
-        if (options.url && !window.BimfaceSDKLoaderConfig) {
-            await remoteLoad(options.url);
-        }
+        await this.initSDK();
+        const viewMetaData = await this.loadSDK(options);
 
-        if (!options.domId) {
-            throw new Error('domId missing');
+        const domShow = document.getElementById(options.domId);
+        let webAppConfig = new window.Glodon.Bimface.Application.WebApplication3DConfig();
+        webAppConfig.domElement = domShow;
+        if (options.viewConfig) {
+            webAppConfig = { ...webAppConfig, ...options.viewConfig };
         }
-
-        if (!options.viewToken) {
-            throw new Error('viewToken missing');
-        }
-
-        return new Promise((resolve, reject) => {
-            const loaderConfig = new window.BimfaceSDKLoaderConfig();
-            loaderConfig.viewToken = options.viewToken;
-            window.BimfaceSDKLoader.load(
-                loaderConfig,
-                viewMetaData => {
-                    var domShow = document.getElementById(options.domId);
-                    var webAppConfig = new window.Glodon.Bimface.Application.WebApplication3DConfig();
-                    webAppConfig.domElement = domShow;
-                    if (options.viewConfig) {
-                        webAppConfig = { ...webAppConfig, ...options.viewConfig };
-                    }
-                    this.app = new window.Glodon.Bimface.Application.WebApplication3D(webAppConfig);
-                    this.viewer3D = this.app.getViewer();
-                    this.app.addView(viewMetaData.viewToken);
-                    resolve();
-                },
-                error => {
-                    reject(error);
-                }
-            );
-        });
+        this.app = new window.Glodon.Bimface.Application.WebApplication3D(webAppConfig);
+        this.viewer3D = this.app.getViewer();
+        this.app.addView(viewMetaData.viewToken);
     }
     /**
      * 获取楼层

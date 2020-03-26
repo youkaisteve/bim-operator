@@ -6,4 +6,7 @@
 
 ### Interfaces
 
-* [IBimOperation](../interfaces/_interface_.ibimoperation.md)
+* [IBim3DModel](../interfaces/_interface_.ibim3dmodel.md)
+* [IBimDrawing](../interfaces/_interface_.ibimdrawing.md)
+* [IBimOperator](../interfaces/_interface_.ibimoperator.md)
+* [IMarker](../interfaces/_interface_.imarker.md)

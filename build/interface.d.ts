@@ -1,7 +1,7 @@
 import Floor from './model/floor';
 import ViewPoint from './model/view_point';
 import Marker3D from './model/marker_3d';
-import { IsolateOption } from './enums';
+import { IsolateOption, DrawingDisplayMode } from './enums';
 import { ComponentFilter } from './model/filter';
 import { HighlightOption } from './model';
 export interface IBimOperator {
@@ -34,4 +34,6 @@ export interface IMarker {
     clear3dMarker(): void;
 }
 export interface IBimDrawing {
+    load(options: any): Promise<void>;
+    setDisplayMode(model: DrawingDisplayMode, customOptions: any): void;
 }
