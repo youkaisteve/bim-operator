@@ -24,7 +24,11 @@ export default class Bimface implements IBimOperation {
     isolateComponentByCondition(conditions: Array<ComponentFilter>, option: IsolateOption): void;
     clearIsolation(): void;
     highlightComponents(componentIds: String[], options: HighlightOption): void;
-    clearAllHighlightComponents(): void;
+    clearHighlightComponents(componentIds?: String[]): void;
+    selectComponents(componentIds: String[]): void;
+    selectComponentsByCondition(conditions: Array<ComponentFilter>): void;
+    clearSelectedComponents(): void;
+    getSelectedComponents(): any;
     resize(width?: number, height?: number): void;
     private turn3dMarkerOn;
 }

@@ -72,12 +72,29 @@ export interface IBimOperation {
      * @param options 高亮选项
      */
     highlightComponents(componentIds: String[], options: HighlightOption): void;
-
     /**
-     * 清除所有高亮构件
+     * 清除所有构件
+     * @param componentIds 构件id列表，如果没有则清除所有高亮构件
      */
-    clearAllHighlightComponents();
-
+    clearHighlightComponents(componentIds?: String[]);
+    /**
+     * 选中构件
+     * @param componentIds 构件id列表
+     */
+    selectComponents(componentIds: String[]): void;
+    /**
+     * 根据条件选中构件
+     * @param conditions 条件
+     */
+    selectComponentsByCondition(conditions: Array<ComponentFilter>): void;
+    /**
+     * 清空选中构件
+     */
+    clearSelectedComponents(): void;
+    /**
+     * 获取选中的构件
+     */
+    getSelectedComponents(): String[];
     /**
      * 设置场景显示大小
      * @param width 宽度
