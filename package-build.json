@@ -2,17 +2,9 @@
     "name": "bim-operator",
     "version": "1.0.15",
     "description": "a pack of bim operations",
-    "files": [
-        "build"
-    ],
-    "main": "build/index.js",
-    "types": "build/index.d.ts",
-    "publishConfig": {
-        "directory": "build"
-    },
-    "keywords": [
-        "bim"
-    ],
+    "main": "index.js",
+    "types": "index.d.ts",
+    "keywords": ["bim"],
     "repository": {
         "type": "git",
         "url": "git@github.com:youkaisteve/bim-operator.git"
