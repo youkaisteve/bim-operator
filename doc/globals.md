@@ -1,6 +1,6 @@
-[bim-operator - v1.0.15](README.md) › [Globals](globals.md)
+[bim-operator - v1.0.20](README.md) › [Globals](globals.md)
 
-# bim-operator - v1.0.15
+# bim-operator - v1.0.20
 
 ## Index
 
@@ -13,6 +13,7 @@
 * ["interface"](modules/_interface_.md)
 * ["model/base"](modules/_model_base_.md)
 * ["model/component"](modules/_model_component_.md)
+* ["model/custom_button"](modules/_model_custom_button_.md)
 * ["model/filter"](modules/_model_filter_.md)
 * ["model/floor"](modules/_model_floor_.md)
 * ["model/index"](modules/_model_index_.md)
