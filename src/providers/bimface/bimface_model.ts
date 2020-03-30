@@ -1,4 +1,4 @@
-import { IBim3DModel, IMarker } from '../../interface';
+import { IBim3DModel, IMarker, IBimCustom, IDispose } from '../../interface';
 import BimfaceBase from './bimface_base';
 import ViewPoint from '../../model/view_point';
 import Floor from '../../model/floor';
@@ -13,11 +13,10 @@ const MARKER_FIELD = Symbol('Bimface#MarkerFiled');
 /**
  * bimface操作
  */
-export default class Bimface3DModel extends BimfaceBase implements IBim3DModel {
+export default class Bimface3DModel extends BimfaceBase implements IBim3DModel, IBimCustom, IDispose {
     /**
      * bimface相关对象
      */
-    app: any;
     viewer3D: any;
     [MARKER_FIELD]: IMarker;
 
@@ -38,9 +37,13 @@ export default class Bimface3DModel extends BimfaceBase implements IBim3DModel {
      * @param {string} options.viewToken 访问认证token
      * @param {string} options.url js-sdk地址
      * @param {string} options.domId dom id
-     * @param {Object} options.viewConfig 视图的配置
+     * @param {Object} options.appConfig 应用的配置
+     * @param {String[]} options.appConfig.Buttons 工具条button，0:Home：主视角，1: RectangleSelect：框选，2: Measure：测量，3: Section：剖切，4: Walk：漫游，5: Map：地图，6: Property：构件详情，7: Setting：设置，8: Information：基本信息，9: FullScreen：全屏 默认全部加载
+     * @param {String[]} options.appConfig.Toolbars 工具条或目录树，MainToolbar:工具条；ModelTree：目录树
+     * @param {String[]} options.appConfig.Toolbars 工具条或目录树，MainToolbar:工具条；ModelTree：目录树
+     * @param {Object} options.viewConfig 视图的配置, 参考：https://static.bimface.com/jssdk-apidoc/v3/Glodon.Bimface.Viewer.Viewer3DConfig.html
      */
-    async loadModel(options: any): Promise<void> {
+    async load(options: any): Promise<void> {
         await this.initSDK();
         const viewMetaData = await this.loadSDK(options);
 
@@ -70,6 +73,15 @@ export default class Bimface3DModel extends BimfaceBase implements IBim3DModel {
         return new Promise(resolve => {
             this.viewer3D.getFloorsbyFileId(fileId, resolve);
         });
+    }
+    /**
+     * 楼层爆炸
+     * @param floors 楼层ids
+     * @param extend 楼层爆炸离散系数，范围为[0, 30]，可选，默认为3
+     */
+    @needRender()
+    explosionFloor(floorIds: String[], extend: Number) {
+        this.viewer3D.setFloorExplosion(extend, floorIds);
     }
     /**
      * 根据条件查询构件
@@ -132,7 +144,7 @@ export default class Bimface3DModel extends BimfaceBase implements IBim3DModel {
         if (componentIds && componentIds.length > 0) {
             if (options) {
                 this.viewer3D.setBlinkColor(
-                    new window.Glodon.Web.Graphics.Color(options.color || '#FF0000', options.opacity || 0.8)
+                    new window.Glodon.Web.Graphics.Color(options.color || '#FF0000', options.opacity || 1)
                 );
                 this.viewer3D.setBlinkIntervalTime(options.intervalTime || 200);
             }
@@ -163,6 +175,13 @@ export default class Bimface3DModel extends BimfaceBase implements IBim3DModel {
 
     resize(width?: number, height?: number) {
         this.viewer3D.resize(width, height);
+    }
+
+    dispose(options) {
+        if (options && options.viewToken) {
+            this.app && this.app.destroy(options.viewToken);
+        }
+        super.dispose(options);
     }
 
     // /**

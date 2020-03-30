@@ -1,4 +1,4 @@
-import { IBim3DModel, IMarker } from '../../interface';
+import { IBim3DModel, IMarker, IBimCustom, IDispose } from '../../interface';
 import BimfaceBase from './bimface_base';
 import ViewPoint from '../../model/view_point';
 import Floor from '../../model/floor';
@@ -6,14 +6,14 @@ import { IsolateOption } from '../../enums';
 import { ComponentFilter } from '../../model/filter';
 import { HighlightOption } from '../../model';
 declare const MARKER_FIELD: unique symbol;
-export default class Bimface3DModel extends BimfaceBase implements IBim3DModel {
-    app: any;
+export default class Bimface3DModel extends BimfaceBase implements IBim3DModel, IBimCustom, IDispose {
     viewer3D: any;
     [MARKER_FIELD]: IMarker;
     get marker(): IMarker;
-    loadModel(options: any): Promise<void>;
+    load(options: any): Promise<void>;
     getFloors(): Promise<Floor[]>;
     getFloorsbyFileId(fileId: String): Promise<Array<Floor>>;
+    explosionFloor(floorIds: String[], extend: Number): void;
     getComponentByCondition(fileId: String, conditions: Array<ComponentFilter>): Promise<String[]>;
     getViewPoint(options: any): Promise<ViewPoint>;
     setViewPoint(viewPoint: ViewPoint): void;
@@ -27,5 +27,6 @@ export default class Bimface3DModel extends BimfaceBase implements IBim3DModel {
     clearSelectedComponents(): void;
     getSelectedComponents(): any;
     resize(width?: number, height?: number): void;
+    dispose(options: any): void;
 }
 export {};

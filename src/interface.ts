@@ -4,6 +4,7 @@ import Marker3D from './model/marker_3d';
 import { IsolateOption, DrawingDisplayMode } from './enums';
 import { ComponentFilter } from './model/filter';
 import { HighlightOption } from './model';
+import CustomButton from './model/custom_button';
 
 /**
  * 模型操作接口
@@ -22,7 +23,7 @@ export interface IBim3DModel {
      * 加载模型
      * @param options 选项，厂商不同配置会有差别
      */
-    loadModel(options: any): Promise<void>;
+    load(options: any): Promise<void>;
     /**
      * 获取所有楼层
      */
@@ -32,6 +33,12 @@ export interface IBim3DModel {
      * @param fileId 单个模型的id
      */
     getFloorsbyFileId(fileId: String): Promise<Array<Floor>>;
+    /**
+     * 楼层爆炸
+     * @param floors 楼层ids
+     * @param extend 楼层爆炸离散系数，根据厂商定制，可选
+     */
+    explosionFloor(floorIds: String[], extend: Number);
     /**
      * 根据条件获取构件
      * @param conditions 查询条件，不同厂商之间可能会有差别
@@ -136,4 +143,26 @@ export interface IBimDrawing {
      * @param {number} customOptions.opacity 不透明度,默认为0，即透明
      */
     setDisplayMode(model: DrawingDisplayMode, customOptions: any): void;
+}
+
+/**
+ * Bim自定义
+ */
+export interface IBimCustom {
+    /**
+     * 自定义工具条按钮
+     * @param customButtons 工具条按钮们
+     */
+    addCustomButtons(customButtons: Array<CustomButton>): void;
+}
+
+/**
+ * Bim视图销毁
+ */
+export interface IDispose {
+    /**
+     * 销毁视图
+     * @param options 销毁选项，和load选项一致
+     */
+    dispose(options);
 }

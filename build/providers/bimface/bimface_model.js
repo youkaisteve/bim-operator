@@ -91,7 +91,7 @@ var Bimface3DModel = (function (_super) {
         enumerable: true,
         configurable: true
     });
-    Bimface3DModel.prototype.loadModel = function (options) {
+    Bimface3DModel.prototype.load = function (options) {
         return __awaiter(this, void 0, void 0, function () {
             var viewMetaData, domShow, webAppConfig;
             return __generator(this, function (_a) {
@@ -135,6 +135,9 @@ var Bimface3DModel = (function (_super) {
                     })];
             });
         });
+    };
+    Bimface3DModel.prototype.explosionFloor = function (floorIds, extend) {
+        this.viewer3D.setFloorExplosion(extend, floorIds);
     };
     Bimface3DModel.prototype.getComponentByCondition = function (fileId, conditions) {
         return __awaiter(this, void 0, void 0, function () {
@@ -191,7 +194,7 @@ var Bimface3DModel = (function (_super) {
         this.viewer3D.enableBlinkComponents(true);
         if (componentIds && componentIds.length > 0) {
             if (options) {
-                this.viewer3D.setBlinkColor(new window.Glodon.Web.Graphics.Color(options.color || '#FF0000', options.opacity || 0.8));
+                this.viewer3D.setBlinkColor(new window.Glodon.Web.Graphics.Color(options.color || '#FF0000', options.opacity || 1));
                 this.viewer3D.setBlinkIntervalTime(options.intervalTime || 200);
             }
             this.viewer3D.addBlinkComponentsById(componentIds);
@@ -220,6 +223,18 @@ var Bimface3DModel = (function (_super) {
     Bimface3DModel.prototype.resize = function (width, height) {
         this.viewer3D.resize(width, height);
     };
+    Bimface3DModel.prototype.dispose = function (options) {
+        if (options && options.viewToken) {
+            this.app && this.app.destroy(options.viewToken);
+        }
+        _super.prototype.dispose.call(this, options);
+    };
+    __decorate([
+        render_1.default(),
+        __metadata("design:type", Function),
+        __metadata("design:paramtypes", [Array, Number]),
+        __metadata("design:returntype", void 0)
+    ], Bimface3DModel.prototype, "explosionFloor", null);
     __decorate([
         render_1.default(),
         __metadata("design:type", Function),
