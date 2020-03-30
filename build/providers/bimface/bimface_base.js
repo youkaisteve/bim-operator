@@ -74,6 +74,25 @@ var BimfaceBase = (function () {
             });
         });
     };
+    BimfaceBase.prototype.addCustomButtons = function (customButtons) {
+        var toolbar = this.app.getToolbar('MainToolbar');
+        var btnConfig = new window.Glodon.Bimface.UI.Button.ButtonConfig();
+        if (customButtons && customButtons.length > 0) {
+            customButtons.forEach(function (customBtn) {
+                if (customBtn.html) {
+                    var btn = new window.Glodon.Bimface.UI.Button.Button(btnConfig);
+                    btn.setHtml(customBtn.html);
+                    btn.addEventListener('Click', customBtn.clickEvent);
+                    if (customBtn.index >= 0) {
+                        toolbar.insertControl(customBtn.index, btn);
+                    }
+                    else {
+                        toolbar.addControl(btn);
+                    }
+                }
+            });
+        }
+    };
     BimfaceBase.prototype.dispose = function (options) {
         if (options && options.domId) {
             var dom = document.getElementById(options.domId);

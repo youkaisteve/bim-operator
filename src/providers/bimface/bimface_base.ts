@@ -1,7 +1,10 @@
 import remoteLoad from '../../util/remote-load';
 import { BIMFACE_JS_SDK } from '../../consts';
+import CustomButton from '../../model/custom_button';
 
 export default class BimfaceBase {
+    app: any;
+
     async initSDK() {
         if (!window.BimfaceSDKLoaderConfig) {
             await remoteLoad(BIMFACE_JS_SDK);
@@ -22,7 +25,6 @@ export default class BimfaceBase {
             throw new Error('viewToken missing');
         }
         // 清除dom
-
         this.dispose(options);
 
         return new Promise((resolve, reject) => {
@@ -30,6 +32,25 @@ export default class BimfaceBase {
             loaderConfig.viewToken = options.viewToken;
             window.BimfaceSDKLoader.load(loaderConfig, resolve, reject);
         });
+    }
+
+    addCustomButtons(customButtons: Array<CustomButton>) {
+        const toolbar = this.app.getToolbar('MainToolbar');
+        const btnConfig = new window.Glodon.Bimface.UI.Button.ButtonConfig();
+        if (customButtons && customButtons.length > 0) {
+            customButtons.forEach(customBtn => {
+                if (customBtn.html) {
+                    const btn = new window.Glodon.Bimface.UI.Button.Button(btnConfig);
+                    btn.setHtml(customBtn.html);
+                    btn.addEventListener('Click', customBtn.clickEvent);
+                    if (customBtn.index >= 0) {
+                        toolbar.insertControl(customBtn.index, btn);
+                    } else {
+                        toolbar.addControl(btn);
+                    }
+                }
+            });
+        }
     }
 
     dispose(options) {
