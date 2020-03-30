@@ -51,11 +51,15 @@ export default class Bimface3DModel extends BimfaceBase implements IBim3DModel, 
         let webAppConfig = new window.Glodon.Bimface.Application.WebApplication3DConfig();
         webAppConfig.domElement = domShow;
         if (options.viewConfig) {
-            webAppConfig = { ...webAppConfig, ...options.viewConfig };
+            webAppConfig = { ...webAppConfig, ...options.viewConfig, ...options.appConfig };
         }
         this.app = new window.Glodon.Bimface.Application.WebApplication3D(webAppConfig);
         this.viewer3D = this.app.getViewer();
         this.app.addView(viewMetaData.viewToken);
+
+        return new Promise(resolve => {
+            this.viewer3D.addEventListener(window.Glodon.Bimface.Viewer.Viewer3DEvent.ViewAdded, resolve);
+        });
     }
     /**
      * 获取楼层

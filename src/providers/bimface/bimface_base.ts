@@ -1,9 +1,18 @@
 import remoteLoad from '../../util/remote-load';
 import { BIMFACE_JS_SDK } from '../../consts';
 import CustomButton from '../../model/custom_button';
+import needRender from '../../decorators/render';
 
-export default class BimfaceBase {
-    app: any;
+export default abstract class BimfaceBase {
+    private _app: any;
+
+    protected get app() {
+        return this._app;
+    }
+
+    protected set app(app: any) {
+        this._app = app;
+    }
 
     async initSDK() {
         if (!window.BimfaceSDKLoaderConfig) {
@@ -34,6 +43,7 @@ export default class BimfaceBase {
         });
     }
 
+    @needRender()
     addCustomButtons(customButtons: Array<CustomButton>) {
         const toolbar = this.app.getToolbar('MainToolbar');
         const btnConfig = new window.Glodon.Bimface.UI.Button.ButtonConfig();
