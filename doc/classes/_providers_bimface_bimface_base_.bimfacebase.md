@@ -1,4 +1,4 @@
-[bim-operator - v1.0.15](../README.md) › [Globals](../globals.md) › ["providers/bimface/bimface_base"](../modules/_providers_bimface_bimface_base_.md) › [BimfaceBase](_providers_bimface_bimface_base_.bimfacebase.md)
+[bim-operator - v1.0.20](../README.md) › [Globals](../globals.md) › ["providers/bimface/bimface_base"](../modules/_providers_bimface_bimface_base_.md) › [BimfaceBase](_providers_bimface_bimface_base_.bimfacebase.md)
 
 # Class: BimfaceBase
 
@@ -12,19 +12,74 @@
 
 ## Index
 
+### Properties
+
+* [_app](_providers_bimface_bimface_base_.bimfacebase.md#private-_app)
+
+### Accessors
+
+* [app](_providers_bimface_bimface_base_.bimfacebase.md#protected-app)
+
 ### Methods
 
+* [addCustomButtons](_providers_bimface_bimface_base_.bimfacebase.md#addcustombuttons)
 * [dispose](_providers_bimface_bimface_base_.bimfacebase.md#dispose)
 * [initSDK](_providers_bimface_bimface_base_.bimfacebase.md#initsdk)
 * [loadSDK](_providers_bimface_bimface_base_.bimfacebase.md#loadsdk)
 
+## Properties
+
+### `Private` _app
+
+• **_app**: *any*
+
+*Defined in [providers/bimface/bimface_base.ts:7](https://github.com/youkaisteve/bim-operator/blob/4b2ca5f/src/providers/bimface/bimface_base.ts#L7)*
+
+## Accessors
+
+### `Protected` app
+
+• **get app**(): *any*
+
+*Defined in [providers/bimface/bimface_base.ts:9](https://github.com/youkaisteve/bim-operator/blob/4b2ca5f/src/providers/bimface/bimface_base.ts#L9)*
+
+**Returns:** *any*
+
+• **set app**(`app`: any): *void*
+
+*Defined in [providers/bimface/bimface_base.ts:13](https://github.com/youkaisteve/bim-operator/blob/4b2ca5f/src/providers/bimface/bimface_base.ts#L13)*
+
+**Parameters:**
+
+Name | Type |
+------ | ------ |
+`app` | any |
+
+**Returns:** *void*
+
 ## Methods
+
+###  addCustomButtons
+
+▸ **addCustomButtons**(`customButtons`: Array‹[CustomButton](../interfaces/_model_custom_button_.custombutton.md)›): *void*
+
+*Defined in [providers/bimface/bimface_base.ts:47](https://github.com/youkaisteve/bim-operator/blob/4b2ca5f/src/providers/bimface/bimface_base.ts#L47)*
+
+**Parameters:**
+
+Name | Type |
+------ | ------ |
+`customButtons` | Array‹[CustomButton](../interfaces/_model_custom_button_.custombutton.md)› |
+
+**Returns:** *void*
+
+___
 
 ###  dispose
 
 ▸ **dispose**(`options`: any): *void*
 
-*Defined in [providers/bimface/bimface_base.ts:35](https://github.com/youkaisteve/bim-operator/blob/158031c/src/providers/bimface/bimface_base.ts#L35)*
+*Defined in [providers/bimface/bimface_base.ts:66](https://github.com/youkaisteve/bim-operator/blob/4b2ca5f/src/providers/bimface/bimface_base.ts#L66)*
 
 **Parameters:**
 
@@ -40,7 +95,7 @@ ___
 
 ▸ **initSDK**(): *Promise‹void›*
 
-*Defined in [providers/bimface/bimface_base.ts:5](https://github.com/youkaisteve/bim-operator/blob/158031c/src/providers/bimface/bimface_base.ts#L5)*
+*Defined in [providers/bimface/bimface_base.ts:17](https://github.com/youkaisteve/bim-operator/blob/4b2ca5f/src/providers/bimface/bimface_base.ts#L17)*
 
 **Returns:** *Promise‹void›*
 
@@ -50,7 +105,7 @@ ___
 
 ▸ **loadSDK**(`options`: any): *Promise‹any›*
 
-*Defined in [providers/bimface/bimface_base.ts:16](https://github.com/youkaisteve/bim-operator/blob/158031c/src/providers/bimface/bimface_base.ts#L16)*
+*Defined in [providers/bimface/bimface_base.ts:28](https://github.com/youkaisteve/bim-operator/blob/4b2ca5f/src/providers/bimface/bimface_base.ts#L28)*
 
 加载SDK
 
