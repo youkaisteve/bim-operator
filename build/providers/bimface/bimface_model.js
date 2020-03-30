@@ -94,6 +94,7 @@ var Bimface3DModel = (function (_super) {
     Bimface3DModel.prototype.load = function (options) {
         return __awaiter(this, void 0, void 0, function () {
             var viewMetaData, domShow, webAppConfig;
+            var _this = this;
             return __generator(this, function (_a) {
                 switch (_a.label) {
                     case 0: return [4, this.initSDK()];
@@ -106,12 +107,14 @@ var Bimface3DModel = (function (_super) {
                         webAppConfig = new window.Glodon.Bimface.Application.WebApplication3DConfig();
                         webAppConfig.domElement = domShow;
                         if (options.viewConfig) {
-                            webAppConfig = __assign(__assign({}, webAppConfig), options.viewConfig);
+                            webAppConfig = __assign(__assign(__assign({}, webAppConfig), options.viewConfig), options.appConfig);
                         }
                         this.app = new window.Glodon.Bimface.Application.WebApplication3D(webAppConfig);
                         this.viewer3D = this.app.getViewer();
                         this.app.addView(viewMetaData.viewToken);
-                        return [2];
+                        return [2, new Promise(function (resolve) {
+                                _this.viewer3D.addEventListener(window.Glodon.Bimface.Viewer.Viewer3DEvent.ViewAdded, resolve);
+                            })];
                 }
             });
         });

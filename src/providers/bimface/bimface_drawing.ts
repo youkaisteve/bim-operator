@@ -17,7 +17,7 @@ export default class BimfaceDrawing extends BimfaceBase implements IBimDrawing, 
      * @param {String[]} options.appConfig.Toolbars 工具条或目录树，MainToolbar:工具条；ModelTree：目录树
      * @param {Object} options.viewConfig 视图的配置，参考：https://static.bimface.com/jssdk-apidoc/v3/Glodon.Bimface.Viewer.ViewerDrawingConfig.html
      */
-    async load(options: any) {
+    async load(options: any): Promise<void> {
         await this.initSDK();
         const viewMetaData = await this.loadSDK(options);
         var dom4Show = document.getElementById(options.domId);
@@ -31,6 +31,9 @@ export default class BimfaceDrawing extends BimfaceBase implements IBimDrawing, 
         this.app = new window.Glodon.Bimface.Application.WebApplicationDrawing(webAppConfig);
         this.app.load(viewMetaData.viewToken);
         this.viewer2D = this.app.getViewer();
+        return new Promise(resolve => {
+            this.viewer2D.addEventListener(window.Glodon.Bimface.Viewer.ViewerDrawingEvent.Loaded, resolve);
+        });
     }
 
     setDisplayMode(model: DrawingDisplayMode, customOptions: any): void {

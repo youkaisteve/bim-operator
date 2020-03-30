@@ -70,6 +70,7 @@ var BimfaceDrawing = (function (_super) {
     BimfaceDrawing.prototype.load = function (options) {
         return __awaiter(this, void 0, void 0, function () {
             var viewMetaData, dom4Show, webAppConfig;
+            var _this = this;
             return __generator(this, function (_a) {
                 switch (_a.label) {
                     case 0: return [4, this.initSDK()];
@@ -89,7 +90,9 @@ var BimfaceDrawing = (function (_super) {
                         this.app = new window.Glodon.Bimface.Application.WebApplicationDrawing(webAppConfig);
                         this.app.load(viewMetaData.viewToken);
                         this.viewer2D = this.app.getViewer();
-                        return [2];
+                        return [2, new Promise(function (resolve) {
+                                _this.viewer2D.addEventListener(window.Glodon.Bimface.Viewer.ViewerDrawingEvent.Loaded, resolve);
+                            })];
                 }
             });
         });
