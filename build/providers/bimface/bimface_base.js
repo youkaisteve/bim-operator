@@ -85,7 +85,6 @@ var BimfaceBase = (function () {
                 if (!options.viewToken) {
                     throw new Error('viewToken missing');
                 }
-                this.dispose(options);
                 return [2, new Promise(function (resolve, reject) {
                         var loaderConfig = new window.BimfaceSDKLoaderConfig();
                         loaderConfig.viewToken = options.viewToken;

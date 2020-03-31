@@ -18,6 +18,9 @@ export default class BimfaceDrawing extends BimfaceBase implements IBimDrawing, 
      * @param {Object} options.viewConfig 视图的配置，参考：https://static.bimface.com/jssdk-apidoc/v3/Glodon.Bimface.Viewer.ViewerDrawingConfig.html
      */
     async load(options: any): Promise<void> {
+        // 清除dom
+        this.dispose(options);
+
         await this.initSDK();
         const viewMetaData = await this.loadSDK(options);
         var dom4Show = document.getElementById(options.domId);
