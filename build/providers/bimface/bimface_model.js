@@ -97,7 +97,9 @@ var Bimface3DModel = (function (_super) {
             var _this = this;
             return __generator(this, function (_a) {
                 switch (_a.label) {
-                    case 0: return [4, this.initSDK()];
+                    case 0:
+                        this.dispose(options);
+                        return [4, this.initSDK()];
                     case 1:
                         _a.sent();
                         return [4, this.loadSDK(options)];

@@ -33,8 +33,6 @@ export default abstract class BimfaceBase {
         if (!options.viewToken) {
             throw new Error('viewToken missing');
         }
-        // 清除dom
-        this.dispose(options);
 
         return new Promise((resolve, reject) => {
             const loaderConfig = new window.BimfaceSDKLoaderConfig();

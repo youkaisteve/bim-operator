@@ -44,6 +44,9 @@ export default class Bimface3DModel extends BimfaceBase implements IBim3DModel, 
      * @param {Object} options.viewConfig 视图的配置, 参考：https://static.bimface.com/jssdk-apidoc/v3/Glodon.Bimface.Viewer.Viewer3DConfig.html
      */
     async load(options: any): Promise<void> {
+        // 清除dom
+        this.dispose(options);
+
         await this.initSDK();
         const viewMetaData = await this.loadSDK(options);
 
@@ -51,7 +54,11 @@ export default class Bimface3DModel extends BimfaceBase implements IBim3DModel, 
         let webAppConfig = new window.Glodon.Bimface.Application.WebApplication3DConfig();
         webAppConfig.domElement = domShow;
         if (options.viewConfig) {
-            webAppConfig = { ...webAppConfig, ...options.viewConfig, ...options.appConfig };
+            webAppConfig = {
+                ...webAppConfig,
+                ...options.viewConfig,
+                ...options.appConfig
+            };
         }
         this.app = new window.Glodon.Bimface.Application.WebApplication3D(webAppConfig);
         this.viewer3D = this.app.getViewer();
