@@ -27,7 +27,7 @@
         "typescript": "^3.5.0"
     },
     "publishConfig": {
-        "directory": "build"
+        "access": "public"
     },
     "keywords": [
         "bim"
