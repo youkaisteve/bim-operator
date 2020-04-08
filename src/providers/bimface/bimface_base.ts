@@ -14,6 +14,8 @@ export default abstract class BimfaceBase {
         this._app = app;
     }
 
+    abstract addEventListener(eventName: String, callback: Function);
+
     async initSDK() {
         if (!window.BimfaceSDKLoaderConfig) {
             await remoteLoad(BIMFACE_JS_SDK);
@@ -40,8 +42,6 @@ export default abstract class BimfaceBase {
             window.BimfaceSDKLoader.load(loaderConfig, resolve, reject);
         });
     }
-
-    abstract addEventListener(eventName: String, callback: Function);
 
     @needRender()
     addCustomButtons(customButtons: Array<CustomButton>) {
