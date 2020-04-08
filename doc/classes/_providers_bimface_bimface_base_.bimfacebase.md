@@ -1,4 +1,4 @@
-[bim-operator - v1.0.20](../README.md) › [Globals](../globals.md) › ["providers/bimface/bimface_base"](../modules/_providers_bimface_bimface_base_.md) › [BimfaceBase](_providers_bimface_bimface_base_.bimfacebase.md)
+[bim-operator - v1.0.22](../README.md) › [Globals](../globals.md) › ["providers/bimface/bimface_base"](../modules/_providers_bimface_bimface_base_.md) › [BimfaceBase](_providers_bimface_bimface_base_.bimfacebase.md)
 
 # Class: BimfaceBase
 
@@ -23,6 +23,7 @@
 ### Methods
 
 * [addCustomButtons](_providers_bimface_bimface_base_.bimfacebase.md#addcustombuttons)
+* [addEventListener](_providers_bimface_bimface_base_.bimfacebase.md#abstract-addeventlistener)
 * [dispose](_providers_bimface_bimface_base_.bimfacebase.md#dispose)
 * [initSDK](_providers_bimface_bimface_base_.bimfacebase.md#initsdk)
 * [loadSDK](_providers_bimface_bimface_base_.bimfacebase.md#loadsdk)
@@ -33,7 +34,7 @@
 
 • **_app**: *any*
 
-*Defined in [providers/bimface/bimface_base.ts:7](https://github.com/youkaisteve/bim-operator/blob/4b2ca5f/src/providers/bimface/bimface_base.ts#L7)*
+*Defined in [providers/bimface/bimface_base.ts:7](https://github.com/youkaisteve/bim-operator/blob/9d072c0/src/providers/bimface/bimface_base.ts#L7)*
 
 ## Accessors
 
@@ -41,13 +42,13 @@
 
 • **get app**(): *any*
 
-*Defined in [providers/bimface/bimface_base.ts:9](https://github.com/youkaisteve/bim-operator/blob/4b2ca5f/src/providers/bimface/bimface_base.ts#L9)*
+*Defined in [providers/bimface/bimface_base.ts:9](https://github.com/youkaisteve/bim-operator/blob/9d072c0/src/providers/bimface/bimface_base.ts#L9)*
 
 **Returns:** *any*
 
 • **set app**(`app`: any): *void*
 
-*Defined in [providers/bimface/bimface_base.ts:13](https://github.com/youkaisteve/bim-operator/blob/4b2ca5f/src/providers/bimface/bimface_base.ts#L13)*
+*Defined in [providers/bimface/bimface_base.ts:13](https://github.com/youkaisteve/bim-operator/blob/9d072c0/src/providers/bimface/bimface_base.ts#L13)*
 
 **Parameters:**
 
@@ -63,7 +64,7 @@ Name | Type |
 
 ▸ **addCustomButtons**(`customButtons`: Array‹[CustomButton](../interfaces/_model_custom_button_.custombutton.md)›): *void*
 
-*Defined in [providers/bimface/bimface_base.ts:47](https://github.com/youkaisteve/bim-operator/blob/4b2ca5f/src/providers/bimface/bimface_base.ts#L47)*
+*Defined in [providers/bimface/bimface_base.ts:47](https://github.com/youkaisteve/bim-operator/blob/9d072c0/src/providers/bimface/bimface_base.ts#L47)*
 
 **Parameters:**
 
@@ -75,11 +76,28 @@ Name | Type |
 
 ___
 
+### `Abstract` addEventListener
+
+▸ **addEventListener**(`eventName`: String, `callback`: Function): *any*
+
+*Defined in [providers/bimface/bimface_base.ts:44](https://github.com/youkaisteve/bim-operator/blob/9d072c0/src/providers/bimface/bimface_base.ts#L44)*
+
+**Parameters:**
+
+Name | Type |
+------ | ------ |
+`eventName` | String |
+`callback` | Function |
+
+**Returns:** *any*
+
+___
+
 ###  dispose
 
 ▸ **dispose**(`options`: any): *void*
 
-*Defined in [providers/bimface/bimface_base.ts:66](https://github.com/youkaisteve/bim-operator/blob/4b2ca5f/src/providers/bimface/bimface_base.ts#L66)*
+*Defined in [providers/bimface/bimface_base.ts:66](https://github.com/youkaisteve/bim-operator/blob/9d072c0/src/providers/bimface/bimface_base.ts#L66)*
 
 **Parameters:**
 
@@ -95,7 +113,7 @@ ___
 
 ▸ **initSDK**(): *Promise‹void›*
 
-*Defined in [providers/bimface/bimface_base.ts:17](https://github.com/youkaisteve/bim-operator/blob/4b2ca5f/src/providers/bimface/bimface_base.ts#L17)*
+*Defined in [providers/bimface/bimface_base.ts:17](https://github.com/youkaisteve/bim-operator/blob/9d072c0/src/providers/bimface/bimface_base.ts#L17)*
 
 **Returns:** *Promise‹void›*
 
@@ -105,7 +123,7 @@ ___
 
 ▸ **loadSDK**(`options`: any): *Promise‹any›*
 
-*Defined in [providers/bimface/bimface_base.ts:28](https://github.com/youkaisteve/bim-operator/blob/4b2ca5f/src/providers/bimface/bimface_base.ts#L28)*
+*Defined in [providers/bimface/bimface_base.ts:28](https://github.com/youkaisteve/bim-operator/blob/9d072c0/src/providers/bimface/bimface_base.ts#L28)*
 
 加载SDK
 

@@ -67,6 +67,9 @@ var BimfaceDrawing = (function (_super) {
     function BimfaceDrawing() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
+    BimfaceDrawing.prototype.addEventListener = function (eventName, callback) {
+        this.viewer2D.addEventListener(eventName, callback);
+    };
     BimfaceDrawing.prototype.load = function (options) {
         return __awaiter(this, void 0, void 0, function () {
             var viewMetaData, dom4Show, webAppConfig;
