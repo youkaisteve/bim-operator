@@ -35,7 +35,7 @@ bimface标注类，用于锚点
 
 \+ **new BimfaceMarker**(`viewer3D`: any): *[BimfaceMarker](_providers_bimface_bimface_marker_.bimfacemarker.md)*
 
-*Defined in [providers/bimface/bimface_marker.ts:9](https://github.com/youkaisteve/bim-operator/blob/f12da11/src/providers/bimface/bimface_marker.ts#L9)*
+*Defined in [providers/bimface/bimface_marker.ts:9](https://github.com/youkaisteve/bim-operator/blob/3c56b33/src/providers/bimface/bimface_marker.ts#L9)*
 
 **Parameters:**
 
@@ -51,7 +51,7 @@ Name | Type |
 
 • **marker3D**: *any*
 
-*Defined in [providers/bimface/bimface_marker.ts:9](https://github.com/youkaisteve/bim-operator/blob/f12da11/src/providers/bimface/bimface_marker.ts#L9)*
+*Defined in [providers/bimface/bimface_marker.ts:9](https://github.com/youkaisteve/bim-operator/blob/3c56b33/src/providers/bimface/bimface_marker.ts#L9)*
 
 ## Methods
 
@@ -61,7 +61,7 @@ Name | Type |
 
 *Implementation of [IMarker](../interfaces/_interface_.imarker.md)*
 
-*Defined in [providers/bimface/bimface_marker.ts:25](https://github.com/youkaisteve/bim-operator/blob/f12da11/src/providers/bimface/bimface_marker.ts#L25)*
+*Defined in [providers/bimface/bimface_marker.ts:25](https://github.com/youkaisteve/bim-operator/blob/3c56b33/src/providers/bimface/bimface_marker.ts#L25)*
 
 添加3d锚点
 
@@ -81,7 +81,7 @@ ___
 
 *Implementation of [IMarker](../interfaces/_interface_.imarker.md)*
 
-*Defined in [providers/bimface/bimface_marker.ts:51](https://github.com/youkaisteve/bim-operator/blob/f12da11/src/providers/bimface/bimface_marker.ts#L51)*
+*Defined in [providers/bimface/bimface_marker.ts:51](https://github.com/youkaisteve/bim-operator/blob/3c56b33/src/providers/bimface/bimface_marker.ts#L51)*
 
 清空3d锚点
 
@@ -95,7 +95,7 @@ ___
 
 *Implementation of [IMarker](../interfaces/_interface_.imarker.md)*
 
-*Defined in [providers/bimface/bimface_marker.ts:17](https://github.com/youkaisteve/bim-operator/blob/f12da11/src/providers/bimface/bimface_marker.ts#L17)*
+*Defined in [providers/bimface/bimface_marker.ts:17](https://github.com/youkaisteve/bim-operator/blob/3c56b33/src/providers/bimface/bimface_marker.ts#L17)*
 
 **Returns:** *any*
 
@@ -107,7 +107,7 @@ ___
 
 *Implementation of [IMarker](../interfaces/_interface_.imarker.md)*
 
-*Defined in [providers/bimface/bimface_marker.ts:45](https://github.com/youkaisteve/bim-operator/blob/f12da11/src/providers/bimface/bimface_marker.ts#L45)*
+*Defined in [providers/bimface/bimface_marker.ts:45](https://github.com/youkaisteve/bim-operator/blob/3c56b33/src/providers/bimface/bimface_marker.ts#L45)*
 
 移除3d锚点
 

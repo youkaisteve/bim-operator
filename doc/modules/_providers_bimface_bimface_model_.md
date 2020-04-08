@@ -18,4 +18,4 @@
 
 • **MARKER_FIELD**: *unique symbol* =  Symbol('Bimface#MarkerFiled')
 
-*Defined in [providers/bimface/bimface_model.ts:11](https://github.com/youkaisteve/bim-operator/blob/f12da11/src/providers/bimface/bimface_model.ts#L11)*
+*Defined in [providers/bimface/bimface_model.ts:11](https://github.com/youkaisteve/bim-operator/blob/3c56b33/src/providers/bimface/bimface_model.ts#L11)*

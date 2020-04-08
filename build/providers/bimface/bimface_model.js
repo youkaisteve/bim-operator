@@ -111,9 +111,7 @@ var Bimface3DModel = (function (_super) {
                         domShow = document.getElementById(options.domId);
                         webAppConfig = new window.Glodon.Bimface.Application.WebApplication3DConfig();
                         webAppConfig.domElement = domShow;
-                        if (options.viewConfig) {
-                            webAppConfig = __assign(__assign(__assign({}, webAppConfig), options.viewConfig), options.appConfig);
-                        }
+                        webAppConfig = __assign(__assign(__assign({}, webAppConfig), options.viewConfig), options.appConfig);
                         this.app = new window.Glodon.Bimface.Application.WebApplication3D(webAppConfig);
                         this.viewer3D = this.app.getViewer();
                         this.app.addView(viewMetaData.viewToken);

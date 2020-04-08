@@ -19,7 +19,7 @@
 
 • **BIMFACE_3D_FIELD**: *unique symbol* =  Symbol('Bimface#3DFiled')
 
-*Defined in [providers/bimface_operator.ts:6](https://github.com/youkaisteve/bim-operator/blob/f12da11/src/providers/bimface_operator.ts#L6)*
+*Defined in [providers/bimface_operator.ts:6](https://github.com/youkaisteve/bim-operator/blob/3c56b33/src/providers/bimface_operator.ts#L6)*
 
 ___
 
@@ -27,4 +27,4 @@ ___
 
 • **BIMFACE_DRAWING_FIELD**: *unique symbol* =  Symbol('Bimface#DrawingField')
 
-*Defined in [providers/bimface_operator.ts:7](https://github.com/youkaisteve/bim-operator/blob/f12da11/src/providers/bimface_operator.ts#L7)*
+*Defined in [providers/bimface_operator.ts:7](https://github.com/youkaisteve/bim-operator/blob/3c56b33/src/providers/bimface_operator.ts#L7)*

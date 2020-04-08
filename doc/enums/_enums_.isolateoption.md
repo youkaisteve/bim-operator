@@ -17,7 +17,7 @@
 
 • **HideOthers**: = "HideOthers"
 
-*Defined in [enums.ts:8](https://github.com/youkaisteve/bim-operator/blob/f12da11/src/enums.ts#L8)*
+*Defined in [enums.ts:8](https://github.com/youkaisteve/bim-operator/blob/3c56b33/src/enums.ts#L8)*
 
 隐藏其他构件
 
@@ -27,6 +27,6 @@ ___
 
 • **MakeOthersTranslucent**: = "MakeOthersTranslucent"
 
-*Defined in [enums.ts:12](https://github.com/youkaisteve/bim-operator/blob/f12da11/src/enums.ts#L12)*
+*Defined in [enums.ts:12](https://github.com/youkaisteve/bim-operator/blob/3c56b33/src/enums.ts#L12)*
 
 半透明其他构件
