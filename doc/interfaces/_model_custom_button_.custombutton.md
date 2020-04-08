@@ -1,4 +1,4 @@
-[bim-operator - v1.0.22](../README.md) › [Globals](../globals.md) › ["model/custom_button"](../modules/_model_custom_button_.md) › [CustomButton](_model_custom_button_.custombutton.md)
+[bim-operator - v1.0.23](../README.md) › [Globals](../globals.md) › ["model/custom_button"](../modules/_model_custom_button_.md) › [CustomButton](_model_custom_button_.custombutton.md)
 
 # Interface: CustomButton
 
@@ -20,7 +20,7 @@
 
 • **clickEvent**: *Function*
 
-*Defined in [model/custom_button.ts:9](https://github.com/youkaisteve/bim-operator/blob/9d072c0/src/model/custom_button.ts#L9)*
+*Defined in [model/custom_button.ts:9](https://github.com/youkaisteve/bim-operator/blob/f12da11/src/model/custom_button.ts#L9)*
 
 点击事件
 
@@ -30,7 +30,7 @@ ___
 
 • **html**: *String*
 
-*Defined in [model/custom_button.ts:5](https://github.com/youkaisteve/bim-operator/blob/9d072c0/src/model/custom_button.ts#L5)*
+*Defined in [model/custom_button.ts:5](https://github.com/youkaisteve/bim-operator/blob/f12da11/src/model/custom_button.ts#L5)*
 
 按钮Html
 
@@ -40,6 +40,6 @@ ___
 
 • **index**: *Number*
 
-*Defined in [model/custom_button.ts:13](https://github.com/youkaisteve/bim-operator/blob/9d072c0/src/model/custom_button.ts#L13)*
+*Defined in [model/custom_button.ts:13](https://github.com/youkaisteve/bim-operator/blob/f12da11/src/model/custom_button.ts#L13)*
 
 按钮索引，如果为空则排最后
