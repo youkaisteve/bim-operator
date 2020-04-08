@@ -15,7 +15,7 @@
 
 ▸ **handleDescriptor**(`target`: any, `key`: any, `descriptor`: any): *any*
 
-*Defined in [decorators/render.ts:2](https://github.com/youkaisteve/bim-operator/blob/f12da11/src/decorators/render.ts#L2)*
+*Defined in [decorators/render.ts:2](https://github.com/youkaisteve/bim-operator/blob/3c56b33/src/decorators/render.ts#L2)*
 
 **Parameters:**
 
@@ -33,6 +33,6 @@ ___
 
 ▸ **needRender**(): *any*
 
-*Defined in [decorators/render.ts:21](https://github.com/youkaisteve/bim-operator/blob/f12da11/src/decorators/render.ts#L21)*
+*Defined in [decorators/render.ts:21](https://github.com/youkaisteve/bim-operator/blob/3c56b33/src/decorators/render.ts#L21)*
 
 **Returns:** *any*

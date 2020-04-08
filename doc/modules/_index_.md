@@ -18,7 +18,7 @@
 
 ▸ **getProvider**(`provider`: String): *[IBimOperator](../interfaces/_interface_.ibimoperator.md)*
 
-*Defined in [index.ts:19](https://github.com/youkaisteve/bim-operator/blob/f12da11/src/index.ts#L19)*
+*Defined in [index.ts:19](https://github.com/youkaisteve/bim-operator/blob/3c56b33/src/index.ts#L19)*
 
 获取供应商操作类
 
@@ -36,7 +36,7 @@ Name | Type | Description |
 
 ### ▪ **ProviderType**: *object*
 
-*Defined in [index.ts:11](https://github.com/youkaisteve/bim-operator/blob/f12da11/src/index.ts#L11)*
+*Defined in [index.ts:11](https://github.com/youkaisteve/bim-operator/blob/3c56b33/src/index.ts#L11)*
 
 Bim供应商
 
@@ -44,4 +44,4 @@ Bim供应商
 
 • **BIMFACE**: *string* = "bimface"
 
-*Defined in [index.ts:12](https://github.com/youkaisteve/bim-operator/blob/f12da11/src/index.ts#L12)*
+*Defined in [index.ts:12](https://github.com/youkaisteve/bim-operator/blob/3c56b33/src/index.ts#L12)*

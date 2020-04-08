@@ -14,4 +14,4 @@
 
 • **BIMFACE_JS_SDK**: *"https://static.bimface.com/api/BimfaceSDKLoader/BimfaceSDKLoader@latest-release.js"* = "https://static.bimface.com/api/BimfaceSDKLoader/BimfaceSDKLoader@latest-release.js"
 
-*Defined in [consts.ts:1](https://github.com/youkaisteve/bim-operator/blob/f12da11/src/consts.ts#L1)*
+*Defined in [consts.ts:1](https://github.com/youkaisteve/bim-operator/blob/3c56b33/src/consts.ts#L1)*

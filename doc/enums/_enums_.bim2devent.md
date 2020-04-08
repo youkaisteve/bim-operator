@@ -17,7 +17,7 @@
 
 • **Error**: = "Error"
 
-*Defined in [enums.ts:61](https://github.com/youkaisteve/bim-operator/blob/f12da11/src/enums.ts#L61)*
+*Defined in [enums.ts:61](https://github.com/youkaisteve/bim-operator/blob/3c56b33/src/enums.ts#L61)*
 
 ___
 
@@ -25,7 +25,7 @@ ___
 
 • **Loaded**: = "Loaded"
 
-*Defined in [enums.ts:62](https://github.com/youkaisteve/bim-operator/blob/f12da11/src/enums.ts#L62)*
+*Defined in [enums.ts:62](https://github.com/youkaisteve/bim-operator/blob/3c56b33/src/enums.ts#L62)*
 
 ___
 
@@ -33,7 +33,7 @@ ___
 
 • **MouseClicked**: = "MouseClicked"
 
-*Defined in [enums.ts:63](https://github.com/youkaisteve/bim-operator/blob/f12da11/src/enums.ts#L63)*
+*Defined in [enums.ts:63](https://github.com/youkaisteve/bim-operator/blob/3c56b33/src/enums.ts#L63)*
 
 ___
 
@@ -41,4 +41,4 @@ ___
 
 • **ViewChange**: = "ViewChange"
 
-*Defined in [enums.ts:64](https://github.com/youkaisteve/bim-operator/blob/f12da11/src/enums.ts#L64)*
+*Defined in [enums.ts:64](https://github.com/youkaisteve/bim-operator/blob/3c56b33/src/enums.ts#L64)*
