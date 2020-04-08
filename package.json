@@ -1,5 +1,5 @@
 {
-    "name": "@yzw/bim-operator",
+    "name": "bim-operator",
     "version": "1.0.24",
     "description": "a pack of bim operations",
     "files": [
