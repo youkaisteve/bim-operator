@@ -1,5 +1,5 @@
 {
-    "name": "bim-operator",
+    "name": "@yzw/bim-operator",
     "version": "1.0.23",
     "description": "a pack of bim operations",
     "files": [
@@ -9,7 +9,7 @@
     "types": "build/index.d.ts",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
-        "build": "rm -rf ./build && tsc -p tsconfig.prod.json && cp package-build.json ./build/package.json",
+        "build": "rm -rf ./build && tsc -p tsconfig.prod.json",
         "pub": "npm version patch && git push && npm publish",
         "doc": "rm -rf ./doc && npx typedoc --module commonjs --target es5 --experimentalDecorators --plugin typedoc-plugin-markdown --out ./doc ./src/"
     },

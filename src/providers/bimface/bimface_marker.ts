@@ -14,7 +14,10 @@ export default class BimfaceMarker implements IMarker {
         this.marker3D = new window.Glodon.Bimface.Plugins.Marker3D.Marker3DContainer(markerConfig);
     }
 
-    getAllMarkers() {
+    /**
+     * 获取所有标记
+     */
+    getAllMarkers(): Array<Marker3D> {
         return this.marker3D.getAllItems();
     }
 

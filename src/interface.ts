@@ -38,7 +38,7 @@ export interface IBim3DModel {
      * @param floors 楼层ids
      * @param extend 楼层爆炸离散系数，根据厂商定制，可选
      */
-    explosionFloor(floorIds: String[], extend: Number);
+    explosionFloor(floorIds: Array<String>, extend: Number): void;
     /**
      * 根据条件获取构件
      * @param conditions 查询条件，不同厂商之间可能会有差别
@@ -66,23 +66,23 @@ export interface IBim3DModel {
     /**
      * 清空隔离
      */
-    clearIsolation();
+    clearIsolation(): void;
     /**
-     * 突出构件
+     * 高亮构件
      * @param componentIds 构件ids
      * @param options 高亮选项
      */
-    highlightComponents(componentIds: String[], options: HighlightOption): void;
+    highlightComponents(componentIds: Array<String>, options: HighlightOption): void;
     /**
-     * 清除所有构件
+     * 清除所有高亮构件
      * @param componentIds 构件id列表，如果没有则清除所有高亮构件
      */
-    clearHighlightComponents(componentIds?: String[]);
+    clearHighlightComponents(componentIds?: Array<String>): void;
     /**
      * 选中构件
      * @param componentIds 构件id列表
      */
-    selectComponents(componentIds: String[]): void;
+    selectComponents(componentIds: Array<String>): void;
     /**
      * 根据条件选中构件
      * @param conditions 条件
@@ -95,7 +95,7 @@ export interface IBim3DModel {
     /**
      * 获取选中的构件
      */
-    getSelectedComponents(): String[];
+    getSelectedComponents(): Array<String>;
     /**
      * 设置场景显示大小
      * @param width 宽度
@@ -108,7 +108,10 @@ export interface IBim3DModel {
  * 3D标注类
  */
 export interface IMarker {
-    getAllMarkers(): Marker3D[];
+    /**
+     * 获取所有标记
+     */
+    getAllMarkers(): Array<Marker3D>;
     /**
      * 添加3D标记
      * @param marker 位置信息

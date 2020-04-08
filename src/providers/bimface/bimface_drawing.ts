@@ -2,6 +2,9 @@ import { IBimDrawing, IBimCustom } from '../../interface';
 import BimfaceBase from './bimface_base';
 import { DrawingDisplayMode, Bim2DEvent } from '../../enums';
 
+/**
+ * bimface 2D 操作
+ */
 export default class BimfaceDrawing extends BimfaceBase implements IBimDrawing, IBimCustom {
     app: any;
     viewer2D: any;
@@ -22,8 +25,8 @@ export default class BimfaceDrawing extends BimfaceBase implements IBimDrawing, 
      * @param {string} options.url js-sdk地址
      * @param {string} options.domId dom id
      * @param {Object} options.appConfig 应用的配置
-     * @param {String[]} options.appConfig.Buttons 工具条button，0:Home：主视角，1: RectZoom：框选，2: DrawingMeasure：测量，3: Map：地图，4: Layers：图层，5: Setting：设置，6: FullScreen：全屏 默认全部加载
-     * @param {String[]} options.appConfig.Toolbars 工具条或目录树，MainToolbar:工具条；ModelTree：目录树
+     * @param {Array<String>} options.appConfig.Buttons 工具条button，0:Home：主视角，1: RectZoom：框选，2: DrawingMeasure：测量，3: Map：地图，4: Layers：图层，5: Setting：设置，6: FullScreen：全屏 默认全部加载
+     * @param {Array<String>} options.appConfig.Toolbars 工具条或目录树，MainToolbar:工具条；ModelTree：目录树
      * @param {Object} options.viewConfig 视图的配置，参考：https://static.bimface.com/jssdk-apidoc/v3/Glodon.Bimface.Viewer.ViewerDrawingConfig.html
      */
     async load(options: any): Promise<void> {
@@ -48,6 +51,13 @@ export default class BimfaceDrawing extends BimfaceBase implements IBimDrawing, 
         });
     }
 
+    /**
+     * 设置展示模式
+     * @param model 模式
+     * @param customOptions 选项
+     * @param {String}} customOptions.color 颜色,如#FFFFFF
+     * @param {number} customOptions.opacity 不透明度,默认为0，即透明
+     */
     setDisplayMode(model: DrawingDisplayMode, customOptions: any): void {
         this.viewer2D.setDisplayMode(model);
         if (model === DrawingDisplayMode.Custom && customOptions) {

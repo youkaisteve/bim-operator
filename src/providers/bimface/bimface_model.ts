@@ -11,7 +11,7 @@ import BimfaceMarker from './bimface_marker';
 const MARKER_FIELD = Symbol('Bimface#MarkerFiled');
 
 /**
- * bimface操作
+ * bimface 3D 操作
  */
 export default class Bimface3DModel extends BimfaceBase implements IBim3DModel, IBimCustom, IDispose {
     /**
@@ -47,9 +47,9 @@ export default class Bimface3DModel extends BimfaceBase implements IBim3DModel, 
      * @param {string} options.url js-sdk地址
      * @param {string} options.domId dom id
      * @param {Object} options.appConfig 应用的配置
-     * @param {String[]} options.appConfig.Buttons 工具条button，0:Home：主视角，1: RectangleSelect：框选，2: Measure：测量，3: Section：剖切，4: Walk：漫游，5: Map：地图，6: Property：构件详情，7: Setting：设置，8: Information：基本信息，9: FullScreen：全屏 默认全部加载
-     * @param {String[]} options.appConfig.Toolbars 工具条或目录树，MainToolbar:工具条；ModelTree：目录树
-     * @param {String[]} options.appConfig.Toolbars 工具条或目录树，MainToolbar:工具条；ModelTree：目录树
+     * @param {Array<String>} options.appConfig.Buttons 工具条button，0:Home：主视角，1: RectangleSelect：框选，2: Measure：测量，3: Section：剖切，4: Walk：漫游，5: Map：地图，6: Property：构件详情，7: Setting：设置，8: Information：基本信息，9: FullScreen：全屏 默认全部加载
+     * @param {Array<String>} options.appConfig.Toolbars 工具条或目录树，MainToolbar:工具条；ModelTree：目录树
+     * @param {Array<String>} options.appConfig.Toolbars 工具条或目录树，MainToolbar:工具条；ModelTree：目录树
      * @param {Object} options.viewConfig 视图的配置, 参考：https://static.bimface.com/jssdk-apidoc/v3/Glodon.Bimface.Viewer.Viewer3DConfig.html
      */
     async load(options: any): Promise<void> {
@@ -78,7 +78,7 @@ export default class Bimface3DModel extends BimfaceBase implements IBim3DModel, 
     /**
      * 获取楼层
      */
-    async getFloors(): Promise<Floor[]> {
+    async getFloors(): Promise<Array<Floor>> {
         return new Promise((resolve) => {
             this.viewer3D.getFloors(resolve);
         });
@@ -98,7 +98,7 @@ export default class Bimface3DModel extends BimfaceBase implements IBim3DModel, 
      * @param extend 楼层爆炸离散系数，范围为[0, 30]，可选，默认为3
      */
     @needRender()
-    explosionFloor(floorIds: String[], extend: Number) {
+    explosionFloor(floorIds: Array<String>, extend: Number): void {
         this.viewer3D.setFloorExplosion(extend, floorIds);
     }
     /**
@@ -106,7 +106,7 @@ export default class Bimface3DModel extends BimfaceBase implements IBim3DModel, 
      * @param {String} fileId 模型id
      * @param {Array<ComponentFilter>} conditions 查询条件
      */
-    async getComponentByCondition(fileId: String, conditions: Array<ComponentFilter>): Promise<String[]> {
+    async getComponentByCondition(fileId: String, conditions: Array<ComponentFilter>): Promise<Array<String>> {
         if (!fileId) {
             throw new Error('fileId不能为空');
         }
@@ -115,7 +115,12 @@ export default class Bimface3DModel extends BimfaceBase implements IBim3DModel, 
             this.viewer3D.getElementByConditions(fileId, conditions, resolve);
         });
     }
-
+    /**
+     * 获取视点
+     * @param {Object} options 视点参数
+     * @param {String}} options.color 颜色,如#FFFFFF
+     * @param {number} options.opacity 不透明度,默认为0，即透明
+     */
     async getViewPoint(options): Promise<ViewPoint> {
         const cameraStatus = this.viewer3D.getCameraStatus();
         let color;
@@ -136,28 +141,45 @@ export default class Bimface3DModel extends BimfaceBase implements IBim3DModel, 
         });
     }
 
-    setViewPoint(viewPoint: ViewPoint) {
+    /**
+     * 设置视点
+     */
+    setViewPoint(viewPoint: ViewPoint): void {
         if (viewPoint && viewPoint.cameraStatus) this.viewer3D.setCameraStatus(viewPoint.cameraStatus);
     }
 
+    /**
+     * 隔离构件
+     */
     @needRender()
-    isolateComponent(componentIds: String[], option: IsolateOption): void {
+    isolateComponent(componentIds: Array<String>, option: IsolateOption): void {
         this.viewer3D.isolateComponentsById(componentIds, option);
     }
 
+    /**
+     * 根据条件隔离构件
+     */
     @needRender()
     isolateComponentByCondition(conditions: Array<ComponentFilter>, option: IsolateOption): void {
         console.log(conditions);
         this.viewer3D.isolateComponentsByObjectData(conditions, option);
     }
 
+    /**
+     * 高亮隔离
+     */
     @needRender()
-    clearIsolation() {
+    clearIsolation(): void {
         this.viewer3D.clearIsolation();
     }
 
+    /**
+     * 突出构件
+     * @param componentIds 构件ids
+     * @param options 高亮选项
+     */
     @needRender()
-    highlightComponents(componentIds: String[], options: HighlightOption) {
+    highlightComponents(componentIds: Array<String>, options: HighlightOption): void {
         this.viewer3D.enableBlinkComponents(true);
         if (componentIds && componentIds.length > 0) {
             if (options) {
@@ -170,31 +192,61 @@ export default class Bimface3DModel extends BimfaceBase implements IBim3DModel, 
         }
     }
 
+    /**
+     * 清除所有高亮构件
+     * @param componentIds 构件id列表，如果没有则清除所有高亮构件
+     */
     @needRender()
-    clearHighlightComponents(componentIds?: String[]) {
+    clearHighlightComponents(componentIds?: Array<String>): void {
         if (componentIds && componentIds.length > 0) {
             this.viewer3D.clearBlinkComponentsById(componentIds);
         } else {
             this.viewer3D.clearAllBlinkComponents();
         }
     }
-    selectComponents(componentIds: String[]) {
+
+    /**
+     * 选中构件
+     * @param componentIds 构件id列表
+     */
+    selectComponents(componentIds: Array<String>): void {
         this.viewer3D.setSelectedComponentsById(componentIds);
     }
-    selectComponentsByCondition(conditions: Array<ComponentFilter>) {
+
+    /**
+     * 根据条件选中构件
+     * @param conditions 条件
+     */
+    selectComponentsByCondition(conditions: Array<ComponentFilter>): void {
         this.viewer3D.setSelectedComponentsByObjectData(conditions);
     }
-    clearSelectedComponents() {
+
+    /**
+     * 清空选中构件
+     */
+    clearSelectedComponents(): void {
         this.viewer3D.clearSelectedComponents();
     }
-    getSelectedComponents() {
+    /**
+     * 获取选中的构件
+     */
+    getSelectedComponents(): Array<String> {
         return this.viewer3D.getSelectedComponents();
     }
 
-    resize(width?: number, height?: number) {
+    /**
+     * 设置场景显示大小
+     * @param width 宽度
+     * @param height 高度
+     */
+    resize(width?: number, height?: number): void {
         this.viewer3D.resize(width, height);
     }
 
+    /**
+     * 释放3D模型实例
+     * @param options 选项
+     */
     dispose(options) {
         if (options && options.viewToken) {
             this.app && this.app.destroy(options.viewToken);
