@@ -2,7 +2,7 @@ import { IBim3DModel, IMarker, IBimCustom, IDispose } from '../../interface';
 import BimfaceBase from './bimface_base';
 import ViewPoint from '../../model/view_point';
 import Floor from '../../model/floor';
-import { IsolateOption } from '../../enums';
+import { IsolateOption, Bim3DEvent } from '../../enums';
 import { ComponentFilter } from '../../model/filter';
 import needRender from '../../decorators/render';
 import { HighlightOption } from '../../model';
@@ -32,6 +32,15 @@ export default class Bimface3DModel extends BimfaceBase implements IBim3DModel, 
     }
 
     /**
+     * 监听事件
+     * @param eventName 事件名
+     * @param callback 回调
+     */
+    addEventListener(eventName: Bim3DEvent, callback: Function) {
+        this.viewer3D.addEventListener(eventName, callback);
+    }
+
+    /**
      * 加载模型
      * @param {Object} options
      * @param {string} options.viewToken 访问认证token
@@ -57,14 +66,14 @@ export default class Bimface3DModel extends BimfaceBase implements IBim3DModel, 
             webAppConfig = {
                 ...webAppConfig,
                 ...options.viewConfig,
-                ...options.appConfig
+                ...options.appConfig,
             };
         }
         this.app = new window.Glodon.Bimface.Application.WebApplication3D(webAppConfig);
         this.viewer3D = this.app.getViewer();
         this.app.addView(viewMetaData.viewToken);
 
-        return new Promise(resolve => {
+        return new Promise((resolve) => {
             this.viewer3D.addEventListener(window.Glodon.Bimface.Viewer.Viewer3DEvent.ViewAdded, resolve);
         });
     }
@@ -72,7 +81,7 @@ export default class Bimface3DModel extends BimfaceBase implements IBim3DModel, 
      * 获取楼层
      */
     async getFloors(): Promise<Floor[]> {
-        return new Promise(resolve => {
+        return new Promise((resolve) => {
             this.viewer3D.getFloors(resolve);
         });
     }
@@ -81,7 +90,7 @@ export default class Bimface3DModel extends BimfaceBase implements IBim3DModel, 
      * @param fileId 模型文件id
      */
     async getFloorsbyFileId(fileId: String): Promise<Array<Floor>> {
-        return new Promise(resolve => {
+        return new Promise((resolve) => {
             this.viewer3D.getFloorsbyFileId(fileId, resolve);
         });
     }
@@ -104,7 +113,7 @@ export default class Bimface3DModel extends BimfaceBase implements IBim3DModel, 
             throw new Error('fileId不能为空');
         }
 
-        return new Promise(resolve => {
+        return new Promise((resolve) => {
             this.viewer3D.getElementByConditions(fileId, conditions, resolve);
         });
     }
@@ -118,11 +127,11 @@ export default class Bimface3DModel extends BimfaceBase implements IBim3DModel, 
             color = new window.Glodon.Web.Graphics.Color(0, 0, 0, 0);
         }
 
-        return new Promise(resolve => {
-            return this.viewer3D.createSnapshotAsync(color, data => {
+        return new Promise((resolve) => {
+            return this.viewer3D.createSnapshotAsync(color, (data) => {
                 const viewPoint: ViewPoint = {
                     cameraStatus: cameraStatus,
-                    thumbnail: data
+                    thumbnail: data,
                 };
                 resolve(viewPoint);
             });

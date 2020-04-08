@@ -9,7 +9,7 @@ export enum IsolateOption {
     /**
      * 半透明其他构件
      */
-    MakeOthersTranslucent = 'MakeOthersTranslucent'
+    MakeOthersTranslucent = 'MakeOthersTranslucent',
 }
 
 /**
@@ -31,5 +31,35 @@ export enum DrawingDisplayMode {
     /**
      * 自定义模式
      */
-    Custom = 3
+    Custom = 3,
+}
+
+export enum Bim3DEvent {
+    AddView = 'AddView',
+    ButtonOnToolbarClicked = 'ButtonOnToolbarClicked',
+    ComponentsHoverChanged = 'ComponentsHoverChanged',
+    ContextMenu = 'ContextMenu',
+    DemandLoaded = 'DemandLoaded',
+    Error = 'Error',
+    FamilyTypeChanged = 'FamilyTypeChanged',
+    FloorExplosion = 'FloorExplosion',
+    Hover = 'Hover',
+    MissingDrawingElement = 'MissingDrawingElement',
+    MouseClicked = 'MouseClicked',
+    MouseDoubleClicked = 'MouseDoubleClicked',
+    MouseDragged = 'MouseDragged',
+    PureRender = 'PureRender',
+    RemoveView = 'RemoveView',
+    Rendered = 'Rendered',
+    SelectionChanged = 'SelectionChanged',
+    ToolbarHomeClick = 'ToolbarHomeClick',
+    ViewAdded = 'ViewAdded',
+    ViewLoading = 'ViewLoading',
+}
+
+export enum Bim2DEvent {
+    Error = 'Error',
+    Loaded = 'Loaded',
+    MouseClicked = 'MouseClicked',
+    ViewChange = 'ViewChange',
 }

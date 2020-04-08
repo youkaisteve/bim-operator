@@ -41,12 +41,14 @@ export default abstract class BimfaceBase {
         });
     }
 
+    abstract addEventListener(eventName: String, callback: Function);
+
     @needRender()
     addCustomButtons(customButtons: Array<CustomButton>) {
         const toolbar = this.app.getToolbar('MainToolbar');
         const btnConfig = new window.Glodon.Bimface.UI.Button.ButtonConfig();
         if (customButtons && customButtons.length > 0) {
-            customButtons.forEach(customBtn => {
+            customButtons.forEach((customBtn) => {
                 if (customBtn.html) {
                     const btn = new window.Glodon.Bimface.UI.Button.Button(btnConfig);
                     btn.setHtml(customBtn.html);
