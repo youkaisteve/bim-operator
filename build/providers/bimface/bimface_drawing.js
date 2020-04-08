@@ -89,8 +89,8 @@ var BimfaceDrawing = (function (_super) {
                         webAppConfig.domElement = dom4Show;
                         webAppConfig.drawingUrl = viewMetaData.drawingUrl;
                         webAppConfig.viewToken = viewMetaData.viewToken;
-                        if (options.viewConfig) {
-                            webAppConfig = __assign(__assign({}, webAppConfig), options.viewConfig);
+                        if (options.appConfig) {
+                            webAppConfig = __assign(__assign({}, webAppConfig), options.appConfig);
                         }
                         this.app = new window.Glodon.Bimface.Application.WebApplicationDrawing(webAppConfig);
                         this.app.load(viewMetaData.viewToken);
