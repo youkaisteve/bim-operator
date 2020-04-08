@@ -1,10 +1,19 @@
 import { IBimDrawing, IBimCustom } from '../../interface';
 import BimfaceBase from './bimface_base';
-import { DrawingDisplayMode } from '../../enums';
+import { DrawingDisplayMode, Bim2DEvent } from '../../enums';
 
 export default class BimfaceDrawing extends BimfaceBase implements IBimDrawing, IBimCustom {
     app: any;
     viewer2D: any;
+
+    /**
+     * 监听事件
+     * @param eventName 事件名
+     * @param callback 回调
+     */
+    addEventListener(eventName: Bim2DEvent, callback: Function) {
+        this.viewer2D.addEventListener(eventName, callback);
+    }
 
     /**
      * 加载图纸
@@ -34,7 +43,7 @@ export default class BimfaceDrawing extends BimfaceBase implements IBimDrawing, 
         this.app = new window.Glodon.Bimface.Application.WebApplicationDrawing(webAppConfig);
         this.app.load(viewMetaData.viewToken);
         this.viewer2D = this.app.getViewer();
-        return new Promise(resolve => {
+        return new Promise((resolve) => {
             this.viewer2D.addEventListener(window.Glodon.Bimface.Viewer.ViewerDrawingEvent.Loaded, resolve);
         });
     }
