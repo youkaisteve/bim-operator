@@ -1,4 +1,4 @@
-[bim-operator - v1.0.23](../README.md) › [Globals](../globals.md) › ["model/filter"](_model_filter_.md)
+[@yzw/bim-operator - v1.0.23](../README.md) › [Globals](../globals.md) › ["model/filter"](_model_filter_.md)
 
 # External module: "model/filter"
 
