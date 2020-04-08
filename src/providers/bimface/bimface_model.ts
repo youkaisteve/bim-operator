@@ -62,13 +62,11 @@ export default class Bimface3DModel extends BimfaceBase implements IBim3DModel, 
         const domShow = document.getElementById(options.domId);
         let webAppConfig = new window.Glodon.Bimface.Application.WebApplication3DConfig();
         webAppConfig.domElement = domShow;
-        if (options.viewConfig) {
-            webAppConfig = {
-                ...webAppConfig,
-                ...options.viewConfig,
-                ...options.appConfig,
-            };
-        }
+        webAppConfig = {
+            ...webAppConfig,
+            ...options.viewConfig,
+            ...options.appConfig,
+        };
         this.app = new window.Glodon.Bimface.Application.WebApplication3D(webAppConfig);
         this.viewer3D = this.app.getViewer();
         this.app.addView(viewMetaData.viewToken);
