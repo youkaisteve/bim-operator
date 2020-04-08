@@ -1,4 +1,4 @@
-[bim-operator - v1.0.20](../README.md) › [Globals](../globals.md) › ["providers/bimface/bimface_drawing"](../modules/_providers_bimface_bimface_drawing_.md) › [BimfaceDrawing](_providers_bimface_bimface_drawing_.bimfacedrawing.md)
+[bim-operator - v1.0.22](../README.md) › [Globals](../globals.md) › ["providers/bimface/bimface_drawing"](../modules/_providers_bimface_bimface_drawing_.md) › [BimfaceDrawing](_providers_bimface_bimface_drawing_.bimfacedrawing.md)
 
 # Class: BimfaceDrawing
 
@@ -23,6 +23,7 @@
 ### Methods
 
 * [addCustomButtons](_providers_bimface_bimface_drawing_.bimfacedrawing.md#addcustombuttons)
+* [addEventListener](_providers_bimface_bimface_drawing_.bimfacedrawing.md#addeventlistener)
 * [dispose](_providers_bimface_bimface_drawing_.bimfacedrawing.md#dispose)
 * [initSDK](_providers_bimface_bimface_drawing_.bimfacedrawing.md#initsdk)
 * [load](_providers_bimface_bimface_drawing_.bimfacedrawing.md#load)
@@ -37,7 +38,7 @@
 
 *Overrides [BimfaceBase](_providers_bimface_bimface_base_.bimfacebase.md).[app](_providers_bimface_bimface_base_.bimfacebase.md#protected-app)*
 
-*Defined in [providers/bimface/bimface_drawing.ts:6](https://github.com/youkaisteve/bim-operator/blob/4b2ca5f/src/providers/bimface/bimface_drawing.ts#L6)*
+*Defined in [providers/bimface/bimface_drawing.ts:6](https://github.com/youkaisteve/bim-operator/blob/9d072c0/src/providers/bimface/bimface_drawing.ts#L6)*
 
 ___
 
@@ -45,7 +46,7 @@ ___
 
 • **viewer2D**: *any*
 
-*Defined in [providers/bimface/bimface_drawing.ts:7](https://github.com/youkaisteve/bim-operator/blob/4b2ca5f/src/providers/bimface/bimface_drawing.ts#L7)*
+*Defined in [providers/bimface/bimface_drawing.ts:7](https://github.com/youkaisteve/bim-operator/blob/9d072c0/src/providers/bimface/bimface_drawing.ts#L7)*
 
 ## Methods
 
@@ -57,7 +58,7 @@ ___
 
 *Inherited from [BimfaceBase](_providers_bimface_bimface_base_.bimfacebase.md).[addCustomButtons](_providers_bimface_bimface_base_.bimfacebase.md#addcustombuttons)*
 
-*Defined in [providers/bimface/bimface_base.ts:47](https://github.com/youkaisteve/bim-operator/blob/4b2ca5f/src/providers/bimface/bimface_base.ts#L47)*
+*Defined in [providers/bimface/bimface_base.ts:47](https://github.com/youkaisteve/bim-operator/blob/9d072c0/src/providers/bimface/bimface_base.ts#L47)*
 
 **Parameters:**
 
@@ -69,13 +70,34 @@ Name | Type |
 
 ___
 
+###  addEventListener
+
+▸ **addEventListener**(`eventName`: [Bim2DEvent](../enums/_enums_.bim2devent.md), `callback`: Function): *void*
+
+*Overrides [BimfaceBase](_providers_bimface_bimface_base_.bimfacebase.md).[addEventListener](_providers_bimface_bimface_base_.bimfacebase.md#abstract-addeventlistener)*
+
+*Defined in [providers/bimface/bimface_drawing.ts:14](https://github.com/youkaisteve/bim-operator/blob/9d072c0/src/providers/bimface/bimface_drawing.ts#L14)*
+
+监听事件
+
+**Parameters:**
+
+Name | Type | Description |
+------ | ------ | ------ |
+`eventName` | [Bim2DEvent](../enums/_enums_.bim2devent.md) | 事件名 |
+`callback` | Function | 回调  |
+
+**Returns:** *void*
+
+___
+
 ###  dispose
 
 ▸ **dispose**(`options`: any): *void*
 
 *Inherited from [BimfaceBase](_providers_bimface_bimface_base_.bimfacebase.md).[dispose](_providers_bimface_bimface_base_.bimfacebase.md#dispose)*
 
-*Defined in [providers/bimface/bimface_base.ts:66](https://github.com/youkaisteve/bim-operator/blob/4b2ca5f/src/providers/bimface/bimface_base.ts#L66)*
+*Defined in [providers/bimface/bimface_base.ts:66](https://github.com/youkaisteve/bim-operator/blob/9d072c0/src/providers/bimface/bimface_base.ts#L66)*
 
 **Parameters:**
 
@@ -93,7 +115,7 @@ ___
 
 *Inherited from [BimfaceBase](_providers_bimface_bimface_base_.bimfacebase.md).[initSDK](_providers_bimface_bimface_base_.bimfacebase.md#initsdk)*
 
-*Defined in [providers/bimface/bimface_base.ts:17](https://github.com/youkaisteve/bim-operator/blob/4b2ca5f/src/providers/bimface/bimface_base.ts#L17)*
+*Defined in [providers/bimface/bimface_base.ts:17](https://github.com/youkaisteve/bim-operator/blob/9d072c0/src/providers/bimface/bimface_base.ts#L17)*
 
 **Returns:** *Promise‹void›*
 
@@ -105,7 +127,7 @@ ___
 
 *Implementation of [IBimDrawing](../interfaces/_interface_.ibimdrawing.md)*
 
-*Defined in [providers/bimface/bimface_drawing.ts:20](https://github.com/youkaisteve/bim-operator/blob/4b2ca5f/src/providers/bimface/bimface_drawing.ts#L20)*
+*Defined in [providers/bimface/bimface_drawing.ts:29](https://github.com/youkaisteve/bim-operator/blob/9d072c0/src/providers/bimface/bimface_drawing.ts#L29)*
 
 加载图纸
 
@@ -125,7 +147,7 @@ ___
 
 *Inherited from [BimfaceBase](_providers_bimface_bimface_base_.bimfacebase.md).[loadSDK](_providers_bimface_bimface_base_.bimfacebase.md#loadsdk)*
 
-*Defined in [providers/bimface/bimface_base.ts:28](https://github.com/youkaisteve/bim-operator/blob/4b2ca5f/src/providers/bimface/bimface_base.ts#L28)*
+*Defined in [providers/bimface/bimface_base.ts:28](https://github.com/youkaisteve/bim-operator/blob/9d072c0/src/providers/bimface/bimface_base.ts#L28)*
 
 加载SDK
 
@@ -147,7 +169,7 @@ ___
 
 *Implementation of [IBimDrawing](../interfaces/_interface_.ibimdrawing.md)*
 
-*Defined in [providers/bimface/bimface_drawing.ts:39](https://github.com/youkaisteve/bim-operator/blob/4b2ca5f/src/providers/bimface/bimface_drawing.ts#L39)*
+*Defined in [providers/bimface/bimface_drawing.ts:51](https://github.com/youkaisteve/bim-operator/blob/9d072c0/src/providers/bimface/bimface_drawing.ts#L51)*
 
 **Parameters:**
 

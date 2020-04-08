@@ -2,7 +2,7 @@ import { IBim3DModel, IMarker, IBimCustom, IDispose } from '../../interface';
 import BimfaceBase from './bimface_base';
 import ViewPoint from '../../model/view_point';
 import Floor from '../../model/floor';
-import { IsolateOption } from '../../enums';
+import { IsolateOption, Bim3DEvent } from '../../enums';
 import { ComponentFilter } from '../../model/filter';
 import { HighlightOption } from '../../model';
 declare const MARKER_FIELD: unique symbol;
@@ -10,6 +10,7 @@ export default class Bimface3DModel extends BimfaceBase implements IBim3DModel, 
     viewer3D: any;
     [MARKER_FIELD]: IMarker;
     get marker(): IMarker;
+    addEventListener(eventName: Bim3DEvent, callback: Function): void;
     load(options: any): Promise<void>;
     getFloors(): Promise<Floor[]>;
     getFloorsbyFileId(fileId: String): Promise<Array<Floor>>;

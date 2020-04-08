@@ -91,6 +91,9 @@ var Bimface3DModel = (function (_super) {
         enumerable: true,
         configurable: true
     });
+    Bimface3DModel.prototype.addEventListener = function (eventName, callback) {
+        this.viewer3D.addEventListener(eventName, callback);
+    };
     Bimface3DModel.prototype.load = function (options) {
         return __awaiter(this, void 0, void 0, function () {
             var viewMetaData, domShow, webAppConfig;
@@ -173,7 +176,7 @@ var Bimface3DModel = (function (_super) {
                         return _this.viewer3D.createSnapshotAsync(color, function (data) {
                             var viewPoint = {
                                 cameraStatus: cameraStatus,
-                                thumbnail: data
+                                thumbnail: data,
                             };
                             resolve(viewPoint);
                         });

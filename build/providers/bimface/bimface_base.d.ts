@@ -5,6 +5,7 @@ export default abstract class BimfaceBase {
     protected set app(app: any);
     initSDK(): Promise<void>;
     loadSDK(options: any): Promise<any>;
+    abstract addEventListener(eventName: String, callback: Function): any;
     addCustomButtons(customButtons: Array<CustomButton>): void;
     dispose(options: any): void;
 }
