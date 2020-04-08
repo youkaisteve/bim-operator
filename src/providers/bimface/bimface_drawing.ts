@@ -37,8 +37,8 @@ export default class BimfaceDrawing extends BimfaceBase implements IBimDrawing, 
         webAppConfig.domElement = dom4Show;
         webAppConfig.drawingUrl = viewMetaData.drawingUrl;
         webAppConfig.viewToken = viewMetaData.viewToken;
-        if (options.viewConfig) {
-            webAppConfig = { ...webAppConfig, ...options.viewConfig };
+        if (options.appConfig) {
+            webAppConfig = { ...webAppConfig, ...options.appConfig };
         }
         this.app = new window.Glodon.Bimface.Application.WebApplicationDrawing(webAppConfig);
         this.app.load(viewMetaData.viewToken);
