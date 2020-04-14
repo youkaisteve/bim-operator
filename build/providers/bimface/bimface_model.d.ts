@@ -16,6 +16,7 @@ export default class Bimface3DModel extends BimfaceBase implements IBim3DModel, 
     getFloors(): Promise<Array<Floor>>;
     getFloorsbyFileId(fileId: String): Promise<Array<Floor>>;
     explosionFloor(floorIds: Array<String>, extend: Number): void;
+    clearFloorExplosion(): void;
     getComponentByCondition(fileId: String, conditions: Array<ComponentFilter>): Promise<Array<String>>;
     getViewPoint(options: any): Promise<ViewPoint>;
     setViewPoint(viewPoint: ViewPoint): void;
