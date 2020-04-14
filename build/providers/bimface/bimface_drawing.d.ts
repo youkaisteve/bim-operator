@@ -5,6 +5,7 @@ export default class BimfaceDrawing extends BimfaceBase implements IBimDrawing, 
     app: any;
     viewer2D: any;
     addEventListener(eventName: Bim2DEvent, callback: Function): void;
+    render(): void;
     load(options: any): Promise<void>;
     setDisplayMode(model: DrawingDisplayMode, customOptions: any): void;
 }

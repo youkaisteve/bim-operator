@@ -1,10 +1,11 @@
 import { IMarker } from '../../interface';
 import Marker3D from '../../model/marker_3d';
-import needRender from '../../decorators/render';
+import debugLog from '../../decorators/debug_log';
 
 /**
  * bimface标注类，用于锚点
  */
+@debugLog()
 export default class BimfaceMarker implements IMarker {
     marker3D: any;
 
@@ -24,7 +25,6 @@ export default class BimfaceMarker implements IMarker {
     /**
      * 添加3d锚点
      */
-    @needRender()
     add3dMarker(marker: Marker3D) {
         if (marker === undefined) throw new Error("marker can't be null");
 

@@ -6,15 +6,15 @@ function handleDescriptor(target, key, descriptor) {
         value() {
             let methodCallResult = fn.apply(this, arguments);
             if (methodCallResult && methodCallResult.constructor.name === 'Promise') {
-                return methodCallResult.then(result => {
-                    this.viewer3D.render();
+                return methodCallResult.then((result) => {
+                    this.render();
                     return result;
                 });
             } else {
-                this.viewer3D.render();
+                this.render();
                 return methodCallResult;
             }
-        }
+        },
     };
 }
 

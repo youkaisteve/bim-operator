@@ -1,4 +1,4 @@
-[bim-operator - v1.0.28](../README.md) › [Globals](../globals.md) › ["providers/bimface/bimface_model"](_providers_bimface_bimface_model_.md)
+[bim-operator - v1.0.30](../README.md) › [Globals](../globals.md) › ["providers/bimface/bimface_model"](_providers_bimface_bimface_model_.md)
 
 # External module: "providers/bimface/bimface_model"
 
@@ -18,4 +18,4 @@
 
 • **MARKER_FIELD**: *unique symbol* =  Symbol('Bimface#MarkerFiled')
 
-*Defined in [providers/bimface/bimface_model.ts:13](https://github.com/youkaisteve/bim-operator/blob/c296650/src/providers/bimface/bimface_model.ts#L13)*
+*Defined in [providers/bimface/bimface_model.ts:12](https://github.com/youkaisteve/bim-operator/blob/0f90d05/src/providers/bimface/bimface_model.ts#L12)*

@@ -23,6 +23,12 @@ var __assign = (this && this.__assign) || function () {
     };
     return __assign.apply(this, arguments);
 };
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
 var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
     function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
     return new (P || (P = Promise))(function (resolve, reject) {
@@ -62,6 +68,7 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
 Object.defineProperty(exports, "__esModule", { value: true });
 var bimface_base_1 = require("./bimface_base");
 var enums_1 = require("../../enums");
+var debug_log_1 = require("../../decorators/debug_log");
 var BimfaceDrawing = (function (_super) {
     __extends(BimfaceDrawing, _super);
     function BimfaceDrawing() {
@@ -69,6 +76,9 @@ var BimfaceDrawing = (function (_super) {
     }
     BimfaceDrawing.prototype.addEventListener = function (eventName, callback) {
         this.viewer2D.addEventListener(eventName, callback);
+    };
+    BimfaceDrawing.prototype.render = function () {
+        this.viewer2D.render();
     };
     BimfaceDrawing.prototype.load = function (options) {
         return __awaiter(this, void 0, void 0, function () {
@@ -108,6 +118,9 @@ var BimfaceDrawing = (function (_super) {
             this.viewer2D.setGlobalColor(new window.Glodon.Web.Graphics.Color(customOptions.color, customOptions.opacity));
         }
     };
+    BimfaceDrawing = __decorate([
+        debug_log_1.default()
+    ], BimfaceDrawing);
     return BimfaceDrawing;
 }(bimface_base_1.default));
 exports.default = BimfaceDrawing;

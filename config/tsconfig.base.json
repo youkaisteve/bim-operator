@@ -16,7 +16,8 @@
         "stripInternal": true,
         "noImplicitAny": false,
         "target": "es5",
-        "sourceMap": true
+        "sourceMap": true,
+        "strictNullChecks": false
     },
     "exclude": ["test-dist", "dist", "node_modules*", "test", "**/*.d.ts", "**/*.spec.ts"]
 }

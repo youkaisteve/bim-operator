@@ -1,4 +1,4 @@
-[bim-operator - v1.0.28](../README.md) › [Globals](../globals.md) › ["interface"](../modules/_interface_.md) › [IDispose](_interface_.idispose.md)
+[bim-operator - v1.0.30](../README.md) › [Globals](../globals.md) › ["interface"](../modules/_interface_.md) › [IDispose](_interface_.idispose.md)
 
 # Interface: IDispose
 
@@ -24,7 +24,7 @@ Bim视图销毁
 
 ▸ **dispose**(`options`: any): *any*
 
-*Defined in [interface.ts:170](https://github.com/youkaisteve/bim-operator/blob/c296650/src/interface.ts#L170)*
+*Defined in [interface.ts:170](https://github.com/youkaisteve/bim-operator/blob/0f90d05/src/interface.ts#L170)*
 
 销毁视图
 
