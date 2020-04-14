@@ -109,6 +109,15 @@ export default class Bimface3DModel extends BimfaceBase implements IBim3DModel, 
     explosionFloor(floorIds: Array<String>, extend: Number): void {
         this.viewer3D.setFloorExplosion(extend || 3, floorIds);
     }
+
+    /**
+     * 清空楼层爆炸
+     */
+    @needRender()
+    clearFloorExplosion() {
+        this.viewer3D.clearFloorExplosion();
+    }
+
     /**
      * 根据条件查询构件
      * @param {String} fileId 模型id

@@ -148,6 +148,9 @@ var Bimface3DModel = (function (_super) {
     Bimface3DModel.prototype.explosionFloor = function (floorIds, extend) {
         this.viewer3D.setFloorExplosion(extend || 3, floorIds);
     };
+    Bimface3DModel.prototype.clearFloorExplosion = function () {
+        this.viewer3D.clearFloorExplosion();
+    };
     Bimface3DModel.prototype.getComponentByCondition = function (fileId, conditions) {
         return __awaiter(this, void 0, void 0, function () {
             var _this = this;
@@ -244,6 +247,12 @@ var Bimface3DModel = (function (_super) {
         __metadata("design:paramtypes", [Array, Number]),
         __metadata("design:returntype", void 0)
     ], Bimface3DModel.prototype, "explosionFloor", null);
+    __decorate([
+        render_1.default(),
+        __metadata("design:type", Function),
+        __metadata("design:paramtypes", []),
+        __metadata("design:returntype", void 0)
+    ], Bimface3DModel.prototype, "clearFloorExplosion", null);
     __decorate([
         render_1.default(),
         __metadata("design:type", Function),
