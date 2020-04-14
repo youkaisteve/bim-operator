@@ -275,7 +275,7 @@ var Bimface3DModel = (function (_super) {
     Bimface3DModel = __decorate([
         yk_aspect_1.beforeMethodOnClass({
             handle: function (meta) {
-                console.debug("[" + meta.className + "." + meta.methodName + " CALLED");
+                console.debug("[" + meta.className + "." + meta.methodName + "] CALLED");
                 var argsStrs = toolkit_1.default.getArgumentsDisplayInfo(meta.args);
                 if (argsStrs) {
                     argsStrs.forEach(function (argsStr) {
