@@ -14,7 +14,7 @@ export interface IBim3DModel {
     load(options: any): Promise<void>;
     getFloors(): Promise<Array<Floor>>;
     getFloorsbyFileId(fileId: String): Promise<Array<Floor>>;
-    explosionFloor(floorIds: Array<String>, extend: Number): void;
+    explosionFloor(extend: Number, floorIds: Array<String>): void;
     getComponentByCondition(fileId: String, conditions: Array<ComponentFilter>): Promise<Array<String>>;
     getViewPoint(options: any): Promise<ViewPoint>;
     setViewPoint(viewPoint: ViewPoint): void;
