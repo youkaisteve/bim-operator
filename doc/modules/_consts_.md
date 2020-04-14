@@ -1,4 +1,4 @@
-[@yzw/bim-operator - v1.0.23](../README.md) › [Globals](../globals.md) › ["consts"](_consts_.md)
+[bim-operator - v1.0.25](../README.md) › [Globals](../globals.md) › ["consts"](_consts_.md)
 
 # External module: "consts"
 
@@ -14,4 +14,4 @@
 
 • **BIMFACE_JS_SDK**: *"https://static.bimface.com/api/BimfaceSDKLoader/BimfaceSDKLoader@latest-release.js"* = "https://static.bimface.com/api/BimfaceSDKLoader/BimfaceSDKLoader@latest-release.js"
 
-*Defined in [consts.ts:1](https://github.com/youkaisteve/bim-operator/blob/594e416/src/consts.ts#L1)*
+*Defined in [consts.ts:1](https://github.com/youkaisteve/bim-operator/blob/87779d0/src/consts.ts#L1)*

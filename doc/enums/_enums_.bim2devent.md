@@ -1,4 +1,4 @@
-[@yzw/bim-operator - v1.0.23](../README.md) › [Globals](../globals.md) › ["enums"](../modules/_enums_.md) › [Bim2DEvent](_enums_.bim2devent.md)
+[bim-operator - v1.0.25](../README.md) › [Globals](../globals.md) › ["enums"](../modules/_enums_.md) › [Bim2DEvent](_enums_.bim2devent.md)
 
 # Enumeration: Bim2DEvent
 
@@ -17,7 +17,7 @@
 
 • **Error**: = "Error"
 
-*Defined in [enums.ts:61](https://github.com/youkaisteve/bim-operator/blob/594e416/src/enums.ts#L61)*
+*Defined in [enums.ts:61](https://github.com/youkaisteve/bim-operator/blob/87779d0/src/enums.ts#L61)*
 
 ___
 
@@ -25,7 +25,7 @@ ___
 
 • **Loaded**: = "Loaded"
 
-*Defined in [enums.ts:62](https://github.com/youkaisteve/bim-operator/blob/594e416/src/enums.ts#L62)*
+*Defined in [enums.ts:62](https://github.com/youkaisteve/bim-operator/blob/87779d0/src/enums.ts#L62)*
 
 ___
 
@@ -33,7 +33,7 @@ ___
 
 • **MouseClicked**: = "MouseClicked"
 
-*Defined in [enums.ts:63](https://github.com/youkaisteve/bim-operator/blob/594e416/src/enums.ts#L63)*
+*Defined in [enums.ts:63](https://github.com/youkaisteve/bim-operator/blob/87779d0/src/enums.ts#L63)*
 
 ___
 
@@ -41,4 +41,4 @@ ___
 
 • **ViewChange**: = "ViewChange"
 
-*Defined in [enums.ts:64](https://github.com/youkaisteve/bim-operator/blob/594e416/src/enums.ts#L64)*
+*Defined in [enums.ts:64](https://github.com/youkaisteve/bim-operator/blob/87779d0/src/enums.ts#L64)*

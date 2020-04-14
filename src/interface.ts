@@ -38,7 +38,7 @@ export interface IBim3DModel {
      * @param floors 楼层ids
      * @param extend 楼层爆炸离散系数，根据厂商定制，可选
      */
-    explosionFloor(floorIds: Array<String>, extend: Number): void;
+    explosionFloor(extend: Number, floorIds: Array<String>): void;
     /**
      * 根据条件获取构件
      * @param conditions 查询条件，不同厂商之间可能会有差别

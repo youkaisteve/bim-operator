@@ -1,4 +1,4 @@
-[@yzw/bim-operator - v1.0.23](../README.md) › [Globals](../globals.md) › ["model/custom_button"](_model_custom_button_.md)
+[bim-operator - v1.0.25](../README.md) › [Globals](../globals.md) › ["model/custom_button"](_model_custom_button_.md)
 
 # External module: "model/custom_button"
 

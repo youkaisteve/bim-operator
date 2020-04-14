@@ -1,4 +1,4 @@
-[@yzw/bim-operator - v1.0.23](../README.md) › [Globals](../globals.md) › ["enums"](_enums_.md)
+[bim-operator - v1.0.25](../README.md) › [Globals](../globals.md) › ["enums"](_enums_.md)
 
 # External module: "enums"
 
