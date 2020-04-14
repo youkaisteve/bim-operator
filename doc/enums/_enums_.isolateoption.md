@@ -1,4 +1,4 @@
-[bim-operator - v1.0.26](../README.md) › [Globals](../globals.md) › ["enums"](../modules/_enums_.md) › [IsolateOption](_enums_.isolateoption.md)
+[bim-operator - v1.0.28](../README.md) › [Globals](../globals.md) › ["enums"](../modules/_enums_.md) › [IsolateOption](_enums_.isolateoption.md)
 
 # Enumeration: IsolateOption
 
@@ -17,7 +17,7 @@
 
 • **HideOthers**: = "HideOthers"
 
-*Defined in [enums.ts:8](https://github.com/youkaisteve/bim-operator/blob/5cdd1c6/src/enums.ts#L8)*
+*Defined in [enums.ts:8](https://github.com/youkaisteve/bim-operator/blob/c296650/src/enums.ts#L8)*
 
 隐藏其他构件
 
@@ -27,6 +27,6 @@ ___
 
 • **MakeOthersTranslucent**: = "MakeOthersTranslucent"
 
-*Defined in [enums.ts:12](https://github.com/youkaisteve/bim-operator/blob/5cdd1c6/src/enums.ts#L12)*
+*Defined in [enums.ts:12](https://github.com/youkaisteve/bim-operator/blob/c296650/src/enums.ts#L12)*
 
 半透明其他构件

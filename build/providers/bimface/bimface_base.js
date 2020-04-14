@@ -99,14 +99,20 @@ var BimfaceBase = (function () {
         if (customButtons && customButtons.length > 0) {
             customButtons.forEach(function (customBtn) {
                 if (customBtn.html) {
-                    var btn = new window.Glodon.Bimface.UI.Button.Button(btnConfig);
-                    btn.setHtml(customBtn.html);
-                    btn.addEventListener('Click', customBtn.clickEvent);
+                    var btn_1 = new window.Glodon.Bimface.UI.Button.ChangeButton(btnConfig);
+                    btn_1.setHtml(customBtn.html);
+                    if (customBtn.className) {
+                        btn_1.addClassName(customBtn.className);
+                    }
+                    btn_1.addEventListener('Click', function () {
+                        btn_1.toggleState();
+                        customBtn.clickEvent();
+                    });
                     if (customBtn.index >= 0) {
-                        toolbar.insertControl(customBtn.index, btn);
+                        toolbar.insertControl(customBtn.index, btn_1);
                     }
                     else {
-                        toolbar.addControl(btn);
+                        toolbar.addControl(btn_1);
                     }
                 }
             });

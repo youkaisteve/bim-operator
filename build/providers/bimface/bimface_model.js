@@ -73,6 +73,8 @@ var bimface_base_1 = require("./bimface_base");
 var enums_1 = require("../../enums");
 var render_1 = require("../../decorators/render");
 var bimface_marker_1 = require("./bimface_marker");
+var yk_aspect_1 = require("yk-aspect");
+var toolkit_1 = require("../../util/toolkit");
 var MARKER_FIELD = Symbol('Bimface#MarkerFiled');
 var Bimface3DModel = (function (_super) {
     __extends(Bimface3DModel, _super);
@@ -81,11 +83,10 @@ var Bimface3DModel = (function (_super) {
     }
     Object.defineProperty(Bimface3DModel.prototype, "marker", {
         get: function () {
-            if (!this.viewer3D) {
-                throw new Error('Please init 3D Model first =>>>>>> IBimOperation.loadModel');
+            if (this.viewer3D) {
+                if (!this[MARKER_FIELD])
+                    this[MARKER_FIELD] = new bimface_marker_1.default(this.viewer3D);
             }
-            if (!this[MARKER_FIELD])
-                this[MARKER_FIELD] = new bimface_marker_1.default(this.viewer3D);
             return this[MARKER_FIELD];
         },
         enumerable: true,
@@ -271,6 +272,19 @@ var Bimface3DModel = (function (_super) {
         __metadata("design:paramtypes", [Array]),
         __metadata("design:returntype", void 0)
     ], Bimface3DModel.prototype, "clearHighlightComponents", null);
+    Bimface3DModel = __decorate([
+        yk_aspect_1.beforeMethodOnClass({
+            handle: function (meta) {
+                console.debug("[" + meta.className + "." + meta.methodName + " CALLED");
+                var argsStrs = toolkit_1.default.getArgumentsDisplayInfo(meta.args);
+                if (argsStrs) {
+                    argsStrs.forEach(function (argsStr) {
+                        console.debug(">>> parameter ===> " + argsStr);
+                    });
+                }
+            },
+        })
+    ], Bimface3DModel);
     return Bimface3DModel;
 }(bimface_base_1.default));
 exports.default = Bimface3DModel;
