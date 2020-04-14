@@ -7,12 +7,25 @@ import { ComponentFilter } from '../../model/filter';
 import needRender from '../../decorators/render';
 import { HighlightOption } from '../../model';
 import BimfaceMarker from './bimface_marker';
+import { beforeMethodOnClass } from 'yk-aspect';
+import toolkit from '../../util/toolkit';
 
 const MARKER_FIELD = Symbol('Bimface#MarkerFiled');
 
 /**
  * bimface 3D 操作
  */
+@beforeMethodOnClass({
+    handle: (meta) => {
+        console.debug(`[${meta.className}.${meta.methodName}] CALLED`);
+        const argsStrs = toolkit.getArgumentsDisplayInfo(meta.args);
+        if (argsStrs) {
+            argsStrs.forEach((argsStr) => {
+                console.debug(`>>> parameter ===> ${argsStr}`);
+            });
+        }
+    },
+})
 export default class Bimface3DModel extends BimfaceBase implements IBim3DModel, IBimCustom, IDispose {
     /**
      * bimface相关对象
@@ -24,10 +37,9 @@ export default class Bimface3DModel extends BimfaceBase implements IBim3DModel, 
      * 3D标注器
      */
     get marker(): IMarker {
-        if (!this.viewer3D) {
-            throw new Error('Please init 3D Model first =>>>>>> IBimOperation.loadModel');
+        if (this.viewer3D) {
+            if (!this[MARKER_FIELD]) this[MARKER_FIELD] = new BimfaceMarker(this.viewer3D);
         }
-        if (!this[MARKER_FIELD]) this[MARKER_FIELD] = new BimfaceMarker(this.viewer3D);
         return this[MARKER_FIELD];
     }
 

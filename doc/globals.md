@@ -1,6 +1,6 @@
-[bim-operator - v1.0.26](README.md) › [Globals](globals.md)
+[bim-operator - v1.0.28](README.md) › [Globals](globals.md)
 
-# bim-operator - v1.0.26
+# bim-operator - v1.0.28
 
 ## Index
 
@@ -27,3 +27,4 @@
 * ["providers/bimface/bimface_model"](modules/_providers_bimface_bimface_model_.md)
 * ["providers/bimface_operator"](modules/_providers_bimface_operator_.md)
 * ["util/remote-load"](modules/_util_remote_load_.md)
+* ["util/toolkit"](modules/_util_toolkit_.md)

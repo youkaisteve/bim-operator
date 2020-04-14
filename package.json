@@ -14,7 +14,7 @@
         "doc": "rm -rf ./doc && npx typedoc --module commonjs --target es5 --experimentalDecorators --plugin typedoc-plugin-markdown --out ./doc ./src/"
     },
     "dependencies": {
-        "yk-aspect": "^1.0.2"
+        "yk-aspect": "^1.0.3"
     },
     "devDependencies": {
         "@types/node": "^10.5.5",

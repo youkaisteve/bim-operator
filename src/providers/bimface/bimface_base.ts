@@ -50,9 +50,15 @@ export default abstract class BimfaceBase {
         if (customButtons && customButtons.length > 0) {
             customButtons.forEach((customBtn) => {
                 if (customBtn.html) {
-                    const btn = new window.Glodon.Bimface.UI.Button.Button(btnConfig);
+                    const btn = new window.Glodon.Bimface.UI.Button.ChangeButton(btnConfig);
                     btn.setHtml(customBtn.html);
-                    btn.addEventListener('Click', customBtn.clickEvent);
+                    if (customBtn.className) {
+                        btn.addClassName(customBtn.className);
+                    }
+                    btn.addEventListener('Click', () => {
+                        btn.toggleState();
+                        customBtn.clickEvent();
+                    });
                     if (customBtn.index >= 0) {
                         toolbar.insertControl(customBtn.index, btn);
                     } else {
