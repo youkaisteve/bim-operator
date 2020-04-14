@@ -1,4 +1,4 @@
-[bim-operator - v1.0.25](../README.md) › [Globals](../globals.md) › ["model/view_point"](_model_view_point_.md)
+[bim-operator - v1.0.26](../README.md) › [Globals](../globals.md) › ["model/view_point"](_model_view_point_.md)
 
 # External module: "model/view_point"
 

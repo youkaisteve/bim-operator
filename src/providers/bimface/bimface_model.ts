@@ -98,7 +98,7 @@ export default class Bimface3DModel extends BimfaceBase implements IBim3DModel, 
      * @param extend 楼层爆炸离散系数，范围为[0, 30]，可选，默认为3
      */
     @needRender()
-    explosionFloor(extend: Number, floorIds: Array<String>): void {
+    explosionFloor(floorIds: Array<String>, extend: Number): void {
         this.viewer3D.setFloorExplosion(extend || 3, floorIds);
     }
     /**

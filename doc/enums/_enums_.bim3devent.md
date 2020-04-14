@@ -1,4 +1,4 @@
-[bim-operator - v1.0.25](../README.md) › [Globals](../globals.md) › ["enums"](../modules/_enums_.md) › [Bim3DEvent](_enums_.bim3devent.md)
+[bim-operator - v1.0.26](../README.md) › [Globals](../globals.md) › ["enums"](../modules/_enums_.md) › [Bim3DEvent](_enums_.bim3devent.md)
 
 # Enumeration: Bim3DEvent
 
@@ -33,7 +33,7 @@
 
 • **AddView**: = "AddView"
 
-*Defined in [enums.ts:38](https://github.com/youkaisteve/bim-operator/blob/87779d0/src/enums.ts#L38)*
+*Defined in [enums.ts:38](https://github.com/youkaisteve/bim-operator/blob/5cdd1c6/src/enums.ts#L38)*
 
 ___
 
@@ -41,7 +41,7 @@ ___
 
 • **ButtonOnToolbarClicked**: = "ButtonOnToolbarClicked"
 
-*Defined in [enums.ts:39](https://github.com/youkaisteve/bim-operator/blob/87779d0/src/enums.ts#L39)*
+*Defined in [enums.ts:39](https://github.com/youkaisteve/bim-operator/blob/5cdd1c6/src/enums.ts#L39)*
 
 ___
 
@@ -49,7 +49,7 @@ ___
 
 • **ComponentsHoverChanged**: = "ComponentsHoverChanged"
 
-*Defined in [enums.ts:40](https://github.com/youkaisteve/bim-operator/blob/87779d0/src/enums.ts#L40)*
+*Defined in [enums.ts:40](https://github.com/youkaisteve/bim-operator/blob/5cdd1c6/src/enums.ts#L40)*
 
 ___
 
@@ -57,7 +57,7 @@ ___
 
 • **ContextMenu**: = "ContextMenu"
 
-*Defined in [enums.ts:41](https://github.com/youkaisteve/bim-operator/blob/87779d0/src/enums.ts#L41)*
+*Defined in [enums.ts:41](https://github.com/youkaisteve/bim-operator/blob/5cdd1c6/src/enums.ts#L41)*
 
 ___
 
@@ -65,7 +65,7 @@ ___
 
 • **DemandLoaded**: = "DemandLoaded"
 
-*Defined in [enums.ts:42](https://github.com/youkaisteve/bim-operator/blob/87779d0/src/enums.ts#L42)*
+*Defined in [enums.ts:42](https://github.com/youkaisteve/bim-operator/blob/5cdd1c6/src/enums.ts#L42)*
 
 ___
 
@@ -73,7 +73,7 @@ ___
 
 • **Error**: = "Error"
 
-*Defined in [enums.ts:43](https://github.com/youkaisteve/bim-operator/blob/87779d0/src/enums.ts#L43)*
+*Defined in [enums.ts:43](https://github.com/youkaisteve/bim-operator/blob/5cdd1c6/src/enums.ts#L43)*
 
 ___
 
@@ -81,7 +81,7 @@ ___
 
 • **FamilyTypeChanged**: = "FamilyTypeChanged"
 
-*Defined in [enums.ts:44](https://github.com/youkaisteve/bim-operator/blob/87779d0/src/enums.ts#L44)*
+*Defined in [enums.ts:44](https://github.com/youkaisteve/bim-operator/blob/5cdd1c6/src/enums.ts#L44)*
 
 ___
 
@@ -89,7 +89,7 @@ ___
 
 • **FloorExplosion**: = "FloorExplosion"
 
-*Defined in [enums.ts:45](https://github.com/youkaisteve/bim-operator/blob/87779d0/src/enums.ts#L45)*
+*Defined in [enums.ts:45](https://github.com/youkaisteve/bim-operator/blob/5cdd1c6/src/enums.ts#L45)*
 
 ___
 
@@ -97,7 +97,7 @@ ___
 
 • **Hover**: = "Hover"
 
-*Defined in [enums.ts:46](https://github.com/youkaisteve/bim-operator/blob/87779d0/src/enums.ts#L46)*
+*Defined in [enums.ts:46](https://github.com/youkaisteve/bim-operator/blob/5cdd1c6/src/enums.ts#L46)*
 
 ___
 
@@ -105,7 +105,7 @@ ___
 
 • **MissingDrawingElement**: = "MissingDrawingElement"
 
-*Defined in [enums.ts:47](https://github.com/youkaisteve/bim-operator/blob/87779d0/src/enums.ts#L47)*
+*Defined in [enums.ts:47](https://github.com/youkaisteve/bim-operator/blob/5cdd1c6/src/enums.ts#L47)*
 
 ___
 
@@ -113,7 +113,7 @@ ___
 
 • **MouseClicked**: = "MouseClicked"
 
-*Defined in [enums.ts:48](https://github.com/youkaisteve/bim-operator/blob/87779d0/src/enums.ts#L48)*
+*Defined in [enums.ts:48](https://github.com/youkaisteve/bim-operator/blob/5cdd1c6/src/enums.ts#L48)*
 
 ___
 
@@ -121,7 +121,7 @@ ___
 
 • **MouseDoubleClicked**: = "MouseDoubleClicked"
 
-*Defined in [enums.ts:49](https://github.com/youkaisteve/bim-operator/blob/87779d0/src/enums.ts#L49)*
+*Defined in [enums.ts:49](https://github.com/youkaisteve/bim-operator/blob/5cdd1c6/src/enums.ts#L49)*
 
 ___
 
@@ -129,7 +129,7 @@ ___
 
 • **MouseDragged**: = "MouseDragged"
 
-*Defined in [enums.ts:50](https://github.com/youkaisteve/bim-operator/blob/87779d0/src/enums.ts#L50)*
+*Defined in [enums.ts:50](https://github.com/youkaisteve/bim-operator/blob/5cdd1c6/src/enums.ts#L50)*
 
 ___
 
@@ -137,7 +137,7 @@ ___
 
 • **PureRender**: = "PureRender"
 
-*Defined in [enums.ts:51](https://github.com/youkaisteve/bim-operator/blob/87779d0/src/enums.ts#L51)*
+*Defined in [enums.ts:51](https://github.com/youkaisteve/bim-operator/blob/5cdd1c6/src/enums.ts#L51)*
 
 ___
 
@@ -145,7 +145,7 @@ ___
 
 • **RemoveView**: = "RemoveView"
 
-*Defined in [enums.ts:52](https://github.com/youkaisteve/bim-operator/blob/87779d0/src/enums.ts#L52)*
+*Defined in [enums.ts:52](https://github.com/youkaisteve/bim-operator/blob/5cdd1c6/src/enums.ts#L52)*
 
 ___
 
@@ -153,7 +153,7 @@ ___
 
 • **Rendered**: = "Rendered"
 
-*Defined in [enums.ts:53](https://github.com/youkaisteve/bim-operator/blob/87779d0/src/enums.ts#L53)*
+*Defined in [enums.ts:53](https://github.com/youkaisteve/bim-operator/blob/5cdd1c6/src/enums.ts#L53)*
 
 ___
 
@@ -161,7 +161,7 @@ ___
 
 • **SelectionChanged**: = "SelectionChanged"
 
-*Defined in [enums.ts:54](https://github.com/youkaisteve/bim-operator/blob/87779d0/src/enums.ts#L54)*
+*Defined in [enums.ts:54](https://github.com/youkaisteve/bim-operator/blob/5cdd1c6/src/enums.ts#L54)*
 
 ___
 
@@ -169,7 +169,7 @@ ___
 
 • **ToolbarHomeClick**: = "ToolbarHomeClick"
 
-*Defined in [enums.ts:55](https://github.com/youkaisteve/bim-operator/blob/87779d0/src/enums.ts#L55)*
+*Defined in [enums.ts:55](https://github.com/youkaisteve/bim-operator/blob/5cdd1c6/src/enums.ts#L55)*
 
 ___
 
@@ -177,7 +177,7 @@ ___
 
 • **ViewAdded**: = "ViewAdded"
 
-*Defined in [enums.ts:56](https://github.com/youkaisteve/bim-operator/blob/87779d0/src/enums.ts#L56)*
+*Defined in [enums.ts:56](https://github.com/youkaisteve/bim-operator/blob/5cdd1c6/src/enums.ts#L56)*
 
 ___
 
@@ -185,4 +185,4 @@ ___
 
 • **ViewLoading**: = "ViewLoading"
 
-*Defined in [enums.ts:57](https://github.com/youkaisteve/bim-operator/blob/87779d0/src/enums.ts#L57)*
+*Defined in [enums.ts:57](https://github.com/youkaisteve/bim-operator/blob/5cdd1c6/src/enums.ts#L57)*

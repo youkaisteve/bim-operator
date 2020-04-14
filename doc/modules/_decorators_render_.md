@@ -1,4 +1,4 @@
-[bim-operator - v1.0.25](../README.md) › [Globals](../globals.md) › ["decorators/render"](_decorators_render_.md)
+[bim-operator - v1.0.26](../README.md) › [Globals](../globals.md) › ["decorators/render"](_decorators_render_.md)
 
 # External module: "decorators/render"
 
@@ -15,7 +15,7 @@
 
 ▸ **handleDescriptor**(`target`: any, `key`: any, `descriptor`: any): *any*
 
-*Defined in [decorators/render.ts:2](https://github.com/youkaisteve/bim-operator/blob/87779d0/src/decorators/render.ts#L2)*
+*Defined in [decorators/render.ts:2](https://github.com/youkaisteve/bim-operator/blob/5cdd1c6/src/decorators/render.ts#L2)*
 
 **Parameters:**
 
@@ -33,6 +33,6 @@ ___
 
 ▸ **needRender**(): *any*
 
-*Defined in [decorators/render.ts:21](https://github.com/youkaisteve/bim-operator/blob/87779d0/src/decorators/render.ts#L21)*
+*Defined in [decorators/render.ts:21](https://github.com/youkaisteve/bim-operator/blob/5cdd1c6/src/decorators/render.ts#L21)*
 
 **Returns:** *any*
