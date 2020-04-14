@@ -9,7 +9,7 @@ export * from './model';
  * Bim供应商
  */
 export const ProviderType = {
-    BIMFACE: 'bimface'
+    BIMFACE: 'bimface',
 };
 
 /**

@@ -1,4 +1,4 @@
-[bim-operator - v1.0.28](../README.md) › [Globals](../globals.md) › ["providers/bimface_operator"](_providers_bimface_operator_.md)
+[bim-operator - v1.0.30](../README.md) › [Globals](../globals.md) › ["providers/bimface_operator"](_providers_bimface_operator_.md)
 
 # External module: "providers/bimface_operator"
 
@@ -19,7 +19,7 @@
 
 • **BIMFACE_3D_FIELD**: *unique symbol* =  Symbol('Bimface#3DFiled')
 
-*Defined in [providers/bimface_operator.ts:6](https://github.com/youkaisteve/bim-operator/blob/c296650/src/providers/bimface_operator.ts#L6)*
+*Defined in [providers/bimface_operator.ts:6](https://github.com/youkaisteve/bim-operator/blob/0f90d05/src/providers/bimface_operator.ts#L6)*
 
 ___
 
@@ -27,4 +27,4 @@ ___
 
 • **BIMFACE_DRAWING_FIELD**: *unique symbol* =  Symbol('Bimface#DrawingField')
 
-*Defined in [providers/bimface_operator.ts:7](https://github.com/youkaisteve/bim-operator/blob/c296650/src/providers/bimface_operator.ts#L7)*
+*Defined in [providers/bimface_operator.ts:7](https://github.com/youkaisteve/bim-operator/blob/0f90d05/src/providers/bimface_operator.ts#L7)*

@@ -19,12 +19,12 @@ function handleDescriptor(target, key, descriptor) {
             var methodCallResult = fn.apply(this, arguments);
             if (methodCallResult && methodCallResult.constructor.name === 'Promise') {
                 return methodCallResult.then(function (result) {
-                    _this.viewer3D.render();
+                    _this.render();
                     return result;
                 });
             }
             else {
-                this.viewer3D.render();
+                this.render();
                 return methodCallResult;
             }
         } });

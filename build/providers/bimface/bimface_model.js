@@ -73,8 +73,7 @@ var bimface_base_1 = require("./bimface_base");
 var enums_1 = require("../../enums");
 var render_1 = require("../../decorators/render");
 var bimface_marker_1 = require("./bimface_marker");
-var yk_aspect_1 = require("yk-aspect");
-var toolkit_1 = require("../../util/toolkit");
+var debug_log_1 = require("../../decorators/debug_log");
 var MARKER_FIELD = Symbol('Bimface#MarkerFiled');
 var Bimface3DModel = (function (_super) {
     __extends(Bimface3DModel, _super);
@@ -94,6 +93,9 @@ var Bimface3DModel = (function (_super) {
     });
     Bimface3DModel.prototype.addEventListener = function (eventName, callback) {
         this.viewer3D.addEventListener(eventName, callback);
+    };
+    Bimface3DModel.prototype.render = function () {
+        this.viewer3D.render();
     };
     Bimface3DModel.prototype.load = function (options) {
         return __awaiter(this, void 0, void 0, function () {
@@ -191,7 +193,6 @@ var Bimface3DModel = (function (_super) {
         this.viewer3D.isolateComponentsById(componentIds, option);
     };
     Bimface3DModel.prototype.isolateComponentByCondition = function (conditions, option) {
-        console.log(conditions);
         this.viewer3D.isolateComponentsByObjectData(conditions, option);
     };
     Bimface3DModel.prototype.clearIsolation = function () {
@@ -234,6 +235,7 @@ var Bimface3DModel = (function (_super) {
         if (options && options.viewToken) {
             this.app && this.app.destroy(options.viewToken);
         }
+        this[MARKER_FIELD] = null;
         _super.prototype.dispose.call(this, options);
     };
     __decorate([
@@ -273,17 +275,7 @@ var Bimface3DModel = (function (_super) {
         __metadata("design:returntype", void 0)
     ], Bimface3DModel.prototype, "clearHighlightComponents", null);
     Bimface3DModel = __decorate([
-        yk_aspect_1.beforeMethodOnClass({
-            handle: function (meta) {
-                console.debug("[" + meta.className + "." + meta.methodName + "] CALLED");
-                var argsStrs = toolkit_1.default.getArgumentsDisplayInfo(meta.args);
-                if (argsStrs) {
-                    argsStrs.forEach(function (argsStr) {
-                        console.debug(">>> parameter ===> " + argsStr);
-                    });
-                }
-            },
-        })
+        debug_log_1.default()
     ], Bimface3DModel);
     return Bimface3DModel;
 }(bimface_base_1.default));

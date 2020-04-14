@@ -7,25 +7,14 @@ import { ComponentFilter } from '../../model/filter';
 import needRender from '../../decorators/render';
 import { HighlightOption } from '../../model';
 import BimfaceMarker from './bimface_marker';
-import { beforeMethodOnClass } from 'yk-aspect';
-import toolkit from '../../util/toolkit';
+import debugLog from '../../decorators/debug_log';
 
 const MARKER_FIELD = Symbol('Bimface#MarkerFiled');
 
 /**
  * bimface 3D 操作
  */
-@beforeMethodOnClass({
-    handle: (meta) => {
-        console.debug(`[${meta.className}.${meta.methodName}] CALLED`);
-        const argsStrs = toolkit.getArgumentsDisplayInfo(meta.args);
-        if (argsStrs) {
-            argsStrs.forEach((argsStr) => {
-                console.debug(`>>> parameter ===> ${argsStr}`);
-            });
-        }
-    },
-})
+@debugLog()
 export default class Bimface3DModel extends BimfaceBase implements IBim3DModel, IBimCustom, IDispose {
     /**
      * bimface相关对象
@@ -50,6 +39,13 @@ export default class Bimface3DModel extends BimfaceBase implements IBim3DModel, 
      */
     addEventListener(eventName: Bim3DEvent, callback: Function) {
         this.viewer3D.addEventListener(eventName, callback);
+    }
+
+    /**
+     * 渲染
+     */
+    render() {
+        this.viewer3D.render();
     }
 
     /**
@@ -173,7 +169,6 @@ export default class Bimface3DModel extends BimfaceBase implements IBim3DModel, 
      */
     @needRender()
     isolateComponentByCondition(conditions: Array<ComponentFilter>, option: IsolateOption): void {
-        console.log(conditions);
         this.viewer3D.isolateComponentsByObjectData(conditions, option);
     }
 
@@ -263,6 +258,7 @@ export default class Bimface3DModel extends BimfaceBase implements IBim3DModel, 
         if (options && options.viewToken) {
             this.app && this.app.destroy(options.viewToken);
         }
+        this[MARKER_FIELD] = null;
         super.dispose(options);
     }
 

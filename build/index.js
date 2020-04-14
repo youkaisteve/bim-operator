@@ -6,7 +6,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var bimface_operator_1 = require("./providers/bimface_operator");
 __export(require("./enums"));
 exports.ProviderType = {
-    BIMFACE: 'bimface'
+    BIMFACE: 'bimface',
 };
 function getProvider(provider) {
     switch (provider) {

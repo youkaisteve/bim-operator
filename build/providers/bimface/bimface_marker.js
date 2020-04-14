@@ -9,7 +9,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-var render_1 = require("../../decorators/render");
+var debug_log_1 = require("../../decorators/debug_log");
 var BimfaceMarker = (function () {
     function BimfaceMarker(viewer3D) {
         var markerConfig = new window.Glodon.Bimface.Plugins.Marker3D.Marker3DContainerConfig();
@@ -44,12 +44,10 @@ var BimfaceMarker = (function () {
     BimfaceMarker.prototype.clear3dMarker = function () {
         this.marker3D && this.marker3D.clear();
     };
-    __decorate([
-        render_1.default(),
-        __metadata("design:type", Function),
-        __metadata("design:paramtypes", [Object]),
-        __metadata("design:returntype", void 0)
-    ], BimfaceMarker.prototype, "add3dMarker", null);
+    BimfaceMarker = __decorate([
+        debug_log_1.default(),
+        __metadata("design:paramtypes", [Object])
+    ], BimfaceMarker);
     return BimfaceMarker;
 }());
 exports.default = BimfaceMarker;

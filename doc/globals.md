@@ -1,12 +1,13 @@
-[bim-operator - v1.0.28](README.md) › [Globals](globals.md)
+[bim-operator - v1.0.30](README.md) › [Globals](globals.md)
 
-# bim-operator - v1.0.28
+# bim-operator - v1.0.30
 
 ## Index
 
 ### External modules
 
 * ["consts"](modules/_consts_.md)
+* ["decorators/debug_log"](modules/_decorators_debug_log_.md)
 * ["decorators/render"](modules/_decorators_render_.md)
 * ["enums"](modules/_enums_.md)
 * ["index"](modules/_index_.md)

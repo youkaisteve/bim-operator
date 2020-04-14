@@ -15,7 +15,7 @@ export default abstract class BimfaceBase {
     }
 
     abstract addEventListener(eventName: String, callback: Function);
-
+    abstract render();
     async initSDK() {
         if (!window.BimfaceSDKLoaderConfig) {
             await remoteLoad(BIMFACE_JS_SDK);
@@ -49,21 +49,21 @@ export default abstract class BimfaceBase {
         const btnConfig = new window.Glodon.Bimface.UI.Button.ButtonConfig();
         if (customButtons && customButtons.length > 0) {
             customButtons.forEach((customBtn) => {
+                const btn = new window.Glodon.Bimface.UI.Button.ToggleButton(btnConfig);
                 if (customBtn.html) {
-                    const btn = new window.Glodon.Bimface.UI.Button.ChangeButton(btnConfig);
                     btn.setHtml(customBtn.html);
-                    if (customBtn.className) {
-                        btn.addClassName(customBtn.className);
-                    }
-                    btn.addEventListener('Click', () => {
-                        btn.toggleState();
-                        customBtn.clickEvent();
-                    });
-                    if (customBtn.index >= 0) {
-                        toolbar.insertControl(customBtn.index, btn);
-                    } else {
-                        toolbar.addControl(btn);
-                    }
+                }
+                if (customBtn.className) {
+                    btn.addClassName(customBtn.className);
+                }
+                btn.addEventListener('Click', () => {
+                    btn.toggleCheckedState();
+                    customBtn.clickEvent();
+                });
+                if (customBtn.index >= 0) {
+                    toolbar.insertControl(customBtn.index, btn);
+                } else {
+                    toolbar.addControl(btn);
                 }
             });
         }

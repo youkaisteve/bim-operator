@@ -1,10 +1,12 @@
 import { IBimDrawing, IBimCustom } from '../../interface';
 import BimfaceBase from './bimface_base';
 import { DrawingDisplayMode, Bim2DEvent } from '../../enums';
+import debugLog from '../../decorators/debug_log';
 
 /**
  * bimface 2D 操作
  */
+@debugLog()
 export default class BimfaceDrawing extends BimfaceBase implements IBimDrawing, IBimCustom {
     app: any;
     viewer2D: any;
@@ -16,6 +18,13 @@ export default class BimfaceDrawing extends BimfaceBase implements IBimDrawing, 
      */
     addEventListener(eventName: Bim2DEvent, callback: Function) {
         this.viewer2D.addEventListener(eventName, callback);
+    }
+
+    /**
+     * 渲染
+     */
+    render() {
+        this.viewer2D.render();
     }
 
     /**
