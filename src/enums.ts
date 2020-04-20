@@ -34,6 +34,9 @@ export enum DrawingDisplayMode {
     Custom = 3,
 }
 
+/**
+ * BIM3D模型的事件
+ */
 export enum Bim3DEvent {
     AddView = 'AddView',
     ButtonOnToolbarClicked = 'ButtonOnToolbarClicked',
@@ -57,6 +60,9 @@ export enum Bim3DEvent {
     ViewLoading = 'ViewLoading',
 }
 
+/**
+ * BIM2D图纸的事件
+ */
 export enum Bim2DEvent {
     Error = 'Error',
     Loaded = 'Loaded',
