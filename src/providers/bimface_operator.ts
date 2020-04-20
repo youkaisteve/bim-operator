@@ -6,6 +6,9 @@ import BimfaceDrawing from './bimface/bimface_drawing';
 const BIMFACE_3D_FIELD = Symbol('Bimface#3DFiled');
 const BIMFACE_DRAWING_FIELD = Symbol('Bimface#DrawingField');
 
+/**
+ * Bimface操作类，用于获取模型或者图纸对应的具体操作实例
+ */
 export default class BimfaceOperator implements IBimOperator {
     [BIMFACE_3D_FIELD]: IBim3DModel;
     [BIMFACE_DRAWING_FIELD]: IBimDrawing;

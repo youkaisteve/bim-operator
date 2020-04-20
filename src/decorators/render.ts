@@ -18,6 +18,9 @@ function handleDescriptor(target, key, descriptor) {
     };
 }
 
+/**
+ * bim操作需要render，为method打上标签后，会调用自身的render方法
+ */
 export default function needRender() {
     return decorate(handleDescriptor);
 }

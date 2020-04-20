@@ -3,6 +3,9 @@ import { BIMFACE_JS_SDK } from '../../consts';
 import CustomButton from '../../model/custom_button';
 import needRender from '../../decorators/render';
 
+/**
+ * bimface api基类，提供图纸和模型的通用方法
+ */
 export default abstract class BimfaceBase {
     private _app: any;
 
