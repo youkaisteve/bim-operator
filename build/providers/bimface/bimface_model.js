@@ -105,7 +105,7 @@ var Bimface3DModel = (function (_super) {
                 switch (_a.label) {
                     case 0:
                         this.dispose(options);
-                        return [4, this.initSDK(options.unsafe)];
+                        return [4, this.initSDK()];
                     case 1:
                         _a.sent();
                         return [4, this.loadSDK(options)];
