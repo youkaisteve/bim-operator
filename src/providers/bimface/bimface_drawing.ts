@@ -43,7 +43,7 @@ export default class BimfaceDrawing extends BimfaceBase implements IBimDrawing, 
         // 清除dom
         this.dispose(options);
 
-        await this.initSDK();
+        await this.initSDK(options.unsafe);
         const viewMetaData = await this.loadSDK(options);
         var dom4Show = document.getElementById(options.domId);
         var webAppConfig = new window.Glodon.Bimface.Application.WebApplicationDrawingConfig();
