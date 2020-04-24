@@ -1,5 +1,5 @@
 import remoteLoad from '../../util/remote-load';
-import { BIMFACE_JS_SDK, BIMFACE_JS_SDK_UNSAFE } from '../../consts';
+import { BIMFACE_JS_SDK } from '../../consts';
 import CustomButton from '../../model/custom_button';
 import needRender from '../../decorators/render';
 
@@ -19,9 +19,9 @@ export default abstract class BimfaceBase {
 
     abstract addEventListener(eventName: String, callback: Function);
     abstract render();
-    async initSDK(unsafe?: Boolean) {
+    async initSDK() {
         if (!window.BimfaceSDKLoaderConfig) {
-            await remoteLoad(unsafe ? BIMFACE_JS_SDK_UNSAFE : BIMFACE_JS_SDK);
+            await remoteLoad(BIMFACE_JS_SDK);
         }
     }
 

@@ -1,4 +1,4 @@
-[bim-operator - v1.0.34](../README.md) › [Globals](../globals.md) › ["providers/bimface/bimface_marker"](_providers_bimface_bimface_marker_.md)
+[@yzw/bim-operator - v1.0.35](../README.md) › [Globals](../globals.md) › ["providers/bimface/bimface_marker"](_providers_bimface_bimface_marker_.md)
 
 # External module: "providers/bimface/bimface_marker"
 
