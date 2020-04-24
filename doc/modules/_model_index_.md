@@ -1,4 +1,4 @@
-[bim-operator - v1.0.31](../README.md) › [Globals](../globals.md) › ["model/index"](_model_index_.md)
+[bim-operator - v1.0.34](../README.md) › [Globals](../globals.md) › ["model/index"](_model_index_.md)
 
 # External module: "model/index"
 

@@ -61,13 +61,13 @@ var BimfaceBase = (function () {
         enumerable: true,
         configurable: true
     });
-    BimfaceBase.prototype.initSDK = function () {
+    BimfaceBase.prototype.initSDK = function (unsafe) {
         return __awaiter(this, void 0, void 0, function () {
             return __generator(this, function (_a) {
                 switch (_a.label) {
                     case 0:
                         if (!!window.BimfaceSDKLoaderConfig) return [3, 2];
-                        return [4, remote_load_1.default(consts_1.BIMFACE_JS_SDK)];
+                        return [4, remote_load_1.default(unsafe ? consts_1.BIMFACE_JS_SDK_UNSAFE : consts_1.BIMFACE_JS_SDK)];
                     case 1:
                         _a.sent();
                         _a.label = 2;

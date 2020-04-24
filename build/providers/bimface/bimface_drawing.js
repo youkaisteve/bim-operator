@@ -88,7 +88,7 @@ var BimfaceDrawing = (function (_super) {
                 switch (_a.label) {
                     case 0:
                         this.dispose(options);
-                        return [4, this.initSDK()];
+                        return [4, this.initSDK(options.unsafe)];
                     case 1:
                         _a.sent();
                         return [4, this.loadSDK(options)];
