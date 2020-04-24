@@ -1,4 +1,4 @@
-[bim-operator - v1.0.31](../README.md) › [Globals](../globals.md) › ["decorators/render"](_decorators_render_.md)
+[bim-operator - v1.0.34](../README.md) › [Globals](../globals.md) › ["decorators/render"](_decorators_render_.md)
 
 # External module: "decorators/render"
 
@@ -15,7 +15,7 @@
 
 ▸ **handleDescriptor**(`target`: any, `key`: any, `descriptor`: any): *any*
 
-*Defined in [decorators/render.ts:2](https://github.com/youkaisteve/bim-operator/blob/ed18f99/src/decorators/render.ts#L2)*
+*Defined in [decorators/render.ts:2](https://github.com/youkaisteve/bim-operator/blob/b5c6c98/src/decorators/render.ts#L2)*
 
 **Parameters:**
 
@@ -33,6 +33,8 @@ ___
 
 ▸ **needRender**(): *any*
 
-*Defined in [decorators/render.ts:21](https://github.com/youkaisteve/bim-operator/blob/ed18f99/src/decorators/render.ts#L21)*
+*Defined in [decorators/render.ts:24](https://github.com/youkaisteve/bim-operator/blob/b5c6c98/src/decorators/render.ts#L24)*
+
+bim操作需要render，为method打上标签后，会调用自身的render方法
 
 **Returns:** *any*
