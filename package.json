@@ -1,6 +1,6 @@
 {
     "name": "bim-operator",
-    "version": "1.0.33",
+    "version": "1.0.34",
     "description": "a pack of bim operations",
     "files": [
         "build"
