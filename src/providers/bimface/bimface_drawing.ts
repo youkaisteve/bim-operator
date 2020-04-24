@@ -34,6 +34,7 @@ export default class BimfaceDrawing extends BimfaceBase implements IBimDrawing, 
      * @param {string} options.url js-sdk地址
      * @param {string} options.domId dom id
      * @param {Object} options.appConfig 应用的配置
+     * @param {Object} options.unsafe 以http而非https的方式加载sdk
      * @param {Array<String>} options.appConfig.Buttons 工具条button，0:Home：主视角，1: RectZoom：框选，2: DrawingMeasure：测量，3: Map：地图，4: Layers：图层，5: Setting：设置，6: FullScreen：全屏 默认全部加载
      * @param {Array<String>} options.appConfig.Toolbars 工具条或目录树，MainToolbar:工具条；ModelTree：目录树
      * @param {Object} options.viewConfig 视图的配置，参考：https://static.bimface.com/jssdk-apidoc/v3/Glodon.Bimface.Viewer.ViewerDrawingConfig.html

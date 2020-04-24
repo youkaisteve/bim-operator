@@ -55,6 +55,7 @@ export default class Bimface3DModel extends BimfaceBase implements IBim3DModel, 
      * @param {string} options.url js-sdk地址
      * @param {string} options.domId dom id
      * @param {Object} options.appConfig 应用的配置
+     * @param {Object} options.unsafe 以http而非https的方式加载sdk
      * @param {Array<String>} options.appConfig.Buttons 工具条button，0:Home：主视角，1: RectangleSelect：框选，2: Measure：测量，3: Section：剖切，4: Walk：漫游，5: Map：地图，6: Property：构件详情，7: Setting：设置，8: Information：基本信息，9: FullScreen：全屏 默认全部加载
      * @param {Array<String>} options.appConfig.Toolbars 工具条或目录树，MainToolbar:工具条；ModelTree：目录树
      * @param {Array<String>} options.appConfig.Toolbars 工具条或目录树，MainToolbar:工具条；ModelTree：目录树
@@ -64,7 +65,7 @@ export default class Bimface3DModel extends BimfaceBase implements IBim3DModel, 
         // 清除dom
         this.dispose(options);
 
-        await this.initSDK();
+        await this.initSDK(options.unsafe);
         const viewMetaData = await this.loadSDK(options);
 
         const domShow = document.getElementById(options.domId);
