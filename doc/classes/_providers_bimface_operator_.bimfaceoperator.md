@@ -1,4 +1,4 @@
-[@yzw/bim-operator - v1.0.35](../README.md) › [Globals](../globals.md) › ["providers/bimface_operator"](../modules/_providers_bimface_operator_.md) › [BimfaceOperator](_providers_bimface_operator_.bimfaceoperator.md)
+[@yzw/bim-operator - v1.0.36](../README.md) › [Globals](../globals.md) › ["providers/bimface_operator"](../modules/_providers_bimface_operator_.md) › [BimfaceOperator](_providers_bimface_operator_.bimfaceoperator.md)
 
 # Class: BimfaceOperator
 
@@ -30,7 +30,7 @@ Bimface操作类，用于获取模型或者图纸对应的具体操作实例
 
 • **[BIMFACE_3D_FIELD]**: *[IBim3DModel](../interfaces/_interface_.ibim3dmodel.md)*
 
-*Defined in [providers/bimface_operator.ts:13](https://github.com/youkaisteve/bim-operator/blob/00dd191/src/providers/bimface_operator.ts#L13)*
+*Defined in [providers/bimface_operator.ts:13](https://github.com/youkaisteve/bim-operator/blob/3cd98e1/src/providers/bimface_operator.ts#L13)*
 
 ___
 
@@ -38,7 +38,7 @@ ___
 
 • **[BIMFACE_DRAWING_FIELD]**: *[IBimDrawing](../interfaces/_interface_.ibimdrawing.md)*
 
-*Defined in [providers/bimface_operator.ts:14](https://github.com/youkaisteve/bim-operator/blob/00dd191/src/providers/bimface_operator.ts#L14)*
+*Defined in [providers/bimface_operator.ts:14](https://github.com/youkaisteve/bim-operator/blob/3cd98e1/src/providers/bimface_operator.ts#L14)*
 
 ## Accessors
 
@@ -46,7 +46,7 @@ ___
 
 • **get bim3DModel**(): *[IBim3DModel](../interfaces/_interface_.ibim3dmodel.md)*
 
-*Defined in [providers/bimface_operator.ts:16](https://github.com/youkaisteve/bim-operator/blob/00dd191/src/providers/bimface_operator.ts#L16)*
+*Defined in [providers/bimface_operator.ts:16](https://github.com/youkaisteve/bim-operator/blob/3cd98e1/src/providers/bimface_operator.ts#L16)*
 
 **Returns:** *[IBim3DModel](../interfaces/_interface_.ibim3dmodel.md)*
 
@@ -56,6 +56,6 @@ ___
 
 • **get bimDrawing**(): *[IBimDrawing](../interfaces/_interface_.ibimdrawing.md)*
 
-*Defined in [providers/bimface_operator.ts:20](https://github.com/youkaisteve/bim-operator/blob/00dd191/src/providers/bimface_operator.ts#L20)*
+*Defined in [providers/bimface_operator.ts:20](https://github.com/youkaisteve/bim-operator/blob/3cd98e1/src/providers/bimface_operator.ts#L20)*
 
 **Returns:** *[IBimDrawing](../interfaces/_interface_.ibimdrawing.md)*
