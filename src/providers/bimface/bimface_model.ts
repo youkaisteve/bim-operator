@@ -255,7 +255,10 @@ export default class Bimface3DModel extends BimfaceBase implements IBim3DModel, 
      */
     @needRender()
     setComponentsColor(componentIds: Array<String>, color: String): void {
-        return this.viewer3D.overrideComponentsColorById(componentIds, color);
+        return this.viewer3D.overrideComponentsColorById(
+            componentIds,
+            new window.Glodon.Web.Graphics.Color(color, 0.8)
+        );
     }
     /**
      * 根据条件设置构件颜色
@@ -263,7 +266,10 @@ export default class Bimface3DModel extends BimfaceBase implements IBim3DModel, 
      */
     @needRender()
     setComponentsColorByCondition(conditions: Array<ComponentFilter>, color: String): void {
-        return this.viewer3D.overrideComponentsColorByObjectData(conditions, color);
+        return this.viewer3D.overrideComponentsColorByObjectData(
+            conditions,
+            new window.Glodon.Web.Graphics.Color(color, 0.8)
+        );
     }
     /**
      * 恢复构件颜色
