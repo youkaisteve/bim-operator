@@ -1,4 +1,4 @@
-[@yzw/bim-operator - v1.0.35](../README.md) › [Globals](../globals.md) › ["model/marker_3d"](_model_marker_3d_.md)
+[@yzw/bim-operator - v1.0.36](../README.md) › [Globals](../globals.md) › ["model/marker_3d"](_model_marker_3d_.md)
 
 # External module: "model/marker_3d"
 

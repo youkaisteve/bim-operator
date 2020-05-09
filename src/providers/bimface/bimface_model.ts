@@ -249,7 +249,38 @@ export default class Bimface3DModel extends BimfaceBase implements IBim3DModel, 
     getSelectedComponents(): Array<String> {
         return this.viewer3D.getSelectedComponents();
     }
-
+    /**
+     * 设置构件ids
+     * @param componentIds 构件ids
+     */
+    @needRender()
+    setComponentsColor(componentIds: Array<String>, color: String): void {
+        return this.viewer3D.overrideComponentsColorById(componentIds, color);
+    }
+    /**
+     * 根据条件设置构件颜色
+     * @param conditions 条件
+     */
+    @needRender()
+    setComponentsColorByCondition(conditions: Array<ComponentFilter>, color: String): void {
+        return this.viewer3D.overrideComponentsColorByObjectData(conditions, color);
+    }
+    /**
+     * 恢复构件颜色
+     * @param componentIds 构件ids
+     */
+    @needRender()
+    restoreComponentsColor(componentIds: Array<String>): void {
+        return this.viewer3D.restoreComponentsColorById(componentIds);
+    }
+    /**
+     * 根据条件恢复构件颜色
+     * @param conditions 条件
+     */
+    @needRender()
+    restoreComponentsColorByCondition(conditions: Array<ComponentFilter>): void {
+        return this.viewer3D.restoreComponentsColorByObjectData(conditions);
+    }
     /**
      * 设置场景显示大小
      * @param width 宽度

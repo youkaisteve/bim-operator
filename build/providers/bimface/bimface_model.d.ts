@@ -29,6 +29,10 @@ export default class Bimface3DModel extends BimfaceBase implements IBim3DModel, 
     selectComponentsByCondition(conditions: Array<ComponentFilter>): void;
     clearSelectedComponents(): void;
     getSelectedComponents(): Array<String>;
+    setComponentsColor(componentIds: Array<String>, color: String): void;
+    setComponentsColorByCondition(conditions: Array<ComponentFilter>, color: String): void;
+    restoreComponentsColor(componentIds: Array<String>): void;
+    restoreComponentsColorByCondition(conditions: Array<ComponentFilter>): void;
     resize(width?: number, height?: number): void;
     dispose(options: any): void;
 }

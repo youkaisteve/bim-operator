@@ -101,6 +101,26 @@ export interface IBim3DModel {
      */
     getSelectedComponents(): Array<String>;
     /**
+     * 设置构件ids
+     * @param componentIds 构件ids
+     */
+    setComponentsColor(componentIds: Array<String>, color: String): void;
+    /**
+     * 根据条件设置构件颜色
+     * @param conditions 条件
+     */
+    setComponentsColorByCondition(conditions: Array<ComponentFilter>, color: String): void;
+    /**
+     * 恢复构件颜色
+     * @param componentIds 构件ids
+     */
+    restoreComponentsColor(componentIds: Array<String>): void;
+    /**
+     * 根据条件恢复构件颜色
+     * @param conditions 条件
+     */
+    restoreComponentsColorByCondition(conditions: Array<ComponentFilter>): void;
+    /**
      * 设置场景显示大小
      * @param width 宽度
      * @param height 高度

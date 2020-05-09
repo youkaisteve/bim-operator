@@ -231,6 +231,18 @@ var Bimface3DModel = (function (_super) {
     Bimface3DModel.prototype.getSelectedComponents = function () {
         return this.viewer3D.getSelectedComponents();
     };
+    Bimface3DModel.prototype.setComponentsColor = function (componentIds, color) {
+        return this.viewer3D.overrideComponentsColorById(componentIds, color);
+    };
+    Bimface3DModel.prototype.setComponentsColorByCondition = function (conditions, color) {
+        return this.viewer3D.overrideComponentsColorByObjectData(conditions, color);
+    };
+    Bimface3DModel.prototype.restoreComponentsColor = function (componentIds) {
+        return this.viewer3D.restoreComponentsColorById(componentIds);
+    };
+    Bimface3DModel.prototype.restoreComponentsColorByCondition = function (conditions) {
+        return this.viewer3D.restoreComponentsColorByObjectData(conditions);
+    };
     Bimface3DModel.prototype.resize = function (width, height) {
         this.viewer3D.resize(width, height);
     };
@@ -283,6 +295,30 @@ var Bimface3DModel = (function (_super) {
         __metadata("design:paramtypes", [Array]),
         __metadata("design:returntype", void 0)
     ], Bimface3DModel.prototype, "clearHighlightComponents", null);
+    __decorate([
+        render_1.default(),
+        __metadata("design:type", Function),
+        __metadata("design:paramtypes", [Array, String]),
+        __metadata("design:returntype", void 0)
+    ], Bimface3DModel.prototype, "setComponentsColor", null);
+    __decorate([
+        render_1.default(),
+        __metadata("design:type", Function),
+        __metadata("design:paramtypes", [Array, String]),
+        __metadata("design:returntype", void 0)
+    ], Bimface3DModel.prototype, "setComponentsColorByCondition", null);
+    __decorate([
+        render_1.default(),
+        __metadata("design:type", Function),
+        __metadata("design:paramtypes", [Array]),
+        __metadata("design:returntype", void 0)
+    ], Bimface3DModel.prototype, "restoreComponentsColor", null);
+    __decorate([
+        render_1.default(),
+        __metadata("design:type", Function),
+        __metadata("design:paramtypes", [Array]),
+        __metadata("design:returntype", void 0)
+    ], Bimface3DModel.prototype, "restoreComponentsColorByCondition", null);
     Bimface3DModel = __decorate([
         debug_log_1.default()
     ], Bimface3DModel);
