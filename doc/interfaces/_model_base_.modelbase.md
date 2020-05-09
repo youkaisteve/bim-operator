@@ -1,4 +1,4 @@
-[@yzw/bim-operator - v1.0.36](../README.md) › [Globals](../globals.md) › ["model/base"](../modules/_model_base_.md) › [ModelBase](_model_base_.modelbase.md)
+[@yzw/bim-operator - v1.0.37](../README.md) › [Globals](../globals.md) › ["model/base"](../modules/_model_base_.md) › [ModelBase](_model_base_.modelbase.md)
 
 # Interface: ModelBase
 
@@ -25,7 +25,7 @@
 
 • **fileId**: *String*
 
-*Defined in [model/base.ts:8](https://github.com/youkaisteve/bim-operator/blob/3cd98e1/src/model/base.ts#L8)*
+*Defined in [model/base.ts:8](https://github.com/youkaisteve/bim-operator/blob/eefad41/src/model/base.ts#L8)*
 
 单模型id
 
@@ -35,6 +35,6 @@ ___
 
 • **integrateId**? : *String*
 
-*Defined in [model/base.ts:12](https://github.com/youkaisteve/bim-operator/blob/3cd98e1/src/model/base.ts#L12)*
+*Defined in [model/base.ts:12](https://github.com/youkaisteve/bim-operator/blob/eefad41/src/model/base.ts#L12)*
 
 组合模型id

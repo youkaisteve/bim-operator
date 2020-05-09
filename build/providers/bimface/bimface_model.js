@@ -232,10 +232,10 @@ var Bimface3DModel = (function (_super) {
         return this.viewer3D.getSelectedComponents();
     };
     Bimface3DModel.prototype.setComponentsColor = function (componentIds, color) {
-        return this.viewer3D.overrideComponentsColorById(componentIds, color);
+        return this.viewer3D.overrideComponentsColorById(componentIds, new window.Glodon.Web.Graphics.Color(color, 0.8));
     };
     Bimface3DModel.prototype.setComponentsColorByCondition = function (conditions, color) {
-        return this.viewer3D.overrideComponentsColorByObjectData(conditions, color);
+        return this.viewer3D.overrideComponentsColorByObjectData(conditions, new window.Glodon.Web.Graphics.Color(color, 0.8));
     };
     Bimface3DModel.prototype.restoreComponentsColor = function (componentIds) {
         return this.viewer3D.restoreComponentsColorById(componentIds);

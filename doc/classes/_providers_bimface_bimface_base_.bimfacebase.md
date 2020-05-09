@@ -1,4 +1,4 @@
-[@yzw/bim-operator - v1.0.36](../README.md) › [Globals](../globals.md) › ["providers/bimface/bimface_base"](../modules/_providers_bimface_bimface_base_.md) › [BimfaceBase](_providers_bimface_bimface_base_.bimfacebase.md)
+[@yzw/bim-operator - v1.0.37](../README.md) › [Globals](../globals.md) › ["providers/bimface/bimface_base"](../modules/_providers_bimface_bimface_base_.md) › [BimfaceBase](_providers_bimface_bimface_base_.bimfacebase.md)
 
 # Class: BimfaceBase
 
@@ -37,7 +37,7 @@ bimface api基类，提供图纸和模型的通用方法
 
 • **_app**: *any*
 
-*Defined in [providers/bimface/bimface_base.ts:10](https://github.com/youkaisteve/bim-operator/blob/3cd98e1/src/providers/bimface/bimface_base.ts#L10)*
+*Defined in [providers/bimface/bimface_base.ts:10](https://github.com/youkaisteve/bim-operator/blob/eefad41/src/providers/bimface/bimface_base.ts#L10)*
 
 ## Accessors
 
@@ -45,13 +45,13 @@ bimface api基类，提供图纸和模型的通用方法
 
 • **get app**(): *any*
 
-*Defined in [providers/bimface/bimface_base.ts:12](https://github.com/youkaisteve/bim-operator/blob/3cd98e1/src/providers/bimface/bimface_base.ts#L12)*
+*Defined in [providers/bimface/bimface_base.ts:12](https://github.com/youkaisteve/bim-operator/blob/eefad41/src/providers/bimface/bimface_base.ts#L12)*
 
 **Returns:** *any*
 
 • **set app**(`app`: any): *void*
 
-*Defined in [providers/bimface/bimface_base.ts:16](https://github.com/youkaisteve/bim-operator/blob/3cd98e1/src/providers/bimface/bimface_base.ts#L16)*
+*Defined in [providers/bimface/bimface_base.ts:16](https://github.com/youkaisteve/bim-operator/blob/eefad41/src/providers/bimface/bimface_base.ts#L16)*
 
 **Parameters:**
 
@@ -67,7 +67,7 @@ Name | Type |
 
 ▸ **addCustomButtons**(`customButtons`: Array‹[CustomButton](../interfaces/_model_custom_button_.custombutton.md)›): *void*
 
-*Defined in [providers/bimface/bimface_base.ts:50](https://github.com/youkaisteve/bim-operator/blob/3cd98e1/src/providers/bimface/bimface_base.ts#L50)*
+*Defined in [providers/bimface/bimface_base.ts:50](https://github.com/youkaisteve/bim-operator/blob/eefad41/src/providers/bimface/bimface_base.ts#L50)*
 
 **Parameters:**
 
@@ -83,7 +83,7 @@ ___
 
 ▸ **addEventListener**(`eventName`: String, `callback`: Function): *any*
 
-*Defined in [providers/bimface/bimface_base.ts:20](https://github.com/youkaisteve/bim-operator/blob/3cd98e1/src/providers/bimface/bimface_base.ts#L20)*
+*Defined in [providers/bimface/bimface_base.ts:20](https://github.com/youkaisteve/bim-operator/blob/eefad41/src/providers/bimface/bimface_base.ts#L20)*
 
 **Parameters:**
 
@@ -100,7 +100,7 @@ ___
 
 ▸ **dispose**(`options`: any): *void*
 
-*Defined in [providers/bimface/bimface_base.ts:75](https://github.com/youkaisteve/bim-operator/blob/3cd98e1/src/providers/bimface/bimface_base.ts#L75)*
+*Defined in [providers/bimface/bimface_base.ts:75](https://github.com/youkaisteve/bim-operator/blob/eefad41/src/providers/bimface/bimface_base.ts#L75)*
 
 **Parameters:**
 
@@ -116,7 +116,7 @@ ___
 
 ▸ **initSDK**(): *Promise‹void›*
 
-*Defined in [providers/bimface/bimface_base.ts:22](https://github.com/youkaisteve/bim-operator/blob/3cd98e1/src/providers/bimface/bimface_base.ts#L22)*
+*Defined in [providers/bimface/bimface_base.ts:22](https://github.com/youkaisteve/bim-operator/blob/eefad41/src/providers/bimface/bimface_base.ts#L22)*
 
 **Returns:** *Promise‹void›*
 
@@ -126,7 +126,7 @@ ___
 
 ▸ **loadSDK**(`options`: any): *Promise‹any›*
 
-*Defined in [providers/bimface/bimface_base.ts:33](https://github.com/youkaisteve/bim-operator/blob/3cd98e1/src/providers/bimface/bimface_base.ts#L33)*
+*Defined in [providers/bimface/bimface_base.ts:33](https://github.com/youkaisteve/bim-operator/blob/eefad41/src/providers/bimface/bimface_base.ts#L33)*
 
 加载SDK
 
@@ -146,6 +146,6 @@ ___
 
 ▸ **render**(): *any*
 
-*Defined in [providers/bimface/bimface_base.ts:21](https://github.com/youkaisteve/bim-operator/blob/3cd98e1/src/providers/bimface/bimface_base.ts#L21)*
+*Defined in [providers/bimface/bimface_base.ts:21](https://github.com/youkaisteve/bim-operator/blob/eefad41/src/providers/bimface/bimface_base.ts#L21)*
 
 **Returns:** *any*
