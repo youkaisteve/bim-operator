@@ -3,6 +3,7 @@ import BimfaceBase from './bimface_base';
 import { DrawingDisplayMode, Bim2DEvent } from '../../enums';
 import debugLog from '../../decorators/debug_log';
 
+const MULTI_FIELD = Symbol('Bimface#IsMultiField');
 /**
  * bimface 2D 操作
  */
@@ -10,6 +11,10 @@ import debugLog from '../../decorators/debug_log';
 export default class BimfaceDrawing extends BimfaceBase implements IBimDrawing, IBimCustom {
     app: any;
     viewer2D: any;
+    /**
+     * 是否在批量执行
+     */
+    [MULTI_FIELD]: Boolean = false;
 
     /**
      * 监听事件
@@ -25,6 +30,19 @@ export default class BimfaceDrawing extends BimfaceBase implements IBimDrawing, 
      */
     render() {
         this.viewer2D.render();
+    }
+
+    /**
+     * 批量执行，最后.done来完成调用,进行渲染。主要用于对模型进行多次改变，避免每次改变都自动render
+     * @params executions 需要执行的方法
+     * @retuen 多次执行返回的结果（如果有的话）
+     */
+    multi(executions: Array<Promise<any>>) {
+        this[MULTI_FIELD] = true;
+        return Promise.all(executions).finally(() => {
+            this[MULTI_FIELD] = false;
+            this.render();
+        });
     }
 
     /**

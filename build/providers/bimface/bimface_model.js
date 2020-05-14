@@ -74,11 +74,14 @@ var enums_1 = require("../../enums");
 var render_1 = require("../../decorators/render");
 var bimface_marker_1 = require("./bimface_marker");
 var debug_log_1 = require("../../decorators/debug_log");
-var MARKER_FIELD = Symbol('Bimface#MarkerFiled');
+var MARKER_FIELD = Symbol('Bimface#MarkerField');
+var MULTI_FIELD = Symbol('Bimface#IsMultiField');
 var Bimface3DModel = (function (_super) {
     __extends(Bimface3DModel, _super);
     function Bimface3DModel() {
-        return _super !== null && _super.apply(this, arguments) || this;
+        var _this = _super !== null && _super.apply(this, arguments) || this;
+        _this[_a] = false;
+        return _this;
     }
     Object.defineProperty(Bimface3DModel.prototype, "marker", {
         get: function () {
@@ -95,22 +98,33 @@ var Bimface3DModel = (function (_super) {
         this.viewer3D.addEventListener(eventName, callback);
     };
     Bimface3DModel.prototype.render = function () {
+        if (this[MULTI_FIELD] === true) {
+            return;
+        }
         this.viewer3D.render();
+    };
+    Bimface3DModel.prototype.multi = function (executions) {
+        var _this = this;
+        this[MULTI_FIELD] = true;
+        return Promise.all(executions).finally(function () {
+            _this[MULTI_FIELD] = false;
+            _this.render();
+        });
     };
     Bimface3DModel.prototype.load = function (options) {
         return __awaiter(this, void 0, void 0, function () {
             var viewMetaData, domShow, webAppConfig;
             var _this = this;
-            return __generator(this, function (_a) {
-                switch (_a.label) {
+            return __generator(this, function (_b) {
+                switch (_b.label) {
                     case 0:
                         this.dispose(options);
                         return [4, this.initSDK()];
                     case 1:
-                        _a.sent();
+                        _b.sent();
                         return [4, this.loadSDK(options)];
                     case 2:
-                        viewMetaData = _a.sent();
+                        viewMetaData = _b.sent();
                         domShow = document.getElementById(options.domId);
                         webAppConfig = new window.Glodon.Bimface.Application.WebApplication3DConfig();
                         webAppConfig.domElement = domShow;
@@ -128,7 +142,7 @@ var Bimface3DModel = (function (_super) {
     Bimface3DModel.prototype.getFloors = function () {
         return __awaiter(this, void 0, void 0, function () {
             var _this = this;
-            return __generator(this, function (_a) {
+            return __generator(this, function (_b) {
                 return [2, new Promise(function (resolve) {
                         _this.viewer3D.getFloors(resolve);
                     })];
@@ -138,7 +152,7 @@ var Bimface3DModel = (function (_super) {
     Bimface3DModel.prototype.getFloorsbyFileId = function (fileId) {
         return __awaiter(this, void 0, void 0, function () {
             var _this = this;
-            return __generator(this, function (_a) {
+            return __generator(this, function (_b) {
                 return [2, new Promise(function (resolve) {
                         _this.viewer3D.getFloorsbyFileId(fileId, resolve);
                     })];
@@ -154,7 +168,7 @@ var Bimface3DModel = (function (_super) {
     Bimface3DModel.prototype.getComponentByCondition = function (fileId, conditions) {
         return __awaiter(this, void 0, void 0, function () {
             var _this = this;
-            return __generator(this, function (_a) {
+            return __generator(this, function (_b) {
                 if (!fileId) {
                     throw new Error('fileId不能为空');
                 }
@@ -168,7 +182,7 @@ var Bimface3DModel = (function (_super) {
         return __awaiter(this, void 0, void 0, function () {
             var cameraStatus, color;
             var _this = this;
-            return __generator(this, function (_a) {
+            return __generator(this, function (_b) {
                 cameraStatus = this.viewer3D.getCameraStatus();
                 if (options && options.color) {
                     color = new window.Glodon.Web.Graphics.Color(options.color, options.opacity || 0);
@@ -253,6 +267,8 @@ var Bimface3DModel = (function (_super) {
         this[MARKER_FIELD] = null;
         _super.prototype.dispose.call(this, options);
     };
+    var _a;
+    _a = MULTI_FIELD;
     __decorate([
         render_1.default(),
         __metadata("design:type", Function),
@@ -295,6 +311,24 @@ var Bimface3DModel = (function (_super) {
         __metadata("design:paramtypes", [Array]),
         __metadata("design:returntype", void 0)
     ], Bimface3DModel.prototype, "clearHighlightComponents", null);
+    __decorate([
+        render_1.default(),
+        __metadata("design:type", Function),
+        __metadata("design:paramtypes", [Array]),
+        __metadata("design:returntype", void 0)
+    ], Bimface3DModel.prototype, "selectComponents", null);
+    __decorate([
+        render_1.default(),
+        __metadata("design:type", Function),
+        __metadata("design:paramtypes", [Array]),
+        __metadata("design:returntype", void 0)
+    ], Bimface3DModel.prototype, "selectComponentsByCondition", null);
+    __decorate([
+        render_1.default(),
+        __metadata("design:type", Function),
+        __metadata("design:paramtypes", []),
+        __metadata("design:returntype", void 0)
+    ], Bimface3DModel.prototype, "clearSelectedComponents", null);
     __decorate([
         render_1.default(),
         __metadata("design:type", Function),
