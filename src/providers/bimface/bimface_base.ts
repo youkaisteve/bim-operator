@@ -19,6 +19,10 @@ export default abstract class BimfaceBase {
 
     abstract addEventListener(eventName: String, callback: Function);
     abstract render();
+    /**
+     * 批量执行相关代码
+     */
+    abstract multi(executions: Array<Promise<any>>);
     async initSDK() {
         if (!window.BimfaceSDKLoaderConfig) {
             await remoteLoad(BIMFACE_JS_SDK);

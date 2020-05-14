@@ -6,12 +6,15 @@ import { IsolateOption, Bim3DEvent } from '../../enums';
 import { ComponentFilter } from '../../model/filter';
 import { HighlightOption } from '../../model';
 declare const MARKER_FIELD: unique symbol;
+declare const MULTI_FIELD: unique symbol;
 export default class Bimface3DModel extends BimfaceBase implements IBim3DModel, IBimCustom, IDispose {
     viewer3D: any;
     [MARKER_FIELD]: IMarker;
+    [MULTI_FIELD]: Boolean;
     get marker(): IMarker;
     addEventListener(eventName: Bim3DEvent, callback: Function): void;
     render(): void;
+    multi(executions: Array<Promise<any>>): Promise<any[]>;
     load(options: any): Promise<void>;
     getFloors(): Promise<Array<Floor>>;
     getFloorsbyFileId(fileId: String): Promise<Array<Floor>>;

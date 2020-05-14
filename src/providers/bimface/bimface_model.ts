@@ -9,7 +9,8 @@ import { HighlightOption } from '../../model';
 import BimfaceMarker from './bimface_marker';
 import debugLog from '../../decorators/debug_log';
 
-const MARKER_FIELD = Symbol('Bimface#MarkerFiled');
+const MARKER_FIELD = Symbol('Bimface#MarkerField');
+const MULTI_FIELD = Symbol('Bimface#IsMultiField');
 
 /**
  * bimface 3D 操作
@@ -21,6 +22,10 @@ export default class Bimface3DModel extends BimfaceBase implements IBim3DModel, 
      */
     viewer3D: any;
     [MARKER_FIELD]: IMarker;
+    /**
+     * 是否在批量执行
+     */
+    [MULTI_FIELD]: Boolean = false;
 
     /**
      * 3D标注器
@@ -45,7 +50,23 @@ export default class Bimface3DModel extends BimfaceBase implements IBim3DModel, 
      * 渲染
      */
     render() {
+        if (this[MULTI_FIELD] === true) {
+            return;
+        }
         this.viewer3D.render();
+    }
+
+    /**
+     * 批量执行，最后.done来完成调用,进行渲染。主要用于对模型进行多次改变，避免每次改变都自动render
+     * @params executions 需要执行的方法
+     * @retuen 多次执行返回的结果（如果有的话）
+     */
+    multi(executions: Array<Promise<any>>) {
+        this[MULTI_FIELD] = true;
+        return Promise.all(executions).finally(() => {
+            this[MULTI_FIELD] = false;
+            this.render();
+        });
     }
 
     /**
@@ -225,6 +246,7 @@ export default class Bimface3DModel extends BimfaceBase implements IBim3DModel, 
      * 选中构件
      * @param componentIds 构件id列表
      */
+    @needRender()
     selectComponents(componentIds: Array<String>): void {
         this.viewer3D.setSelectedComponentsById(componentIds);
     }
@@ -233,6 +255,7 @@ export default class Bimface3DModel extends BimfaceBase implements IBim3DModel, 
      * 根据条件选中构件
      * @param conditions 条件
      */
+    @needRender()
     selectComponentsByCondition(conditions: Array<ComponentFilter>): void {
         this.viewer3D.setSelectedComponentsByObjectData(conditions);
     }
@@ -240,6 +263,7 @@ export default class Bimface3DModel extends BimfaceBase implements IBim3DModel, 
     /**
      * 清空选中构件
      */
+    @needRender()
     clearSelectedComponents(): void {
         this.viewer3D.clearSelectedComponents();
     }

@@ -69,10 +69,13 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var bimface_base_1 = require("./bimface_base");
 var enums_1 = require("../../enums");
 var debug_log_1 = require("../../decorators/debug_log");
+var MULTI_FIELD = Symbol('Bimface#IsMultiField');
 var BimfaceDrawing = (function (_super) {
     __extends(BimfaceDrawing, _super);
     function BimfaceDrawing() {
-        return _super !== null && _super.apply(this, arguments) || this;
+        var _this = _super !== null && _super.apply(this, arguments) || this;
+        _this[_a] = false;
+        return _this;
     }
     BimfaceDrawing.prototype.addEventListener = function (eventName, callback) {
         this.viewer2D.addEventListener(eventName, callback);
@@ -80,20 +83,28 @@ var BimfaceDrawing = (function (_super) {
     BimfaceDrawing.prototype.render = function () {
         this.viewer2D.render();
     };
+    BimfaceDrawing.prototype.multi = function (executions) {
+        var _this = this;
+        this[MULTI_FIELD] = true;
+        return Promise.all(executions).finally(function () {
+            _this[MULTI_FIELD] = false;
+            _this.render();
+        });
+    };
     BimfaceDrawing.prototype.load = function (options) {
         return __awaiter(this, void 0, void 0, function () {
             var viewMetaData, dom4Show, webAppConfig;
             var _this = this;
-            return __generator(this, function (_a) {
-                switch (_a.label) {
+            return __generator(this, function (_b) {
+                switch (_b.label) {
                     case 0:
                         this.dispose(options);
                         return [4, this.initSDK()];
                     case 1:
-                        _a.sent();
+                        _b.sent();
                         return [4, this.loadSDK(options)];
                     case 2:
-                        viewMetaData = _a.sent();
+                        viewMetaData = _b.sent();
                         dom4Show = document.getElementById(options.domId);
                         webAppConfig = new window.Glodon.Bimface.Application.WebApplicationDrawingConfig();
                         webAppConfig.domElement = dom4Show;
@@ -118,6 +129,8 @@ var BimfaceDrawing = (function (_super) {
             this.viewer2D.setGlobalColor(new window.Glodon.Web.Graphics.Color(customOptions.color, customOptions.opacity));
         }
     };
+    var _a;
+    _a = MULTI_FIELD;
     BimfaceDrawing = __decorate([
         debug_log_1.default()
     ], BimfaceDrawing);
