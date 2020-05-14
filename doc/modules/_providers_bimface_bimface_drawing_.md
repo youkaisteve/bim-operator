@@ -1,4 +1,4 @@
-[@yzw/bim-operator - v1.0.40](../README.md) › [Globals](../globals.md) › ["providers/bimface/bimface_drawing"](_providers_bimface_bimface_drawing_.md)
+[@yzw/bim-operator - v1.0.41](../README.md) › [Globals](../globals.md) › ["providers/bimface/bimface_drawing"](_providers_bimface_bimface_drawing_.md)
 
 # External module: "providers/bimface/bimface_drawing"
 
@@ -18,4 +18,4 @@
 
 • **MULTI_FIELD**: *unique symbol* =  Symbol('Bimface#IsMultiField')
 
-*Defined in [providers/bimface/bimface_drawing.ts:6](https://github.com/youkaisteve/bim-operator/blob/db59ec1/src/providers/bimface/bimface_drawing.ts#L6)*
+*Defined in [providers/bimface/bimface_drawing.ts:6](https://github.com/youkaisteve/bim-operator/blob/37a7415/src/providers/bimface/bimface_drawing.ts#L6)*

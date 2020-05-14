@@ -14,7 +14,7 @@ export default class Bimface3DModel extends BimfaceBase implements IBim3DModel, 
     get marker(): IMarker;
     addEventListener(eventName: Bim3DEvent, callback: Function): void;
     render(): void;
-    multi(executions: Array<Promise<any>>): Promise<any[]>;
+    multi(callback: Function): Promise<void>;
     load(options: any): Promise<void>;
     getFloors(): Promise<Array<Floor>>;
     getFloorsbyFileId(fileId: String): Promise<Array<Floor>>;

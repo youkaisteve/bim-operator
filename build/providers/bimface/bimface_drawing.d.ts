@@ -8,7 +8,7 @@ export default class BimfaceDrawing extends BimfaceBase implements IBimDrawing, 
     [MULTI_FIELD]: Boolean;
     addEventListener(eventName: Bim2DEvent, callback: Function): void;
     render(): void;
-    multi(executions: Array<Promise<any>>): Promise<any[]>;
+    multi(callback: Function): Promise<void>;
     load(options: any): Promise<void>;
     setDisplayMode(model: DrawingDisplayMode, customOptions: any): void;
 }

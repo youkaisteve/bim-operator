@@ -22,7 +22,7 @@ export default abstract class BimfaceBase {
     /**
      * 批量执行相关代码
      */
-    abstract multi(executions: Array<Promise<any>>);
+    abstract multi(callback: Function);
     async initSDK() {
         if (!window.BimfaceSDKLoaderConfig) {
             await remoteLoad(BIMFACE_JS_SDK);

@@ -83,12 +83,23 @@ var BimfaceDrawing = (function (_super) {
     BimfaceDrawing.prototype.render = function () {
         this.viewer2D.render();
     };
-    BimfaceDrawing.prototype.multi = function (executions) {
-        var _this = this;
-        this[MULTI_FIELD] = true;
-        return Promise.all(executions).finally(function () {
-            _this[MULTI_FIELD] = false;
-            _this.render();
+    BimfaceDrawing.prototype.multi = function (callback) {
+        return __awaiter(this, void 0, void 0, function () {
+            return __generator(this, function (_b) {
+                switch (_b.label) {
+                    case 0:
+                        if (!callback) {
+                            throw new Error('callback is required');
+                        }
+                        this[MULTI_FIELD] = true;
+                        return [4, callback(this)];
+                    case 1:
+                        _b.sent();
+                        this[MULTI_FIELD] = false;
+                        this.render();
+                        return [2];
+                }
+            });
         });
     };
     BimfaceDrawing.prototype.load = function (options) {
