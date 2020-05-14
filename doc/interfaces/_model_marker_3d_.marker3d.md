@@ -1,4 +1,4 @@
-[@yzw/bim-operator - v1.0.41](../README.md) › [Globals](../globals.md) › ["model/marker_3d"](../modules/_model_marker_3d_.md) › [Marker3D](_model_marker_3d_.marker3d.md)
+[@yzw/bim-operator - v1.0.42](../README.md) › [Globals](../globals.md) › ["model/marker_3d"](../modules/_model_marker_3d_.md) › [Marker3D](_model_marker_3d_.marker3d.md)
 
 # Interface: Marker3D
 
@@ -27,7 +27,7 @@
 
 • **id**: *string*
 
-*Defined in [model/marker_3d.ts:8](https://github.com/youkaisteve/bim-operator/blob/37a7415/src/model/marker_3d.ts#L8)*
+*Defined in [model/marker_3d.ts:8](https://github.com/youkaisteve/bim-operator/blob/d51d1c3/src/model/marker_3d.ts#L8)*
 
 id
 
@@ -37,7 +37,7 @@ ___
 
 • **onClick**? : *Function*
 
-*Defined in [model/marker_3d.ts:32](https://github.com/youkaisteve/bim-operator/blob/37a7415/src/model/marker_3d.ts#L32)*
+*Defined in [model/marker_3d.ts:32](https://github.com/youkaisteve/bim-operator/blob/d51d1c3/src/model/marker_3d.ts#L32)*
 
 点击事件
 
@@ -47,7 +47,7 @@ ___
 
 • **onHover**? : *Function*
 
-*Defined in [model/marker_3d.ts:36](https://github.com/youkaisteve/bim-operator/blob/37a7415/src/model/marker_3d.ts#L36)*
+*Defined in [model/marker_3d.ts:36](https://github.com/youkaisteve/bim-operator/blob/d51d1c3/src/model/marker_3d.ts#L36)*
 
 hover事件
 
@@ -57,7 +57,7 @@ ___
 
 • **size**? : *number*
 
-*Defined in [model/marker_3d.ts:20](https://github.com/youkaisteve/bim-operator/blob/37a7415/src/model/marker_3d.ts#L20)*
+*Defined in [model/marker_3d.ts:20](https://github.com/youkaisteve/bim-operator/blob/d51d1c3/src/model/marker_3d.ts#L20)*
 
 icon尺寸
 
@@ -67,7 +67,7 @@ ___
 
 • **src**: *string*
 
-*Defined in [model/marker_3d.ts:16](https://github.com/youkaisteve/bim-operator/blob/37a7415/src/model/marker_3d.ts#L16)*
+*Defined in [model/marker_3d.ts:16](https://github.com/youkaisteve/bim-operator/blob/d51d1c3/src/model/marker_3d.ts#L16)*
 
 icon图片路径
 
@@ -77,7 +77,7 @@ ___
 
 • **tooltip**? : *string*
 
-*Defined in [model/marker_3d.ts:24](https://github.com/youkaisteve/bim-operator/blob/37a7415/src/model/marker_3d.ts#L24)*
+*Defined in [model/marker_3d.ts:24](https://github.com/youkaisteve/bim-operator/blob/d51d1c3/src/model/marker_3d.ts#L24)*
 
 提示内容
 
@@ -87,7 +87,7 @@ ___
 
 • **tooltipStyle**? : *Object*
 
-*Defined in [model/marker_3d.ts:28](https://github.com/youkaisteve/bim-operator/blob/37a7415/src/model/marker_3d.ts#L28)*
+*Defined in [model/marker_3d.ts:28](https://github.com/youkaisteve/bim-operator/blob/d51d1c3/src/model/marker_3d.ts#L28)*
 
 tooltip样式
 
@@ -97,6 +97,6 @@ ___
 
 • **worldPosition**: *Position*
 
-*Defined in [model/marker_3d.ts:12](https://github.com/youkaisteve/bim-operator/blob/37a7415/src/model/marker_3d.ts#L12)*
+*Defined in [model/marker_3d.ts:12](https://github.com/youkaisteve/bim-operator/blob/d51d1c3/src/model/marker_3d.ts#L12)*
 
 位置
