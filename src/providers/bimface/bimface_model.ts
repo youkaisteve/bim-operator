@@ -58,15 +58,16 @@ export default class Bimface3DModel extends BimfaceBase implements IBim3DModel, 
 
     /**
      * 批量执行，最后.done来完成调用,进行渲染。主要用于对模型进行多次改变，避免每次改变都自动render
-     * @params executions 需要执行的方法
-     * @retuen 多次执行返回的结果（如果有的话）
+     * @param callback 回调函数，以当前实例为参数，在这里执行需要的代码
      */
-    multi(executions: Array<Promise<any>>) {
+    async multi(callback: Function) {
+        if (!callback) {
+            throw new Error('callback is required');
+        }
         this[MULTI_FIELD] = true;
-        return Promise.all(executions).finally(() => {
-            this[MULTI_FIELD] = false;
-            this.render();
-        });
+        await callback(this);
+        this[MULTI_FIELD] = false;
+        this.render();
     }
 
     /**
