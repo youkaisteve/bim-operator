@@ -81,6 +81,10 @@ var BimfaceDrawing = (function (_super) {
         this.viewer2D.addEventListener(eventName, callback);
     };
     BimfaceDrawing.prototype.render = function () {
+        if (this[MULTI_FIELD] === true) {
+            console.debug('render skiped while in multi mode');
+            return;
+        }
         this.viewer2D.render();
     };
     BimfaceDrawing.prototype.multi = function (callback) {

@@ -51,6 +51,7 @@ export default class Bimface3DModel extends BimfaceBase implements IBim3DModel, 
      */
     render() {
         if (this[MULTI_FIELD] === true) {
+            console.debug('render skiped while in multi mode');
             return;
         }
         this.viewer3D.render();

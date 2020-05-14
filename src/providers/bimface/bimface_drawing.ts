@@ -29,6 +29,10 @@ export default class BimfaceDrawing extends BimfaceBase implements IBimDrawing, 
      * 渲染
      */
     render() {
+        if (this[MULTI_FIELD] === true) {
+            console.debug('render skiped while in multi mode');
+            return;
+        }
         this.viewer2D.render();
     }
 

@@ -99,6 +99,7 @@ var Bimface3DModel = (function (_super) {
     };
     Bimface3DModel.prototype.render = function () {
         if (this[MULTI_FIELD] === true) {
+            console.debug('render skiped while in multi mode');
             return;
         }
         this.viewer3D.render();
