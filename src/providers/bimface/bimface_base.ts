@@ -67,9 +67,9 @@ export default abstract class BimfaceBase {
                 btn.addEventListener('Click', () => {
                     customBtn.isToggle = !customBtn.isToggle;
                     if (customBtn.isToggle) {
-                        btn.setClassNames(customBtn.toggleClassName);
+                        btn.setClassNames(`bf-button ${customBtn.toggleClassName}`);
                     } else {
-                        btn.setClassNames(customBtn.className);
+                        btn.setClassNames(`bf-button ${customBtn.className}`);
                     }
                     btn.toggleCheckedState();
                     customBtn.clickEvent();
