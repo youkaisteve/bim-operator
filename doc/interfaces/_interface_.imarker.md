@@ -1,4 +1,4 @@
-[@yzw/bim-operator - v1.0.42](../README.md) › [Globals](../globals.md) › ["interface"](../modules/_interface_.md) › [IMarker](_interface_.imarker.md)
+[@yzw/bim-operator - v1.0.43](../README.md) › [Globals](../globals.md) › ["interface"](../modules/_interface_.md) › [IMarker](_interface_.imarker.md)
 
 # Interface: IMarker
 
@@ -27,7 +27,7 @@
 
 ▸ **add3dMarker**(`marker`: [Marker3D](_model_marker_3d_.marker3d.md)): *string*
 
-*Defined in [interface.ts:144](https://github.com/youkaisteve/bim-operator/blob/d51d1c3/src/interface.ts#L144)*
+*Defined in [interface.ts:144](https://github.com/youkaisteve/bim-operator/blob/1b8f8ba/src/interface.ts#L144)*
 
 添加3D标记
 
@@ -47,7 +47,7 @@ ___
 
 ▸ **clear3dMarker**(): *void*
 
-*Defined in [interface.ts:153](https://github.com/youkaisteve/bim-operator/blob/d51d1c3/src/interface.ts#L153)*
+*Defined in [interface.ts:153](https://github.com/youkaisteve/bim-operator/blob/1b8f8ba/src/interface.ts#L153)*
 
 清除所有3D标记
 
@@ -59,7 +59,7 @@ ___
 
 ▸ **getAllMarkers**(): *Array‹[Marker3D](_model_marker_3d_.marker3d.md)›*
 
-*Defined in [interface.ts:138](https://github.com/youkaisteve/bim-operator/blob/d51d1c3/src/interface.ts#L138)*
+*Defined in [interface.ts:138](https://github.com/youkaisteve/bim-operator/blob/1b8f8ba/src/interface.ts#L138)*
 
 获取所有标记
 
@@ -71,7 +71,7 @@ ___
 
 ▸ **remove3dMarker**(`markerId`: string): *void*
 
-*Defined in [interface.ts:149](https://github.com/youkaisteve/bim-operator/blob/d51d1c3/src/interface.ts#L149)*
+*Defined in [interface.ts:149](https://github.com/youkaisteve/bim-operator/blob/1b8f8ba/src/interface.ts#L149)*
 
 清空3d锚点
 
