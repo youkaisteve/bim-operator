@@ -1,4 +1,4 @@
-[@yzw/bim-operator - v1.0.44](../README.md) › [Globals](../globals.md) › ["model/position"](../modules/_model_position_.md) › [Position](_model_position_.position.md)
+[@yzw/bim-operator - v1.0.45](../README.md) › [Globals](../globals.md) › ["model/position"](../modules/_model_position_.md) › [Position](_model_position_.position.md)
 
 # Interface: Position
 
@@ -22,7 +22,7 @@
 
 • **x**: *number*
 
-*Defined in [model/position.ts:8](https://github.com/youkaisteve/bim-operator/blob/084edee/src/model/position.ts#L8)*
+*Defined in [model/position.ts:8](https://github.com/youkaisteve/bim-operator/blob/07608a2/src/model/position.ts#L8)*
 
 x
 
@@ -32,7 +32,7 @@ ___
 
 • **y**: *number*
 
-*Defined in [model/position.ts:12](https://github.com/youkaisteve/bim-operator/blob/084edee/src/model/position.ts#L12)*
+*Defined in [model/position.ts:12](https://github.com/youkaisteve/bim-operator/blob/07608a2/src/model/position.ts#L12)*
 
 y
 
@@ -42,6 +42,6 @@ ___
 
 • **z**? : *string*
 
-*Defined in [model/position.ts:16](https://github.com/youkaisteve/bim-operator/blob/084edee/src/model/position.ts#L16)*
+*Defined in [model/position.ts:16](https://github.com/youkaisteve/bim-operator/blob/07608a2/src/model/position.ts#L16)*
 
 z

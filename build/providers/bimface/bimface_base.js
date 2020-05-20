@@ -104,7 +104,7 @@ var BimfaceBase = (function () {
                     btn.setHtml(customBtn.html);
                 }
                 if (customBtn.className) {
-                    btn.setClassNames(customBtn.className);
+                    btn.setClassNames("bf-button " + customBtn.className);
                 }
                 btn.addEventListener('Click', function () {
                     customBtn.isToggle = !customBtn.isToggle;

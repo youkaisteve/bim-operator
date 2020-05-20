@@ -62,7 +62,7 @@ export default abstract class BimfaceBase {
                     btn.setHtml(customBtn.html);
                 }
                 if (customBtn.className) {
-                    btn.setClassNames(customBtn.className);
+                    btn.setClassNames(`bf-button ${customBtn.className}`);
                 }
                 btn.addEventListener('Click', () => {
                     customBtn.isToggle = !customBtn.isToggle;
