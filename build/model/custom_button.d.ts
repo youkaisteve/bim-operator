@@ -3,4 +3,6 @@ export default interface CustomButton {
     clickEvent: Function;
     index: Number;
     className: String;
+    toggleClassName: String;
+    isToggle: Boolean;
 }

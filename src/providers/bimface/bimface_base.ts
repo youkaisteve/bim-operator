@@ -57,13 +57,20 @@ export default abstract class BimfaceBase {
         if (customButtons && customButtons.length > 0) {
             customButtons.forEach((customBtn) => {
                 const btn = new window.Glodon.Bimface.UI.Button.ToggleButton(btnConfig);
+                customBtn.isToggle = customBtn.isToggle || false;
                 if (customBtn.html) {
                     btn.setHtml(customBtn.html);
                 }
                 if (customBtn.className) {
-                    btn.addClassName(customBtn.className);
+                    btn.setClassNames(customBtn.className);
                 }
                 btn.addEventListener('Click', () => {
+                    customBtn.isToggle = !customBtn.isToggle;
+                    if (customBtn.isToggle) {
+                        btn.setClassNames(customBtn.toggleClassName);
+                    } else {
+                        btn.setClassNames(customBtn.className);
+                    }
                     btn.toggleCheckedState();
                     customBtn.clickEvent();
                 });

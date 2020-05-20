@@ -1,4 +1,4 @@
-[@yzw/bim-operator - v1.0.42](../README.md) › [Globals](../globals.md) › ["util/toolkit"](_util_toolkit_.md)
+[@yzw/bim-operator - v1.0.43](../README.md) › [Globals](../globals.md) › ["util/toolkit"](_util_toolkit_.md)
 
 # External module: "util/toolkit"
 
