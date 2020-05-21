@@ -6,12 +6,14 @@ function debugLog(pattern) {
     return yk_aspect_1.beforeMethodOnClass({
         pattern: pattern,
         handle: function (meta) {
-            console.debug("[" + meta.className + "." + meta.methodName + "] CALLED");
-            var argsStrs = toolkit_1.default.getArgumentsDisplayInfo(meta.args);
-            if (argsStrs) {
-                argsStrs.forEach(function (argsStr) {
-                    console.debug(">>> parameter ===> " + argsStr);
-                });
+            if (meta.target.context && meta.target.context.debugOn) {
+                console.debug("[" + meta.className + "." + meta.methodName + "] CALLED");
+                var argsStrs = toolkit_1.default.getArgumentsDisplayInfo(meta.args);
+                if (argsStrs) {
+                    argsStrs.forEach(function (argsStr) {
+                        console.debug(">>> parameter ===> " + argsStr);
+                    });
+                }
             }
         },
     });

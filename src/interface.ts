@@ -7,6 +7,16 @@ import { HighlightOption } from './model';
 import CustomButton from './model/custom_button';
 
 /**
+ * 上下文
+ */
+export interface IContext {
+    /**
+     * 是否开启debug
+     */
+    debugOn: Boolean;
+}
+
+/**
  * 模型操作接口
  */
 export interface IBimOperator {

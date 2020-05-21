@@ -5,12 +5,13 @@ var bimface_drawing_1 = require("./bimface/bimface_drawing");
 var BIMFACE_3D_FIELD = Symbol('Bimface#3DFiled');
 var BIMFACE_DRAWING_FIELD = Symbol('Bimface#DrawingField');
 var BimfaceOperator = (function () {
-    function BimfaceOperator() {
+    function BimfaceOperator(context) {
+        this._context = context;
     }
     Object.defineProperty(BimfaceOperator.prototype, "bim3DModel", {
         get: function () {
             if (!this[BIMFACE_3D_FIELD])
-                this[BIMFACE_3D_FIELD] = new bimface_model_1.default();
+                this[BIMFACE_3D_FIELD] = new bimface_model_1.default(this._context);
             return this[BIMFACE_3D_FIELD];
         },
         enumerable: true,
@@ -19,7 +20,7 @@ var BimfaceOperator = (function () {
     Object.defineProperty(BimfaceOperator.prototype, "bimDrawing", {
         get: function () {
             if (!this[BIMFACE_DRAWING_FIELD])
-                this[BIMFACE_DRAWING_FIELD] = new bimface_drawing_1.default();
+                this[BIMFACE_DRAWING_FIELD] = new bimface_drawing_1.default(this._context);
             return this[BIMFACE_DRAWING_FIELD];
         },
         enumerable: true,

@@ -5,6 +5,9 @@ import { IsolateOption, DrawingDisplayMode } from './enums';
 import { ComponentFilter } from './model/filter';
 import { HighlightOption } from './model';
 import CustomButton from './model/custom_button';
+export interface IContext {
+    debugOn: Boolean;
+}
 export interface IBimOperator {
     bim3DModel: IBim3DModel;
     bimDrawing: IBimDrawing;

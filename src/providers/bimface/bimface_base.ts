@@ -2,12 +2,14 @@ import remoteLoad from '../../util/remote-load';
 import { BIMFACE_JS_SDK } from '../../consts';
 import CustomButton from '../../model/custom_button';
 import needRender from '../../decorators/render';
+import { IContext } from '../../interface';
 
 /**
  * bimface api基类，提供图纸和模型的通用方法
  */
 export default abstract class BimfaceBase {
     private _app: any;
+    protected context: IContext;
 
     protected get app() {
         return this._app;
@@ -23,6 +25,11 @@ export default abstract class BimfaceBase {
      * 批量执行相关代码
      */
     abstract multi(callback: Function);
+
+    constructor(context: IContext) {
+        this.context = context;
+    }
+
     async initSDK() {
         if (!window.BimfaceSDKLoaderConfig) {
             await remoteLoad(BIMFACE_JS_SDK);
