@@ -1,4 +1,4 @@
-[@yzw/bim-operator - v1.0.48](../README.md) › [Globals](../globals.md) › ["model/options"](_model_options_.md)
+[@yzw/bim-operator - v1.0.50](../README.md) › [Globals](../globals.md) › ["model/options"](_model_options_.md)
 
 # External module: "model/options"
 

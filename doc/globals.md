@@ -1,12 +1,13 @@
-[@yzw/bim-operator - v1.0.48](README.md) › [Globals](globals.md)
+[@yzw/bim-operator - v1.0.50](README.md) › [Globals](globals.md)
 
-# @yzw/bim-operator - v1.0.48
+# @yzw/bim-operator - v1.0.50
 
 ## Index
 
 ### External modules
 
 * ["consts"](modules/_consts_.md)
+* ["context"](modules/_context_.md)
 * ["decorators/debug_log"](modules/_decorators_debug_log_.md)
 * ["decorators/render"](modules/_decorators_render_.md)
 * ["enums"](modules/_enums_.md)

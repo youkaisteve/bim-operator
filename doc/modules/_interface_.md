@@ -1,4 +1,4 @@
-[@yzw/bim-operator - v1.0.48](../README.md) › [Globals](../globals.md) › ["interface"](_interface_.md)
+[@yzw/bim-operator - v1.0.50](../README.md) › [Globals](../globals.md) › ["interface"](_interface_.md)
 
 # External module: "interface"
 
@@ -10,5 +10,6 @@
 * [IBimCustom](../interfaces/_interface_.ibimcustom.md)
 * [IBimDrawing](../interfaces/_interface_.ibimdrawing.md)
 * [IBimOperator](../interfaces/_interface_.ibimoperator.md)
+* [IContext](../interfaces/_interface_.icontext.md)
 * [IDispose](../interfaces/_interface_.idispose.md)
 * [IMarker](../interfaces/_interface_.imarker.md)

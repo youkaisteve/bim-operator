@@ -1,4 +1,4 @@
-[@yzw/bim-operator - v1.0.48](../README.md) › [Globals](../globals.md) › ["providers/bimface_operator"](../modules/_providers_bimface_operator_.md) › [BimfaceOperator](_providers_bimface_operator_.bimfaceoperator.md)
+[@yzw/bim-operator - v1.0.50](../README.md) › [Globals](../globals.md) › ["providers/bimface_operator"](../modules/_providers_bimface_operator_.md) › [BimfaceOperator](_providers_bimface_operator_.bimfaceoperator.md)
 
 # Class: BimfaceOperator
 
@@ -14,15 +14,36 @@ Bimface操作类，用于获取模型或者图纸对应的具体操作实例
 
 ## Index
 
+### Constructors
+
+* [constructor](_providers_bimface_operator_.bimfaceoperator.md#constructor)
+
 ### Properties
 
 * [[BIMFACE_3D_FIELD]](_providers_bimface_operator_.bimfaceoperator.md#[bimface_3d_field])
 * [[BIMFACE_DRAWING_FIELD]](_providers_bimface_operator_.bimfaceoperator.md#[bimface_drawing_field])
+* [_context](_providers_bimface_operator_.bimfaceoperator.md#private-_context)
 
 ### Accessors
 
 * [bim3DModel](_providers_bimface_operator_.bimfaceoperator.md#bim3dmodel)
 * [bimDrawing](_providers_bimface_operator_.bimfaceoperator.md#bimdrawing)
+
+## Constructors
+
+###  constructor
+
+\+ **new BimfaceOperator**(`context`: [IContext](../interfaces/_interface_.icontext.md)): *[BimfaceOperator](_providers_bimface_operator_.bimfaceoperator.md)*
+
+*Defined in [providers/bimface_operator.ts:16](https://github.com/youkaisteve/bim-operator/blob/902514b/src/providers/bimface_operator.ts#L16)*
+
+**Parameters:**
+
+Name | Type |
+------ | ------ |
+`context` | [IContext](../interfaces/_interface_.icontext.md) |
+
+**Returns:** *[BimfaceOperator](_providers_bimface_operator_.bimfaceoperator.md)*
 
 ## Properties
 
@@ -30,7 +51,7 @@ Bimface操作类，用于获取模型或者图纸对应的具体操作实例
 
 • **[BIMFACE_3D_FIELD]**: *[IBim3DModel](../interfaces/_interface_.ibim3dmodel.md)*
 
-*Defined in [providers/bimface_operator.ts:13](https://github.com/youkaisteve/bim-operator/blob/7c91779/src/providers/bimface_operator.ts#L13)*
+*Defined in [providers/bimface_operator.ts:13](https://github.com/youkaisteve/bim-operator/blob/902514b/src/providers/bimface_operator.ts#L13)*
 
 ___
 
@@ -38,7 +59,15 @@ ___
 
 • **[BIMFACE_DRAWING_FIELD]**: *[IBimDrawing](../interfaces/_interface_.ibimdrawing.md)*
 
-*Defined in [providers/bimface_operator.ts:14](https://github.com/youkaisteve/bim-operator/blob/7c91779/src/providers/bimface_operator.ts#L14)*
+*Defined in [providers/bimface_operator.ts:14](https://github.com/youkaisteve/bim-operator/blob/902514b/src/providers/bimface_operator.ts#L14)*
+
+___
+
+### `Private` _context
+
+• **_context**: *[IContext](../interfaces/_interface_.icontext.md)*
+
+*Defined in [providers/bimface_operator.ts:16](https://github.com/youkaisteve/bim-operator/blob/902514b/src/providers/bimface_operator.ts#L16)*
 
 ## Accessors
 
@@ -46,7 +75,7 @@ ___
 
 • **get bim3DModel**(): *[IBim3DModel](../interfaces/_interface_.ibim3dmodel.md)*
 
-*Defined in [providers/bimface_operator.ts:16](https://github.com/youkaisteve/bim-operator/blob/7c91779/src/providers/bimface_operator.ts#L16)*
+*Defined in [providers/bimface_operator.ts:22](https://github.com/youkaisteve/bim-operator/blob/902514b/src/providers/bimface_operator.ts#L22)*
 
 **Returns:** *[IBim3DModel](../interfaces/_interface_.ibim3dmodel.md)*
 
@@ -56,6 +85,6 @@ ___
 
 • **get bimDrawing**(): *[IBimDrawing](../interfaces/_interface_.ibimdrawing.md)*
 
-*Defined in [providers/bimface_operator.ts:20](https://github.com/youkaisteve/bim-operator/blob/7c91779/src/providers/bimface_operator.ts#L20)*
+*Defined in [providers/bimface_operator.ts:26](https://github.com/youkaisteve/bim-operator/blob/902514b/src/providers/bimface_operator.ts#L26)*
 
 **Returns:** *[IBimDrawing](../interfaces/_interface_.ibimdrawing.md)*
