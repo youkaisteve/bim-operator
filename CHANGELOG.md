@@ -1,8 +1,14 @@
-# Changelog
+## <small>1.0.53 (2020-05-21)</small>
 
-All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+* 1.0.53 ([e6e8cf7](https://github.com/youkaisteve/bim-operator/commit/e6e8cf7))
+* 1.0.53 ([026e703](https://github.com/youkaisteve/bim-operator/commit/026e703))
+* 1.0.54 ([4aedcf2](https://github.com/youkaisteve/bim-operator/commit/4aedcf2))
+* fix(index.ts): format log ([6ceba09](https://github.com/youkaisteve/bim-operator/commit/6ceba09))
+* fix(package.json): version patch ([5f10150](https://github.com/youkaisteve/bim-operator/commit/5f10150))
+* docs(changelog.md): refresh changelog ([16c4416](https://github.com/youkaisteve/bim-operator/commit/16c4416))
+* docs(package.json): change script order ([02ccc49](https://github.com/youkaisteve/bim-operator/commit/02ccc49))
 
-### [1.0.54](https://github.com/youkaisteve/bim-operator/compare/v1.0.53...v1.0.54) (2020-05-21)
+
 
 ## <small>1.0.52 (2020-05-21)</small>
 
@@ -412,3 +418,6 @@ All notable changes to this project will be documented in this file. See [standa
 * add dist ([4e1a85e](https://github.com/youkaisteve/bim-operator/commit/4e1a85e))
 * init ([06a06db](https://github.com/youkaisteve/bim-operator/commit/06a06db))
 * Initial commit ([e9a81c0](https://github.com/youkaisteve/bim-operator/commit/e9a81c0))
+
+
+
