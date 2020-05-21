@@ -10,8 +10,8 @@
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
         "build": "rm -rf ./build && tsc -p tsconfig.prod.json",
-        "release": "standard-version && git push --follow-tags && npm publish --registry http://172.16.0.132:18081/repository/npm-lab/",
-        "doc": "rm -rf ./doc && npx typedoc --module commonjs --target es5 --experimentalDecorators --plugin typedoc-plugin-markdown --out ./doc ./src/"
+        "doc": "rm -rf ./doc && npx typedoc --module commonjs --target es5 --experimentalDecorators --plugin typedoc-plugin-markdown --out ./doc ./src/",
+        "release": "standard-version && git push --follow-tags && npm publish --registry http://172.16.0.132:18081/repository/npm-lab/"
     },
     "husky": {
         "hooks": {
