@@ -1,4 +1,4 @@
-[@yzw/bim-operator - v1.0.45](../README.md) › [Globals](../globals.md) › ["model/position"](_model_position_.md)
+[@yzw/bim-operator - v1.0.48](../README.md) › [Globals](../globals.md) › ["model/position"](_model_position_.md)
 
 # External module: "model/position"
 
