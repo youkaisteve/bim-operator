@@ -1,4 +1,4 @@
-[@yzw/bim-operator - v1.0.48](../README.md) › [Globals](../globals.md) › ["providers/bimface/bimface_base"](../modules/_providers_bimface_bimface_base_.md) › [BimfaceBase](_providers_bimface_bimface_base_.bimfacebase.md)
+[@yzw/bim-operator - v1.0.50](../README.md) › [Globals](../globals.md) › ["providers/bimface/bimface_base"](../modules/_providers_bimface_bimface_base_.md) › [BimfaceBase](_providers_bimface_bimface_base_.bimfacebase.md)
 
 # Class: BimfaceBase
 
@@ -14,9 +14,14 @@ bimface api基类，提供图纸和模型的通用方法
 
 ## Index
 
+### Constructors
+
+* [constructor](_providers_bimface_bimface_base_.bimfacebase.md#constructor)
+
 ### Properties
 
 * [_app](_providers_bimface_bimface_base_.bimfacebase.md#private-_app)
+* [context](_providers_bimface_bimface_base_.bimfacebase.md#protected-context)
 
 ### Accessors
 
@@ -32,13 +37,37 @@ bimface api基类，提供图纸和模型的通用方法
 * [multi](_providers_bimface_bimface_base_.bimfacebase.md#abstract-multi)
 * [render](_providers_bimface_bimface_base_.bimfacebase.md#abstract-render)
 
+## Constructors
+
+###  constructor
+
+\+ **new BimfaceBase**(`context`: [IContext](../interfaces/_interface_.icontext.md)): *[BimfaceBase](_providers_bimface_bimface_base_.bimfacebase.md)*
+
+*Defined in [providers/bimface/bimface_base.ts:27](https://github.com/youkaisteve/bim-operator/blob/902514b/src/providers/bimface/bimface_base.ts#L27)*
+
+**Parameters:**
+
+Name | Type |
+------ | ------ |
+`context` | [IContext](../interfaces/_interface_.icontext.md) |
+
+**Returns:** *[BimfaceBase](_providers_bimface_bimface_base_.bimfacebase.md)*
+
 ## Properties
 
 ### `Private` _app
 
 • **_app**: *any*
 
-*Defined in [providers/bimface/bimface_base.ts:10](https://github.com/youkaisteve/bim-operator/blob/7c91779/src/providers/bimface/bimface_base.ts#L10)*
+*Defined in [providers/bimface/bimface_base.ts:11](https://github.com/youkaisteve/bim-operator/blob/902514b/src/providers/bimface/bimface_base.ts#L11)*
+
+___
+
+### `Protected` context
+
+• **context**: *[IContext](../interfaces/_interface_.icontext.md)*
+
+*Defined in [providers/bimface/bimface_base.ts:12](https://github.com/youkaisteve/bim-operator/blob/902514b/src/providers/bimface/bimface_base.ts#L12)*
 
 ## Accessors
 
@@ -46,13 +75,13 @@ bimface api基类，提供图纸和模型的通用方法
 
 • **get app**(): *any*
 
-*Defined in [providers/bimface/bimface_base.ts:12](https://github.com/youkaisteve/bim-operator/blob/7c91779/src/providers/bimface/bimface_base.ts#L12)*
+*Defined in [providers/bimface/bimface_base.ts:14](https://github.com/youkaisteve/bim-operator/blob/902514b/src/providers/bimface/bimface_base.ts#L14)*
 
 **Returns:** *any*
 
 • **set app**(`app`: any): *void*
 
-*Defined in [providers/bimface/bimface_base.ts:16](https://github.com/youkaisteve/bim-operator/blob/7c91779/src/providers/bimface/bimface_base.ts#L16)*
+*Defined in [providers/bimface/bimface_base.ts:18](https://github.com/youkaisteve/bim-operator/blob/902514b/src/providers/bimface/bimface_base.ts#L18)*
 
 **Parameters:**
 
@@ -68,7 +97,7 @@ Name | Type |
 
 ▸ **addCustomButtons**(`customButtons`: Array‹[CustomButton](../interfaces/_model_custom_button_.custombutton.md)›): *void*
 
-*Defined in [providers/bimface/bimface_base.ts:54](https://github.com/youkaisteve/bim-operator/blob/7c91779/src/providers/bimface/bimface_base.ts#L54)*
+*Defined in [providers/bimface/bimface_base.ts:61](https://github.com/youkaisteve/bim-operator/blob/902514b/src/providers/bimface/bimface_base.ts#L61)*
 
 **Parameters:**
 
@@ -84,7 +113,7 @@ ___
 
 ▸ **addEventListener**(`eventName`: String, `callback`: Function): *any*
 
-*Defined in [providers/bimface/bimface_base.ts:20](https://github.com/youkaisteve/bim-operator/blob/7c91779/src/providers/bimface/bimface_base.ts#L20)*
+*Defined in [providers/bimface/bimface_base.ts:22](https://github.com/youkaisteve/bim-operator/blob/902514b/src/providers/bimface/bimface_base.ts#L22)*
 
 **Parameters:**
 
@@ -101,7 +130,7 @@ ___
 
 ▸ **dispose**(`options`: any): *void*
 
-*Defined in [providers/bimface/bimface_base.ts:86](https://github.com/youkaisteve/bim-operator/blob/7c91779/src/providers/bimface/bimface_base.ts#L86)*
+*Defined in [providers/bimface/bimface_base.ts:93](https://github.com/youkaisteve/bim-operator/blob/902514b/src/providers/bimface/bimface_base.ts#L93)*
 
 **Parameters:**
 
@@ -117,7 +146,7 @@ ___
 
 ▸ **initSDK**(): *Promise‹void›*
 
-*Defined in [providers/bimface/bimface_base.ts:26](https://github.com/youkaisteve/bim-operator/blob/7c91779/src/providers/bimface/bimface_base.ts#L26)*
+*Defined in [providers/bimface/bimface_base.ts:33](https://github.com/youkaisteve/bim-operator/blob/902514b/src/providers/bimface/bimface_base.ts#L33)*
 
 **Returns:** *Promise‹void›*
 
@@ -127,7 +156,7 @@ ___
 
 ▸ **loadSDK**(`options`: any): *Promise‹any›*
 
-*Defined in [providers/bimface/bimface_base.ts:37](https://github.com/youkaisteve/bim-operator/blob/7c91779/src/providers/bimface/bimface_base.ts#L37)*
+*Defined in [providers/bimface/bimface_base.ts:44](https://github.com/youkaisteve/bim-operator/blob/902514b/src/providers/bimface/bimface_base.ts#L44)*
 
 加载SDK
 
@@ -147,7 +176,7 @@ ___
 
 ▸ **multi**(`callback`: Function): *any*
 
-*Defined in [providers/bimface/bimface_base.ts:25](https://github.com/youkaisteve/bim-operator/blob/7c91779/src/providers/bimface/bimface_base.ts#L25)*
+*Defined in [providers/bimface/bimface_base.ts:27](https://github.com/youkaisteve/bim-operator/blob/902514b/src/providers/bimface/bimface_base.ts#L27)*
 
 批量执行相关代码
 
@@ -165,6 +194,6 @@ ___
 
 ▸ **render**(): *any*
 
-*Defined in [providers/bimface/bimface_base.ts:21](https://github.com/youkaisteve/bim-operator/blob/7c91779/src/providers/bimface/bimface_base.ts#L21)*
+*Defined in [providers/bimface/bimface_base.ts:23](https://github.com/youkaisteve/bim-operator/blob/902514b/src/providers/bimface/bimface_base.ts#L23)*
 
 **Returns:** *any*
