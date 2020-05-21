@@ -9,12 +9,14 @@ export default function debugLog(pattern?: any) {
     return beforeMethodOnClass({
         pattern: pattern,
         handle: (meta) => {
-            console.debug(`[${meta.className}.${meta.methodName}] CALLED`);
-            const argsStrs = toolkit.getArgumentsDisplayInfo(meta.args);
-            if (argsStrs) {
-                argsStrs.forEach((argsStr) => {
-                    console.debug(`>>> parameter ===> ${argsStr}`);
-                });
+            if (meta.target.context && meta.target.context.debugOn) {
+                console.debug(`[${meta.className}.${meta.methodName}] CALLED`);
+                const argsStrs = toolkit.getArgumentsDisplayInfo(meta.args);
+                if (argsStrs) {
+                    argsStrs.forEach((argsStr) => {
+                        console.debug(`>>> parameter ===> ${argsStr}`);
+                    });
+                }
             }
         },
     });

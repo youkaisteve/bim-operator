@@ -49,7 +49,8 @@ var remote_load_1 = require("../../util/remote-load");
 var consts_1 = require("../../consts");
 var render_1 = require("../../decorators/render");
 var BimfaceBase = (function () {
-    function BimfaceBase() {
+    function BimfaceBase(context) {
+        this.context = context;
     }
     Object.defineProperty(BimfaceBase.prototype, "app", {
         get: function () {
