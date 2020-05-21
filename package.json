@@ -1,6 +1,6 @@
 {
     "name": "@yzw/bim-operator",
-    "version": "1.0.46",
+    "version": "1.0.47",
     "description": "a pack of bim operations",
     "files": [
         "build"
@@ -11,13 +11,23 @@
         "test": "echo \"Error: no test specified\" && exit 1",
         "build": "rm -rf ./build && tsc -p tsconfig.prod.json",
         "pub": "npm version patch && git push && npm publish --registry http://172.16.0.132:18081/repository/npm-lab/",
-        "doc": "rm -rf ./doc && npx typedoc --module commonjs --target es5 --experimentalDecorators --plugin typedoc-plugin-markdown --out ./doc ./src/"
+        "doc": "rm -rf ./doc && npx typedoc --module commonjs --target es5 --experimentalDecorators --plugin typedoc-plugin-markdown --out ./doc ./src/",
+        "release": "standard-version"
+    },
+    "husky": {
+        "hooks": {
+            "commit-msg": "commitlint -e $GIT_PARAMS"
+        }
     },
     "dependencies": {
+        "standard-version": "^8.0.0",
         "yk-aspect": "^1.0.3"
     },
     "devDependencies": {
+        "@commitlint/cli": "^8.3.5",
+        "@commitlint/config-conventional": "^8.3.4",
         "@types/node": "^10.5.5",
+        "husky": "^4.2.5",
         "ts-node": "^8.3.0",
         "tslib": "^1.8.1",
         "tslint": "^5.11.0",
