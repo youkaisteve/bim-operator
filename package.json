@@ -18,6 +18,11 @@
             "commit-msg": "commitlint -e $GIT_PARAMS"
         }
     },
+    "config": {
+        "commitizen": {
+            "path": "node_modules/cz-conventional-changelog"
+        }
+    },
     "dependencies": {
         "standard-version": "^8.0.0",
         "yk-aspect": "^1.0.3"
@@ -26,6 +31,7 @@
         "@commitlint/cli": "^8.3.5",
         "@commitlint/config-conventional": "^8.3.4",
         "@types/node": "^10.5.5",
+        "cz-conventional-changelog": "^3.2.0",
         "husky": "^4.2.5",
         "ts-node": "^8.3.0",
         "tslib": "^1.8.1",
