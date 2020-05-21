@@ -7,7 +7,7 @@ export * from './enums';
 export * from './model';
 
 console.debug = function (argument) {
-    console.log.call(this, `%c [BIM-Operator] %c ${argument}`, 'font-weight:bold;color:#f99;', 'color:#00f;');
+    console.log.call(this, `%c [BIM-Operator]%c ${argument}`, 'font-weight:bold;color:#f99;', 'color:#00f;');
 };
 /**
  * Bim供应商
@@ -23,7 +23,7 @@ export const ProviderType = {
  */
 export default function getProvider(provider: String, customContext: IContext): IBimOperator {
     const combineContext = { ...context, ...customContext };
-    console.debug(`customContext set : ${JSON.stringify(combineContext)}`);
+    console.debug(`CustomContext set : ${JSON.stringify(combineContext)}`);
     switch (provider) {
         case ProviderType.BIMFACE:
             return new BimfaceOperator(combineContext);
