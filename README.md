@@ -2,11 +2,14 @@
 
 bim 轻量化模型操作接口
 
-## Install
+## Install && Useage
 
 ```shell
 npm i bim-operator --save
 ```
+
+- [document](./doc/globals.md)
+- [changelog](./CHANGELOG.md)
 
 ## Usage
 
