@@ -9,6 +9,7 @@
     "types": "build/index.d.ts",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
+        "commit": "git cz",
         "build": "rm -rf ./build && tsc -p tsconfig.prod.json",
         "doc": "rm -rf ./doc && npx typedoc --module commonjs --target es5 --experimentalDecorators --plugin typedoc-plugin-markdown --out ./doc ./src/",
         "changelog": "conventional-changelog -i CHANGELOG.md -s -r 0 && git add CHANGELOG.md",
