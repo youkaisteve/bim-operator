@@ -18,7 +18,7 @@ export default class BimfaceMarker implements IMarker {
     /**
      * 获取所有标记
      */
-    getAllMarkers(): Array<Marker3D> {
+    getAllMarkers(): Marker3D[] {
         return this.marker3D.getAllItems();
     }
 
@@ -26,18 +26,26 @@ export default class BimfaceMarker implements IMarker {
      * 添加3d锚点
      */
     add3dMarker(marker: Marker3D) {
-        if (marker === undefined) throw new Error("marker can't be null");
+        if (marker === undefined) {
+            throw new Error('marker can not be null');
+        }
 
         const marker3dConfig = new window.Glodon.Bimface.Plugins.Marker3D.Marker3DConfig();
         marker3dConfig.id = marker.id;
         marker3dConfig.worldPosition = marker.worldPosition;
         marker3dConfig.src = marker.src || '';
-        if (marker.size) marker3dConfig.size = marker.size;
+        if (marker.size) {
+            marker3dConfig.size = marker.size;
+        }
         marker3dConfig.tooltip = marker.tooltip || '';
         marker3dConfig.tooltipStyle = marker.tooltipStyle || null;
         const marker3d = new window.Glodon.Bimface.Plugins.Marker3D.Marker3D(marker3dConfig);
-        if (marker.onClick) marker3d.onClick(marker.onClick);
-        if (marker.onHover) marker3d.onHover(marker.onHover);
+        if (marker.onClick) {
+            marker3d.onClick(marker.onClick);
+        }
+        if (marker.onHover) {
+            marker3d.onHover(marker.onHover);
+        }
         this.marker3D.addItem(marker3d);
         return marker3d.getId();
     }
@@ -52,6 +60,8 @@ export default class BimfaceMarker implements IMarker {
      * 清空3d锚点
      */
     clear3dMarker() {
-        this.marker3D && this.marker3D.clear();
+        if (this.marker3D) {
+            this.marker3D.clear();
+        }
     }
 }

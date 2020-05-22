@@ -67,7 +67,7 @@ ___
 
 ###  clearHighlightComponents
 
-▸ **clearHighlightComponents**(`componentIds?`: Array‹String›): *void*
+▸ **clearHighlightComponents**(`componentIds?`: Array‹string›): *void*
 
 *Defined in [interface.ts:94](https://github.com/youkaisteve/bim-operator/blob/902514b/src/interface.ts#L94)*
 
@@ -75,9 +75,9 @@ ___
 
 **Parameters:**
 
-Name | Type | Description |
------- | ------ | ------ |
-`componentIds?` | Array‹String› | 构件id列表，如果没有则清除所有高亮构件  |
+| Name            | Type          | Description                            |
+| --------------- | ------------- | -------------------------------------- |
+| `componentIds?` | Array‹string› | 构件id列表，如果没有则清除所有高亮构件 |
 
 **Returns:** *void*
 
@@ -109,7 +109,7 @@ ___
 
 ###  explosionFloor
 
-▸ **explosionFloor**(`floorIds`: Array‹String›, `extend`: Number): *void*
+▸ **explosionFloor**(`floorIds`: Array‹string›, `extend`: number): *void*
 
 *Defined in [interface.ts:51](https://github.com/youkaisteve/bim-operator/blob/902514b/src/interface.ts#L51)*
 
@@ -117,10 +117,10 @@ ___
 
 **Parameters:**
 
-Name | Type | Description |
------- | ------ | ------ |
-`floorIds` | Array‹String› | - |
-`extend` | Number | 楼层爆炸离散系数，根据厂商定制，可选  |
+| Name       | Type          | Description                          |
+| ---------- | ------------- | ------------------------------------ |
+| `floorIds` | Array‹string› | -                                    |
+| `extend`   | number        | 楼层爆炸离散系数，根据厂商定制，可选 |
 
 **Returns:** *void*
 
@@ -128,7 +128,7 @@ ___
 
 ###  getComponentByCondition
 
-▸ **getComponentByCondition**(`fileId`: String, `conditions`: Array‹[ComponentFilter](_model_filter_.componentfilter.md)›): *Promise‹Array‹String››*
+▸ **getComponentByCondition**(`fileId`: string, `conditions`: Array‹[ComponentFilter](_model_filter_.componentfilter.md)›): *Promise‹Array‹string››*
 
 *Defined in [interface.ts:60](https://github.com/youkaisteve/bim-operator/blob/902514b/src/interface.ts#L60)*
 
@@ -136,12 +136,12 @@ ___
 
 **Parameters:**
 
-Name | Type | Description |
------- | ------ | ------ |
-`fileId` | String | - |
-`conditions` | Array‹[ComponentFilter](_model_filter_.componentfilter.md)› | 查询条件，不同厂商之间可能会有差别  |
+| Name         | Type                                                        | Description                        |
+| ------------ | ----------------------------------------------------------- | ---------------------------------- |
+| `fileId`     | string                                                      | -                                  |
+| `conditions` | Array‹[ComponentFilter](_model_filter_.componentfilter.md)› | 查询条件，不同厂商之间可能会有差别 |
 
-**Returns:** *Promise‹Array‹String››*
+**Returns:** *Promise‹Array‹string››*
 
 ___
 
@@ -159,7 +159,7 @@ ___
 
 ###  getFloorsbyFileId
 
-▸ **getFloorsbyFileId**(`fileId`: String): *Promise‹Array‹[Floor](_model_floor_.floor.md)››*
+▸ **getFloorsbyFileId**(`fileId`: string): *Promise‹Array‹[Floor](_model_floor_.floor.md)››*
 
 *Defined in [interface.ts:45](https://github.com/youkaisteve/bim-operator/blob/902514b/src/interface.ts#L45)*
 
@@ -167,9 +167,9 @@ ___
 
 **Parameters:**
 
-Name | Type | Description |
------- | ------ | ------ |
-`fileId` | String | 单个模型的id  |
+| Name     | Type   | Description  |
+| -------- | ------ | ------------ |
+| `fileId` | string | 单个模型的id |
 
 **Returns:** *Promise‹Array‹[Floor](_model_floor_.floor.md)››*
 
@@ -177,13 +177,13 @@ ___
 
 ###  getSelectedComponents
 
-▸ **getSelectedComponents**(): *Array‹String›*
+▸ **getSelectedComponents**(): *Array‹string›*
 
 *Defined in [interface.ts:112](https://github.com/youkaisteve/bim-operator/blob/902514b/src/interface.ts#L112)*
 
 获取选中的构件
 
-**Returns:** *Array‹String›*
+**Returns:** *Array‹string›*
 
 ___
 
@@ -197,9 +197,9 @@ ___
 
 **Parameters:**
 
-Name | Type | Description |
------- | ------ | ------ |
-`options` | any | 视点参数 |
+| Name      | Type | Description |
+| --------- | ---- | ----------- |
+| `options` | any  | 视点参数    |
 
 **Returns:** *Promise‹[ViewPoint](_model_view_point_.viewpoint.md)›*
 
@@ -207,7 +207,7 @@ ___
 
 ###  highlightComponents
 
-▸ **highlightComponents**(`componentIds`: Array‹String›, `options`: [HighlightOption](_model_options_.highlightoption.md)): *void*
+▸ **highlightComponents**(`componentIds`: Array‹string›, `options`: [HighlightOption](_model_options_.highlightoption.md)): *void*
 
 *Defined in [interface.ts:89](https://github.com/youkaisteve/bim-operator/blob/902514b/src/interface.ts#L89)*
 
@@ -215,10 +215,10 @@ ___
 
 **Parameters:**
 
-Name | Type | Description |
------- | ------ | ------ |
-`componentIds` | Array‹String› | 构件ids |
-`options` | [HighlightOption](_model_options_.highlightoption.md) | 高亮选项  |
+| Name           | Type                                                  | Description |
+| -------------- | ----------------------------------------------------- | ----------- |
+| `componentIds` | Array‹string›                                         | 构件ids     |
+| `options`      | [HighlightOption](_model_options_.highlightoption.md) | 高亮选项    |
 
 **Returns:** *void*
 
@@ -226,7 +226,7 @@ ___
 
 ###  isolateComponent
 
-▸ **isolateComponent**(`componentIds`: Array‹String›, `option`: [IsolateOption](../enums/_enums_.isolateoption.md)): *void*
+▸ **isolateComponent**(`componentIds`: Array‹string›, `option`: [IsolateOption](../enums/_enums_.isolateoption.md)): *void*
 
 *Defined in [interface.ts:75](https://github.com/youkaisteve/bim-operator/blob/902514b/src/interface.ts#L75)*
 
@@ -234,10 +234,10 @@ ___
 
 **Parameters:**
 
-Name | Type |
------- | ------ |
-`componentIds` | Array‹String› |
-`option` | [IsolateOption](../enums/_enums_.isolateoption.md) |
+| Name           | Type                                               |
+| -------------- | -------------------------------------------------- |
+| `componentIds` | Array‹string›                                      |
+| `option`       | [IsolateOption](../enums/_enums_.isolateoption.md) |
 
 **Returns:** *void*
 
@@ -253,10 +253,10 @@ ___
 
 **Parameters:**
 
-Name | Type |
------- | ------ |
-`conditions` | Array‹[ComponentFilter](_model_filter_.componentfilter.md)› |
-`option` | [IsolateOption](../enums/_enums_.isolateoption.md) |
+| Name         | Type                                                        |
+| ------------ | ----------------------------------------------------------- |
+| `conditions` | Array‹[ComponentFilter](_model_filter_.componentfilter.md)› |
+| `option`     | [IsolateOption](../enums/_enums_.isolateoption.md)          |
 
 **Returns:** *void*
 
@@ -272,9 +272,9 @@ ___
 
 **Parameters:**
 
-Name | Type | Description |
------- | ------ | ------ |
-`options` | any | 选项，厂商不同配置会有差别  |
+| Name      | Type | Description                |
+| --------- | ---- | -------------------------- |
+| `options` | any  | 选项，厂商不同配置会有差别 |
 
 **Returns:** *Promise‹void›*
 
@@ -290,10 +290,10 @@ ___
 
 **Parameters:**
 
-Name | Type | Description |
------- | ------ | ------ |
-`width?` | number | 宽度 |
-`height?` | number | 高度  |
+| Name      | Type   | Description |
+| --------- | ------ | ----------- |
+| `width?`  | number | 宽度        |
+| `height?` | number | 高度        |
 
 **Returns:** *void*
 
@@ -301,7 +301,7 @@ ___
 
 ###  restoreComponentsColor
 
-▸ **restoreComponentsColor**(`componentIds`: Array‹String›): *void*
+▸ **restoreComponentsColor**(`componentIds`: Array‹string›): *void*
 
 *Defined in [interface.ts:127](https://github.com/youkaisteve/bim-operator/blob/902514b/src/interface.ts#L127)*
 
@@ -309,9 +309,9 @@ ___
 
 **Parameters:**
 
-Name | Type | Description |
------- | ------ | ------ |
-`componentIds` | Array‹String› | 构件ids  |
+| Name           | Type          | Description |
+| -------------- | ------------- | ----------- |
+| `componentIds` | Array‹string› | 构件ids     |
 
 **Returns:** *void*
 
@@ -327,9 +327,9 @@ ___
 
 **Parameters:**
 
-Name | Type | Description |
------- | ------ | ------ |
-`conditions` | Array‹[ComponentFilter](_model_filter_.componentfilter.md)› | 条件  |
+|     | Name         | Type                                                        | Description |
+| --- | ------------ | ----------------------------------------------------------- | ----------- |
+|     | `conditions` | Array‹[ComponentFilter](_model_filter_.componentfilter.md)› | 条件        |
 
 **Returns:** *void*
 
@@ -337,7 +337,7 @@ ___
 
 ###  selectComponents
 
-▸ **selectComponents**(`componentIds`: Array‹String›): *void*
+▸ **selectComponents**(`componentIds`: Array‹string›): *void*
 
 *Defined in [interface.ts:99](https://github.com/youkaisteve/bim-operator/blob/902514b/src/interface.ts#L99)*
 
@@ -345,9 +345,9 @@ ___
 
 **Parameters:**
 
-Name | Type | Description |
------- | ------ | ------ |
-`componentIds` | Array‹String› | 构件id列表  |
+| Name           | Type          | Description |
+| -------------- | ------------- | ----------- |
+| `componentIds` | Array‹string› | 构件id列表  |
 
 **Returns:** *void*
 
@@ -363,9 +363,9 @@ ___
 
 **Parameters:**
 
-Name | Type | Description |
------- | ------ | ------ |
-`conditions` | Array‹[ComponentFilter](_model_filter_.componentfilter.md)› | 条件  |
+| Name         | Type                                                        | Description |
+| ------------ | ----------------------------------------------------------- | ----------- |
+| `conditions` | Array‹[ComponentFilter](_model_filter_.componentfilter.md)› | 条件        |
 
 **Returns:** *void*
 
@@ -373,7 +373,7 @@ ___
 
 ###  setComponentsColor
 
-▸ **setComponentsColor**(`componentIds`: Array‹String›, `color`: String): *void*
+▸ **setComponentsColor**(`componentIds`: Array‹string›, `color`: string): *void*
 
 *Defined in [interface.ts:117](https://github.com/youkaisteve/bim-operator/blob/902514b/src/interface.ts#L117)*
 
@@ -381,10 +381,10 @@ ___
 
 **Parameters:**
 
-Name | Type | Description |
------- | ------ | ------ |
-`componentIds` | Array‹String› | 构件ids  |
-`color` | String | - |
+| Name           | Type          | Description |
+| -------------- | ------------- | ----------- |
+| `componentIds` | Array‹string› | 构件ids     |
+| `color`        | string        | -           |
 
 **Returns:** *void*
 
@@ -392,7 +392,7 @@ ___
 
 ###  setComponentsColorByCondition
 
-▸ **setComponentsColorByCondition**(`conditions`: Array‹[ComponentFilter](_model_filter_.componentfilter.md)›, `color`: String): *void*
+▸ **setComponentsColorByCondition**(`conditions`: Array‹[ComponentFilter](_model_filter_.componentfilter.md)›, `color`: string): *void*
 
 *Defined in [interface.ts:122](https://github.com/youkaisteve/bim-operator/blob/902514b/src/interface.ts#L122)*
 
@@ -400,10 +400,10 @@ ___
 
 **Parameters:**
 
-Name | Type | Description |
------- | ------ | ------ |
-`conditions` | Array‹[ComponentFilter](_model_filter_.componentfilter.md)› | 条件  |
-`color` | String | - |
+| Name         | Type                                                        | Description |
+| ------------ | ----------------------------------------------------------- | ----------- |
+| `conditions` | Array‹[ComponentFilter](_model_filter_.componentfilter.md)› | 条件        |
+| `color`      | string                                                      | -           |
 
 **Returns:** *void*
 
@@ -419,8 +419,8 @@ ___
 
 **Parameters:**
 
-Name | Type |
------- | ------ |
-`viewPoint` | [ViewPoint](_model_view_point_.viewpoint.md) |
+| Name        | Type                                         |
+| ----------- | -------------------------------------------- |
+| `viewPoint` | [ViewPoint](_model_view_point_.viewpoint.md) |
 
 **Returns:** *void*

@@ -20,7 +20,7 @@
 
 ###  color
 
-• **color**: *String*
+• **color**: *string*
 
 *Defined in [model/options.ts:8](https://github.com/youkaisteve/bim-operator/blob/902514b/src/model/options.ts#L8)*
 

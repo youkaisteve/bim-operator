@@ -25,14 +25,14 @@ export default class Bimface3DModel extends BimfaceBase implements IBim3DModel, 
     /**
      * 是否在批量执行
      */
-    [MULTI_FIELD]: Boolean = false;
+    [MULTI_FIELD]: boolean;
 
     /**
      * 3D标注器
      */
     get marker(): IMarker {
-        if (this.viewer3D) {
-            if (!this[MARKER_FIELD]) this[MARKER_FIELD] = new BimfaceMarker(this.viewer3D);
+        if (this.viewer3D && !this[MARKER_FIELD]) {
+            this[MARKER_FIELD] = new BimfaceMarker(this.viewer3D);
         }
         return this[MARKER_FIELD];
     }
@@ -42,7 +42,7 @@ export default class Bimface3DModel extends BimfaceBase implements IBim3DModel, 
      * @param eventName 事件名
      * @param callback 回调
      */
-    addEventListener(eventName: Bim3DEvent, callback: Function) {
+    addEventListener(eventName: Bim3DEvent, callback: () => void) {
         this.viewer3D.addEventListener(eventName, callback);
     }
 
@@ -61,7 +61,7 @@ export default class Bimface3DModel extends BimfaceBase implements IBim3DModel, 
      * 批量执行，最后.done来完成调用,进行渲染。主要用于对模型进行多次改变，避免每次改变都自动render
      * @param callback 回调函数，以当前实例为参数，在这里执行需要的代码
      */
-    async multi(callback: Function) {
+    async multi(callback: () => void) {
         if (!callback) {
             throw new Error('callback is required');
         }
@@ -78,9 +78,9 @@ export default class Bimface3DModel extends BimfaceBase implements IBim3DModel, 
      * @param {string} options.url js-sdk地址
      * @param {string} options.domId dom id
      * @param {Object} options.appConfig 应用的配置
-     * @param {Array<String>} options.appConfig.Buttons 工具条button，0:Home：主视角，1: RectangleSelect：框选，2: Measure：测量，3: Section：剖切，4: Walk：漫游，5: Map：地图，6: Property：构件详情，7: Setting：设置，8: Information：基本信息，9: FullScreen：全屏 默认全部加载
-     * @param {Array<String>} options.appConfig.Toolbars 工具条或目录树，MainToolbar:工具条；ModelTree：目录树
-     * @param {Array<String>} options.appConfig.Toolbars 工具条或目录树，MainToolbar:工具条；ModelTree：目录树
+     * @param {string[]} options.appConfig.Buttons 工具条button，0:Home：主视角，1: RectangleSelect：框选，2: Measure：测量，3: Section：剖切，4: Walk：漫游，5: Map：地图，6: Property：构件详情，7: Setting：设置，8: Information：基本信息，9: FullScreen：全屏 默认全部加载
+     * @param {string[]} options.appConfig.Toolbars 工具条或目录树，MainToolbar:工具条；ModelTree：目录树
+     * @param {string[]} options.appConfig.Toolbars 工具条或目录树，MainToolbar:工具条；ModelTree：目录树
      * @param {Object} options.viewConfig 视图的配置, 参考：https://static.bimface.com/jssdk-apidoc/v3/Glodon.Bimface.Viewer.Viewer3DConfig.html
      */
     async load(options: any): Promise<void> {
@@ -109,7 +109,7 @@ export default class Bimface3DModel extends BimfaceBase implements IBim3DModel, 
     /**
      * 获取楼层
      */
-    async getFloors(): Promise<Array<Floor>> {
+    async getFloors(): Promise<Floor[]> {
         return new Promise((resolve) => {
             this.viewer3D.getFloors(resolve);
         });
@@ -118,7 +118,7 @@ export default class Bimface3DModel extends BimfaceBase implements IBim3DModel, 
      * 获取单个模型的楼层（在集成模型中使用）
      * @param fileId 模型文件id
      */
-    async getFloorsbyFileId(fileId: String): Promise<Array<Floor>> {
+    async getFloorsbyFileId(fileId: string): Promise<Floor[]> {
         return new Promise((resolve) => {
             this.viewer3D.getFloorsbyFileId(fileId, resolve);
         });
@@ -129,7 +129,7 @@ export default class Bimface3DModel extends BimfaceBase implements IBim3DModel, 
      * @param extend 楼层爆炸离散系数，范围为[0, 30]，可选，默认为3
      */
     @needRender()
-    explosionFloor(floorIds: Array<String>, extend: Number): void {
+    explosionFloor(floorIds: string[], extend: number): void {
         this.viewer3D.setFloorExplosion(extend || 3, floorIds);
     }
 
@@ -143,10 +143,10 @@ export default class Bimface3DModel extends BimfaceBase implements IBim3DModel, 
 
     /**
      * 根据条件查询构件
-     * @param {String} fileId 模型id
-     * @param {Array<ComponentFilter>} conditions 查询条件
+     * @param {string} fileId 模型id
+     * @param {ComponentFilter[]} conditions 查询条件
      */
-    async getComponentByCondition(fileId: String, conditions: Array<ComponentFilter>): Promise<Array<String>> {
+    async getComponentByCondition(fileId: string, conditions: ComponentFilter[]): Promise<string[]> {
         if (!fileId) {
             throw new Error('fileId不能为空');
         }
@@ -158,7 +158,7 @@ export default class Bimface3DModel extends BimfaceBase implements IBim3DModel, 
     /**
      * 获取视点
      * @param {Object} options 视点参数
-     * @param {String}} options.color 颜色,如#FFFFFF
+     * @param {string}} options.color 颜色,如#FFFFFF
      * @param {number} options.opacity 不透明度,默认为0，即透明
      */
     async getViewPoint(options): Promise<ViewPoint> {
@@ -173,7 +173,7 @@ export default class Bimface3DModel extends BimfaceBase implements IBim3DModel, 
         return new Promise((resolve) => {
             return this.viewer3D.createSnapshotAsync(color, (data) => {
                 const viewPoint: ViewPoint = {
-                    cameraStatus: cameraStatus,
+                    cameraStatus: Object,
                     thumbnail: data,
                 };
                 resolve(viewPoint);
@@ -185,14 +185,16 @@ export default class Bimface3DModel extends BimfaceBase implements IBim3DModel, 
      * 设置视点
      */
     setViewPoint(viewPoint: ViewPoint): void {
-        if (viewPoint && viewPoint.cameraStatus) this.viewer3D.setCameraStatus(viewPoint.cameraStatus);
+        if (viewPoint && viewPoint.cameraStatus) {
+            this.viewer3D.setCameraStatus(viewPoint.cameraStatus);
+        }
     }
 
     /**
      * 隔离构件
      */
     @needRender()
-    isolateComponent(componentIds: Array<String>, option: IsolateOption): void {
+    isolateComponent(componentIds: string[], option: IsolateOption): void {
         this.viewer3D.isolateComponentsById(componentIds, option);
     }
 
@@ -200,7 +202,7 @@ export default class Bimface3DModel extends BimfaceBase implements IBim3DModel, 
      * 根据条件隔离构件
      */
     @needRender()
-    isolateComponentByCondition(conditions: Array<ComponentFilter>, option: IsolateOption): void {
+    isolateComponentByCondition(conditions: ComponentFilter[], option: IsolateOption): void {
         this.viewer3D.isolateComponentsByObjectData(conditions, option);
     }
 
@@ -218,7 +220,7 @@ export default class Bimface3DModel extends BimfaceBase implements IBim3DModel, 
      * @param options 高亮选项
      */
     @needRender()
-    highlightComponents(componentIds: Array<String>, options: HighlightOption): void {
+    highlightComponents(componentIds: string[], options: HighlightOption): void {
         this.viewer3D.enableBlinkComponents(true);
         if (componentIds && componentIds.length > 0) {
             if (options) {
@@ -236,7 +238,7 @@ export default class Bimface3DModel extends BimfaceBase implements IBim3DModel, 
      * @param componentIds 构件id列表，如果没有则清除所有高亮构件
      */
     @needRender()
-    clearHighlightComponents(componentIds?: Array<String>): void {
+    clearHighlightComponents(componentIds?: string[]): void {
         if (componentIds && componentIds.length > 0) {
             this.viewer3D.clearBlinkComponentsById(componentIds);
         } else {
@@ -249,7 +251,7 @@ export default class Bimface3DModel extends BimfaceBase implements IBim3DModel, 
      * @param componentIds 构件id列表
      */
     @needRender()
-    selectComponents(componentIds: Array<String>): void {
+    selectComponents(componentIds: string[]): void {
         this.viewer3D.setSelectedComponentsById(componentIds);
     }
 
@@ -258,7 +260,7 @@ export default class Bimface3DModel extends BimfaceBase implements IBim3DModel, 
      * @param conditions 条件
      */
     @needRender()
-    selectComponentsByCondition(conditions: Array<ComponentFilter>): void {
+    selectComponentsByCondition(conditions: ComponentFilter[]): void {
         this.viewer3D.setSelectedComponentsByObjectData(conditions);
     }
 
@@ -272,7 +274,7 @@ export default class Bimface3DModel extends BimfaceBase implements IBim3DModel, 
     /**
      * 获取选中的构件
      */
-    getSelectedComponents(): Array<String> {
+    getSelectedComponents(): string[] {
         return this.viewer3D.getSelectedComponents();
     }
     /**
@@ -280,7 +282,7 @@ export default class Bimface3DModel extends BimfaceBase implements IBim3DModel, 
      * @param componentIds 构件ids
      */
     @needRender()
-    setComponentsColor(componentIds: Array<String>, color: String): void {
+    setComponentsColor(componentIds: string[], color: string): void {
         return this.viewer3D.overrideComponentsColorById(
             componentIds,
             new window.Glodon.Web.Graphics.Color(color, 0.8)
@@ -291,7 +293,7 @@ export default class Bimface3DModel extends BimfaceBase implements IBim3DModel, 
      * @param conditions 条件
      */
     @needRender()
-    setComponentsColorByCondition(conditions: Array<ComponentFilter>, color: String): void {
+    setComponentsColorByCondition(conditions: ComponentFilter[], color: string): void {
         return this.viewer3D.overrideComponentsColorByObjectData(
             conditions,
             new window.Glodon.Web.Graphics.Color(color, 0.8)
@@ -302,7 +304,7 @@ export default class Bimface3DModel extends BimfaceBase implements IBim3DModel, 
      * @param componentIds 构件ids
      */
     @needRender()
-    restoreComponentsColor(componentIds: Array<String>): void {
+    restoreComponentsColor(componentIds: string[]): void {
         return this.viewer3D.restoreComponentsColorById(componentIds);
     }
     /**
@@ -310,7 +312,7 @@ export default class Bimface3DModel extends BimfaceBase implements IBim3DModel, 
      * @param conditions 条件
      */
     @needRender()
-    restoreComponentsColorByCondition(conditions: Array<ComponentFilter>): void {
+    restoreComponentsColorByCondition(conditions: ComponentFilter[]): void {
         return this.viewer3D.restoreComponentsColorByObjectData(conditions);
     }
     /**
@@ -327,8 +329,8 @@ export default class Bimface3DModel extends BimfaceBase implements IBim3DModel, 
      * @param options 选项
      */
     dispose(options) {
-        if (options && options.viewToken) {
-            this.app && this.app.destroy(options.viewToken);
+        if (options && options.viewToken && this.app) {
+            this.app.destroy(options.viewToken);
         }
         this[MARKER_FIELD] = null;
         super.dispose(options);
@@ -338,7 +340,7 @@ export default class Bimface3DModel extends BimfaceBase implements IBim3DModel, 
     //  * 生成条件
     //  * @param filters 条件对象
     //  */
-    // private transferComponentFilter(filters: Array<ComponentFilter>) {
+    // private transferComponentFilter(filters: ComponentFilter[]) {
     //     const result: Object[] = [];
     //     if (filters && filters.length > 0) {
     //         filters.forEach(filter => {

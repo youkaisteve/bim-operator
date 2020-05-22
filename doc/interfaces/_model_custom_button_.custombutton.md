@@ -21,7 +21,7 @@
 
 ###  className
 
-• **className**: *String*
+• **className**: *string*
 
 *Defined in [model/custom_button.ts:17](https://github.com/youkaisteve/bim-operator/blob/902514b/src/model/custom_button.ts#L17)*
 
@@ -41,7 +41,7 @@ ___
 
 ###  html
 
-• **html**: *String*
+• **html**: *string*
 
 *Defined in [model/custom_button.ts:5](https://github.com/youkaisteve/bim-operator/blob/902514b/src/model/custom_button.ts#L5)*
 
@@ -51,7 +51,7 @@ ___
 
 ###  index
 
-• **index**: *Number*
+• **index**: *number*
 
 *Defined in [model/custom_button.ts:13](https://github.com/youkaisteve/bim-operator/blob/902514b/src/model/custom_button.ts#L13)*
 
@@ -61,7 +61,7 @@ ___
 
 ###  isToggle
 
-• **isToggle**: *Boolean*
+• **isToggle**: *boolean*
 
 *Defined in [model/custom_button.ts:25](https://github.com/youkaisteve/bim-operator/blob/902514b/src/model/custom_button.ts#L25)*
 
@@ -71,7 +71,7 @@ ___
 
 ###  toggleClassName
 
-• **toggleClassName**: *String*
+• **toggleClassName**: *string*
 
 *Defined in [model/custom_button.ts:21](https://github.com/youkaisteve/bim-operator/blob/902514b/src/model/custom_button.ts#L21)*
 

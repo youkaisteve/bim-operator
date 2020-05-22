@@ -5,7 +5,7 @@ export default interface ViewPoint {
     /**
      * 视点的相机状态
      */
-    cameraStatus: Object;
+    cameraStatus: object;
     /**
      * 视点的缩略图(base64——data:image/png;base64,xxxx)
      */

@@ -25,13 +25,13 @@ export default interface Marker3D {
     /**
      * tooltip样式
      */
-    tooltipStyle?: Object;
+    tooltipStyle?: object;
     /**
      * 点击事件
      */
-    onClick?: Function;
+    onClick?: () => void;
     /**
      * hover事件
      */
-    onHover?: Function;
+    onHover?: () => void;
 }

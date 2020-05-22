@@ -1,5 +1,4 @@
-import { IBimOperator, IBim3DModel, IContext } from '../interface';
-import { IBimDrawing } from '../interface';
+import { IBimOperator, IBim3DModel, IBimDrawing, IContext } from '../interface';
 import Bimface3DModel from './bimface/bimface_model';
 import BimfaceDrawing from './bimface/bimface_drawing';
 
@@ -20,11 +19,15 @@ export default class BimfaceOperator implements IBimOperator {
     }
 
     get bim3DModel(): IBim3DModel {
-        if (!this[BIMFACE_3D_FIELD]) this[BIMFACE_3D_FIELD] = new Bimface3DModel(this._context);
+        if (!this[BIMFACE_3D_FIELD]) {
+            this[BIMFACE_3D_FIELD] = new Bimface3DModel(this._context);
+        }
         return this[BIMFACE_3D_FIELD];
     }
     get bimDrawing(): IBimDrawing {
-        if (!this[BIMFACE_DRAWING_FIELD]) this[BIMFACE_DRAWING_FIELD] = new BimfaceDrawing(this._context);
+        if (!this[BIMFACE_DRAWING_FIELD]) {
+            this[BIMFACE_DRAWING_FIELD] = new BimfaceDrawing(this._context);
+        }
         return this[BIMFACE_DRAWING_FIELD];
     }
 }

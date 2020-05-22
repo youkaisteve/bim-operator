@@ -19,12 +19,12 @@ export default abstract class BimfaceBase {
         this._app = app;
     }
 
-    abstract addEventListener(eventName: String, callback: Function);
+    abstract addEventListener(eventName: string, callback: () => void);
     abstract render();
     /**
      * 批量执行相关代码
      */
-    abstract multi(callback: Function);
+    abstract multi(callback: () => void);
 
     constructor(context: IContext) {
         this.context = context;
@@ -58,7 +58,7 @@ export default abstract class BimfaceBase {
     }
 
     @needRender()
-    addCustomButtons(customButtons: Array<CustomButton>) {
+    addCustomButtons(customButtons: CustomButton[]) {
         const toolbar = this.app.getToolbar('MainToolbar');
         const btnConfig = new window.Glodon.Bimface.UI.Button.ButtonConfig();
         if (customButtons && customButtons.length > 0) {

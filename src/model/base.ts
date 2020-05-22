@@ -5,9 +5,9 @@ export default interface ModelBase {
     /**
      * 单模型id
      */
-    fileId: String;
+    fileId: string;
     /**
      * 组合模型id
      */
-    integrateId?: String;
+    integrateId?: string;
 }

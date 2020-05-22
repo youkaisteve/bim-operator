@@ -18,7 +18,7 @@
 
 ###  debugOn
 
-• **debugOn**: *Boolean*
+• **debugOn**: *boolean*
 
 *Defined in [interface.ts:16](https://github.com/youkaisteve/bim-operator/blob/902514b/src/interface.ts#L16)*
 

@@ -78,9 +78,9 @@ bimface 3D 操作
 
 **Parameters:**
 
-Name | Type |
------- | ------ |
-`context` | [IContext](../interfaces/_interface_.icontext.md) |
+| Name      | Type                                              |
+| --------- | ------------------------------------------------- |
+| `context` | [IContext](../interfaces/_interface_.icontext.md) |
 
 **Returns:** *[Bimface3DModel](_providers_bimface_bimface_model_.bimface3dmodel.md)*
 
@@ -96,7 +96,7 @@ ___
 
 ###  [MULTI_FIELD]
 
-• **[MULTI_FIELD]**: *Boolean* = false
+• **[MULTI_FIELD]**: *boolean* = false
 
 *Defined in [providers/bimface/bimface_model.ts:28](https://github.com/youkaisteve/bim-operator/blob/902514b/src/providers/bimface/bimface_model.ts#L28)*
 
@@ -142,9 +142,9 @@ bimface相关对象
 
 **Parameters:**
 
-Name | Type |
------- | ------ |
-`app` | any |
+| Name  | Type |
+| ----- | ---- |
+| `app` | any  |
 
 **Returns:** *void*
 
@@ -174,9 +174,9 @@ ___
 
 **Parameters:**
 
-Name | Type |
------- | ------ |
-`customButtons` | Array‹[CustomButton](../interfaces/_model_custom_button_.custombutton.md)› |
+| Name            | Type                                                                       |
+| --------------- | -------------------------------------------------------------------------- |
+| `customButtons` | Array‹[CustomButton](../interfaces/_model_custom_button_.custombutton.md)› |
 
 **Returns:** *void*
 
@@ -194,10 +194,10 @@ ___
 
 **Parameters:**
 
-Name | Type | Description |
------- | ------ | ------ |
-`eventName` | [Bim3DEvent](../enums/_enums_.bim3devent.md) | 事件名 |
-`callback` | Function | 回调  |
+| Name        | Type                                         | Description |
+| ----------- | -------------------------------------------- | ----------- |
+| `eventName` | [Bim3DEvent](../enums/_enums_.bim3devent.md) | 事件名      |
+| `callback`  | Function                                     | 回调        |
 
 **Returns:** *void*
 
@@ -229,9 +229,9 @@ ___
 
 **Parameters:**
 
-Name | Type | Description |
------- | ------ | ------ |
-`componentIds?` | Array‹String› | 构件id列表，如果没有则清除所有高亮构件  |
+| Name            | Type          | Description                            |
+| --------------- | ------------- | -------------------------------------- |
+| `componentIds?` | Array‹string› | 构件id列表，如果没有则清除所有高亮构件 |
 
 **Returns:** *void*
 
@@ -279,9 +279,9 @@ ___
 
 **Parameters:**
 
-Name | Type | Description |
------- | ------ | ------ |
-`options` | any | 选项  |
+| Name      | Type | Description |
+| --------- | ---- | ----------- |
+| `options` | any  | 选项        |
 
 **Returns:** *void*
 
@@ -289,7 +289,7 @@ ___
 
 ###  explosionFloor
 
-▸ **explosionFloor**(`floorIds`: Array‹String›, `extend`: Number): *void*
+▸ **explosionFloor**(`floorIds`: Array‹string›, `extend`: number): *void*
 
 *Implementation of [IBim3DModel](../interfaces/_interface_.ibim3dmodel.md)*
 
@@ -299,10 +299,10 @@ ___
 
 **Parameters:**
 
-Name | Type | Description |
------- | ------ | ------ |
-`floorIds` | Array‹String› | - |
-`extend` | Number | 楼层爆炸离散系数，范围为[0, 30]，可选，默认为3  |
+| Name       | Type          | Description                                    |
+| ---------- | ------------- | ---------------------------------------------- |
+| `floorIds` | Array‹string› | -                                              |
+| `extend`   | number        | 楼层爆炸离散系数，范围为[0, 30]，可选，默认为3 |
 
 **Returns:** *void*
 
@@ -310,7 +310,7 @@ ___
 
 ###  getComponentByCondition
 
-▸ **getComponentByCondition**(`fileId`: String, `conditions`: Array‹[ComponentFilter](../interfaces/_model_filter_.componentfilter.md)›): *Promise‹Array‹String››*
+▸ **getComponentByCondition**(`fileId`: string, `conditions`: Array‹[ComponentFilter](../interfaces/_model_filter_.componentfilter.md)›): *Promise‹Array‹string››*
 
 *Implementation of [IBim3DModel](../interfaces/_interface_.ibim3dmodel.md)*
 
@@ -320,12 +320,12 @@ ___
 
 **Parameters:**
 
-Name | Type | Description |
------- | ------ | ------ |
-`fileId` | String | 模型id |
-`conditions` | Array‹[ComponentFilter](../interfaces/_model_filter_.componentfilter.md)› | 查询条件  |
+| Name         | Type                                                                      | Description |
+| ------------ | ------------------------------------------------------------------------- | ----------- |
+| `fileId`     | string                                                                    | 模型id      |
+| `conditions` | Array‹[ComponentFilter](../interfaces/_model_filter_.componentfilter.md)› | 查询条件    |
 
-**Returns:** *Promise‹Array‹String››*
+**Returns:** *Promise‹Array‹string››*
 
 ___
 
@@ -345,7 +345,7 @@ ___
 
 ###  getFloorsbyFileId
 
-▸ **getFloorsbyFileId**(`fileId`: String): *Promise‹Array‹[Floor](../interfaces/_model_floor_.floor.md)››*
+▸ **getFloorsbyFileId**(`fileId`: string): *Promise‹Array‹[Floor](../interfaces/_model_floor_.floor.md)››*
 
 *Implementation of [IBim3DModel](../interfaces/_interface_.ibim3dmodel.md)*
 
@@ -355,9 +355,9 @@ ___
 
 **Parameters:**
 
-Name | Type | Description |
------- | ------ | ------ |
-`fileId` | String | 模型文件id  |
+| Name     | Type   | Description |
+| -------- | ------ | ----------- |
+| `fileId` | string | 模型文件id  |
 
 **Returns:** *Promise‹Array‹[Floor](../interfaces/_model_floor_.floor.md)››*
 
@@ -365,7 +365,7 @@ ___
 
 ###  getSelectedComponents
 
-▸ **getSelectedComponents**(): *Array‹String›*
+▸ **getSelectedComponents**(): *Array‹string›*
 
 *Implementation of [IBim3DModel](../interfaces/_interface_.ibim3dmodel.md)*
 
@@ -373,7 +373,7 @@ ___
 
 获取选中的构件
 
-**Returns:** *Array‹String›*
+**Returns:** *Array‹string›*
 
 ___
 
@@ -389,9 +389,9 @@ ___
 
 **Parameters:**
 
-Name | Type | Description |
------- | ------ | ------ |
-`options` | any | 视点参数 |
+| Name      | Type | Description |
+| --------- | ---- | ----------- |
+| `options` | any  | 视点参数    |
 
 **Returns:** *Promise‹[ViewPoint](../interfaces/_model_view_point_.viewpoint.md)›*
 
@@ -399,7 +399,7 @@ ___
 
 ###  highlightComponents
 
-▸ **highlightComponents**(`componentIds`: Array‹String›, `options`: [HighlightOption](../interfaces/_model_options_.highlightoption.md)): *void*
+▸ **highlightComponents**(`componentIds`: Array‹string›, `options`: [HighlightOption](../interfaces/_model_options_.highlightoption.md)): *void*
 
 *Implementation of [IBim3DModel](../interfaces/_interface_.ibim3dmodel.md)*
 
@@ -409,10 +409,10 @@ ___
 
 **Parameters:**
 
-Name | Type | Description |
------- | ------ | ------ |
-`componentIds` | Array‹String› | 构件ids |
-`options` | [HighlightOption](../interfaces/_model_options_.highlightoption.md) | 高亮选项  |
+| Name           | Type                                                                | Description |
+| -------------- | ------------------------------------------------------------------- | ----------- |
+| `componentIds` | Array‹string›                                                       | 构件ids     |
+| `options`      | [HighlightOption](../interfaces/_model_options_.highlightoption.md) | 高亮选项    |
 
 **Returns:** *void*
 
@@ -432,7 +432,7 @@ ___
 
 ###  isolateComponent
 
-▸ **isolateComponent**(`componentIds`: Array‹String›, `option`: [IsolateOption](../enums/_enums_.isolateoption.md)): *void*
+▸ **isolateComponent**(`componentIds`: Array‹string›, `option`: [IsolateOption](../enums/_enums_.isolateoption.md)): *void*
 
 *Implementation of [IBim3DModel](../interfaces/_interface_.ibim3dmodel.md)*
 
@@ -442,10 +442,10 @@ ___
 
 **Parameters:**
 
-Name | Type |
------- | ------ |
-`componentIds` | Array‹String› |
-`option` | [IsolateOption](../enums/_enums_.isolateoption.md) |
+| Name           | Type                                               |
+| -------------- | -------------------------------------------------- |
+| `componentIds` | Array‹string›                                      |
+| `option`       | [IsolateOption](../enums/_enums_.isolateoption.md) |
 
 **Returns:** *void*
 
@@ -463,10 +463,10 @@ ___
 
 **Parameters:**
 
-Name | Type |
------- | ------ |
-`conditions` | Array‹[ComponentFilter](../interfaces/_model_filter_.componentfilter.md)› |
-`option` | [IsolateOption](../enums/_enums_.isolateoption.md) |
+| Name         | Type                                                                      |
+| ------------ | ------------------------------------------------------------------------- |
+| `conditions` | Array‹[ComponentFilter](../interfaces/_model_filter_.componentfilter.md)› |
+| `option`     | [IsolateOption](../enums/_enums_.isolateoption.md)                        |
 
 **Returns:** *void*
 
@@ -484,9 +484,9 @@ ___
 
 **Parameters:**
 
-Name | Type |
------- | ------ |
-`options` | any |
+| Name      | Type |
+| --------- | ---- |
+| `options` | any  |
 
 **Returns:** *Promise‹void›*
 
@@ -504,9 +504,9 @@ ___
 
 **Parameters:**
 
-Name | Type | Description |
------- | ------ | ------ |
-`options` | any | SDKLoader选项 |
+| Name      | Type | Description   |
+| --------- | ---- | ------------- |
+| `options` | any  | SDKLoader选项 |
 
 **Returns:** *Promise‹any›*
 
@@ -526,9 +526,9 @@ ___
 
 **Parameters:**
 
-Name | Type | Description |
------- | ------ | ------ |
-`callback` | Function | 回调函数，以当前实例为参数，在这里执行需要的代码  |
+| Name       | Type     | Description                                      |
+| ---------- | -------- | ------------------------------------------------ |
+| `callback` | Function | 回调函数，以当前实例为参数，在这里执行需要的代码 |
 
 **Returns:** *Promise‹void›*
 
@@ -560,10 +560,10 @@ ___
 
 **Parameters:**
 
-Name | Type | Description |
------- | ------ | ------ |
-`width?` | number | 宽度 |
-`height?` | number | 高度  |
+| Name      | Type   | Description |
+| --------- | ------ | ----------- |
+| `width?`  | number | 宽度        |
+| `height?` | number | 高度        |
 
 **Returns:** *void*
 
@@ -571,7 +571,7 @@ ___
 
 ###  restoreComponentsColor
 
-▸ **restoreComponentsColor**(`componentIds`: Array‹String›): *void*
+▸ **restoreComponentsColor**(`componentIds`: Array‹string›): *void*
 
 *Implementation of [IBim3DModel](../interfaces/_interface_.ibim3dmodel.md)*
 
@@ -581,9 +581,9 @@ ___
 
 **Parameters:**
 
-Name | Type | Description |
------- | ------ | ------ |
-`componentIds` | Array‹String› | 构件ids  |
+| Name           | Type          | Description |
+| -------------- | ------------- | ----------- |
+| `componentIds` | Array‹string› | 构件ids     |
 
 **Returns:** *void*
 
@@ -601,9 +601,9 @@ ___
 
 **Parameters:**
 
-Name | Type | Description |
------- | ------ | ------ |
-`conditions` | Array‹[ComponentFilter](../interfaces/_model_filter_.componentfilter.md)› | 条件  |
+|     | Name         | Type                                                                      | Description |
+| --- | ------------ | ------------------------------------------------------------------------- | ----------- |
+|     | `conditions` | Array‹[ComponentFilter](../interfaces/_model_filter_.componentfilter.md)› | 条件        |
 
 **Returns:** *void*
 
@@ -611,7 +611,7 @@ ___
 
 ###  selectComponents
 
-▸ **selectComponents**(`componentIds`: Array‹String›): *void*
+▸ **selectComponents**(`componentIds`: Array‹string›): *void*
 
 *Implementation of [IBim3DModel](../interfaces/_interface_.ibim3dmodel.md)*
 
@@ -621,9 +621,9 @@ ___
 
 **Parameters:**
 
-Name | Type | Description |
------- | ------ | ------ |
-`componentIds` | Array‹String› | 构件id列表  |
+| Name           | Type          | Description |
+| -------------- | ------------- | ----------- |
+| `componentIds` | Array‹string› | 构件id列表  |
 
 **Returns:** *void*
 
@@ -641,9 +641,9 @@ ___
 
 **Parameters:**
 
-Name | Type | Description |
------- | ------ | ------ |
-`conditions` | Array‹[ComponentFilter](../interfaces/_model_filter_.componentfilter.md)› | 条件  |
+| Name         | Type                                                                      | Description |
+| ------------ | ------------------------------------------------------------------------- | ----------- |
+| `conditions` | Array‹[ComponentFilter](../interfaces/_model_filter_.componentfilter.md)› | 条件        |
 
 **Returns:** *void*
 
@@ -651,7 +651,7 @@ ___
 
 ###  setComponentsColor
 
-▸ **setComponentsColor**(`componentIds`: Array‹String›, `color`: String): *void*
+▸ **setComponentsColor**(`componentIds`: Array‹string›, `color`: string): *void*
 
 *Implementation of [IBim3DModel](../interfaces/_interface_.ibim3dmodel.md)*
 
@@ -661,10 +661,10 @@ ___
 
 **Parameters:**
 
-Name | Type | Description |
------- | ------ | ------ |
-`componentIds` | Array‹String› | 构件ids  |
-`color` | String | - |
+| Name           | Type          | Description |
+| -------------- | ------------- | ----------- |
+| `componentIds` | Array‹string› | 构件ids     |
+| `color`        | string        | -           |
 
 **Returns:** *void*
 
@@ -672,7 +672,7 @@ ___
 
 ###  setComponentsColorByCondition
 
-▸ **setComponentsColorByCondition**(`conditions`: Array‹[ComponentFilter](../interfaces/_model_filter_.componentfilter.md)›, `color`: String): *void*
+▸ **setComponentsColorByCondition**(`conditions`: Array‹[ComponentFilter](../interfaces/_model_filter_.componentfilter.md)›, `color`: string): *void*
 
 *Implementation of [IBim3DModel](../interfaces/_interface_.ibim3dmodel.md)*
 
@@ -682,10 +682,10 @@ ___
 
 **Parameters:**
 
-Name | Type | Description |
------- | ------ | ------ |
-`conditions` | Array‹[ComponentFilter](../interfaces/_model_filter_.componentfilter.md)› | 条件  |
-`color` | String | - |
+| Name         | Type                                                                      | Description |
+| ------------ | ------------------------------------------------------------------------- | ----------- |
+| `conditions` | Array‹[ComponentFilter](../interfaces/_model_filter_.componentfilter.md)› | 条件        |
+| `color`      | string                                                                    | -           |
 
 **Returns:** *void*
 
@@ -703,8 +703,8 @@ ___
 
 **Parameters:**
 
-Name | Type |
------- | ------ |
-`viewPoint` | [ViewPoint](../interfaces/_model_view_point_.viewpoint.md) |
+| Name        | Type                                                       |
+| ----------- | ---------------------------------------------------------- |
+| `viewPoint` | [ViewPoint](../interfaces/_model_view_point_.viewpoint.md) |
 
 **Returns:** *void*

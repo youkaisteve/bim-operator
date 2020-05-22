@@ -7,7 +7,7 @@ import toolkit from '../util/toolkit';
  */
 export default function debugLog(pattern?: any) {
     return beforeMethodOnClass({
-        pattern: pattern,
+        pattern,
         handle: (meta) => {
             if (meta.target.context && meta.target.context.debugOn) {
                 console.debug(`[${meta.className}.${meta.methodName}] CALLED`);

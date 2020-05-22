@@ -4,7 +4,7 @@ function handleDescriptor(target, key, descriptor) {
     return {
         ...descriptor,
         value() {
-            let methodCallResult = fn.apply(this, arguments);
+            const methodCallResult = fn.apply(this, arguments);
             if (methodCallResult && methodCallResult.constructor.name === 'Promise') {
                 return methodCallResult.then((result) => {
                     this.render();

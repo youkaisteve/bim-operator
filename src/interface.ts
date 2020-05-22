@@ -13,7 +13,7 @@ export interface IContext {
     /**
      * 是否开启debug
      */
-    debugOn: Boolean;
+    debugOn: boolean;
 }
 
 /**
@@ -37,18 +37,18 @@ export interface IBim3DModel {
     /**
      * 获取所有楼层
      */
-    getFloors(): Promise<Array<Floor>>;
+    getFloors(): Promise<Floor[]>;
     /**
      * 获取单个模型的楼层（在集成模型中使用）
      * @param fileId 单个模型的id
      */
-    getFloorsbyFileId(fileId: String): Promise<Array<Floor>>;
+    getFloorsbyFileId(fileId: string): Promise<Floor[]>;
     /**
      * 楼层爆炸
      * @param floors 楼层ids
      * @param extend 楼层爆炸离散系数，根据厂商定制，可选
      */
-    explosionFloor(floorIds: Array<String>, extend: Number): void;
+    explosionFloor(floorIds: string[], extend: number): void;
     /**
      * 清空楼层爆炸
      */
@@ -57,11 +57,11 @@ export interface IBim3DModel {
      * 根据条件获取构件
      * @param conditions 查询条件，不同厂商之间可能会有差别
      */
-    getComponentByCondition(fileId: String, conditions: Array<ComponentFilter>): Promise<Array<String>>;
+    getComponentByCondition(fileId: string, conditions: ComponentFilter[]): Promise<string[]>;
     /**
      * 获取视点
      * @param {Object} options 视点参数
-     * @param {String}} options.color 颜色,如#FFFFFF
+     * @param {string}} options.color 颜色,如#FFFFFF
      * @param {number} options.opacity 不透明度,默认为0，即透明
      */
     getViewPoint(options): Promise<ViewPoint>;
@@ -72,11 +72,11 @@ export interface IBim3DModel {
     /**
      * 隔离构件
      */
-    isolateComponent(componentIds: Array<String>, option: IsolateOption): void;
+    isolateComponent(componentIds: string[], option: IsolateOption): void;
     /**
      * 根据条件隔离构件
      */
-    isolateComponentByCondition(conditions: Array<ComponentFilter>, option: IsolateOption): void;
+    isolateComponentByCondition(conditions: ComponentFilter[], option: IsolateOption): void;
     /**
      * 清空隔离
      */
@@ -86,22 +86,22 @@ export interface IBim3DModel {
      * @param componentIds 构件ids
      * @param options 高亮选项
      */
-    highlightComponents(componentIds: Array<String>, options: HighlightOption): void;
+    highlightComponents(componentIds: string[], options: HighlightOption): void;
     /**
      * 清除所有高亮构件
      * @param componentIds 构件id列表，如果没有则清除所有高亮构件
      */
-    clearHighlightComponents(componentIds?: Array<String>): void;
+    clearHighlightComponents(componentIds?: string[]): void;
     /**
      * 选中构件
      * @param componentIds 构件id列表
      */
-    selectComponents(componentIds: Array<String>): void;
+    selectComponents(componentIds: string[]): void;
     /**
      * 根据条件选中构件
      * @param conditions 条件
      */
-    selectComponentsByCondition(conditions: Array<ComponentFilter>): void;
+    selectComponentsByCondition(conditions: ComponentFilter[]): void;
     /**
      * 清空选中构件
      */
@@ -109,27 +109,27 @@ export interface IBim3DModel {
     /**
      * 获取选中的构件
      */
-    getSelectedComponents(): Array<String>;
+    getSelectedComponents(): string[];
     /**
      * 设置构件ids
      * @param componentIds 构件ids
      */
-    setComponentsColor(componentIds: Array<String>, color: String): void;
+    setComponentsColor(componentIds: string[], color: string): void;
     /**
      * 根据条件设置构件颜色
      * @param conditions 条件
      */
-    setComponentsColorByCondition(conditions: Array<ComponentFilter>, color: String): void;
+    setComponentsColorByCondition(conditions: ComponentFilter[], color: string): void;
     /**
      * 恢复构件颜色
      * @param componentIds 构件ids
      */
-    restoreComponentsColor(componentIds: Array<String>): void;
+    restoreComponentsColor(componentIds: string[]): void;
     /**
      * 根据条件恢复构件颜色
      * @param conditions 条件
      */
-    restoreComponentsColorByCondition(conditions: Array<ComponentFilter>): void;
+    restoreComponentsColorByCondition(conditions: ComponentFilter[]): void;
     /**
      * 设置场景显示大小
      * @param width 宽度
@@ -145,7 +145,7 @@ export interface IMarker {
     /**
      * 获取所有标记
      */
-    getAllMarkers(): Array<Marker3D>;
+    getAllMarkers(): Marker3D[];
     /**
      * 添加3D标记
      * @param marker 位置信息
@@ -176,7 +176,7 @@ export interface IBimDrawing {
      * 设置展示模式
      * @param model 模式
      * @param customOptions 选项
-     * @param {String}} customOptions.color 颜色,如#FFFFFF
+     * @param {string}} customOptions.color 颜色,如#FFFFFF
      * @param {number} customOptions.opacity 不透明度,默认为0，即透明
      */
     setDisplayMode(model: DrawingDisplayMode, customOptions: any): void;
@@ -190,7 +190,7 @@ export interface IBimCustom {
      * 自定义工具条按钮
      * @param customButtons 工具条按钮们
      */
-    addCustomButtons(customButtons: Array<CustomButton>): void;
+    addCustomButtons(customButtons: CustomButton[]): void;
 }
 
 /**

@@ -23,7 +23,7 @@
 
 ###  fileId
 
-• **fileId**: *String*
+• **fileId**: *string*
 
 *Inherited from [ModelBase](_model_base_.modelbase.md).[fileId](_model_base_.modelbase.md#fileid)*
 
@@ -35,7 +35,7 @@ ___
 
 ###  floorId
 
-• **floorId**: *String | Number*
+• **floorId**: *string | number*
 
 *Defined in [model/floor.ts:10](https://github.com/youkaisteve/bim-operator/blob/902514b/src/model/floor.ts#L10)*
 
@@ -45,7 +45,7 @@ ___
 
 ###  floorName
 
-• **floorName**: *String*
+• **floorName**: *string*
 
 *Defined in [model/floor.ts:14](https://github.com/youkaisteve/bim-operator/blob/902514b/src/model/floor.ts#L14)*
 
@@ -55,7 +55,7 @@ ___
 
 ### `Optional` integrateId
 
-• **integrateId**? : *String*
+• **integrateId**? : *string*
 
 *Inherited from [ModelBase](_model_base_.modelbase.md).[integrateId](_model_base_.modelbase.md#optional-integrateid)*
 

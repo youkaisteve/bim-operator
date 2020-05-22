@@ -23,7 +23,7 @@
 
 ###  fileId
 
-• **fileId**: *String*
+• **fileId**: *string*
 
 *Defined in [model/base.ts:8](https://github.com/youkaisteve/bim-operator/blob/902514b/src/model/base.ts#L8)*
 
@@ -33,7 +33,7 @@ ___
 
 ### `Optional` integrateId
 
-• **integrateId**? : *String*
+• **integrateId**? : *string*
 
 *Defined in [model/base.ts:12](https://github.com/youkaisteve/bim-operator/blob/902514b/src/model/base.ts#L12)*
 

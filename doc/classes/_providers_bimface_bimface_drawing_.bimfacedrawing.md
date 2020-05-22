@@ -62,7 +62,7 @@ Name | Type |
 
 ###  [MULTI_FIELD]
 
-• **[MULTI_FIELD]**: *Boolean* = false
+• **[MULTI_FIELD]**: *boolean* = false
 
 *Defined in [providers/bimface/bimface_drawing.ts:17](https://github.com/youkaisteve/bim-operator/blob/902514b/src/providers/bimface/bimface_drawing.ts#L17)*
 

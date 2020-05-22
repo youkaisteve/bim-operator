@@ -5,21 +5,21 @@ export interface ComponentFilter {
     /**
      * 构件类型
      */
-    categoryId: String;
+    categoryId: string;
     /**
      * 楼层名字
      */
-    levelName: String;
+    levelName: string;
     /**
      * 专业名称
      */
-    specialty: String;
+    specialty: string;
     /**
      * 族名称
      */
-    family: String;
+    family: string;
     /**
      * 族类型
      */
-    familyType: String;
+    familyType: string;
 }

@@ -23,7 +23,7 @@
 
 ###  componentId
 
-• **componentId**: *String | Number*
+• **componentId**: *string | number*
 
 *Defined in [model/component.ts:10](https://github.com/youkaisteve/bim-operator/blob/902514b/src/model/component.ts#L10)*
 
@@ -33,7 +33,7 @@ ___
 
 ###  componentName
 
-• **componentName**: *String*
+• **componentName**: *string*
 
 *Defined in [model/component.ts:14](https://github.com/youkaisteve/bim-operator/blob/902514b/src/model/component.ts#L14)*
 
@@ -43,7 +43,7 @@ ___
 
 ###  fileId
 
-• **fileId**: *String*
+• **fileId**: *string*
 
 *Inherited from [ModelBase](_model_base_.modelbase.md).[fileId](_model_base_.modelbase.md#fileid)*
 
@@ -55,7 +55,7 @@ ___
 
 ### `Optional` integrateId
 
-• **integrateId**? : *String*
+• **integrateId**? : *string*
 
 *Inherited from [ModelBase](_model_base_.modelbase.md).[integrateId](_model_base_.modelbase.md#optional-integrateid)*
 

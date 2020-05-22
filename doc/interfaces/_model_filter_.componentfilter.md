@@ -22,7 +22,7 @@
 
 ###  categoryId
 
-• **categoryId**: *String*
+• **categoryId**: *string*
 
 *Defined in [model/filter.ts:8](https://github.com/youkaisteve/bim-operator/blob/902514b/src/model/filter.ts#L8)*
 
@@ -32,7 +32,7 @@ ___
 
 ###  family
 
-• **family**: *String*
+• **family**: *string*
 
 *Defined in [model/filter.ts:20](https://github.com/youkaisteve/bim-operator/blob/902514b/src/model/filter.ts#L20)*
 
@@ -42,7 +42,7 @@ ___
 
 ###  familyType
 
-• **familyType**: *String*
+• **familyType**: *string*
 
 *Defined in [model/filter.ts:24](https://github.com/youkaisteve/bim-operator/blob/902514b/src/model/filter.ts#L24)*
 
@@ -52,7 +52,7 @@ ___
 
 ###  levelName
 
-• **levelName**: *String*
+• **levelName**: *string*
 
 *Defined in [model/filter.ts:12](https://github.com/youkaisteve/bim-operator/blob/902514b/src/model/filter.ts#L12)*
 
@@ -62,7 +62,7 @@ ___
 
 ###  specialty
 
-• **specialty**: *String*
+• **specialty**: *string*
 
 *Defined in [model/filter.ts:16](https://github.com/youkaisteve/bim-operator/blob/902514b/src/model/filter.ts#L16)*
 

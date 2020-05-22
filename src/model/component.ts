@@ -7,9 +7,9 @@ export default interface Component extends ModelBase {
     /**
      * 构件id
      */
-    componentId: String | Number;
+    componentId: string | number;
     /**
      * 构件名称
      */
-    componentName: String;
+    componentName: string;
 }

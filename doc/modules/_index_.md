@@ -16,7 +16,7 @@
 
 ###  getProvider
 
-▸ **getProvider**(`provider`: String, `customContext`: [IContext](../interfaces/_interface_.icontext.md)): *[IBimOperator](../interfaces/_interface_.ibimoperator.md)*
+▸ **getProvider**(`provider`: string, `customContext`: [IContext](../interfaces/_interface_.icontext.md)): *[IBimOperator](../interfaces/_interface_.ibimoperator.md)*
 
 *Defined in [index.ts:24](https://github.com/youkaisteve/bim-operator/blob/902514b/src/index.ts#L24)*
 
@@ -24,10 +24,10 @@
 
 **Parameters:**
 
-Name | Type | Description |
------- | ------ | ------ |
-`provider` | String | 提供方名字，@see [ProviderType](_index_.md#const-providertype) |
-`customContext` | [IContext](../interfaces/_interface_.icontext.md) | - |
+| Name            | Type                                              | Description                                                    |
+| --------------- | ------------------------------------------------- | -------------------------------------------------------------- |
+| `provider`      | string                                            | 提供方名字，@see [ProviderType](_index_.md#const-providertype) |
+| `customContext` | [IContext](../interfaces/_interface_.icontext.md) | -                                                              |
 
 **Returns:** *[IBimOperator](../interfaces/_interface_.ibimoperator.md)*
 

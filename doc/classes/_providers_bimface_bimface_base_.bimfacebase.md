@@ -47,9 +47,9 @@ bimface api基类，提供图纸和模型的通用方法
 
 **Parameters:**
 
-Name | Type |
------- | ------ |
-`context` | [IContext](../interfaces/_interface_.icontext.md) |
+| Name      | Type                                              |
+| --------- | ------------------------------------------------- |
+| `context` | [IContext](../interfaces/_interface_.icontext.md) |
 
 **Returns:** *[BimfaceBase](_providers_bimface_bimface_base_.bimfacebase.md)*
 
@@ -85,9 +85,9 @@ ___
 
 **Parameters:**
 
-Name | Type |
------- | ------ |
-`app` | any |
+| Name  | Type |
+| ----- | ---- |
+| `app` | any  |
 
 **Returns:** *void*
 
@@ -101,9 +101,9 @@ Name | Type |
 
 **Parameters:**
 
-Name | Type |
------- | ------ |
-`customButtons` | Array‹[CustomButton](../interfaces/_model_custom_button_.custombutton.md)› |
+| Name            | Type                                                                       |
+| --------------- | -------------------------------------------------------------------------- |
+| `customButtons` | Array‹[CustomButton](../interfaces/_model_custom_button_.custombutton.md)› |
 
 **Returns:** *void*
 
@@ -111,16 +111,16 @@ ___
 
 ### `Abstract` addEventListener
 
-▸ **addEventListener**(`eventName`: String, `callback`: Function): *any*
+▸ **addEventListener**(`eventName`: string, `callback`: Function): *any*
 
 *Defined in [providers/bimface/bimface_base.ts:22](https://github.com/youkaisteve/bim-operator/blob/902514b/src/providers/bimface/bimface_base.ts#L22)*
 
 **Parameters:**
 
-Name | Type |
------- | ------ |
-`eventName` | String |
-`callback` | Function |
+| Name        | Type     |
+| ----------- | -------- |
+| `eventName` | string   |
+| `callback`  | Function |
 
 **Returns:** *any*
 
@@ -134,9 +134,9 @@ ___
 
 **Parameters:**
 
-Name | Type |
------- | ------ |
-`options` | any |
+| Name      | Type |
+| --------- | ---- |
+| `options` | any  |
 
 **Returns:** *void*
 
@@ -162,9 +162,9 @@ ___
 
 **Parameters:**
 
-Name | Type | Description |
------- | ------ | ------ |
-`options` | any | SDKLoader选项 |
+| Name      | Type | Description   |
+| --------- | ---- | ------------- |
+| `options` | any  | SDKLoader选项 |
 
 **Returns:** *Promise‹any›*
 
@@ -182,9 +182,9 @@ ___
 
 **Parameters:**
 
-Name | Type |
------- | ------ |
-`callback` | Function |
+| Name       | Type     |
+| ---------- | -------- |
+| `callback` | Function |
 
 **Returns:** *any*
 

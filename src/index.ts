@@ -21,7 +21,7 @@ export const ProviderType = {
  * @param provider 提供方名字，@see {@link ProviderType}
  * @param context 选项 @see {@link IContext}
  */
-export default function getProvider(provider: String, customContext: IContext): IBimOperator {
+export default function getProvider(provider: string, customContext: IContext): IBimOperator {
     const combineContext = { ...context, ...customContext };
     console.debug(`CustomContext set : ${JSON.stringify(combineContext)}`);
     switch (provider) {

@@ -7,9 +7,9 @@ export default interface Floor extends ModelBase {
     /**
      * 楼层id
      */
-    floorId: String | Number;
+    floorId: string | number;
     /**
      * 楼层名称
      */
-    floorName: String;
+    floorName: string;
 }
