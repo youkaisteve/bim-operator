@@ -13,7 +13,7 @@
         "lint": "tslint -p tsconfig.prod.json",
         "build": "rm -rf ./build && tsc -p tsconfig.prod.json",
         "doc": "rm -rf ./doc && npx typedoc --module commonjs --target es5 --experimentalDecorators --plugin typedoc-plugin-markdown --out ./doc ./src/",
-        "changelog": "conventional-changelog -i CHANGELOG.md -s -r 0 && git add CHANGELOG.md",
+        "changelog": "conventional-changelog -i CHANGELOG.md -s && git add CHANGELOG.md",
         "release": "npm run build && npm version patch && git push --follow-tags && npm publish --registry http://172.16.0.132:18081/repository/npm-lab/"
     },
     "standard-version": {
