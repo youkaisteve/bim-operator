@@ -14,7 +14,7 @@
         "build": "rm -rf ./build && tsc -p tsconfig.prod.json",
         "doc": "rm -rf ./doc && npx typedoc --module commonjs --target es5 --experimentalDecorators --plugin typedoc-plugin-markdown --out ./doc ./src/",
         "changelog": "conventional-changelog -i CHANGELOG.md -s && git add CHANGELOG.md",
-        "release": "npm run build && git push --follow-tags && npm publish --registry http://172.16.0.132:18081/repository/npm-lab/"
+        "release": "npm run build && standard-version && git push --follow-tags && npm publish --registry http://172.16.0.132:18081/repository/npm-lab/"
     },
     "standard-version": {
         "skip": {
@@ -28,7 +28,6 @@
         }
     },
     "dependencies": {
-        "standard-version": "^8.0.0",
         "yk-aspect": "^1.0.3"
     },
     "devDependencies": {
@@ -36,6 +35,7 @@
         "@commitlint/config-conventional": "^8.3.4",
         "@types/node": "^10.5.5",
         "husky": "^4.2.5",
+        "standard-version": "^8.0.0",
         "ts-node": "^8.3.0",
         "tslib": "^1.8.1",
         "tslint": "^5.11.0",
