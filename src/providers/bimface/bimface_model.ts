@@ -61,7 +61,7 @@ export default class Bimface3DModel extends BimfaceBase implements IBim3DModel, 
      * 批量执行，最后.done来完成调用,进行渲染。主要用于对模型进行多次改变，避免每次改变都自动render
      * @param callback 回调函数，以当前实例为参数，在这里执行需要的代码
      */
-    async multi(callback: () => void) {
+    async multi(callback: (target) => void) {
         if (!callback) {
             throw new Error('callback is required');
         }
@@ -173,7 +173,7 @@ export default class Bimface3DModel extends BimfaceBase implements IBim3DModel, 
         return new Promise((resolve) => {
             return this.viewer3D.createSnapshotAsync(color, (data) => {
                 const viewPoint: ViewPoint = {
-                    cameraStatus: Object,
+                    cameraStatus,
                     thumbnail: data,
                 };
                 resolve(viewPoint);
