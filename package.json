@@ -14,7 +14,7 @@
         "doc": "rm -rf ./doc && npx typedoc --module commonjs --target es5 --experimentalDecorators --plugin typedoc-plugin-markdown --out ./doc ./src/",
         "changelog": "conventional-changelog -i CHANGELOG.md -s -r 0 && git add CHANGELOG.md",
         "release:internal": "npm run build && npm version patch && git push --follow-tags && npm publish --registry http://172.16.0.132:18081/repository/npm-lab/",
-        "release:external": "npm run build && npm version patch && git push --follow-tags && npm publish"
+        "release:external": "npm run build && git push --follow-tags && npm publish"
     },
     "standard-version": {
         "skip": {
