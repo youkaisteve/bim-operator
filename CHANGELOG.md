@@ -1,3 +1,26 @@
+## <small>1.0.55 (2020-05-22)</small>
+
+* 1.0.55 ([d333cb0](https://github.com/youkaisteve/bim-operator/commit/d333cb0))
+* ci(package.json): changelog script fix ([02585f2](https://github.com/youkaisteve/bim-operator/commit/02585f2))
+* ci(package.json): distinguish external and internal release script ([d80aeed](https://github.com/youkaisteve/bim-operator/commit/d80aeed))
+* ci(package.json): fix release ([5de7570](https://github.com/youkaisteve/bim-operator/commit/5de7570))
+* ci(package.json): fix scripts ([a07784f](https://github.com/youkaisteve/bim-operator/commit/a07784f))
+* refactor: fix code by tslint suggestion ([4ba01af](https://github.com/youkaisteve/bim-operator/commit/4ba01af))
+* docs(build): remove build files ([c89417e](https://github.com/youkaisteve/bim-operator/commit/c89417e))
+
+
+
+## <small>1.0.54 (2020-05-21)</small>
+
+* 1.0.54 ([7488429](https://github.com/youkaisteve/bim-operator/commit/7488429))
+* docs(changelog): changelog change ([017ccab](https://github.com/youkaisteve/bim-operator/commit/017ccab))
+* docs(package.json): change script ([3579a35](https://github.com/youkaisteve/bim-operator/commit/3579a35))
+* ci(package.json): add standard-version config ([19e57a6](https://github.com/youkaisteve/bim-operator/commit/19e57a6))
+* ci(package.json): change version ([b45c220](https://github.com/youkaisteve/bim-operator/commit/b45c220))
+* chore(release): 1.0.54 ([0cf598f](https://github.com/youkaisteve/bim-operator/commit/0cf598f))
+
+
+
 ## <small>1.0.53 (2020-05-21)</small>
 
 * 1.0.53 ([e6e8cf7](https://github.com/youkaisteve/bim-operator/commit/e6e8cf7))
