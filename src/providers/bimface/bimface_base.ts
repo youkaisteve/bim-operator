@@ -57,6 +57,10 @@ export default abstract class BimfaceBase {
         });
     }
 
+    /**
+     * 添加自定义按钮
+     * @param customButtons 自定义按钮
+     */
     @needRender()
     addCustomButtons(customButtons: CustomButton[]) {
         const toolbar = this.app.getToolbar('MainToolbar');

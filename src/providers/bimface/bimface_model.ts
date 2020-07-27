@@ -80,7 +80,6 @@ export default class Bimface3DModel extends BimfaceBase implements IBim3DModel, 
      * @param {Object} options.appConfig 应用的配置
      * @param {string[]} options.appConfig.Buttons 工具条button，0:Home：主视角，1: RectangleSelect：框选，2: Measure：测量，3: Section：剖切，4: Walk：漫游，5: Map：地图，6: Property：构件详情，7: Setting：设置，8: Information：基本信息，9: FullScreen：全屏 默认全部加载
      * @param {string[]} options.appConfig.Toolbars 工具条或目录树，MainToolbar:工具条；ModelTree：目录树
-     * @param {string[]} options.appConfig.Toolbars 工具条或目录树，MainToolbar:工具条；ModelTree：目录树
      * @param {Object} options.viewConfig 视图的配置, 参考：https://static.bimface.com/jssdk-apidoc/v3/Glodon.Bimface.Viewer.Viewer3DConfig.html
      */
     async load(options: any): Promise<void> {
