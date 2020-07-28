@@ -1,4 +1,4 @@
-[@yzw/bim-operator - v1.0.50](../README.md) › [Globals](../globals.md) › ["interface"](_interface_.md)
+[@yzw/bim-operator - v1.0.55](../README.md) › [Globals](../globals.md) › ["interface"](_interface_.md)
 
 # External module: "interface"
 

@@ -1,4 +1,4 @@
-[@yzw/bim-operator - v1.0.50](../README.md) › [Globals](../globals.md) › ["context"](_context_.md)
+[@yzw/bim-operator - v1.0.55](../README.md) › [Globals](../globals.md) › ["context"](_context_.md)
 
 # External module: "context"
 
@@ -14,10 +14,10 @@
 
 ### ▪ **context**: *object*
 
-*Defined in [context.ts:3](https://github.com/youkaisteve/bim-operator/blob/902514b/src/context.ts#L3)*
+*Defined in [context.ts:3](https://github.com/youkaisteve/bim-operator/blob/20b4753/src/context.ts#L3)*
 
 ###  debugOn
 
-• **debugOn**: *boolean* = false
+• **debugOn**: *false* = false
 
-*Defined in [context.ts:4](https://github.com/youkaisteve/bim-operator/blob/902514b/src/context.ts#L4)*
+*Defined in [context.ts:4](https://github.com/youkaisteve/bim-operator/blob/20b4753/src/context.ts#L4)*

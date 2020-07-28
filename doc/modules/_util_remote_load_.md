@@ -1,4 +1,4 @@
-[@yzw/bim-operator - v1.0.50](../README.md) › [Globals](../globals.md) › ["util/remote-load"](_util_remote_load_.md)
+[@yzw/bim-operator - v1.0.55](../README.md) › [Globals](../globals.md) › ["util/remote-load"](_util_remote_load_.md)
 
 # External module: "util/remote-load"
 
@@ -14,15 +14,15 @@
 
 ▸ **remoteLoad**(`url`: string, `hasCallback?`: any): *Promise‹any›*
 
-*Defined in [util/remote-load.ts:6](https://github.com/youkaisteve/bim-operator/blob/902514b/src/util/remote-load.ts#L6)*
+*Defined in [util/remote-load.ts:6](https://github.com/youkaisteve/bim-operator/blob/20b4753/src/util/remote-load.ts#L6)*
 
 远程加载脚本
 
 **Parameters:**
 
-| Name           | Type   | Description |
-| -------------- | ------ | ----------- |
-| `url`          | string | 链接地址    |
-| `hasCallback?` | any    | 是否有回调  |
+Name | Type | Description |
+------ | ------ | ------ |
+`url` | string | 链接地址 |
+`hasCallback?` | any | 是否有回调  |
 
 **Returns:** *Promise‹any›*

@@ -1,4 +1,4 @@
-[@yzw/bim-operator - v1.0.50](../README.md) › [Globals](../globals.md) › ["index"](_index_.md)
+[@yzw/bim-operator - v1.0.55](../README.md) › [Globals](../globals.md) › ["index"](_index_.md)
 
 # External module: "index"
 
@@ -18,16 +18,16 @@
 
 ▸ **getProvider**(`provider`: string, `customContext`: [IContext](../interfaces/_interface_.icontext.md)): *[IBimOperator](../interfaces/_interface_.ibimoperator.md)*
 
-*Defined in [index.ts:24](https://github.com/youkaisteve/bim-operator/blob/902514b/src/index.ts#L24)*
+*Defined in [index.ts:24](https://github.com/youkaisteve/bim-operator/blob/20b4753/src/index.ts#L24)*
 
 获取供应商操作类
 
 **Parameters:**
 
-| Name            | Type                                              | Description                                                    |
-| --------------- | ------------------------------------------------- | -------------------------------------------------------------- |
-| `provider`      | string                                            | 提供方名字，@see [ProviderType](_index_.md#const-providertype) |
-| `customContext` | [IContext](../interfaces/_interface_.icontext.md) | -                                                              |
+Name | Type | Description |
+------ | ------ | ------ |
+`provider` | string | 提供方名字，@see [ProviderType](_index_.md#const-providertype) |
+`customContext` | [IContext](../interfaces/_interface_.icontext.md) | - |
 
 **Returns:** *[IBimOperator](../interfaces/_interface_.ibimoperator.md)*
 
@@ -37,7 +37,7 @@
 
 ### ▪ **ProviderType**: *object*
 
-*Defined in [index.ts:15](https://github.com/youkaisteve/bim-operator/blob/902514b/src/index.ts#L15)*
+*Defined in [index.ts:15](https://github.com/youkaisteve/bim-operator/blob/20b4753/src/index.ts#L15)*
 
 Bim供应商
 
@@ -45,4 +45,4 @@ Bim供应商
 
 • **BIMFACE**: *string* = "bimface"
 
-*Defined in [index.ts:16](https://github.com/youkaisteve/bim-operator/blob/902514b/src/index.ts#L16)*
+*Defined in [index.ts:16](https://github.com/youkaisteve/bim-operator/blob/20b4753/src/index.ts#L16)*

@@ -1,4 +1,4 @@
-[@yzw/bim-operator - v1.0.50](../README.md) › [Globals](../globals.md) › ["consts"](_consts_.md)
+[@yzw/bim-operator - v1.0.55](../README.md) › [Globals](../globals.md) › ["consts"](_consts_.md)
 
 # External module: "consts"
 
@@ -14,6 +14,6 @@
 
 • **BIMFACE_JS_SDK**: *"https://static.bimface.com/api/BimfaceSDKLoader/BimfaceSDKLoader@latest-release.js"* = "https://static.bimface.com/api/BimfaceSDKLoader/BimfaceSDKLoader@latest-release.js"
 
-*Defined in [consts.ts:4](https://github.com/youkaisteve/bim-operator/blob/902514b/src/consts.ts#L4)*
+*Defined in [consts.ts:4](https://github.com/youkaisteve/bim-operator/blob/20b4753/src/consts.ts#L4)*
 
 bimface js sdk的地址
