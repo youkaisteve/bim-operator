@@ -1,3 +1,22 @@
+# Changelog
+
+All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+
+## 1.1.0 (2020-07-30)
+
+
+### Features
+
+* **bim3d:** add interface:隐藏/显示构件,半透明构件 ([96bad79](https://github.com/youkaisteve/bim-operator/commit/96bad792cc705333bba484911e867be3a59317c6))
+* **bimface_base.ts:** btn class exchange ([5796b57](https://github.com/youkaisteve/bim-operator/commit/5796b579a358263955ef378798c4de2fc1b431bf))
+
+
+### Bug Fixes
+
+* **bimface_base.ts:** btn default class ([7b973f1](https://github.com/youkaisteve/bim-operator/commit/7b973f179e3ac36d880f0a175d16e09d87bbac74))
+* **index.ts:** format log ([66e9f0f](https://github.com/youkaisteve/bim-operator/commit/66e9f0f653180d89775bdae864cbacdb1d5b979a))
+* **package.json:** version patch ([c426289](https://github.com/youkaisteve/bim-operator/commit/c426289a936c9f42cc85cb9188e057fb008d6e8d))
+
 ## <small>1.0.55 (2020-05-22)</small>
 
 * 1.0.55 ([d333cb0](https://github.com/youkaisteve/bim-operator/commit/d333cb0))
@@ -441,6 +460,3 @@
 * add dist ([4e1a85e](https://github.com/youkaisteve/bim-operator/commit/4e1a85e))
 * init ([06a06db](https://github.com/youkaisteve/bim-operator/commit/06a06db))
 * Initial commit ([e9a81c0](https://github.com/youkaisteve/bim-operator/commit/e9a81c0))
-
-
-
