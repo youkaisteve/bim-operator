@@ -335,10 +335,11 @@ export default class Bimface3DModel extends BimfaceBase implements IBim3DModel, 
      * @param progressCallback 加载进度回调函数
      */
     @needRender()
-    showComponents(componentIds?: string[], progressCallback?: any): Promise<void> {
+    showComponents(componentIds?: string[], progressCallback?: () => void): Promise<void> {
         return new Promise((resolve) => {
             if (CollectionUtils.isEmpty(componentIds)) {
-                this.viewer3D.showAllComponents(progressCallback, resolve);
+                this.viewer3D.showAllComponents(progressCallback);
+                resolve();
             } else {
                 this.viewer3D.showComponentsById(componentIds);
                 resolve();

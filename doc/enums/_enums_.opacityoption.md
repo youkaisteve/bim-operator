@@ -1,4 +1,4 @@
-[@yzw/bim-operator - v1.1.0](../README.md) › [Globals](../globals.md) › ["enums"](../modules/_enums_.md) › [OpacityOption](_enums_.opacityoption.md)
+[@yzw/bim-operator - v1.2.0](../README.md) › [Globals](../globals.md) › ["enums"](../modules/_enums_.md) › [OpacityOption](_enums_.opacityoption.md)
 
 # Enumeration: OpacityOption
 
@@ -17,7 +17,7 @@
 
 • **Opaque**: = "Opaque"
 
-*Defined in [enums.ts:80](https://github.com/youkaisteve/bim-operator/blob/0268664/src/enums.ts#L80)*
+*Defined in [enums.ts:80](https://github.com/youkaisteve/bim-operator/blob/6108016/src/enums.ts#L80)*
 
 取消半透明
 
@@ -27,6 +27,6 @@ ___
 
 • **Translucent**: = "Translucent"
 
-*Defined in [enums.ts:84](https://github.com/youkaisteve/bim-operator/blob/0268664/src/enums.ts#L84)*
+*Defined in [enums.ts:84](https://github.com/youkaisteve/bim-operator/blob/6108016/src/enums.ts#L84)*
 
 半透明

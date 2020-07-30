@@ -140,7 +140,7 @@ export interface IBim3DModel {
      * @param componentIds 构件列表
      * @param progressCallback 加载进度回调函数
      */
-    showComponents(componentIds?: string[], progressCallback?: any): Promise<void>;
+    showComponents(componentIds?: string[], progressCallback?: () => void): Promise<void>;
     /**
      * 设置构件半透明，或取消构件半透明
      * @param option 设置状态

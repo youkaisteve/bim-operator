@@ -7,6 +7,6 @@ export default class CollectionUtils {
      * @param collection 集合
      */
     static isEmpty(collection: any[]) {
-        return !collection || collection.length > 0;
+        return !collection || collection.length === 0;
     }
 }
