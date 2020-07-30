@@ -20,6 +20,6 @@
 
 • **debugOn**: *boolean*
 
-*Defined in [interface.ts:16](https://github.com/youkaisteve/bim-operator/blob/20b4753/src/interface.ts#L16)*
+*Defined in [interface.ts:16](https://github.com/youkaisteve/bim-operator/blob/fa1479c/src/interface.ts#L16)*
 
 是否开启debug

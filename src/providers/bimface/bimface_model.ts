@@ -2,12 +2,13 @@ import { IBim3DModel, IMarker, IBimCustom, IDispose } from '../../interface';
 import BimfaceBase from './bimface_base';
 import ViewPoint from '../../model/view_point';
 import Floor from '../../model/floor';
-import { IsolateOption, Bim3DEvent } from '../../enums';
+import { IsolateOption, Bim3DEvent, OpacityOption } from '../../enums';
 import { ComponentFilter } from '../../model/filter';
 import needRender from '../../decorators/render';
 import { HighlightOption } from '../../model';
 import BimfaceMarker from './bimface_marker';
 import debugLog from '../../decorators/debug_log';
+import CollectionUtils from '../../util/collect-util';
 
 const MARKER_FIELD = Symbol('Bimface#MarkerField');
 const MULTI_FIELD = Symbol('Bimface#IsMultiField');
@@ -314,6 +315,39 @@ export default class Bimface3DModel extends BimfaceBase implements IBim3DModel, 
     restoreComponentsColorByCondition(conditions: ComponentFilter[]): void {
         return this.viewer3D.restoreComponentsColorByObjectData(conditions);
     }
+
+    @needRender()
+    hideComponents(componentIds?: string[]): void {
+        if (CollectionUtils.isEmpty(componentIds)) {
+            this.viewer3D.hideAllComponents();
+        } else {
+            this.viewer3D.hideComponentsById(componentIds);
+        }
+    }
+
+    @needRender()
+    showComponents(componentIds?: string[], progressCallback?: any): Promise<void> {
+        return new Promise((resolve) => {
+            if (CollectionUtils.isEmpty(componentIds)) {
+                this.viewer3D.showAllComponents(progressCallback, resolve);
+            } else {
+                this.viewer3D.showComponentsById(componentIds);
+                resolve();
+            }
+        });
+    }
+
+    @needRender()
+    setComponentsOpacity(option: OpacityOption, componentIds?: string[]): void {
+        if (CollectionUtils.isEmpty(componentIds)) {
+            option === OpacityOption.Opaque
+                ? this.viewer3D.opaqueAllComponents()
+                : this.viewer3D.transparentAllComponents();
+        } else {
+            this.viewer3D.setComponentsOpacity(componentIds, option);
+        }
+    }
+
     /**
      * 设置场景显示大小
      * @param width 宽度

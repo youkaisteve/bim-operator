@@ -19,7 +19,7 @@
 
 • **MARKER_FIELD**: *unique symbol* =  Symbol('Bimface#MarkerField')
 
-*Defined in [providers/bimface/bimface_model.ts:12](https://github.com/youkaisteve/bim-operator/blob/20b4753/src/providers/bimface/bimface_model.ts#L12)*
+*Defined in [providers/bimface/bimface_model.ts:13](https://github.com/youkaisteve/bim-operator/blob/fa1479c/src/providers/bimface/bimface_model.ts#L13)*
 
 ___
 
@@ -27,4 +27,4 @@ ___
 
 • **MULTI_FIELD**: *unique symbol* =  Symbol('Bimface#IsMultiField')
 
-*Defined in [providers/bimface/bimface_model.ts:13](https://github.com/youkaisteve/bim-operator/blob/20b4753/src/providers/bimface/bimface_model.ts#L13)*
+*Defined in [providers/bimface/bimface_model.ts:14](https://github.com/youkaisteve/bim-operator/blob/fa1479c/src/providers/bimface/bimface_model.ts#L14)*

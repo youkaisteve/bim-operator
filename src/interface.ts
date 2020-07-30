@@ -1,7 +1,7 @@
 import Floor from './model/floor';
 import ViewPoint from './model/view_point';
 import Marker3D from './model/marker_3d';
-import { IsolateOption, DrawingDisplayMode } from './enums';
+import { IsolateOption, DrawingDisplayMode, OpacityOption } from './enums';
 import { ComponentFilter } from './model/filter';
 import { HighlightOption } from './model';
 import CustomButton from './model/custom_button';
@@ -130,6 +130,23 @@ export interface IBim3DModel {
      * @param conditions 条件
      */
     restoreComponentsColorByCondition(conditions: ComponentFilter[]): void;
+    /**
+     * 隐藏构件
+     * @param componentIds 构件列表，若为空，则隐藏所有狗对岸
+     */
+    hideComponents(componentIds?: string[]): void;
+    /**
+     * 显示模型构件
+     * @param componentIds 构件列表
+     * @param progressCallback 加载进度回调函数
+     */
+    showComponents(componentIds?: string[], progressCallback?: any): Promise<void>;
+    /**
+     * 设置构件半透明，或取消构件半透明
+     * @param option 设置状态
+     * @param componentIds 构件id列表，如果为空，则会设置整个模型
+     */
+    setComponentsOpacity(option: OpacityOption, componentIds: string[]): void;
     /**
      * 设置场景显示大小
      * @param width 宽度

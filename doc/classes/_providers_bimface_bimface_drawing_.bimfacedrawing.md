@@ -48,7 +48,7 @@ bimface 2D 操作
 
 *Inherited from [BimfaceBase](_providers_bimface_bimface_base_.bimfacebase.md).[constructor](_providers_bimface_bimface_base_.bimfacebase.md#constructor)*
 
-*Defined in [providers/bimface/bimface_base.ts:27](https://github.com/youkaisteve/bim-operator/blob/20b4753/src/providers/bimface/bimface_base.ts#L27)*
+*Defined in [providers/bimface/bimface_base.ts:27](https://github.com/youkaisteve/bim-operator/blob/fa1479c/src/providers/bimface/bimface_base.ts#L27)*
 
 **Parameters:**
 
@@ -64,7 +64,7 @@ Name | Type |
 
 • **[MULTI_FIELD]**: *boolean*
 
-*Defined in [providers/bimface/bimface_drawing.ts:17](https://github.com/youkaisteve/bim-operator/blob/20b4753/src/providers/bimface/bimface_drawing.ts#L17)*
+*Defined in [providers/bimface/bimface_drawing.ts:17](https://github.com/youkaisteve/bim-operator/blob/fa1479c/src/providers/bimface/bimface_drawing.ts#L17)*
 
 是否在批量执行
 
@@ -76,7 +76,7 @@ ___
 
 *Overrides [BimfaceBase](_providers_bimface_bimface_base_.bimfacebase.md).[app](_providers_bimface_bimface_base_.bimfacebase.md#protected-app)*
 
-*Defined in [providers/bimface/bimface_drawing.ts:12](https://github.com/youkaisteve/bim-operator/blob/20b4753/src/providers/bimface/bimface_drawing.ts#L12)*
+*Defined in [providers/bimface/bimface_drawing.ts:12](https://github.com/youkaisteve/bim-operator/blob/fa1479c/src/providers/bimface/bimface_drawing.ts#L12)*
 
 ___
 
@@ -86,7 +86,7 @@ ___
 
 *Inherited from [BimfaceBase](_providers_bimface_bimface_base_.bimfacebase.md).[context](_providers_bimface_bimface_base_.bimfacebase.md#protected-context)*
 
-*Defined in [providers/bimface/bimface_base.ts:12](https://github.com/youkaisteve/bim-operator/blob/20b4753/src/providers/bimface/bimface_base.ts#L12)*
+*Defined in [providers/bimface/bimface_base.ts:12](https://github.com/youkaisteve/bim-operator/blob/fa1479c/src/providers/bimface/bimface_base.ts#L12)*
 
 ___
 
@@ -94,7 +94,7 @@ ___
 
 • **viewer2D**: *any*
 
-*Defined in [providers/bimface/bimface_drawing.ts:13](https://github.com/youkaisteve/bim-operator/blob/20b4753/src/providers/bimface/bimface_drawing.ts#L13)*
+*Defined in [providers/bimface/bimface_drawing.ts:13](https://github.com/youkaisteve/bim-operator/blob/fa1479c/src/providers/bimface/bimface_drawing.ts#L13)*
 
 ## Methods
 
@@ -106,7 +106,7 @@ ___
 
 *Inherited from [BimfaceBase](_providers_bimface_bimface_base_.bimfacebase.md).[addCustomButtons](_providers_bimface_bimface_base_.bimfacebase.md#addcustombuttons)*
 
-*Defined in [providers/bimface/bimface_base.ts:65](https://github.com/youkaisteve/bim-operator/blob/20b4753/src/providers/bimface/bimface_base.ts#L65)*
+*Defined in [providers/bimface/bimface_base.ts:65](https://github.com/youkaisteve/bim-operator/blob/fa1479c/src/providers/bimface/bimface_base.ts#L65)*
 
 添加自定义按钮
 
@@ -126,7 +126,7 @@ ___
 
 *Overrides [BimfaceBase](_providers_bimface_bimface_base_.bimfacebase.md).[addEventListener](_providers_bimface_bimface_base_.bimfacebase.md#abstract-addeventlistener)*
 
-*Defined in [providers/bimface/bimface_drawing.ts:24](https://github.com/youkaisteve/bim-operator/blob/20b4753/src/providers/bimface/bimface_drawing.ts#L24)*
+*Defined in [providers/bimface/bimface_drawing.ts:24](https://github.com/youkaisteve/bim-operator/blob/fa1479c/src/providers/bimface/bimface_drawing.ts#L24)*
 
 监听事件
 
@@ -152,7 +152,7 @@ ___
 
 *Inherited from [BimfaceBase](_providers_bimface_bimface_base_.bimfacebase.md).[dispose](_providers_bimface_bimface_base_.bimfacebase.md#dispose)*
 
-*Defined in [providers/bimface/bimface_base.ts:97](https://github.com/youkaisteve/bim-operator/blob/20b4753/src/providers/bimface/bimface_base.ts#L97)*
+*Defined in [providers/bimface/bimface_base.ts:97](https://github.com/youkaisteve/bim-operator/blob/fa1479c/src/providers/bimface/bimface_base.ts#L97)*
 
 **Parameters:**
 
@@ -170,7 +170,7 @@ ___
 
 *Inherited from [BimfaceBase](_providers_bimface_bimface_base_.bimfacebase.md).[initSDK](_providers_bimface_bimface_base_.bimfacebase.md#initsdk)*
 
-*Defined in [providers/bimface/bimface_base.ts:33](https://github.com/youkaisteve/bim-operator/blob/20b4753/src/providers/bimface/bimface_base.ts#L33)*
+*Defined in [providers/bimface/bimface_base.ts:33](https://github.com/youkaisteve/bim-operator/blob/fa1479c/src/providers/bimface/bimface_base.ts#L33)*
 
 **Returns:** *Promise‹void›*
 
@@ -182,7 +182,7 @@ ___
 
 *Implementation of [IBimDrawing](../interfaces/_interface_.ibimdrawing.md)*
 
-*Defined in [providers/bimface/bimface_drawing.ts:64](https://github.com/youkaisteve/bim-operator/blob/20b4753/src/providers/bimface/bimface_drawing.ts#L64)*
+*Defined in [providers/bimface/bimface_drawing.ts:64](https://github.com/youkaisteve/bim-operator/blob/fa1479c/src/providers/bimface/bimface_drawing.ts#L64)*
 
 加载图纸
 
@@ -202,7 +202,7 @@ ___
 
 *Inherited from [BimfaceBase](_providers_bimface_bimface_base_.bimfacebase.md).[loadSDK](_providers_bimface_bimface_base_.bimfacebase.md#loadsdk)*
 
-*Defined in [providers/bimface/bimface_base.ts:44](https://github.com/youkaisteve/bim-operator/blob/20b4753/src/providers/bimface/bimface_base.ts#L44)*
+*Defined in [providers/bimface/bimface_base.ts:44](https://github.com/youkaisteve/bim-operator/blob/fa1479c/src/providers/bimface/bimface_base.ts#L44)*
 
 加载SDK
 
@@ -224,7 +224,7 @@ ___
 
 *Overrides [BimfaceBase](_providers_bimface_bimface_base_.bimfacebase.md).[multi](_providers_bimface_bimface_base_.bimfacebase.md#abstract-multi)*
 
-*Defined in [providers/bimface/bimface_drawing.ts:43](https://github.com/youkaisteve/bim-operator/blob/20b4753/src/providers/bimface/bimface_drawing.ts#L43)*
+*Defined in [providers/bimface/bimface_drawing.ts:43](https://github.com/youkaisteve/bim-operator/blob/fa1479c/src/providers/bimface/bimface_drawing.ts#L43)*
 
 批量执行，最后.done来完成调用,进行渲染。主要用于对模型进行多次改变，避免每次改变都自动render
 
@@ -252,7 +252,7 @@ ___
 
 *Overrides [BimfaceBase](_providers_bimface_bimface_base_.bimfacebase.md).[render](_providers_bimface_bimface_base_.bimfacebase.md#abstract-render)*
 
-*Defined in [providers/bimface/bimface_drawing.ts:31](https://github.com/youkaisteve/bim-operator/blob/20b4753/src/providers/bimface/bimface_drawing.ts#L31)*
+*Defined in [providers/bimface/bimface_drawing.ts:31](https://github.com/youkaisteve/bim-operator/blob/fa1479c/src/providers/bimface/bimface_drawing.ts#L31)*
 
 渲染
 
@@ -266,7 +266,7 @@ ___
 
 *Implementation of [IBimDrawing](../interfaces/_interface_.ibimdrawing.md)*
 
-*Defined in [providers/bimface/bimface_drawing.ts:93](https://github.com/youkaisteve/bim-operator/blob/20b4753/src/providers/bimface/bimface_drawing.ts#L93)*
+*Defined in [providers/bimface/bimface_drawing.ts:93](https://github.com/youkaisteve/bim-operator/blob/fa1479c/src/providers/bimface/bimface_drawing.ts#L93)*
 
 设置展示模式
 

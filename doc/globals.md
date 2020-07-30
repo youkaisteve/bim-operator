@@ -28,5 +28,6 @@
 * ["providers/bimface/bimface_marker"](modules/_providers_bimface_bimface_marker_.md)
 * ["providers/bimface/bimface_model"](modules/_providers_bimface_bimface_model_.md)
 * ["providers/bimface_operator"](modules/_providers_bimface_operator_.md)
+* ["util/collect-util"](modules/_util_collect_util_.md)
 * ["util/remote-load"](modules/_util_remote_load_.md)
 * ["util/toolkit"](modules/_util_toolkit_.md)

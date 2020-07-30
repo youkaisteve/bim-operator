@@ -69,3 +69,17 @@ export enum Bim2DEvent {
     MouseClicked = 'MouseClicked',
     ViewChange = 'ViewChange',
 }
+
+/**
+ * 设置构件半透明或取消半透明的状态
+ */
+export enum OpacityOption {
+    /***
+     * 取消半透明
+     */
+    Opaque = 'Opaque',
+    /**
+     * 半透明
+     */
+    Translucent = 'Translucent',
+}

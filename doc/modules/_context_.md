@@ -14,10 +14,10 @@
 
 ### ▪ **context**: *object*
 
-*Defined in [context.ts:3](https://github.com/youkaisteve/bim-operator/blob/20b4753/src/context.ts#L3)*
+*Defined in [context.ts:3](https://github.com/youkaisteve/bim-operator/blob/fa1479c/src/context.ts#L3)*
 
 ###  debugOn
 
 • **debugOn**: *false* = false
 
-*Defined in [context.ts:4](https://github.com/youkaisteve/bim-operator/blob/20b4753/src/context.ts#L4)*
+*Defined in [context.ts:4](https://github.com/youkaisteve/bim-operator/blob/fa1479c/src/context.ts#L4)*

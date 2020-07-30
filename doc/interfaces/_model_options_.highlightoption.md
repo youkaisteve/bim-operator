@@ -22,7 +22,7 @@
 
 • **color**: *string*
 
-*Defined in [model/options.ts:8](https://github.com/youkaisteve/bim-operator/blob/20b4753/src/model/options.ts#L8)*
+*Defined in [model/options.ts:8](https://github.com/youkaisteve/bim-operator/blob/fa1479c/src/model/options.ts#L8)*
 
 高亮颜色，默认#FF0000
 
@@ -32,7 +32,7 @@ ___
 
 • **intervalTime**: *number*
 
-*Defined in [model/options.ts:16](https://github.com/youkaisteve/bim-operator/blob/20b4753/src/model/options.ts#L16)*
+*Defined in [model/options.ts:16](https://github.com/youkaisteve/bim-operator/blob/fa1479c/src/model/options.ts#L16)*
 
 闪烁间隔，毫秒，默认200
 
@@ -42,6 +42,6 @@ ___
 
 • **opacity**: *number*
 
-*Defined in [model/options.ts:12](https://github.com/youkaisteve/bim-operator/blob/20b4753/src/model/options.ts#L12)*
+*Defined in [model/options.ts:12](https://github.com/youkaisteve/bim-operator/blob/fa1479c/src/model/options.ts#L12)*
 
 不透明度，默认为1，即不透明

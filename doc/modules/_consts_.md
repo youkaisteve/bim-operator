@@ -14,6 +14,6 @@
 
 • **BIMFACE_JS_SDK**: *"https://static.bimface.com/api/BimfaceSDKLoader/BimfaceSDKLoader@latest-release.js"* = "https://static.bimface.com/api/BimfaceSDKLoader/BimfaceSDKLoader@latest-release.js"
 
-*Defined in [consts.ts:4](https://github.com/youkaisteve/bim-operator/blob/20b4753/src/consts.ts#L4)*
+*Defined in [consts.ts:4](https://github.com/youkaisteve/bim-operator/blob/fa1479c/src/consts.ts#L4)*
 
 bimface js sdk的地址

@@ -10,3 +10,4 @@
 * [Bim3DEvent](../enums/_enums_.bim3devent.md)
 * [DrawingDisplayMode](../enums/_enums_.drawingdisplaymode.md)
 * [IsolateOption](../enums/_enums_.isolateoption.md)
+* [OpacityOption](../enums/_enums_.opacityoption.md)
