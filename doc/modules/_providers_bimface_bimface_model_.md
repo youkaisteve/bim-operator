@@ -1,4 +1,4 @@
-[@yzw/bim-operator - v1.0.55](../README.md) › [Globals](../globals.md) › ["providers/bimface/bimface_model"](_providers_bimface_bimface_model_.md)
+[@yzw/bim-operator - v1.1.0](../README.md) › [Globals](../globals.md) › ["providers/bimface/bimface_model"](_providers_bimface_bimface_model_.md)
 
 # External module: "providers/bimface/bimface_model"
 
@@ -19,7 +19,7 @@
 
 • **MARKER_FIELD**: *unique symbol* =  Symbol('Bimface#MarkerField')
 
-*Defined in [providers/bimface/bimface_model.ts:13](https://github.com/youkaisteve/bim-operator/blob/fa1479c/src/providers/bimface/bimface_model.ts#L13)*
+*Defined in [providers/bimface/bimface_model.ts:13](https://github.com/youkaisteve/bim-operator/blob/0268664/src/providers/bimface/bimface_model.ts#L13)*
 
 ___
 
@@ -27,4 +27,4 @@ ___
 
 • **MULTI_FIELD**: *unique symbol* =  Symbol('Bimface#IsMultiField')
 
-*Defined in [providers/bimface/bimface_model.ts:14](https://github.com/youkaisteve/bim-operator/blob/fa1479c/src/providers/bimface/bimface_model.ts#L14)*
+*Defined in [providers/bimface/bimface_model.ts:14](https://github.com/youkaisteve/bim-operator/blob/0268664/src/providers/bimface/bimface_model.ts#L14)*

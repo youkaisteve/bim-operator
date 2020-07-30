@@ -132,7 +132,7 @@ export interface IBim3DModel {
     restoreComponentsColorByCondition(conditions: ComponentFilter[]): void;
     /**
      * 隐藏构件
-     * @param componentIds 构件列表，若为空，则隐藏所有狗对岸
+     * @param componentIds 构件列表，若为空，则隐藏所有构件
      */
     hideComponents(componentIds?: string[]): void;
     /**

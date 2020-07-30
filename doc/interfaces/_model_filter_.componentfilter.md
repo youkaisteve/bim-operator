@@ -1,4 +1,4 @@
-[@yzw/bim-operator - v1.0.55](../README.md) › [Globals](../globals.md) › ["model/filter"](../modules/_model_filter_.md) › [ComponentFilter](_model_filter_.componentfilter.md)
+[@yzw/bim-operator - v1.1.0](../README.md) › [Globals](../globals.md) › ["model/filter"](../modules/_model_filter_.md) › [ComponentFilter](_model_filter_.componentfilter.md)
 
 # Interface: ComponentFilter
 
@@ -24,7 +24,7 @@
 
 • **categoryId**: *string*
 
-*Defined in [model/filter.ts:8](https://github.com/youkaisteve/bim-operator/blob/fa1479c/src/model/filter.ts#L8)*
+*Defined in [model/filter.ts:8](https://github.com/youkaisteve/bim-operator/blob/0268664/src/model/filter.ts#L8)*
 
 构件类型
 
@@ -34,7 +34,7 @@ ___
 
 • **family**: *string*
 
-*Defined in [model/filter.ts:20](https://github.com/youkaisteve/bim-operator/blob/fa1479c/src/model/filter.ts#L20)*
+*Defined in [model/filter.ts:20](https://github.com/youkaisteve/bim-operator/blob/0268664/src/model/filter.ts#L20)*
 
 族名称
 
@@ -44,7 +44,7 @@ ___
 
 • **familyType**: *string*
 
-*Defined in [model/filter.ts:24](https://github.com/youkaisteve/bim-operator/blob/fa1479c/src/model/filter.ts#L24)*
+*Defined in [model/filter.ts:24](https://github.com/youkaisteve/bim-operator/blob/0268664/src/model/filter.ts#L24)*
 
 族类型
 
@@ -54,7 +54,7 @@ ___
 
 • **levelName**: *string*
 
-*Defined in [model/filter.ts:12](https://github.com/youkaisteve/bim-operator/blob/fa1479c/src/model/filter.ts#L12)*
+*Defined in [model/filter.ts:12](https://github.com/youkaisteve/bim-operator/blob/0268664/src/model/filter.ts#L12)*
 
 楼层名字
 
@@ -64,6 +64,6 @@ ___
 
 • **specialty**: *string*
 
-*Defined in [model/filter.ts:16](https://github.com/youkaisteve/bim-operator/blob/fa1479c/src/model/filter.ts#L16)*
+*Defined in [model/filter.ts:16](https://github.com/youkaisteve/bim-operator/blob/0268664/src/model/filter.ts#L16)*
 
 专业名称

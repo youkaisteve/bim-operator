@@ -1,4 +1,4 @@
-[@yzw/bim-operator - v1.0.55](../README.md) › [Globals](../globals.md) › ["interface"](../modules/_interface_.md) › [IContext](_interface_.icontext.md)
+[@yzw/bim-operator - v1.1.0](../README.md) › [Globals](../globals.md) › ["interface"](../modules/_interface_.md) › [IContext](_interface_.icontext.md)
 
 # Interface: IContext
 
@@ -20,6 +20,6 @@
 
 • **debugOn**: *boolean*
 
-*Defined in [interface.ts:16](https://github.com/youkaisteve/bim-operator/blob/fa1479c/src/interface.ts#L16)*
+*Defined in [interface.ts:16](https://github.com/youkaisteve/bim-operator/blob/0268664/src/interface.ts#L16)*
 
 是否开启debug

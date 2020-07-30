@@ -316,6 +316,10 @@ export default class Bimface3DModel extends BimfaceBase implements IBim3DModel, 
         return this.viewer3D.restoreComponentsColorByObjectData(conditions);
     }
 
+    /**
+     * 隐藏构件
+     * @param componentIds 构件列表，若为空，则隐藏所有构件
+     */
     @needRender()
     hideComponents(componentIds?: string[]): void {
         if (CollectionUtils.isEmpty(componentIds)) {
@@ -325,6 +329,11 @@ export default class Bimface3DModel extends BimfaceBase implements IBim3DModel, 
         }
     }
 
+    /**
+     * 显示模型构件
+     * @param componentIds 构件列表
+     * @param progressCallback 加载进度回调函数
+     */
     @needRender()
     showComponents(componentIds?: string[], progressCallback?: any): Promise<void> {
         return new Promise((resolve) => {
@@ -337,6 +346,11 @@ export default class Bimface3DModel extends BimfaceBase implements IBim3DModel, 
         });
     }
 
+    /**
+     * 设置构件半透明，或取消构件半透明
+     * @param option 设置状态
+     * @param componentIds 构件id列表，如果为空，则会设置整个模型
+     */
     @needRender()
     setComponentsOpacity(option: OpacityOption, componentIds?: string[]): void {
         if (CollectionUtils.isEmpty(componentIds)) {
