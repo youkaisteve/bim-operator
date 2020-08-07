@@ -143,7 +143,7 @@ export interface IBim3DModel {
      */
     showComponents(componentIds?: string[], progressCallback?: () => void): Promise<void>;
     /**
-     * 设置构件半透明，或取消构件半透明
+     * 设置构件透明度, 包括半透明
      * @param option 设置状态
      * @param componentIds 构件id列表，如果为空，则会设置整个模型
      */
