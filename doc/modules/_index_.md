@@ -1,4 +1,4 @@
-[@yzw/bim-operator - v1.2.0](../README.md) › [Globals](../globals.md) › ["index"](_index_.md)
+[@yzw/bim-operator - v1.3.0](../README.md) › [Globals](../globals.md) › ["index"](_index_.md)
 
 # External module: "index"
 
@@ -18,7 +18,7 @@
 
 ▸ **getProvider**(`provider`: string, `customContext`: [IContext](../interfaces/_interface_.icontext.md)): *[IBimOperator](../interfaces/_interface_.ibimoperator.md)*
 
-*Defined in [index.ts:24](https://github.com/youkaisteve/bim-operator/blob/6108016/src/index.ts#L24)*
+*Defined in [index.ts:24](https://github.com/youkaisteve/bim-operator/blob/9fb2dae/src/index.ts#L24)*
 
 获取供应商操作类
 
@@ -37,7 +37,7 @@ Name | Type | Description |
 
 ### ▪ **ProviderType**: *object*
 
-*Defined in [index.ts:15](https://github.com/youkaisteve/bim-operator/blob/6108016/src/index.ts#L15)*
+*Defined in [index.ts:15](https://github.com/youkaisteve/bim-operator/blob/9fb2dae/src/index.ts#L15)*
 
 Bim供应商
 
@@ -45,4 +45,4 @@ Bim供应商
 
 • **BIMFACE**: *string* = "bimface"
 
-*Defined in [index.ts:16](https://github.com/youkaisteve/bim-operator/blob/6108016/src/index.ts#L16)*
+*Defined in [index.ts:16](https://github.com/youkaisteve/bim-operator/blob/9fb2dae/src/index.ts#L16)*

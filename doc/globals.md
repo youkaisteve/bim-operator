@@ -1,6 +1,6 @@
-[@yzw/bim-operator - v1.2.0](README.md) › [Globals](globals.md)
+[@yzw/bim-operator - v1.3.0](README.md) › [Globals](globals.md)
 
-# @yzw/bim-operator - v1.2.0
+# @yzw/bim-operator - v1.3.0
 
 ## Index
 
@@ -20,6 +20,7 @@
 * ["model/floor"](modules/_model_floor_.md)
 * ["model/index"](modules/_model_index_.md)
 * ["model/marker_3d"](modules/_model_marker_3d_.md)
+* ["model/opacity_option"](modules/_model_opacity_option_.md)
 * ["model/options"](modules/_model_options_.md)
 * ["model/position"](modules/_model_position_.md)
 * ["model/view_point"](modules/_model_view_point_.md)

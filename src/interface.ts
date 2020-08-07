@@ -1,10 +1,11 @@
 import Floor from './model/floor';
 import ViewPoint from './model/view_point';
 import Marker3D from './model/marker_3d';
-import { IsolateOption, DrawingDisplayMode, OpacityOption, RestoreEnum } from './enums';
+import { IsolateOption, DrawingDisplayMode, RestoreEnum } from './enums';
 import { ComponentFilter } from './model/filter';
 import { HighlightOption } from './model';
 import CustomButton from './model/custom_button';
+import OpacityOption from './model/opacity_option';
 
 /**
  * 上下文

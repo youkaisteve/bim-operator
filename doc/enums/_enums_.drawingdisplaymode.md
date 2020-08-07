@@ -1,4 +1,4 @@
-[@yzw/bim-operator - v1.2.0](../README.md) › [Globals](../globals.md) › ["enums"](../modules/_enums_.md) › [DrawingDisplayMode](_enums_.drawingdisplaymode.md)
+[@yzw/bim-operator - v1.3.0](../README.md) › [Globals](../globals.md) › ["enums"](../modules/_enums_.md) › [DrawingDisplayMode](_enums_.drawingdisplaymode.md)
 
 # Enumeration: DrawingDisplayMode
 
@@ -19,7 +19,7 @@
 
 • **BgWhite**: = 1
 
-*Defined in [enums.ts:26](https://github.com/youkaisteve/bim-operator/blob/6108016/src/enums.ts#L26)*
+*Defined in [enums.ts:26](https://github.com/youkaisteve/bim-operator/blob/9fb2dae/src/enums.ts#L26)*
 
 白底模式
 
@@ -29,7 +29,7 @@ ___
 
 • **Custom**: = 3
 
-*Defined in [enums.ts:34](https://github.com/youkaisteve/bim-operator/blob/6108016/src/enums.ts#L34)*
+*Defined in [enums.ts:34](https://github.com/youkaisteve/bim-operator/blob/9fb2dae/src/enums.ts#L34)*
 
 自定义模式
 
@@ -39,7 +39,7 @@ ___
 
 • **Normal**: = 0
 
-*Defined in [enums.ts:22](https://github.com/youkaisteve/bim-operator/blob/6108016/src/enums.ts#L22)*
+*Defined in [enums.ts:22](https://github.com/youkaisteve/bim-operator/blob/9fb2dae/src/enums.ts#L22)*
 
 普通模式
 
@@ -49,6 +49,6 @@ ___
 
 • **WhiteBlack**: = 2
 
-*Defined in [enums.ts:30](https://github.com/youkaisteve/bim-operator/blob/6108016/src/enums.ts#L30)*
+*Defined in [enums.ts:30](https://github.com/youkaisteve/bim-operator/blob/9fb2dae/src/enums.ts#L30)*
 
 黑白模式
