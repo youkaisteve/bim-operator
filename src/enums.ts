@@ -71,9 +71,9 @@ export enum Bim2DEvent {
 }
 
 /**
- * 设置构件半透明或取消半透明的状态
+ * 透明度枚举
  */
-export enum OpacityOption {
+export enum OpacityEnum {
     /***
      * 取消半透明
      */
@@ -82,4 +82,46 @@ export enum OpacityOption {
      * 半透明
      */
     Translucent = 'Translucent',
+    /**
+     * 自定义，需要提供透明度
+     */
+    Custom = 'Custom',
+}
+
+/**
+ * 恢复枚举值
+ */
+export enum RestoreEnum {
+    /***
+     * 全部
+     */
+    All = 0,
+    /**
+     * 着色
+     */
+    Color = 1,
+    /**
+     * 选择
+     */
+    Selection = 2,
+    /**
+     * 隔离
+     */
+    Isolate = 4,
+    /**
+     * 半透明
+     */
+    Translucent = 8,
+    /**
+     * 空间
+     */
+    Room = 16,
+    /**
+     * 强调状态
+     */
+    Blink = 32,
+    /**
+     * 楼层爆炸
+     */
+    FloorExplosion = 64,
 }

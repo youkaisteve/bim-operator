@@ -2,13 +2,14 @@ import { IBim3DModel, IMarker, IBimCustom, IDispose } from '../../interface';
 import BimfaceBase from './bimface_base';
 import ViewPoint from '../../model/view_point';
 import Floor from '../../model/floor';
-import { IsolateOption, Bim3DEvent, OpacityOption } from '../../enums';
+import { IsolateOption, Bim3DEvent, OpacityEnum, RestoreEnum } from '../../enums';
 import { ComponentFilter } from '../../model/filter';
 import needRender from '../../decorators/render';
 import { HighlightOption } from '../../model';
 import BimfaceMarker from './bimface_marker';
 import debugLog from '../../decorators/debug_log';
 import CollectionUtils from '../../util/collect-util';
+import OpacityOption from '../../model/opacity_option';
 
 const MARKER_FIELD = Symbol('Bimface#MarkerField');
 const MULTI_FIELD = Symbol('Bimface#IsMultiField');
@@ -351,15 +352,61 @@ export default class Bimface3DModel extends BimfaceBase implements IBim3DModel, 
      * 设置构件半透明，或取消构件半透明
      * @param option 设置状态
      * @param componentIds 构件id列表，如果为空，则会设置整个模型
+     * @param opacity 透明度，取值范围[0, 1]，默认值为1
      */
     @needRender()
     setComponentsOpacity(option: OpacityOption, componentIds?: string[]): void {
-        if (CollectionUtils.isEmpty(componentIds)) {
-            option === OpacityOption.Opaque
-                ? this.viewer3D.opaqueAllComponents()
-                : this.viewer3D.transparentAllComponents();
+        if (option.opacityType === OpacityEnum.Custom) {
+            if (CollectionUtils.isEmpty(componentIds)) {
+                this.viewer3D.overrideComponentsOpacityById(componentIds, option.opacity, option.modelId);
+            }
         } else {
-            this.viewer3D.setComponentsOpacity(componentIds, option);
+            if (CollectionUtils.isEmpty(componentIds)) {
+                option.opacityType === OpacityEnum.Opaque
+                    ? this.viewer3D.opaqueAllComponents()
+                    : this.viewer3D.transparentAllComponents();
+            } else {
+                this.viewer3D.setComponentsOpacity(componentIds, option);
+            }
+        }
+    }
+
+    /**
+     * 恢复默认显示，包括着色、选择、隔离、半透明、空间等等
+     * @param restoreFlag 恢复的内容，{@link RestoreEnum}的并集
+     */
+    @needRender()
+    restoreDefault(restoreFlag: number = 0) {
+        if (restoreFlag === RestoreEnum.All) {
+            this.viewer3D.restoreAllDefault();
+        }
+
+        if ((restoreFlag & RestoreEnum.Color) === RestoreEnum.Color) {
+            this.viewer3D.clearOverrideColorComponents();
+        }
+
+        if ((restoreFlag & RestoreEnum.Selection) === RestoreEnum.Selection) {
+            this.viewer3D.clearSelectedComponents();
+        }
+
+        if ((restoreFlag & RestoreEnum.Isolate) === RestoreEnum.Isolate) {
+            this.viewer3D.clearIsolation();
+        }
+
+        if ((restoreFlag & RestoreEnum.Translucent) === RestoreEnum.Translucent) {
+            this.viewer3D.opaqueAllComponents();
+        }
+
+        if ((restoreFlag & RestoreEnum.Room) === RestoreEnum.Room) {
+            this.viewer3D.clearAllRooms();
+        }
+
+        if ((restoreFlag & RestoreEnum.Blink) === RestoreEnum.Blink) {
+            this.viewer3D.clearAllBlinkComponents();
+        }
+
+        if ((restoreFlag & RestoreEnum.FloorExplosion) === RestoreEnum.FloorExplosion) {
+            this.viewer3D.clearFloorExplosion();
         }
     }
 

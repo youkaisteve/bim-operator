@@ -1,5 +1,7 @@
 {
-  "extends": [
-    "tslint-midway-contrib"
-  ]
+    "extends": ["tslint-midway-contrib"],
+    "rules": {
+        "no-bitwise": false,
+        "no-inferrable-types": [true, "ignore-params", "ignore-properties"]
+    }
 }
