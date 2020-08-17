@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.4.1](https://github.com/youkaisteve/bim-operator/compare/v1.4.0...v1.4.1) (2020-08-17)
+
+
+### Bug Fixes
+
+* **bim3dmodel:** setComponentsOpacity if error ([16b53dc](https://github.com/youkaisteve/bim-operator/commit/16b53dcf51bdf9b6b41bd1e2454d00bf8c4a7936))
+
 ## 1.4.0 (2020-08-07)
 
 
