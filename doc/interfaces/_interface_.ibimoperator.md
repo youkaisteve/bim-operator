@@ -25,7 +25,7 @@
 
 • **bim3DModel**: *[IBim3DModel](_interface_.ibim3dmodel.md)*
 
-*Defined in [interface.ts:24](https://github.com/youkaisteve/bim-operator/blob/30e800a/src/interface.ts#L24)*
+*Defined in [interface.ts:24](https://github.com/youkaisteve/bim-operator/blob/16b53dc/src/interface.ts#L24)*
 
 ___
 
@@ -33,4 +33,4 @@ ___
 
 • **bimDrawing**: *[IBimDrawing](_interface_.ibimdrawing.md)*
 
-*Defined in [interface.ts:25](https://github.com/youkaisteve/bim-operator/blob/30e800a/src/interface.ts#L25)*
+*Defined in [interface.ts:25](https://github.com/youkaisteve/bim-operator/blob/16b53dc/src/interface.ts#L25)*

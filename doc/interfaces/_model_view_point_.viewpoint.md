@@ -21,7 +21,7 @@
 
 • **cameraStatus**: *object*
 
-*Defined in [model/view_point.ts:8](https://github.com/youkaisteve/bim-operator/blob/30e800a/src/model/view_point.ts#L8)*
+*Defined in [model/view_point.ts:8](https://github.com/youkaisteve/bim-operator/blob/16b53dc/src/model/view_point.ts#L8)*
 
 视点的相机状态
 
@@ -31,6 +31,6 @@ ___
 
 • **thumbnail**: *any*
 
-*Defined in [model/view_point.ts:12](https://github.com/youkaisteve/bim-operator/blob/30e800a/src/model/view_point.ts#L12)*
+*Defined in [model/view_point.ts:12](https://github.com/youkaisteve/bim-operator/blob/16b53dc/src/model/view_point.ts#L12)*
 
 视点的缩略图(base64——data:image/png;base64,xxxx)

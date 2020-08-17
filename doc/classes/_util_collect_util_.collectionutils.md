@@ -20,7 +20,7 @@
 
 ▸ **isEmpty**(`collection`: any[]): *boolean*
 
-*Defined in [util/collect-util.ts:9](https://github.com/youkaisteve/bim-operator/blob/30e800a/src/util/collect-util.ts#L9)*
+*Defined in [util/collect-util.ts:9](https://github.com/youkaisteve/bim-operator/blob/16b53dc/src/util/collect-util.ts#L9)*
 
 是否为空
 
