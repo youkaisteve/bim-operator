@@ -357,7 +357,7 @@ export default class Bimface3DModel extends BimfaceBase implements IBim3DModel, 
     @needRender()
     setComponentsOpacity(option: OpacityOption, componentIds?: string[]): void {
         if (option.opacityType === OpacityEnum.Custom) {
-            if (CollectionUtils.isEmpty(componentIds)) {
+            if (!CollectionUtils.isEmpty(componentIds)) {
                 this.viewer3D.overrideComponentsOpacityById(componentIds, option.opacity, option.modelId);
             }
         } else {
