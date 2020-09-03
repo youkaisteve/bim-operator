@@ -88,7 +88,7 @@ export default class Bimface3DModel extends BimfaceBase implements IBim3DModel, 
         // 清除dom
         this.dispose(options);
 
-        await this.initSDK();
+        await this.initSDK(options.sdk);
         const viewMetaData = await this.loadSDK(options);
 
         const domShow = document.getElementById(options.domId);

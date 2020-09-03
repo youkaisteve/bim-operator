@@ -30,7 +30,11 @@ export default abstract class BimfaceBase {
         this.context = context;
     }
 
-    async initSDK() {
+    /**
+     * 初始化SDK
+     * @param sdkPath sdk路径，可为空
+     */
+    async initSDK(sdkPath?: string) {
         if (!window.BimfaceSDKLoaderConfig) {
             await remoteLoad(BIMFACE_JS_SDK);
         }
