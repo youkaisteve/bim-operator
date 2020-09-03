@@ -1,4 +1,4 @@
-[@yzw/bim-operator - v1.4.1](../README.md) › [Globals](../globals.md) › ["model/floor"](_model_floor_.md)
+[@yzw/bim-operator - v1.5.0](../README.md) › [Globals](../globals.md) › ["model/floor"](_model_floor_.md)
 
 # External module: "model/floor"
 

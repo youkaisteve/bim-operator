@@ -1,4 +1,4 @@
-[@yzw/bim-operator - v1.4.1](../README.md) › [Globals](../globals.md) › ["interface"](../modules/_interface_.md) › [IBimDrawing](_interface_.ibimdrawing.md)
+[@yzw/bim-operator - v1.5.0](../README.md) › [Globals](../globals.md) › ["interface"](../modules/_interface_.md) › [IBimDrawing](_interface_.ibimdrawing.md)
 
 # Interface: IBimDrawing
 
@@ -25,7 +25,7 @@ Bim图纸操作
 
 ▸ **load**(`options`: any): *Promise‹void›*
 
-*Defined in [interface.ts:197](https://github.com/youkaisteve/bim-operator/blob/721f095/src/interface.ts#L197)*
+*Defined in [interface.ts:197](https://github.com/youkaisteve/bim-operator/blob/d807e84/src/interface.ts#L197)*
 
 加载模型
 
@@ -43,7 +43,7 @@ ___
 
 ▸ **setDisplayMode**(`model`: [DrawingDisplayMode](../enums/_enums_.drawingdisplaymode.md), `customOptions`: any): *void*
 
-*Defined in [interface.ts:205](https://github.com/youkaisteve/bim-operator/blob/721f095/src/interface.ts#L205)*
+*Defined in [interface.ts:205](https://github.com/youkaisteve/bim-operator/blob/d807e84/src/interface.ts#L205)*
 
 设置展示模式
 

@@ -1,4 +1,4 @@
-[@yzw/bim-operator - v1.4.1](../README.md) › [Globals](../globals.md) › ["model/floor"](../modules/_model_floor_.md) › [Floor](_model_floor_.floor.md)
+[@yzw/bim-operator - v1.5.0](../README.md) › [Globals](../globals.md) › ["model/floor"](../modules/_model_floor_.md) › [Floor](_model_floor_.floor.md)
 
 # Interface: Floor
 
@@ -27,7 +27,7 @@
 
 *Inherited from [ModelBase](_model_base_.modelbase.md).[fileId](_model_base_.modelbase.md#fileid)*
 
-*Defined in [model/base.ts:8](https://github.com/youkaisteve/bim-operator/blob/721f095/src/model/base.ts#L8)*
+*Defined in [model/base.ts:8](https://github.com/youkaisteve/bim-operator/blob/d807e84/src/model/base.ts#L8)*
 
 单模型id
 
@@ -37,7 +37,7 @@ ___
 
 • **floorId**: *string | number*
 
-*Defined in [model/floor.ts:10](https://github.com/youkaisteve/bim-operator/blob/721f095/src/model/floor.ts#L10)*
+*Defined in [model/floor.ts:10](https://github.com/youkaisteve/bim-operator/blob/d807e84/src/model/floor.ts#L10)*
 
 楼层id
 
@@ -47,7 +47,7 @@ ___
 
 • **floorName**: *string*
 
-*Defined in [model/floor.ts:14](https://github.com/youkaisteve/bim-operator/blob/721f095/src/model/floor.ts#L14)*
+*Defined in [model/floor.ts:14](https://github.com/youkaisteve/bim-operator/blob/d807e84/src/model/floor.ts#L14)*
 
 楼层名称
 
@@ -59,6 +59,6 @@ ___
 
 *Inherited from [ModelBase](_model_base_.modelbase.md).[integrateId](_model_base_.modelbase.md#optional-integrateid)*
 
-*Defined in [model/base.ts:12](https://github.com/youkaisteve/bim-operator/blob/721f095/src/model/base.ts#L12)*
+*Defined in [model/base.ts:12](https://github.com/youkaisteve/bim-operator/blob/d807e84/src/model/base.ts#L12)*
 
 组合模型id
