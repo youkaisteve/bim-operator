@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.5.0](https://github.com/youkaisteve/bim-operator/compare/v1.4.1...v1.5.0) (2020-09-03)
+
+
+### Features
+
+* **bimface:** support custom sdk ([721f095](https://github.com/youkaisteve/bim-operator/commit/721f09539a49303764d1677c1b69f6c7333e0755))
+
 ### [1.4.1](https://github.com/youkaisteve/bim-operator/compare/v1.4.0...v1.4.1) (2020-08-17)
 
 
