@@ -3,4 +3,5 @@ interface Window {
   BimfaceSDKLoaderConfig: any;
   BimfaceSDKLoader: any;
   Glodon: any;
+  THREE: any;
 }

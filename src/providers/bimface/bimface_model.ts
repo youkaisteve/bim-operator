@@ -1,4 +1,4 @@
-import { IBim3DModel, IMarker, IBimCustom, IDispose } from '../../interface';
+import { IBim3DModel, IMarker, IBimCustom, IDispose, IExternal } from '../../interface';
 import BimfaceBase from './bimface_base';
 import ViewPoint from '../../model/view_point';
 import Floor from '../../model/floor';
@@ -9,9 +9,11 @@ import { HighlightOption } from '../../model';
 import BimfaceMarker from './bimface_marker';
 import debugLog from '../../decorators/debug_log';
 import CollectionUtils from '../../util/collect-util';
-import OpacityOption from '../../model/opacity_option';
+import { OpacityOption } from '../../model/options';
+import BimfaceExternal from './bimface_external';
 
 const MARKER_FIELD = Symbol('Bimface#MarkerField');
+const EXTERNAL_FIELD = Symbol('Bimface#ExternalField');
 const MULTI_FIELD = Symbol('Bimface#IsMultiField');
 
 /**
@@ -24,6 +26,7 @@ export default class Bimface3DModel extends BimfaceBase implements IBim3DModel, 
      */
     viewer3D: any;
     [MARKER_FIELD]: IMarker;
+    [EXTERNAL_FIELD]: IExternal;
     /**
      * 是否在批量执行
      */
@@ -37,6 +40,16 @@ export default class Bimface3DModel extends BimfaceBase implements IBim3DModel, 
             this[MARKER_FIELD] = new BimfaceMarker(this.viewer3D);
         }
         return this[MARKER_FIELD];
+    }
+
+    /**
+     * 外部构件管理器
+     */
+    get external(): IExternal {
+        if (this.viewer3D && !this[EXTERNAL_FIELD]) {
+            this[EXTERNAL_FIELD] = new BimfaceExternal(this.viewer3D);
+        }
+        return this[EXTERNAL_FIELD];
     }
 
     /**

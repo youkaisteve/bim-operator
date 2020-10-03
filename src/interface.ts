@@ -5,7 +5,7 @@ import { IsolateOption, DrawingDisplayMode } from './enums';
 import { ComponentFilter } from './model/filter';
 import { HighlightOption } from './model';
 import CustomButton from './model/custom_button';
-import OpacityOption from './model/opacity_option';
+import { OffsetOption, OpacityOption, RotateOption, ScaleOption, TranslateOption } from './model/options';
 
 /**
  * 上下文
@@ -30,6 +30,7 @@ export interface IBimOperator {
  */
 export interface IBim3DModel {
     marker: IMarker;
+    external: IExternal;
     /**
      * 加载模型
      * @param options 选项，厂商不同配置会有差别
@@ -184,6 +185,61 @@ export interface IMarker {
      * 清除所有3D标记
      */
     clear3dMarker(): void;
+}
+
+/**
+ * bimface外部构件管理
+ */
+export interface IExternal {
+    /**
+     * 添加外部构件
+     * @param name 外部构件名称，自定义
+     * @param url 外部构件url
+     */
+    add(name: string, url: string): Promise<string>;
+    /**
+     * 根据Id移除外部构件
+     * @param objectId 外部构件id
+     */
+    removeById(objectId: string): any;
+    /**
+     * 清除所有构件
+     */
+    clear(): void;
+    /**
+     * 根据ID将外部构件沿着局部坐标系轴旋转
+     * @param objectId 外部构件id
+     * @param option 旋转选项
+     */
+    rotate(objectId: string, option: RotateOption): void;
+
+    /**
+     * 根据局部坐标移动外部构件(局部坐标就是相对坐标，根据构件的方向而改变)
+     * @param objectId 外部构件id
+     * @param option 移动选项
+     */
+    offset(objectId: string, option: OffsetOption): void;
+
+    /**
+     * 根据ID对外部构件在局部坐标系下进行缩放，缩放中心为局部坐标原点
+     * @param objectId 外部构件id
+     * @param option 移动选项
+     */
+    scale(objectId: string, option: ScaleOption): void;
+
+    /**
+     * 设置外部构件的空间坐标
+     * @param objectId 外部构件id
+     * @param position 空间坐标
+     */
+    setPosition(objectId: string, position: Position);
+
+    /**
+     * 根据世界坐标移动外部构件(世界坐标也就是绝对坐标，不根据构件的方向而改变)
+     * @param objectId 外部构件id
+     * @param distance 移动选项
+     */
+    translate(objectId: string, option: TranslateOption);
 }
 
 /**
