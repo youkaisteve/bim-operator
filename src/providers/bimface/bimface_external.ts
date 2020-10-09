@@ -1,9 +1,11 @@
+import debugLog from '../../decorators/debug_log';
 import { IExternal } from '../../interface';
 import { RotateOption, OffsetOption, ScaleOption, TranslateOption } from '../../model';
 
 /**
  * bimface外部构件
  */
+@debugLog
 export default class BimfaceExternal implements IExternal {
     externalMgr: any;
     loader: any;
@@ -14,7 +16,7 @@ export default class BimfaceExternal implements IExternal {
         this.loader = new window.THREE.TDSLoader();
     }
     async add(name: string, url: string): Promise<string> {
-        return new Promise(resolve => {
+        return new Promise((resolve) => {
             this.loader.load(url, (object) => {
                 this.externalMgr.addObject(name, object);
                 this.viewer3D.render();
