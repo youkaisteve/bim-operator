@@ -66,7 +66,6 @@ export interface IBim3DModel {
      */
     clearFloorExplosion();
     /**
-    /**
      * 根据条件获取构件
      * @param conditions 查询条件，不同厂商之间可能会有差别
      */
