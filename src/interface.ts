@@ -6,6 +6,7 @@ import { ComponentFilter } from './model/filter';
 import { HighlightOption } from './model';
 import CustomButton from './model/custom_button';
 import { OffsetOption, OpacityOption, RotateOption, ScaleOption, TranslateOption } from './model/options';
+import ContextMenuItem from './model/context_menu_item';
 
 /**
  * 上下文
@@ -15,6 +16,14 @@ export interface IContext {
      * 是否开启debug
      */
     debugOn: boolean;
+    /**
+     * 当前实例渲染的HtmlElementId
+     */
+    elementId?: string;
+    /**
+     * 当前实例的右键菜单
+     */
+    contextMenuItems?: ContextMenuItem[];
 }
 
 /**
@@ -31,6 +40,7 @@ export interface IBimOperator {
 export interface IBim3DModel {
     marker: IMarker;
     external: IExternal;
+    contextMenu: IContextMenu;
     /**
      * 加载模型
      * @param options 选项，厂商不同配置会有差别
@@ -55,6 +65,7 @@ export interface IBim3DModel {
      * 清空楼层爆炸
      */
     clearFloorExplosion();
+    /**
     /**
      * 根据条件获取构件
      * @param conditions 查询条件，不同厂商之间可能会有差别
@@ -281,4 +292,25 @@ export interface IDispose {
      * @param options 销毁选项，和load选项一致
      */
     dispose(options);
+}
+
+/**
+ * 右键菜单管理
+ */
+export interface IContextMenu {
+    /**
+     * 添加菜单
+     * @param menuItems 右键菜单项
+     * @param parentKey 父级key
+     */
+    add(menuItems: ContextMenuItem[], parentKey?: string);
+    /**
+     * 移除右键菜单，如果又子菜单，也会被移除
+     * @param menuKey 菜单的key
+     */
+    remove(menuKey: string);
+    /**
+     * 渲染菜单
+     */
+    render(): void;
 }

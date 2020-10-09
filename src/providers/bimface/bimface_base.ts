@@ -36,7 +36,7 @@ export default abstract class BimfaceBase {
      */
     async initSDK(sdkPath?: string) {
         if (!window.BimfaceSDKLoaderConfig) {
-            await remoteLoad(BIMFACE_JS_SDK);
+            await remoteLoad(sdkPath || BIMFACE_JS_SDK);
         }
     }
 
@@ -53,6 +53,8 @@ export default abstract class BimfaceBase {
         if (!options.viewToken) {
             throw new Error('viewToken missing');
         }
+
+        this.context.elementId = options.domId;
 
         return new Promise((resolve, reject) => {
             const loaderConfig = new window.BimfaceSDKLoaderConfig();

@@ -9,7 +9,6 @@ const MULTI_FIELD = Symbol('Bimface#IsMultiField');
  */
 @debugLog()
 export default class BimfaceDrawing extends BimfaceBase implements IBimDrawing, IBimCustom {
-    app: any;
     viewer2D: any;
     /**
      * 是否在批量执行

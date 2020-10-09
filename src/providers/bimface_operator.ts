@@ -30,4 +30,8 @@ export default class BimfaceOperator implements IBimOperator {
         }
         return this[BIMFACE_DRAWING_FIELD];
     }
+
+    get context(): IContext {
+        return this._context;
+    }
 }

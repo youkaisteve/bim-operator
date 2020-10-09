@@ -1,4 +1,4 @@
-import { IBim3DModel, IMarker, IBimCustom, IDispose, IExternal } from '../../interface';
+import { IBim3DModel, IMarker, IBimCustom, IDispose, IExternal, IContextMenu } from '../../interface';
 import BimfaceBase from './bimface_base';
 import ViewPoint from '../../model/view_point';
 import Floor from '../../model/floor';
@@ -11,10 +11,12 @@ import debugLog from '../../decorators/debug_log';
 import CollectionUtils from '../../util/collect-util';
 import { OpacityOption } from '../../model/options';
 import BimfaceExternal from './bimface_external';
+import BimfaceContextMenu from './bimface_context_menu';
 
 const MARKER_FIELD = Symbol('Bimface#MarkerField');
 const EXTERNAL_FIELD = Symbol('Bimface#ExternalField');
 const MULTI_FIELD = Symbol('Bimface#IsMultiField');
+const CONTEXT_MENU = Symbol('Bimface#ContextMenu');
 
 /**
  * bimface 3D 操作
@@ -27,6 +29,7 @@ export default class Bimface3DModel extends BimfaceBase implements IBim3DModel, 
     viewer3D: any;
     [MARKER_FIELD]: IMarker;
     [EXTERNAL_FIELD]: IExternal;
+    [CONTEXT_MENU]: IContextMenu;
     /**
      * 是否在批量执行
      */
@@ -50,6 +53,16 @@ export default class Bimface3DModel extends BimfaceBase implements IBim3DModel, 
             this[EXTERNAL_FIELD] = new BimfaceExternal(this.viewer3D);
         }
         return this[EXTERNAL_FIELD];
+    }
+
+    /**
+     * 右键菜单
+     */
+    get contextMenu(): IContextMenu {
+        if (this.viewer3D && this.context && !this[CONTEXT_MENU]) {
+            this[CONTEXT_MENU] = new BimfaceContextMenu(this.context);
+        }
+        return this[CONTEXT_MENU];
     }
 
     /**
