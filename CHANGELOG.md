@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.6.1](https://github.com/youkaisteve/bim-operator/compare/v1.6.0...v1.6.1) (2020-10-10)
+
+
+### Bug Fixes
+
+* **bimface:** bimfaceExternal missing () of debuglog ([aeaafe6](https://github.com/youkaisteve/bim-operator/commit/aeaafe6ed775a79ed872d2cce759f1d995cf2fa1))
+
 ## [1.6.0](https://github.com/youkaisteve/bim-operator/compare/v1.5.0...v1.6.0) (2020-10-10)
 
 
