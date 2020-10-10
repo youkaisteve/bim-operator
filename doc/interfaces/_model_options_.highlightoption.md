@@ -1,4 +1,4 @@
-[@yzw/bim-operator - v1.5.0](../README.md) › [Globals](../globals.md) › ["model/options"](../modules/_model_options_.md) › [HighlightOption](_model_options_.highlightoption.md)
+[@yzw/bim-operator - v1.6.0](../README.md) › [Globals](../globals.md) › ["model/options"](../modules/_model_options_.md) › [HighlightOption](_model_options_.highlightoption.md)
 
 # Interface: HighlightOption
 
@@ -22,7 +22,7 @@
 
 • **color**: *string*
 
-*Defined in [src/model/options.ts:9](https://github.com/youkaisteve/bim-operator/blob/90a5443/src/model/options.ts#L9)*
+*Defined in [src/model/options.ts:9](https://github.com/youkaisteve/bim-operator/blob/8ece8e6/src/model/options.ts#L9)*
 
 高亮颜色，默认#FF0000
 
@@ -32,7 +32,7 @@ ___
 
 • **intervalTime**: *number*
 
-*Defined in [src/model/options.ts:17](https://github.com/youkaisteve/bim-operator/blob/90a5443/src/model/options.ts#L17)*
+*Defined in [src/model/options.ts:17](https://github.com/youkaisteve/bim-operator/blob/8ece8e6/src/model/options.ts#L17)*
 
 闪烁间隔，毫秒，默认200
 
@@ -42,6 +42,6 @@ ___
 
 • **opacity**: *number*
 
-*Defined in [src/model/options.ts:13](https://github.com/youkaisteve/bim-operator/blob/90a5443/src/model/options.ts#L13)*
+*Defined in [src/model/options.ts:13](https://github.com/youkaisteve/bim-operator/blob/8ece8e6/src/model/options.ts#L13)*
 
 不透明度，默认为1，即不透明

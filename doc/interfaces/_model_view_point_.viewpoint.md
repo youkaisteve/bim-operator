@@ -1,4 +1,4 @@
-[@yzw/bim-operator - v1.5.0](../README.md) › [Globals](../globals.md) › ["model/view_point"](../modules/_model_view_point_.md) › [ViewPoint](_model_view_point_.viewpoint.md)
+[@yzw/bim-operator - v1.6.0](../README.md) › [Globals](../globals.md) › ["model/view_point"](../modules/_model_view_point_.md) › [ViewPoint](_model_view_point_.viewpoint.md)
 
 # Interface: ViewPoint
 
@@ -21,7 +21,7 @@
 
 • **cameraStatus**: *object*
 
-*Defined in [src/model/view_point.ts:8](https://github.com/youkaisteve/bim-operator/blob/90a5443/src/model/view_point.ts#L8)*
+*Defined in [src/model/view_point.ts:8](https://github.com/youkaisteve/bim-operator/blob/8ece8e6/src/model/view_point.ts#L8)*
 
 视点的相机状态
 
@@ -31,6 +31,6 @@ ___
 
 • **thumbnail**: *any*
 
-*Defined in [src/model/view_point.ts:12](https://github.com/youkaisteve/bim-operator/blob/90a5443/src/model/view_point.ts#L12)*
+*Defined in [src/model/view_point.ts:12](https://github.com/youkaisteve/bim-operator/blob/8ece8e6/src/model/view_point.ts#L12)*
 
 视点的缩略图(base64——data:image/png;base64,xxxx)

@@ -1,6 +1,6 @@
-[@yzw/bim-operator - v1.5.0](README.md) › [Globals](globals.md)
+[@yzw/bim-operator - v1.6.0](README.md) › [Globals](globals.md)
 
-# @yzw/bim-operator - v1.5.0
+# @yzw/bim-operator - v1.6.0
 
 # Bim-Operator
 
@@ -55,4 +55,4 @@ bimDrawing
 
 ## 支持的供应商
 
-bimface
+- bimface —— [示例](https://github.com/youkaisteve/bimface-demo)

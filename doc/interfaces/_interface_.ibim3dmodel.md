@@ -1,4 +1,4 @@
-[@yzw/bim-operator - v1.5.0](../README.md) › [Globals](../globals.md) › ["interface"](../modules/_interface_.md) › [IBim3DModel](_interface_.ibim3dmodel.md)
+[@yzw/bim-operator - v1.6.0](../README.md) › [Globals](../globals.md) › ["interface"](../modules/_interface_.md) › [IBim3DModel](_interface_.ibim3dmodel.md)
 
 # Interface: IBim3DModel
 
@@ -55,7 +55,7 @@
 
 • **contextMenu**: *[IContextMenu](_interface_.icontextmenu.md)*
 
-*Defined in [src/interface.ts:43](https://github.com/youkaisteve/bim-operator/blob/90a5443/src/interface.ts#L43)*
+*Defined in [src/interface.ts:43](https://github.com/youkaisteve/bim-operator/blob/8ece8e6/src/interface.ts#L43)*
 
 ___
 
@@ -63,7 +63,7 @@ ___
 
 • **external**: *[IExternal](_interface_.iexternal.md)*
 
-*Defined in [src/interface.ts:42](https://github.com/youkaisteve/bim-operator/blob/90a5443/src/interface.ts#L42)*
+*Defined in [src/interface.ts:42](https://github.com/youkaisteve/bim-operator/blob/8ece8e6/src/interface.ts#L42)*
 
 ___
 
@@ -71,7 +71,7 @@ ___
 
 • **marker**: *[IMarker](_interface_.imarker.md)*
 
-*Defined in [src/interface.ts:41](https://github.com/youkaisteve/bim-operator/blob/90a5443/src/interface.ts#L41)*
+*Defined in [src/interface.ts:41](https://github.com/youkaisteve/bim-operator/blob/8ece8e6/src/interface.ts#L41)*
 
 ## Methods
 
@@ -79,7 +79,7 @@ ___
 
 ▸ **clearFloorExplosion**(): *any*
 
-*Defined in [src/interface.ts:67](https://github.com/youkaisteve/bim-operator/blob/90a5443/src/interface.ts#L67)*
+*Defined in [src/interface.ts:67](https://github.com/youkaisteve/bim-operator/blob/8ece8e6/src/interface.ts#L67)*
 
 清空楼层爆炸
 
@@ -91,7 +91,7 @@ ___
 
 ▸ **clearHighlightComponents**(`componentIds?`: string[]): *void*
 
-*Defined in [src/interface.ts:106](https://github.com/youkaisteve/bim-operator/blob/90a5443/src/interface.ts#L106)*
+*Defined in [src/interface.ts:106](https://github.com/youkaisteve/bim-operator/blob/8ece8e6/src/interface.ts#L106)*
 
 清除所有高亮构件
 
@@ -109,7 +109,7 @@ ___
 
 ▸ **clearIsolation**(): *void*
 
-*Defined in [src/interface.ts:95](https://github.com/youkaisteve/bim-operator/blob/90a5443/src/interface.ts#L95)*
+*Defined in [src/interface.ts:95](https://github.com/youkaisteve/bim-operator/blob/8ece8e6/src/interface.ts#L95)*
 
 清空隔离
 
@@ -121,7 +121,7 @@ ___
 
 ▸ **clearSelectedComponents**(): *void*
 
-*Defined in [src/interface.ts:120](https://github.com/youkaisteve/bim-operator/blob/90a5443/src/interface.ts#L120)*
+*Defined in [src/interface.ts:120](https://github.com/youkaisteve/bim-operator/blob/8ece8e6/src/interface.ts#L120)*
 
 清空选中构件
 
@@ -133,7 +133,7 @@ ___
 
 ▸ **explosionFloor**(`floorIds`: string[], `extend`: number): *void*
 
-*Defined in [src/interface.ts:63](https://github.com/youkaisteve/bim-operator/blob/90a5443/src/interface.ts#L63)*
+*Defined in [src/interface.ts:63](https://github.com/youkaisteve/bim-operator/blob/8ece8e6/src/interface.ts#L63)*
 
 楼层爆炸
 
@@ -152,7 +152,7 @@ ___
 
 ▸ **getComponentByCondition**(`fileId`: string, `conditions`: [ComponentFilter](_model_filter_.componentfilter.md)[]): *Promise‹string[]›*
 
-*Defined in [src/interface.ts:72](https://github.com/youkaisteve/bim-operator/blob/90a5443/src/interface.ts#L72)*
+*Defined in [src/interface.ts:72](https://github.com/youkaisteve/bim-operator/blob/8ece8e6/src/interface.ts#L72)*
 
 根据条件获取构件
 
@@ -171,7 +171,7 @@ ___
 
 ▸ **getFloors**(): *Promise‹[Floor](_model_floor_.floor.md)[]›*
 
-*Defined in [src/interface.ts:52](https://github.com/youkaisteve/bim-operator/blob/90a5443/src/interface.ts#L52)*
+*Defined in [src/interface.ts:52](https://github.com/youkaisteve/bim-operator/blob/8ece8e6/src/interface.ts#L52)*
 
 获取所有楼层
 
@@ -183,7 +183,7 @@ ___
 
 ▸ **getFloorsbyFileId**(`fileId`: string): *Promise‹[Floor](_model_floor_.floor.md)[]›*
 
-*Defined in [src/interface.ts:57](https://github.com/youkaisteve/bim-operator/blob/90a5443/src/interface.ts#L57)*
+*Defined in [src/interface.ts:57](https://github.com/youkaisteve/bim-operator/blob/8ece8e6/src/interface.ts#L57)*
 
 获取单个模型的楼层（在集成模型中使用）
 
@@ -201,7 +201,7 @@ ___
 
 ▸ **getSelectedComponents**(): *string[]*
 
-*Defined in [src/interface.ts:124](https://github.com/youkaisteve/bim-operator/blob/90a5443/src/interface.ts#L124)*
+*Defined in [src/interface.ts:124](https://github.com/youkaisteve/bim-operator/blob/8ece8e6/src/interface.ts#L124)*
 
 获取选中的构件
 
@@ -213,7 +213,7 @@ ___
 
 ▸ **getViewPoint**(`options`: any): *Promise‹[ViewPoint](_model_view_point_.viewpoint.md)›*
 
-*Defined in [src/interface.ts:79](https://github.com/youkaisteve/bim-operator/blob/90a5443/src/interface.ts#L79)*
+*Defined in [src/interface.ts:79](https://github.com/youkaisteve/bim-operator/blob/8ece8e6/src/interface.ts#L79)*
 
 获取视点
 
@@ -231,7 +231,7 @@ ___
 
 ▸ **hideComponents**(`componentIds?`: string[]): *void*
 
-*Defined in [src/interface.ts:149](https://github.com/youkaisteve/bim-operator/blob/90a5443/src/interface.ts#L149)*
+*Defined in [src/interface.ts:149](https://github.com/youkaisteve/bim-operator/blob/8ece8e6/src/interface.ts#L149)*
 
 隐藏构件
 
@@ -249,7 +249,7 @@ ___
 
 ▸ **highlightComponents**(`componentIds`: string[], `options`: [HighlightOption](_model_options_.highlightoption.md)): *void*
 
-*Defined in [src/interface.ts:101](https://github.com/youkaisteve/bim-operator/blob/90a5443/src/interface.ts#L101)*
+*Defined in [src/interface.ts:101](https://github.com/youkaisteve/bim-operator/blob/8ece8e6/src/interface.ts#L101)*
 
 高亮构件
 
@@ -268,7 +268,7 @@ ___
 
 ▸ **isolateComponent**(`componentIds`: string[], `option`: [IsolateOption](../enums/_enums_.isolateoption.md)): *void*
 
-*Defined in [src/interface.ts:87](https://github.com/youkaisteve/bim-operator/blob/90a5443/src/interface.ts#L87)*
+*Defined in [src/interface.ts:87](https://github.com/youkaisteve/bim-operator/blob/8ece8e6/src/interface.ts#L87)*
 
 隔离构件
 
@@ -287,7 +287,7 @@ ___
 
 ▸ **isolateComponentByCondition**(`conditions`: [ComponentFilter](_model_filter_.componentfilter.md)[], `option`: [IsolateOption](../enums/_enums_.isolateoption.md)): *void*
 
-*Defined in [src/interface.ts:91](https://github.com/youkaisteve/bim-operator/blob/90a5443/src/interface.ts#L91)*
+*Defined in [src/interface.ts:91](https://github.com/youkaisteve/bim-operator/blob/8ece8e6/src/interface.ts#L91)*
 
 根据条件隔离构件
 
@@ -306,7 +306,7 @@ ___
 
 ▸ **load**(`options`: any): *Promise‹void›*
 
-*Defined in [src/interface.ts:48](https://github.com/youkaisteve/bim-operator/blob/90a5443/src/interface.ts#L48)*
+*Defined in [src/interface.ts:48](https://github.com/youkaisteve/bim-operator/blob/8ece8e6/src/interface.ts#L48)*
 
 加载模型
 
@@ -324,7 +324,7 @@ ___
 
 ▸ **resize**(`width?`: number, `height?`: number): *void*
 
-*Defined in [src/interface.ts:172](https://github.com/youkaisteve/bim-operator/blob/90a5443/src/interface.ts#L172)*
+*Defined in [src/interface.ts:172](https://github.com/youkaisteve/bim-operator/blob/8ece8e6/src/interface.ts#L172)*
 
 设置场景显示大小
 
@@ -343,7 +343,7 @@ ___
 
 ▸ **restoreComponentsColor**(`componentIds`: string[]): *void*
 
-*Defined in [src/interface.ts:139](https://github.com/youkaisteve/bim-operator/blob/90a5443/src/interface.ts#L139)*
+*Defined in [src/interface.ts:139](https://github.com/youkaisteve/bim-operator/blob/8ece8e6/src/interface.ts#L139)*
 
 恢复构件颜色
 
@@ -361,7 +361,7 @@ ___
 
 ▸ **restoreComponentsColorByCondition**(`conditions`: [ComponentFilter](_model_filter_.componentfilter.md)[]): *void*
 
-*Defined in [src/interface.ts:144](https://github.com/youkaisteve/bim-operator/blob/90a5443/src/interface.ts#L144)*
+*Defined in [src/interface.ts:144](https://github.com/youkaisteve/bim-operator/blob/8ece8e6/src/interface.ts#L144)*
 
 根据条件恢复构件颜色
 
@@ -379,7 +379,7 @@ ___
 
 ▸ **restoreDefault**(`restoreFlag`: number): *any*
 
-*Defined in [src/interface.ts:166](https://github.com/youkaisteve/bim-operator/blob/90a5443/src/interface.ts#L166)*
+*Defined in [src/interface.ts:166](https://github.com/youkaisteve/bim-operator/blob/8ece8e6/src/interface.ts#L166)*
 
 恢复默认显示，包括着色、选择、隔离、半透明、空间等等
 
@@ -397,7 +397,7 @@ ___
 
 ▸ **selectComponents**(`componentIds`: string[]): *void*
 
-*Defined in [src/interface.ts:111](https://github.com/youkaisteve/bim-operator/blob/90a5443/src/interface.ts#L111)*
+*Defined in [src/interface.ts:111](https://github.com/youkaisteve/bim-operator/blob/8ece8e6/src/interface.ts#L111)*
 
 选中构件
 
@@ -415,7 +415,7 @@ ___
 
 ▸ **selectComponentsByCondition**(`conditions`: [ComponentFilter](_model_filter_.componentfilter.md)[]): *void*
 
-*Defined in [src/interface.ts:116](https://github.com/youkaisteve/bim-operator/blob/90a5443/src/interface.ts#L116)*
+*Defined in [src/interface.ts:116](https://github.com/youkaisteve/bim-operator/blob/8ece8e6/src/interface.ts#L116)*
 
 根据条件选中构件
 
@@ -433,7 +433,7 @@ ___
 
 ▸ **setComponentsColor**(`componentIds`: string[], `color`: string): *void*
 
-*Defined in [src/interface.ts:129](https://github.com/youkaisteve/bim-operator/blob/90a5443/src/interface.ts#L129)*
+*Defined in [src/interface.ts:129](https://github.com/youkaisteve/bim-operator/blob/8ece8e6/src/interface.ts#L129)*
 
 设置构件ids
 
@@ -452,7 +452,7 @@ ___
 
 ▸ **setComponentsColorByCondition**(`conditions`: [ComponentFilter](_model_filter_.componentfilter.md)[], `color`: string): *void*
 
-*Defined in [src/interface.ts:134](https://github.com/youkaisteve/bim-operator/blob/90a5443/src/interface.ts#L134)*
+*Defined in [src/interface.ts:134](https://github.com/youkaisteve/bim-operator/blob/8ece8e6/src/interface.ts#L134)*
 
 根据条件设置构件颜色
 
@@ -471,7 +471,7 @@ ___
 
 ▸ **setComponentsOpacity**(`option`: [OpacityOption](_model_options_.opacityoption.md), `componentIds`: string[]): *void*
 
-*Defined in [src/interface.ts:161](https://github.com/youkaisteve/bim-operator/blob/90a5443/src/interface.ts#L161)*
+*Defined in [src/interface.ts:161](https://github.com/youkaisteve/bim-operator/blob/8ece8e6/src/interface.ts#L161)*
 
 设置构件透明度, 包括半透明
 
@@ -490,7 +490,7 @@ ___
 
 ▸ **setViewPoint**(`viewPoint`: [ViewPoint](_model_view_point_.viewpoint.md)): *void*
 
-*Defined in [src/interface.ts:83](https://github.com/youkaisteve/bim-operator/blob/90a5443/src/interface.ts#L83)*
+*Defined in [src/interface.ts:83](https://github.com/youkaisteve/bim-operator/blob/8ece8e6/src/interface.ts#L83)*
 
 设置视点
 
@@ -508,7 +508,7 @@ ___
 
 ▸ **showComponents**(`componentIds?`: string[], `progressCallback?`: function): *Promise‹void›*
 
-*Defined in [src/interface.ts:155](https://github.com/youkaisteve/bim-operator/blob/90a5443/src/interface.ts#L155)*
+*Defined in [src/interface.ts:155](https://github.com/youkaisteve/bim-operator/blob/8ece8e6/src/interface.ts#L155)*
 
 显示模型构件
 
