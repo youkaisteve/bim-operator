@@ -51,4 +51,4 @@ bimDrawing
 
 ## 支持的供应商
 
-bimface
+- bimface —— [示例](https://github.com/youkaisteve/bimface-demo)
