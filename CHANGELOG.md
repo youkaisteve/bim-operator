@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.6.0](https://github.com/youkaisteve/bim-operator/compare/v1.5.0...v1.6.0) (2020-10-10)
+
+
+### Features
+
+* **bimface:** add context menu ([9dec33d](https://github.com/youkaisteve/bim-operator/commit/9dec33de4e5c00debf119ed50b0e8e029245640b))
+* **externalmgr:** add externalMgr of bimface ([5137604](https://github.com/youkaisteve/bim-operator/commit/5137604c0a522354d689bf706eff05f1e29bd93c))
+
 ## [1.5.0](https://github.com/youkaisteve/bim-operator/compare/v1.4.1...v1.5.0) (2020-09-03)
 
 
