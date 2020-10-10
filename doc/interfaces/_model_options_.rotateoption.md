@@ -22,7 +22,7 @@
 
 • **axis**: *string*
 
-*Defined in [src/model/options.ts:49](https://github.com/youkaisteve/bim-operator/blob/8ece8e6/src/model/options.ts#L49)*
+*Defined in [src/model/options.ts:49](https://github.com/youkaisteve/bim-operator/blob/aeaafe6/src/model/options.ts#L49)*
 
 坐标轴，只能是x,y,z
 
@@ -32,7 +32,7 @@ ___
 
 • **objectId**: *string*
 
-*Defined in [src/model/options.ts:45](https://github.com/youkaisteve/bim-operator/blob/8ece8e6/src/model/options.ts#L45)*
+*Defined in [src/model/options.ts:45](https://github.com/youkaisteve/bim-operator/blob/aeaafe6/src/model/options.ts#L45)*
 
 外部构件id
 
@@ -42,6 +42,6 @@ ___
 
 • **radian**: *number*
 
-*Defined in [src/model/options.ts:53](https://github.com/youkaisteve/bim-operator/blob/8ece8e6/src/model/options.ts#L53)*
+*Defined in [src/model/options.ts:53](https://github.com/youkaisteve/bim-operator/blob/aeaafe6/src/model/options.ts#L53)*
 
 旋转的弧度值，例如PI / 6,即30度，默认逆时针旋转

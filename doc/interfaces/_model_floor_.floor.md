@@ -27,7 +27,7 @@
 
 *Inherited from [ModelBase](_model_base_.modelbase.md).[fileId](_model_base_.modelbase.md#fileid)*
 
-*Defined in [src/model/base.ts:8](https://github.com/youkaisteve/bim-operator/blob/8ece8e6/src/model/base.ts#L8)*
+*Defined in [src/model/base.ts:8](https://github.com/youkaisteve/bim-operator/blob/aeaafe6/src/model/base.ts#L8)*
 
 单模型id
 
@@ -37,7 +37,7 @@ ___
 
 • **floorId**: *string | number*
 
-*Defined in [src/model/floor.ts:10](https://github.com/youkaisteve/bim-operator/blob/8ece8e6/src/model/floor.ts#L10)*
+*Defined in [src/model/floor.ts:10](https://github.com/youkaisteve/bim-operator/blob/aeaafe6/src/model/floor.ts#L10)*
 
 楼层id
 
@@ -47,7 +47,7 @@ ___
 
 • **floorName**: *string*
 
-*Defined in [src/model/floor.ts:14](https://github.com/youkaisteve/bim-operator/blob/8ece8e6/src/model/floor.ts#L14)*
+*Defined in [src/model/floor.ts:14](https://github.com/youkaisteve/bim-operator/blob/aeaafe6/src/model/floor.ts#L14)*
 
 楼层名称
 
@@ -59,6 +59,6 @@ ___
 
 *Inherited from [ModelBase](_model_base_.modelbase.md).[integrateId](_model_base_.modelbase.md#optional-integrateid)*
 
-*Defined in [src/model/base.ts:12](https://github.com/youkaisteve/bim-operator/blob/8ece8e6/src/model/base.ts#L12)*
+*Defined in [src/model/base.ts:12](https://github.com/youkaisteve/bim-operator/blob/aeaafe6/src/model/base.ts#L12)*
 
 组合模型id

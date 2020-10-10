@@ -14,7 +14,7 @@
 
 ▸ **remoteLoad**(`url`: string, `hasCallback?`: any): *Promise‹any›*
 
-*Defined in [src/util/remote-load.ts:6](https://github.com/youkaisteve/bim-operator/blob/8ece8e6/src/util/remote-load.ts#L6)*
+*Defined in [src/util/remote-load.ts:6](https://github.com/youkaisteve/bim-operator/blob/aeaafe6/src/util/remote-load.ts#L6)*
 
 远程加载脚本
 

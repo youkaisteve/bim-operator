@@ -25,7 +25,7 @@ Bim自定义
 
 ▸ **addCustomButtons**(`customButtons`: [CustomButton](_model_custom_button_.custombutton.md)[]): *void*
 
-*Defined in [src/interface.ts:282](https://github.com/youkaisteve/bim-operator/blob/8ece8e6/src/interface.ts#L282)*
+*Defined in [src/interface.ts:282](https://github.com/youkaisteve/bim-operator/blob/aeaafe6/src/interface.ts#L282)*
 
 自定义工具条按钮
 

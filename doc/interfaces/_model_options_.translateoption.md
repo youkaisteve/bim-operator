@@ -22,7 +22,7 @@
 
 • **x**: *number*
 
-*Defined in [src/model/options.ts:98](https://github.com/youkaisteve/bim-operator/blob/8ece8e6/src/model/options.ts#L98)*
+*Defined in [src/model/options.ts:98](https://github.com/youkaisteve/bim-operator/blob/aeaafe6/src/model/options.ts#L98)*
 
 x轴缩放倍数
 
@@ -32,7 +32,7 @@ ___
 
 • **y**: *number*
 
-*Defined in [src/model/options.ts:102](https://github.com/youkaisteve/bim-operator/blob/8ece8e6/src/model/options.ts#L102)*
+*Defined in [src/model/options.ts:102](https://github.com/youkaisteve/bim-operator/blob/aeaafe6/src/model/options.ts#L102)*
 
 y轴缩放倍数
 
@@ -42,6 +42,6 @@ ___
 
 • **z**: *number*
 
-*Defined in [src/model/options.ts:106](https://github.com/youkaisteve/bim-operator/blob/8ece8e6/src/model/options.ts#L106)*
+*Defined in [src/model/options.ts:106](https://github.com/youkaisteve/bim-operator/blob/aeaafe6/src/model/options.ts#L106)*
 
 z轴缩放倍数

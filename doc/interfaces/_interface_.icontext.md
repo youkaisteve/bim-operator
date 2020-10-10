@@ -22,7 +22,7 @@
 
 • **contextMenuItems**? : *[ContextMenuItem](_model_context_menu_item_.contextmenuitem.md)[]*
 
-*Defined in [src/interface.ts:26](https://github.com/youkaisteve/bim-operator/blob/8ece8e6/src/interface.ts#L26)*
+*Defined in [src/interface.ts:26](https://github.com/youkaisteve/bim-operator/blob/aeaafe6/src/interface.ts#L26)*
 
 当前实例的右键菜单
 
@@ -32,7 +32,7 @@ ___
 
 • **debugOn**: *boolean*
 
-*Defined in [src/interface.ts:18](https://github.com/youkaisteve/bim-operator/blob/8ece8e6/src/interface.ts#L18)*
+*Defined in [src/interface.ts:18](https://github.com/youkaisteve/bim-operator/blob/aeaafe6/src/interface.ts#L18)*
 
 是否开启debug
 
@@ -42,6 +42,6 @@ ___
 
 • **elementId**? : *string*
 
-*Defined in [src/interface.ts:22](https://github.com/youkaisteve/bim-operator/blob/8ece8e6/src/interface.ts#L22)*
+*Defined in [src/interface.ts:22](https://github.com/youkaisteve/bim-operator/blob/aeaafe6/src/interface.ts#L22)*
 
 当前实例渲染的HtmlElementId

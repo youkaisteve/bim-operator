@@ -21,7 +21,7 @@
 
 • **CONTEXT_MENU**: *unique symbol* =  Symbol('Bimface#ContextMenu')
 
-*Defined in [src/providers/bimface/bimface_model.ts:19](https://github.com/youkaisteve/bim-operator/blob/8ece8e6/src/providers/bimface/bimface_model.ts#L19)*
+*Defined in [src/providers/bimface/bimface_model.ts:19](https://github.com/youkaisteve/bim-operator/blob/aeaafe6/src/providers/bimface/bimface_model.ts#L19)*
 
 ___
 
@@ -29,7 +29,7 @@ ___
 
 • **EXTERNAL_FIELD**: *unique symbol* =  Symbol('Bimface#ExternalField')
 
-*Defined in [src/providers/bimface/bimface_model.ts:17](https://github.com/youkaisteve/bim-operator/blob/8ece8e6/src/providers/bimface/bimface_model.ts#L17)*
+*Defined in [src/providers/bimface/bimface_model.ts:17](https://github.com/youkaisteve/bim-operator/blob/aeaafe6/src/providers/bimface/bimface_model.ts#L17)*
 
 ___
 
@@ -37,7 +37,7 @@ ___
 
 • **MARKER_FIELD**: *unique symbol* =  Symbol('Bimface#MarkerField')
 
-*Defined in [src/providers/bimface/bimface_model.ts:16](https://github.com/youkaisteve/bim-operator/blob/8ece8e6/src/providers/bimface/bimface_model.ts#L16)*
+*Defined in [src/providers/bimface/bimface_model.ts:16](https://github.com/youkaisteve/bim-operator/blob/aeaafe6/src/providers/bimface/bimface_model.ts#L16)*
 
 ___
 
@@ -45,4 +45,4 @@ ___
 
 • **MULTI_FIELD**: *unique symbol* =  Symbol('Bimface#IsMultiField')
 
-*Defined in [src/providers/bimface/bimface_model.ts:18](https://github.com/youkaisteve/bim-operator/blob/8ece8e6/src/providers/bimface/bimface_model.ts#L18)*
+*Defined in [src/providers/bimface/bimface_model.ts:18](https://github.com/youkaisteve/bim-operator/blob/aeaafe6/src/providers/bimface/bimface_model.ts#L18)*

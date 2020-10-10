@@ -18,7 +18,7 @@
 
 • **Custom**: = "Custom"
 
-*Defined in [src/enums.ts:88](https://github.com/youkaisteve/bim-operator/blob/8ece8e6/src/enums.ts#L88)*
+*Defined in [src/enums.ts:88](https://github.com/youkaisteve/bim-operator/blob/aeaafe6/src/enums.ts#L88)*
 
 自定义，需要提供透明度
 
@@ -28,7 +28,7 @@ ___
 
 • **Opaque**: = "Opaque"
 
-*Defined in [src/enums.ts:80](https://github.com/youkaisteve/bim-operator/blob/8ece8e6/src/enums.ts#L80)*
+*Defined in [src/enums.ts:80](https://github.com/youkaisteve/bim-operator/blob/aeaafe6/src/enums.ts#L80)*
 
 取消半透明
 
@@ -38,6 +38,6 @@ ___
 
 • **Translucent**: = "Translucent"
 
-*Defined in [src/enums.ts:84](https://github.com/youkaisteve/bim-operator/blob/8ece8e6/src/enums.ts#L84)*
+*Defined in [src/enums.ts:84](https://github.com/youkaisteve/bim-operator/blob/aeaafe6/src/enums.ts#L84)*
 
 半透明
