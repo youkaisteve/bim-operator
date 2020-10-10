@@ -300,7 +300,7 @@ export interface IContextMenu {
     /**
      * 添加菜单
      * @param menuItems 右键菜单项
-     * @param parentKey 父级key
+     * @param parentKey 父级key，为空时，重置所有菜单
      */
     add(menuItems: ContextMenuItem[], parentKey?: string);
     /**
