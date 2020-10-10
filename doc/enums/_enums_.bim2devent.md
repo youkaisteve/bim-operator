@@ -19,7 +19,7 @@ BIM2D图纸的事件
 
 • **Error**: = "Error"
 
-*Defined in [enums.ts:67](https://github.com/youkaisteve/bim-operator/blob/d807e84/src/enums.ts#L67)*
+*Defined in [src/enums.ts:67](https://github.com/youkaisteve/bim-operator/blob/90a5443/src/enums.ts#L67)*
 
 ___
 
@@ -27,7 +27,7 @@ ___
 
 • **Loaded**: = "Loaded"
 
-*Defined in [enums.ts:68](https://github.com/youkaisteve/bim-operator/blob/d807e84/src/enums.ts#L68)*
+*Defined in [src/enums.ts:68](https://github.com/youkaisteve/bim-operator/blob/90a5443/src/enums.ts#L68)*
 
 ___
 
@@ -35,7 +35,7 @@ ___
 
 • **MouseClicked**: = "MouseClicked"
 
-*Defined in [enums.ts:69](https://github.com/youkaisteve/bim-operator/blob/d807e84/src/enums.ts#L69)*
+*Defined in [src/enums.ts:69](https://github.com/youkaisteve/bim-operator/blob/90a5443/src/enums.ts#L69)*
 
 ___
 
@@ -43,4 +43,4 @@ ___
 
 • **ViewChange**: = "ViewChange"
 
-*Defined in [enums.ts:70](https://github.com/youkaisteve/bim-operator/blob/d807e84/src/enums.ts#L70)*
+*Defined in [src/enums.ts:70](https://github.com/youkaisteve/bim-operator/blob/90a5443/src/enums.ts#L70)*

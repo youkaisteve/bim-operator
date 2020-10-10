@@ -25,7 +25,7 @@
 
 • **fileId**: *string*
 
-*Defined in [model/base.ts:8](https://github.com/youkaisteve/bim-operator/blob/d807e84/src/model/base.ts#L8)*
+*Defined in [src/model/base.ts:8](https://github.com/youkaisteve/bim-operator/blob/90a5443/src/model/base.ts#L8)*
 
 单模型id
 
@@ -35,6 +35,6 @@ ___
 
 • **integrateId**? : *string*
 
-*Defined in [model/base.ts:12](https://github.com/youkaisteve/bim-operator/blob/d807e84/src/model/base.ts#L12)*
+*Defined in [src/model/base.ts:12](https://github.com/youkaisteve/bim-operator/blob/90a5443/src/model/base.ts#L12)*
 
 组合模型id

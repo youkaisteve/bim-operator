@@ -14,7 +14,7 @@
 
 ▸ **debugLog**(`pattern?`: any): *any*
 
-*Defined in [decorators/debug_log.ts:8](https://github.com/youkaisteve/bim-operator/blob/d807e84/src/decorators/debug_log.ts#L8)*
+*Defined in [src/decorators/debug_log.ts:8](https://github.com/youkaisteve/bim-operator/blob/90a5443/src/decorators/debug_log.ts#L8)*
 
 调试日志，给class打上此标签后，会记录方法的调用以及入参
 

@@ -11,5 +11,7 @@
 * [IBimDrawing](../interfaces/_interface_.ibimdrawing.md)
 * [IBimOperator](../interfaces/_interface_.ibimoperator.md)
 * [IContext](../interfaces/_interface_.icontext.md)
+* [IContextMenu](../interfaces/_interface_.icontextmenu.md)
 * [IDispose](../interfaces/_interface_.idispose.md)
+* [IExternal](../interfaces/_interface_.iexternal.md)
 * [IMarker](../interfaces/_interface_.imarker.md)

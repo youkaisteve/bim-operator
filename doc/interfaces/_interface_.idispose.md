@@ -24,7 +24,7 @@ Bim视图销毁
 
 ▸ **dispose**(`options`: any): *any*
 
-*Defined in [interface.ts:227](https://github.com/youkaisteve/bim-operator/blob/d807e84/src/interface.ts#L227)*
+*Defined in [src/interface.ts:293](https://github.com/youkaisteve/bim-operator/blob/90a5443/src/interface.ts#L293)*
 
 销毁视图
 
