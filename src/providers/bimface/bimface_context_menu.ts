@@ -124,6 +124,10 @@ export default class BimfaceContextMenu extends EventEmitter implements IContext
         }
     }
 
+    /**
+     * 触发菜单点击事件
+     * @param menuItem 菜单项
+     */
     private dispatchClickEvent(menuItem: ContextMenuItem) {
         this.emit('click', menuItem);
     }
