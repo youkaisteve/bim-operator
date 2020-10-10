@@ -5,7 +5,7 @@ import { RotateOption, OffsetOption, ScaleOption, TranslateOption } from '../../
 /**
  * bimface外部构件
  */
-@debugLog
+@debugLog()
 export default class BimfaceExternal implements IExternal {
     externalMgr: any;
     loader: any;
