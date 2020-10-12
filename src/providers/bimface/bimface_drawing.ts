@@ -2,7 +2,6 @@ import { IBimDrawing, IBimCustom } from '../../interface';
 import BimfaceBase from './bimface_base';
 import { DrawingDisplayMode, Bim2DEvent } from '../../enums';
 import debugLog from '../../decorators/debug_log';
-import CollectionUtils from '../../util/collect-util';
 
 const MULTI_FIELD = Symbol('Bimface#IsMultiField');
 /**
