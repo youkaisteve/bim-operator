@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.7.0](https://github.com/youkaisteve/bim-operator/compare/v1.6.1...v1.7.0) (2020-10-12)
+
+
+### Features
+
+* **bimface:** 3D Model support set plugin ([dd4687d](https://github.com/youkaisteve/bim-operator/commit/dd4687dc266c47fc06e53b74fcaed1f1ea449001))
+
 ### [1.6.1](https://github.com/youkaisteve/bim-operator/compare/v1.6.0...v1.6.1) (2020-10-10)
 
 
