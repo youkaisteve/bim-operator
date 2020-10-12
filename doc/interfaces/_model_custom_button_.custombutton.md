@@ -1,4 +1,4 @@
-[@yzw/bim-operator - v1.6.0](../README.md) › [Globals](../globals.md) › ["model/custom_button"](../modules/_model_custom_button_.md) › [CustomButton](_model_custom_button_.custombutton.md)
+[@yzw/bim-operator - v1.6.1](../README.md) › [Globals](../globals.md) › ["model/custom_button"](../modules/_model_custom_button_.md) › [CustomButton](_model_custom_button_.custombutton.md)
 
 # Interface: CustomButton
 
@@ -23,7 +23,7 @@
 
 • **className**: *string*
 
-*Defined in [src/model/custom_button.ts:17](https://github.com/youkaisteve/bim-operator/blob/aeaafe6/src/model/custom_button.ts#L17)*
+*Defined in [src/model/custom_button.ts:17](https://github.com/youkaisteve/bim-operator/blob/dd4687d/src/model/custom_button.ts#L17)*
 
 css class
 
@@ -33,7 +33,7 @@ ___
 
 • **clickEvent**: *function*
 
-*Defined in [src/model/custom_button.ts:9](https://github.com/youkaisteve/bim-operator/blob/aeaafe6/src/model/custom_button.ts#L9)*
+*Defined in [src/model/custom_button.ts:9](https://github.com/youkaisteve/bim-operator/blob/dd4687d/src/model/custom_button.ts#L9)*
 
 点击事件
 
@@ -47,7 +47,7 @@ ___
 
 • **html**: *string*
 
-*Defined in [src/model/custom_button.ts:5](https://github.com/youkaisteve/bim-operator/blob/aeaafe6/src/model/custom_button.ts#L5)*
+*Defined in [src/model/custom_button.ts:5](https://github.com/youkaisteve/bim-operator/blob/dd4687d/src/model/custom_button.ts#L5)*
 
 按钮Html
 
@@ -57,7 +57,7 @@ ___
 
 • **index**: *number*
 
-*Defined in [src/model/custom_button.ts:13](https://github.com/youkaisteve/bim-operator/blob/aeaafe6/src/model/custom_button.ts#L13)*
+*Defined in [src/model/custom_button.ts:13](https://github.com/youkaisteve/bim-operator/blob/dd4687d/src/model/custom_button.ts#L13)*
 
 按钮索引，如果为空则排最后
 
@@ -67,7 +67,7 @@ ___
 
 • **isToggle**: *boolean*
 
-*Defined in [src/model/custom_button.ts:25](https://github.com/youkaisteve/bim-operator/blob/aeaafe6/src/model/custom_button.ts#L25)*
+*Defined in [src/model/custom_button.ts:25](https://github.com/youkaisteve/bim-operator/blob/dd4687d/src/model/custom_button.ts#L25)*
 
 是否toggle
 
@@ -77,6 +77,6 @@ ___
 
 • **toggleClassName**: *string*
 
-*Defined in [src/model/custom_button.ts:21](https://github.com/youkaisteve/bim-operator/blob/aeaafe6/src/model/custom_button.ts#L21)*
+*Defined in [src/model/custom_button.ts:21](https://github.com/youkaisteve/bim-operator/blob/dd4687d/src/model/custom_button.ts#L21)*
 
 toggle状态的class

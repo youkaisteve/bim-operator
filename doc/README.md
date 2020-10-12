@@ -1,6 +1,6 @@
-[@yzw/bim-operator - v1.6.0](README.md) › [Globals](globals.md)
+[@yzw/bim-operator - v1.6.1](README.md) › [Globals](globals.md)
 
-# @yzw/bim-operator - v1.6.0
+# @yzw/bim-operator - v1.6.1
 
 # Bim-Operator
 
@@ -28,7 +28,7 @@ const bimDrawing = provider.bimDrawing;
 
 // 加载模型
 bim3DModel
-    .loadModel({
+    .load({
         viewToken: '<your view token>',
         domId: '<html dom id>',
         viewConfig: {

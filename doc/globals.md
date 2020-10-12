@@ -1,6 +1,6 @@
-[@yzw/bim-operator - v1.6.0](README.md) › [Globals](globals.md)
+[@yzw/bim-operator - v1.6.1](README.md) › [Globals](globals.md)
 
-# @yzw/bim-operator - v1.6.0
+# @yzw/bim-operator - v1.6.1
 
 ## Index
 

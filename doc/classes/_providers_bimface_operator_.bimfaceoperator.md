@@ -1,4 +1,4 @@
-[@yzw/bim-operator - v1.6.0](../README.md) › [Globals](../globals.md) › ["providers/bimface_operator"](../modules/_providers_bimface_operator_.md) › [BimfaceOperator](_providers_bimface_operator_.bimfaceoperator.md)
+[@yzw/bim-operator - v1.6.1](../README.md) › [Globals](../globals.md) › ["providers/bimface_operator"](../modules/_providers_bimface_operator_.md) › [BimfaceOperator](_providers_bimface_operator_.bimfaceoperator.md)
 
 # Class: BimfaceOperator
 
@@ -36,7 +36,7 @@ Bimface操作类，用于获取模型或者图纸对应的具体操作实例
 
 \+ **new BimfaceOperator**(`context`: [IContext](../interfaces/_interface_.icontext.md)): *[BimfaceOperator](_providers_bimface_operator_.bimfaceoperator.md)*
 
-*Defined in [src/providers/bimface_operator.ts:15](https://github.com/youkaisteve/bim-operator/blob/aeaafe6/src/providers/bimface_operator.ts#L15)*
+*Defined in [src/providers/bimface_operator.ts:15](https://github.com/youkaisteve/bim-operator/blob/dd4687d/src/providers/bimface_operator.ts#L15)*
 
 **Parameters:**
 
@@ -52,7 +52,7 @@ Name | Type |
 
 • **[BIMFACE_3D_FIELD]**: *[IBim3DModel](../interfaces/_interface_.ibim3dmodel.md)*
 
-*Defined in [src/providers/bimface_operator.ts:12](https://github.com/youkaisteve/bim-operator/blob/aeaafe6/src/providers/bimface_operator.ts#L12)*
+*Defined in [src/providers/bimface_operator.ts:12](https://github.com/youkaisteve/bim-operator/blob/dd4687d/src/providers/bimface_operator.ts#L12)*
 
 ___
 
@@ -60,7 +60,7 @@ ___
 
 • **[BIMFACE_DRAWING_FIELD]**: *[IBimDrawing](../interfaces/_interface_.ibimdrawing.md)*
 
-*Defined in [src/providers/bimface_operator.ts:13](https://github.com/youkaisteve/bim-operator/blob/aeaafe6/src/providers/bimface_operator.ts#L13)*
+*Defined in [src/providers/bimface_operator.ts:13](https://github.com/youkaisteve/bim-operator/blob/dd4687d/src/providers/bimface_operator.ts#L13)*
 
 ___
 
@@ -68,7 +68,7 @@ ___
 
 • **_context**: *[IContext](../interfaces/_interface_.icontext.md)*
 
-*Defined in [src/providers/bimface_operator.ts:15](https://github.com/youkaisteve/bim-operator/blob/aeaafe6/src/providers/bimface_operator.ts#L15)*
+*Defined in [src/providers/bimface_operator.ts:15](https://github.com/youkaisteve/bim-operator/blob/dd4687d/src/providers/bimface_operator.ts#L15)*
 
 ## Accessors
 
@@ -76,7 +76,7 @@ ___
 
 • **get bim3DModel**(): *[IBim3DModel](../interfaces/_interface_.ibim3dmodel.md)*
 
-*Defined in [src/providers/bimface_operator.ts:21](https://github.com/youkaisteve/bim-operator/blob/aeaafe6/src/providers/bimface_operator.ts#L21)*
+*Defined in [src/providers/bimface_operator.ts:21](https://github.com/youkaisteve/bim-operator/blob/dd4687d/src/providers/bimface_operator.ts#L21)*
 
 **Returns:** *[IBim3DModel](../interfaces/_interface_.ibim3dmodel.md)*
 
@@ -86,7 +86,7 @@ ___
 
 • **get bimDrawing**(): *[IBimDrawing](../interfaces/_interface_.ibimdrawing.md)*
 
-*Defined in [src/providers/bimface_operator.ts:27](https://github.com/youkaisteve/bim-operator/blob/aeaafe6/src/providers/bimface_operator.ts#L27)*
+*Defined in [src/providers/bimface_operator.ts:27](https://github.com/youkaisteve/bim-operator/blob/dd4687d/src/providers/bimface_operator.ts#L27)*
 
 **Returns:** *[IBimDrawing](../interfaces/_interface_.ibimdrawing.md)*
 
@@ -96,6 +96,6 @@ ___
 
 • **get context**(): *[IContext](../interfaces/_interface_.icontext.md)*
 
-*Defined in [src/providers/bimface_operator.ts:34](https://github.com/youkaisteve/bim-operator/blob/aeaafe6/src/providers/bimface_operator.ts#L34)*
+*Defined in [src/providers/bimface_operator.ts:34](https://github.com/youkaisteve/bim-operator/blob/dd4687d/src/providers/bimface_operator.ts#L34)*
 
 **Returns:** *[IContext](../interfaces/_interface_.icontext.md)*
