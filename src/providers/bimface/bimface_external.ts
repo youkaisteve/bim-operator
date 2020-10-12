@@ -13,7 +13,13 @@ export default class BimfaceExternal implements IExternal {
     constructor(viewer3D: any) {
         this.viewer3D = viewer3D;
         this.externalMgr = new window.Glodon.Bimface.Viewer.ExternalObjectManager(viewer3D);
-        this.loader = new window.THREE.TDSLoader();
+        try {
+            this.loader = new window.THREE.TDSLoader();
+        } catch {
+            throw new Error(
+                'External plugin is not loaded, please set param:options.plugins of method bim3DModel.load'
+            );
+        }
     }
     async add(name: string, url: string): Promise<string> {
         return new Promise((resolve) => {

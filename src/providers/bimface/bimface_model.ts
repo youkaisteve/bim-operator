@@ -105,16 +105,20 @@ export default class Bimface3DModel extends BimfaceBase implements IBim3DModel, 
      * @param {string} options.viewToken 访问认证token
      * @param {string} options.url js-sdk地址
      * @param {string} options.domId dom id
+     * @param {Bim3DPluginType[]} options.plugins 插件列表 @see Bim3DPluginType
      * @param {object} options.appConfig 应用的配置
      * @param {string[]} options.appConfig.Buttons 工具条button，0:Home：主视角，1: RectangleSelect：框选，2: Measure：测量，3: Section：剖切，4: Walk：漫游，5: Map：地图，6: Property：构件详情，7: Setting：设置，8: Information：基本信息，9: FullScreen：全屏 默认全部加载
      * @param {string[]} options.appConfig.Toolbars 工具条或目录树，MainToolbar:工具条；ModelTree：目录树
-     * @param {object} options.viewConfig 视图的配置, 参考：https://static.bimface.com/jssdk-apidoc/v3/Glodon.Bimface.Viewer.Viewer3DConfig.html
+     * @param {object} options.viewConfig 视图的配置, @see https://static.bimface.com/jssdk-apidoc/v3/Glodon.Bimface.Viewer.Viewer3DConfig.html
      */
     async load(options: any): Promise<void> {
         // 清除dom
         this.dispose(options);
 
         await this.initSDK(options.sdk);
+        if (!CollectionUtils.isEmpty(options.plugins)) {
+            await this.initPlugin(options.plugins);
+        }
         const viewMetaData = await this.loadSDK(options);
 
         const domShow = document.getElementById(options.domId);

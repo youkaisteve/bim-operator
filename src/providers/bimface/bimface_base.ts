@@ -1,8 +1,10 @@
 import remoteLoad from '../../util/remote-load';
-import { BIMFACE_JS_SDK } from '../../consts';
+import { BIMFACE_EXTERNAL_TDSLoader, BIMFACE_JS_SDK } from '../../consts';
 import CustomButton from '../../model/custom_button';
 import needRender from '../../decorators/render';
 import { IContext } from '../../interface';
+import { Bim3DPluginType } from '../..';
+import CollectionUtils from '../../util/collect-util';
 
 /**
  * bimface api基类，提供图纸和模型的通用方法
@@ -38,6 +40,25 @@ export default abstract class BimfaceBase {
         if (!window.BimfaceSDKLoaderConfig) {
             await remoteLoad(sdkPath || BIMFACE_JS_SDK);
         }
+    }
+
+    /**
+     * 初始化所需的插件
+     * @param plugins 插件类型列表
+     */
+    async initPlugin(plugins: Bim3DPluginType[]) {
+        if (CollectionUtils.isEmpty(plugins)) {
+            return;
+        }
+        return Promise.all(
+            plugins.map((plugin) => {
+                if (plugin === Bim3DPluginType.External) {
+                    remoteLoad(BIMFACE_EXTERNAL_TDSLoader);
+                } else {
+                    throw new Error(`plugin(${plugin}) is not supported`);
+                }
+            })
+        );
     }
 
     /**

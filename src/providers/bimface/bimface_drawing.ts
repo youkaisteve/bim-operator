@@ -2,6 +2,7 @@ import { IBimDrawing, IBimCustom } from '../../interface';
 import BimfaceBase from './bimface_base';
 import { DrawingDisplayMode, Bim2DEvent } from '../../enums';
 import debugLog from '../../decorators/debug_log';
+import CollectionUtils from '../../util/collect-util';
 
 const MULTI_FIELD = Symbol('Bimface#IsMultiField');
 /**
@@ -58,7 +59,7 @@ export default class BimfaceDrawing extends BimfaceBase implements IBimDrawing, 
      * @param {Object} options.appConfig 应用的配置
      * @param {string[]} options.appConfig.Buttons 工具条button，0:Home：主视角，1: RectZoom：框选，2: DrawingMeasure：测量，3: Map：地图，4: Layers：图层，5: Setting：设置，6: FullScreen：全屏 默认全部加载
      * @param {string[]} options.appConfig.Toolbars 工具条或目录树，MainToolbar:工具条；ModelTree：目录树
-     * @param {Object} options.viewConfig 视图的配置，参考：https://static.bimface.com/jssdk-apidoc/v3/Glodon.Bimface.Viewer.ViewerDrawingConfig.html
+     * @param {Object} options.viewConfig 视图的配置，@see https://static.bimface.com/jssdk-apidoc/v3/Glodon.Bimface.Viewer.ViewerDrawingConfig.html
      */
     async load(options: any): Promise<void> {
         // 清除dom

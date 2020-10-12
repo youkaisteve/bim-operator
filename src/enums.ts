@@ -125,3 +125,13 @@ export enum RestoreEnum {
      */
     FloorExplosion = 64,
 }
+
+/**
+ * Bim相关插件类型
+ */
+export enum Bim3DPluginType {
+    /**
+     * 外部构件插件
+     */
+    External = 0,
+}

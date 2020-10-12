@@ -24,7 +24,7 @@ const bimDrawing = provider.bimDrawing;
 
 // 加载模型
 bim3DModel
-    .loadModel({
+    .load({
         viewToken: '<your view token>',
         domId: '<html dom id>',
         viewConfig: {
