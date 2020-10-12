@@ -1,4 +1,4 @@
-[@yzw/bim-operator - v1.6.1](../README.md) › [Globals](../globals.md) › ["interface"](../modules/_interface_.md) › [IBimOperator](_interface_.ibimoperator.md)
+[@yzw/bim-operator - v1.7.0](../README.md) › [Globals](../globals.md) › ["interface"](../modules/_interface_.md) › [IBimOperator](_interface_.ibimoperator.md)
 
 # Interface: IBimOperator
 
@@ -25,7 +25,7 @@
 
 • **bim3DModel**: *[IBim3DModel](_interface_.ibim3dmodel.md)*
 
-*Defined in [src/interface.ts:33](https://github.com/youkaisteve/bim-operator/blob/dd4687d/src/interface.ts#L33)*
+*Defined in [src/interface.ts:33](https://github.com/youkaisteve/bim-operator/blob/24828e5/src/interface.ts#L33)*
 
 ___
 
@@ -33,4 +33,4 @@ ___
 
 • **bimDrawing**: *[IBimDrawing](_interface_.ibimdrawing.md)*
 
-*Defined in [src/interface.ts:34](https://github.com/youkaisteve/bim-operator/blob/dd4687d/src/interface.ts#L34)*
+*Defined in [src/interface.ts:34](https://github.com/youkaisteve/bim-operator/blob/24828e5/src/interface.ts#L34)*

@@ -1,4 +1,4 @@
-[@yzw/bim-operator - v1.6.1](../README.md) › [Globals](../globals.md) › ["interface"](../modules/_interface_.md) › [IContextMenu](_interface_.icontextmenu.md)
+[@yzw/bim-operator - v1.7.0](../README.md) › [Globals](../globals.md) › ["interface"](../modules/_interface_.md) › [IContextMenu](_interface_.icontextmenu.md)
 
 # Interface: IContextMenu
 
@@ -26,7 +26,7 @@
 
 ▸ **add**(`menuItems`: [ContextMenuItem](_model_context_menu_item_.contextmenuitem.md)[], `parentKey?`: string): *any*
 
-*Defined in [src/interface.ts:305](https://github.com/youkaisteve/bim-operator/blob/dd4687d/src/interface.ts#L305)*
+*Defined in [src/interface.ts:305](https://github.com/youkaisteve/bim-operator/blob/24828e5/src/interface.ts#L305)*
 
 添加菜单
 
@@ -45,7 +45,7 @@ ___
 
 ▸ **remove**(`menuKey`: string): *any*
 
-*Defined in [src/interface.ts:310](https://github.com/youkaisteve/bim-operator/blob/dd4687d/src/interface.ts#L310)*
+*Defined in [src/interface.ts:310](https://github.com/youkaisteve/bim-operator/blob/24828e5/src/interface.ts#L310)*
 
 移除右键菜单，如果又子菜单，也会被移除
 
@@ -63,7 +63,7 @@ ___
 
 ▸ **render**(): *void*
 
-*Defined in [src/interface.ts:314](https://github.com/youkaisteve/bim-operator/blob/dd4687d/src/interface.ts#L314)*
+*Defined in [src/interface.ts:314](https://github.com/youkaisteve/bim-operator/blob/24828e5/src/interface.ts#L314)*
 
 渲染菜单
 

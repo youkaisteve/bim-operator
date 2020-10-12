@@ -1,4 +1,4 @@
-[@yzw/bim-operator - v1.6.1](../README.md) › [Globals](../globals.md) › ["providers/bimface/bimface_model"](../modules/_providers_bimface_bimface_model_.md) › [Bimface3DModel](_providers_bimface_bimface_model_.bimface3dmodel.md)
+[@yzw/bim-operator - v1.7.0](../README.md) › [Globals](../globals.md) › ["providers/bimface/bimface_model"](../modules/_providers_bimface_bimface_model_.md) › [Bimface3DModel](_providers_bimface_bimface_model_.bimface3dmodel.md)
 
 # Class: Bimface3DModel
 
@@ -83,7 +83,7 @@ bimface 3D 操作
 
 *Inherited from [BimfaceBase](_providers_bimface_bimface_base_.bimfacebase.md).[constructor](_providers_bimface_bimface_base_.bimfacebase.md#constructor)*
 
-*Defined in [src/providers/bimface/bimface_base.ts:29](https://github.com/youkaisteve/bim-operator/blob/dd4687d/src/providers/bimface/bimface_base.ts#L29)*
+*Defined in [src/providers/bimface/bimface_base.ts:29](https://github.com/youkaisteve/bim-operator/blob/24828e5/src/providers/bimface/bimface_base.ts#L29)*
 
 **Parameters:**
 
@@ -99,7 +99,7 @@ Name | Type |
 
 • **[CONTEXT_MENU]**: *[IContextMenu](../interfaces/_interface_.icontextmenu.md)*
 
-*Defined in [src/providers/bimface/bimface_model.ts:32](https://github.com/youkaisteve/bim-operator/blob/dd4687d/src/providers/bimface/bimface_model.ts#L32)*
+*Defined in [src/providers/bimface/bimface_model.ts:32](https://github.com/youkaisteve/bim-operator/blob/24828e5/src/providers/bimface/bimface_model.ts#L32)*
 
 ___
 
@@ -107,7 +107,7 @@ ___
 
 • **[EXTERNAL_FIELD]**: *[IExternal](../interfaces/_interface_.iexternal.md)*
 
-*Defined in [src/providers/bimface/bimface_model.ts:31](https://github.com/youkaisteve/bim-operator/blob/dd4687d/src/providers/bimface/bimface_model.ts#L31)*
+*Defined in [src/providers/bimface/bimface_model.ts:31](https://github.com/youkaisteve/bim-operator/blob/24828e5/src/providers/bimface/bimface_model.ts#L31)*
 
 ___
 
@@ -115,7 +115,7 @@ ___
 
 • **[MARKER_FIELD]**: *[IMarker](../interfaces/_interface_.imarker.md)*
 
-*Defined in [src/providers/bimface/bimface_model.ts:30](https://github.com/youkaisteve/bim-operator/blob/dd4687d/src/providers/bimface/bimface_model.ts#L30)*
+*Defined in [src/providers/bimface/bimface_model.ts:30](https://github.com/youkaisteve/bim-operator/blob/24828e5/src/providers/bimface/bimface_model.ts#L30)*
 
 ___
 
@@ -123,7 +123,7 @@ ___
 
 • **[MULTI_FIELD]**: *boolean*
 
-*Defined in [src/providers/bimface/bimface_model.ts:36](https://github.com/youkaisteve/bim-operator/blob/dd4687d/src/providers/bimface/bimface_model.ts#L36)*
+*Defined in [src/providers/bimface/bimface_model.ts:36](https://github.com/youkaisteve/bim-operator/blob/24828e5/src/providers/bimface/bimface_model.ts#L36)*
 
 是否在批量执行
 
@@ -135,7 +135,7 @@ ___
 
 *Inherited from [BimfaceBase](_providers_bimface_bimface_base_.bimfacebase.md).[context](_providers_bimface_bimface_base_.bimfacebase.md#protected-context)*
 
-*Defined in [src/providers/bimface/bimface_base.ts:14](https://github.com/youkaisteve/bim-operator/blob/dd4687d/src/providers/bimface/bimface_base.ts#L14)*
+*Defined in [src/providers/bimface/bimface_base.ts:14](https://github.com/youkaisteve/bim-operator/blob/24828e5/src/providers/bimface/bimface_base.ts#L14)*
 
 ___
 
@@ -143,7 +143,7 @@ ___
 
 • **viewer3D**: *any*
 
-*Defined in [src/providers/bimface/bimface_model.ts:29](https://github.com/youkaisteve/bim-operator/blob/dd4687d/src/providers/bimface/bimface_model.ts#L29)*
+*Defined in [src/providers/bimface/bimface_model.ts:29](https://github.com/youkaisteve/bim-operator/blob/24828e5/src/providers/bimface/bimface_model.ts#L29)*
 
 bimface相关对象
 
@@ -155,7 +155,7 @@ bimface相关对象
 
 *Inherited from [BimfaceBase](_providers_bimface_bimface_base_.bimfacebase.md).[app](_providers_bimface_bimface_base_.bimfacebase.md#protected-app)*
 
-*Defined in [src/providers/bimface/bimface_base.ts:16](https://github.com/youkaisteve/bim-operator/blob/dd4687d/src/providers/bimface/bimface_base.ts#L16)*
+*Defined in [src/providers/bimface/bimface_base.ts:16](https://github.com/youkaisteve/bim-operator/blob/24828e5/src/providers/bimface/bimface_base.ts#L16)*
 
 **Returns:** *any*
 
@@ -163,7 +163,7 @@ bimface相关对象
 
 *Inherited from [BimfaceBase](_providers_bimface_bimface_base_.bimfacebase.md).[app](_providers_bimface_bimface_base_.bimfacebase.md#protected-app)*
 
-*Defined in [src/providers/bimface/bimface_base.ts:20](https://github.com/youkaisteve/bim-operator/blob/dd4687d/src/providers/bimface/bimface_base.ts#L20)*
+*Defined in [src/providers/bimface/bimface_base.ts:20](https://github.com/youkaisteve/bim-operator/blob/24828e5/src/providers/bimface/bimface_base.ts#L20)*
 
 **Parameters:**
 
@@ -179,7 +179,7 @@ ___
 
 • **get contextMenu**(): *[IContextMenu](../interfaces/_interface_.icontextmenu.md)*
 
-*Defined in [src/providers/bimface/bimface_model.ts:61](https://github.com/youkaisteve/bim-operator/blob/dd4687d/src/providers/bimface/bimface_model.ts#L61)*
+*Defined in [src/providers/bimface/bimface_model.ts:61](https://github.com/youkaisteve/bim-operator/blob/24828e5/src/providers/bimface/bimface_model.ts#L61)*
 
 右键菜单
 
@@ -191,7 +191,7 @@ ___
 
 • **get external**(): *[IExternal](../interfaces/_interface_.iexternal.md)*
 
-*Defined in [src/providers/bimface/bimface_model.ts:51](https://github.com/youkaisteve/bim-operator/blob/dd4687d/src/providers/bimface/bimface_model.ts#L51)*
+*Defined in [src/providers/bimface/bimface_model.ts:51](https://github.com/youkaisteve/bim-operator/blob/24828e5/src/providers/bimface/bimface_model.ts#L51)*
 
 外部构件管理器
 
@@ -203,7 +203,7 @@ ___
 
 • **get marker**(): *[IMarker](../interfaces/_interface_.imarker.md)*
 
-*Defined in [src/providers/bimface/bimface_model.ts:41](https://github.com/youkaisteve/bim-operator/blob/dd4687d/src/providers/bimface/bimface_model.ts#L41)*
+*Defined in [src/providers/bimface/bimface_model.ts:41](https://github.com/youkaisteve/bim-operator/blob/24828e5/src/providers/bimface/bimface_model.ts#L41)*
 
 3D标注器
 
@@ -219,7 +219,7 @@ ___
 
 *Inherited from [BimfaceBase](_providers_bimface_bimface_base_.bimfacebase.md).[addCustomButtons](_providers_bimface_bimface_base_.bimfacebase.md#addcustombuttons)*
 
-*Defined in [src/providers/bimface/bimface_base.ts:92](https://github.com/youkaisteve/bim-operator/blob/dd4687d/src/providers/bimface/bimface_base.ts#L92)*
+*Defined in [src/providers/bimface/bimface_base.ts:92](https://github.com/youkaisteve/bim-operator/blob/24828e5/src/providers/bimface/bimface_base.ts#L92)*
 
 添加自定义按钮
 
@@ -239,7 +239,7 @@ ___
 
 *Overrides [BimfaceBase](_providers_bimface_bimface_base_.bimfacebase.md).[addEventListener](_providers_bimface_bimface_base_.bimfacebase.md#abstract-addeventlistener)*
 
-*Defined in [src/providers/bimface/bimface_model.ts:73](https://github.com/youkaisteve/bim-operator/blob/dd4687d/src/providers/bimface/bimface_model.ts#L73)*
+*Defined in [src/providers/bimface/bimface_model.ts:73](https://github.com/youkaisteve/bim-operator/blob/24828e5/src/providers/bimface/bimface_model.ts#L73)*
 
 监听事件
 
@@ -265,7 +265,7 @@ ___
 
 *Implementation of [IBim3DModel](../interfaces/_interface_.ibim3dmodel.md)*
 
-*Defined in [src/providers/bimface/bimface_model.ts:171](https://github.com/youkaisteve/bim-operator/blob/dd4687d/src/providers/bimface/bimface_model.ts#L171)*
+*Defined in [src/providers/bimface/bimface_model.ts:171](https://github.com/youkaisteve/bim-operator/blob/24828e5/src/providers/bimface/bimface_model.ts#L171)*
 
 清空楼层爆炸
 
@@ -279,7 +279,7 @@ ___
 
 *Implementation of [IBim3DModel](../interfaces/_interface_.ibim3dmodel.md)*
 
-*Defined in [src/providers/bimface/bimface_model.ts:272](https://github.com/youkaisteve/bim-operator/blob/dd4687d/src/providers/bimface/bimface_model.ts#L272)*
+*Defined in [src/providers/bimface/bimface_model.ts:272](https://github.com/youkaisteve/bim-operator/blob/24828e5/src/providers/bimface/bimface_model.ts#L272)*
 
 清除所有高亮构件
 
@@ -299,7 +299,7 @@ ___
 
 *Implementation of [IBim3DModel](../interfaces/_interface_.ibim3dmodel.md)*
 
-*Defined in [src/providers/bimface/bimface_model.ts:244](https://github.com/youkaisteve/bim-operator/blob/dd4687d/src/providers/bimface/bimface_model.ts#L244)*
+*Defined in [src/providers/bimface/bimface_model.ts:244](https://github.com/youkaisteve/bim-operator/blob/24828e5/src/providers/bimface/bimface_model.ts#L244)*
 
 高亮隔离
 
@@ -313,7 +313,7 @@ ___
 
 *Implementation of [IBim3DModel](../interfaces/_interface_.ibim3dmodel.md)*
 
-*Defined in [src/providers/bimface/bimface_model.ts:302](https://github.com/youkaisteve/bim-operator/blob/dd4687d/src/providers/bimface/bimface_model.ts#L302)*
+*Defined in [src/providers/bimface/bimface_model.ts:302](https://github.com/youkaisteve/bim-operator/blob/24828e5/src/providers/bimface/bimface_model.ts#L302)*
 
 清空选中构件
 
@@ -329,7 +329,7 @@ ___
 
 *Overrides [BimfaceBase](_providers_bimface_bimface_base_.bimfacebase.md).[dispose](_providers_bimface_bimface_base_.bimfacebase.md#dispose)*
 
-*Defined in [src/providers/bimface/bimface_model.ts:456](https://github.com/youkaisteve/bim-operator/blob/dd4687d/src/providers/bimface/bimface_model.ts#L456)*
+*Defined in [src/providers/bimface/bimface_model.ts:456](https://github.com/youkaisteve/bim-operator/blob/24828e5/src/providers/bimface/bimface_model.ts#L456)*
 
 释放3D模型实例
 
@@ -349,7 +349,7 @@ ___
 
 *Implementation of [IBim3DModel](../interfaces/_interface_.ibim3dmodel.md)*
 
-*Defined in [src/providers/bimface/bimface_model.ts:163](https://github.com/youkaisteve/bim-operator/blob/dd4687d/src/providers/bimface/bimface_model.ts#L163)*
+*Defined in [src/providers/bimface/bimface_model.ts:163](https://github.com/youkaisteve/bim-operator/blob/24828e5/src/providers/bimface/bimface_model.ts#L163)*
 
 楼层爆炸
 
@@ -370,7 +370,7 @@ ___
 
 *Implementation of [IBim3DModel](../interfaces/_interface_.ibim3dmodel.md)*
 
-*Defined in [src/providers/bimface/bimface_model.ts:180](https://github.com/youkaisteve/bim-operator/blob/dd4687d/src/providers/bimface/bimface_model.ts#L180)*
+*Defined in [src/providers/bimface/bimface_model.ts:180](https://github.com/youkaisteve/bim-operator/blob/24828e5/src/providers/bimface/bimface_model.ts#L180)*
 
 根据条件查询构件
 
@@ -391,7 +391,7 @@ ___
 
 *Implementation of [IBim3DModel](../interfaces/_interface_.ibim3dmodel.md)*
 
-*Defined in [src/providers/bimface/bimface_model.ts:143](https://github.com/youkaisteve/bim-operator/blob/dd4687d/src/providers/bimface/bimface_model.ts#L143)*
+*Defined in [src/providers/bimface/bimface_model.ts:143](https://github.com/youkaisteve/bim-operator/blob/24828e5/src/providers/bimface/bimface_model.ts#L143)*
 
 获取楼层
 
@@ -405,7 +405,7 @@ ___
 
 *Implementation of [IBim3DModel](../interfaces/_interface_.ibim3dmodel.md)*
 
-*Defined in [src/providers/bimface/bimface_model.ts:152](https://github.com/youkaisteve/bim-operator/blob/dd4687d/src/providers/bimface/bimface_model.ts#L152)*
+*Defined in [src/providers/bimface/bimface_model.ts:152](https://github.com/youkaisteve/bim-operator/blob/24828e5/src/providers/bimface/bimface_model.ts#L152)*
 
 获取单个模型的楼层（在集成模型中使用）
 
@@ -425,7 +425,7 @@ ___
 
 *Implementation of [IBim3DModel](../interfaces/_interface_.ibim3dmodel.md)*
 
-*Defined in [src/providers/bimface/bimface_model.ts:308](https://github.com/youkaisteve/bim-operator/blob/dd4687d/src/providers/bimface/bimface_model.ts#L308)*
+*Defined in [src/providers/bimface/bimface_model.ts:308](https://github.com/youkaisteve/bim-operator/blob/24828e5/src/providers/bimface/bimface_model.ts#L308)*
 
 获取选中的构件
 
@@ -439,7 +439,7 @@ ___
 
 *Implementation of [IBim3DModel](../interfaces/_interface_.ibim3dmodel.md)*
 
-*Defined in [src/providers/bimface/bimface_model.ts:195](https://github.com/youkaisteve/bim-operator/blob/dd4687d/src/providers/bimface/bimface_model.ts#L195)*
+*Defined in [src/providers/bimface/bimface_model.ts:195](https://github.com/youkaisteve/bim-operator/blob/24828e5/src/providers/bimface/bimface_model.ts#L195)*
 
 获取视点
 
@@ -459,7 +459,7 @@ ___
 
 *Implementation of [IBim3DModel](../interfaces/_interface_.ibim3dmodel.md)*
 
-*Defined in [src/providers/bimface/bimface_model.ts:355](https://github.com/youkaisteve/bim-operator/blob/dd4687d/src/providers/bimface/bimface_model.ts#L355)*
+*Defined in [src/providers/bimface/bimface_model.ts:355](https://github.com/youkaisteve/bim-operator/blob/24828e5/src/providers/bimface/bimface_model.ts#L355)*
 
 隐藏构件
 
@@ -479,7 +479,7 @@ ___
 
 *Implementation of [IBim3DModel](../interfaces/_interface_.ibim3dmodel.md)*
 
-*Defined in [src/providers/bimface/bimface_model.ts:254](https://github.com/youkaisteve/bim-operator/blob/dd4687d/src/providers/bimface/bimface_model.ts#L254)*
+*Defined in [src/providers/bimface/bimface_model.ts:254](https://github.com/youkaisteve/bim-operator/blob/24828e5/src/providers/bimface/bimface_model.ts#L254)*
 
 突出构件
 
@@ -500,7 +500,7 @@ ___
 
 *Inherited from [BimfaceBase](_providers_bimface_bimface_base_.bimfacebase.md).[initPlugin](_providers_bimface_bimface_base_.bimfacebase.md#initplugin)*
 
-*Defined in [src/providers/bimface/bimface_base.ts:49](https://github.com/youkaisteve/bim-operator/blob/dd4687d/src/providers/bimface/bimface_base.ts#L49)*
+*Defined in [src/providers/bimface/bimface_base.ts:49](https://github.com/youkaisteve/bim-operator/blob/24828e5/src/providers/bimface/bimface_base.ts#L49)*
 
 初始化所需的插件
 
@@ -520,7 +520,7 @@ ___
 
 *Inherited from [BimfaceBase](_providers_bimface_bimface_base_.bimfacebase.md).[initSDK](_providers_bimface_bimface_base_.bimfacebase.md#initsdk)*
 
-*Defined in [src/providers/bimface/bimface_base.ts:39](https://github.com/youkaisteve/bim-operator/blob/dd4687d/src/providers/bimface/bimface_base.ts#L39)*
+*Defined in [src/providers/bimface/bimface_base.ts:39](https://github.com/youkaisteve/bim-operator/blob/24828e5/src/providers/bimface/bimface_base.ts#L39)*
 
 初始化SDK
 
@@ -540,7 +540,7 @@ ___
 
 *Implementation of [IBim3DModel](../interfaces/_interface_.ibim3dmodel.md)*
 
-*Defined in [src/providers/bimface/bimface_model.ts:228](https://github.com/youkaisteve/bim-operator/blob/dd4687d/src/providers/bimface/bimface_model.ts#L228)*
+*Defined in [src/providers/bimface/bimface_model.ts:228](https://github.com/youkaisteve/bim-operator/blob/24828e5/src/providers/bimface/bimface_model.ts#L228)*
 
 隔离构件
 
@@ -561,7 +561,7 @@ ___
 
 *Implementation of [IBim3DModel](../interfaces/_interface_.ibim3dmodel.md)*
 
-*Defined in [src/providers/bimface/bimface_model.ts:236](https://github.com/youkaisteve/bim-operator/blob/dd4687d/src/providers/bimface/bimface_model.ts#L236)*
+*Defined in [src/providers/bimface/bimface_model.ts:236](https://github.com/youkaisteve/bim-operator/blob/24828e5/src/providers/bimface/bimface_model.ts#L236)*
 
 根据条件隔离构件
 
@@ -582,7 +582,7 @@ ___
 
 *Implementation of [IBim3DModel](../interfaces/_interface_.ibim3dmodel.md)*
 
-*Defined in [src/providers/bimface/bimface_model.ts:114](https://github.com/youkaisteve/bim-operator/blob/dd4687d/src/providers/bimface/bimface_model.ts#L114)*
+*Defined in [src/providers/bimface/bimface_model.ts:114](https://github.com/youkaisteve/bim-operator/blob/24828e5/src/providers/bimface/bimface_model.ts#L114)*
 
 加载模型
 
@@ -602,7 +602,7 @@ ___
 
 *Inherited from [BimfaceBase](_providers_bimface_bimface_base_.bimfacebase.md).[loadSDK](_providers_bimface_bimface_base_.bimfacebase.md#loadsdk)*
 
-*Defined in [src/providers/bimface/bimface_base.ts:69](https://github.com/youkaisteve/bim-operator/blob/dd4687d/src/providers/bimface/bimface_base.ts#L69)*
+*Defined in [src/providers/bimface/bimface_base.ts:69](https://github.com/youkaisteve/bim-operator/blob/24828e5/src/providers/bimface/bimface_base.ts#L69)*
 
 加载SDK
 
@@ -624,7 +624,7 @@ ___
 
 *Overrides [BimfaceBase](_providers_bimface_bimface_base_.bimfacebase.md).[multi](_providers_bimface_bimface_base_.bimfacebase.md#abstract-multi)*
 
-*Defined in [src/providers/bimface/bimface_model.ts:92](https://github.com/youkaisteve/bim-operator/blob/dd4687d/src/providers/bimface/bimface_model.ts#L92)*
+*Defined in [src/providers/bimface/bimface_model.ts:92](https://github.com/youkaisteve/bim-operator/blob/24828e5/src/providers/bimface/bimface_model.ts#L92)*
 
 批量执行，最后.done来完成调用,进行渲染。主要用于对模型进行多次改变，避免每次改变都自动render
 
@@ -652,7 +652,7 @@ ___
 
 *Overrides [BimfaceBase](_providers_bimface_bimface_base_.bimfacebase.md).[render](_providers_bimface_bimface_base_.bimfacebase.md#abstract-render)*
 
-*Defined in [src/providers/bimface/bimface_model.ts:80](https://github.com/youkaisteve/bim-operator/blob/dd4687d/src/providers/bimface/bimface_model.ts#L80)*
+*Defined in [src/providers/bimface/bimface_model.ts:80](https://github.com/youkaisteve/bim-operator/blob/24828e5/src/providers/bimface/bimface_model.ts#L80)*
 
 渲染
 
@@ -666,7 +666,7 @@ ___
 
 *Implementation of [IBim3DModel](../interfaces/_interface_.ibim3dmodel.md)*
 
-*Defined in [src/providers/bimface/bimface_model.ts:448](https://github.com/youkaisteve/bim-operator/blob/dd4687d/src/providers/bimface/bimface_model.ts#L448)*
+*Defined in [src/providers/bimface/bimface_model.ts:448](https://github.com/youkaisteve/bim-operator/blob/24828e5/src/providers/bimface/bimface_model.ts#L448)*
 
 设置场景显示大小
 
@@ -687,7 +687,7 @@ ___
 
 *Implementation of [IBim3DModel](../interfaces/_interface_.ibim3dmodel.md)*
 
-*Defined in [src/providers/bimface/bimface_model.ts:338](https://github.com/youkaisteve/bim-operator/blob/dd4687d/src/providers/bimface/bimface_model.ts#L338)*
+*Defined in [src/providers/bimface/bimface_model.ts:338](https://github.com/youkaisteve/bim-operator/blob/24828e5/src/providers/bimface/bimface_model.ts#L338)*
 
 恢复构件颜色
 
@@ -707,7 +707,7 @@ ___
 
 *Implementation of [IBim3DModel](../interfaces/_interface_.ibim3dmodel.md)*
 
-*Defined in [src/providers/bimface/bimface_model.ts:346](https://github.com/youkaisteve/bim-operator/blob/dd4687d/src/providers/bimface/bimface_model.ts#L346)*
+*Defined in [src/providers/bimface/bimface_model.ts:346](https://github.com/youkaisteve/bim-operator/blob/24828e5/src/providers/bimface/bimface_model.ts#L346)*
 
 根据条件恢复构件颜色
 
@@ -727,7 +727,7 @@ ___
 
 *Implementation of [IBim3DModel](../interfaces/_interface_.ibim3dmodel.md)*
 
-*Defined in [src/providers/bimface/bimface_model.ts:409](https://github.com/youkaisteve/bim-operator/blob/dd4687d/src/providers/bimface/bimface_model.ts#L409)*
+*Defined in [src/providers/bimface/bimface_model.ts:409](https://github.com/youkaisteve/bim-operator/blob/24828e5/src/providers/bimface/bimface_model.ts#L409)*
 
 恢复默认显示，包括着色、选择、隔离、半透明、空间等等
 
@@ -747,7 +747,7 @@ ___
 
 *Implementation of [IBim3DModel](../interfaces/_interface_.ibim3dmodel.md)*
 
-*Defined in [src/providers/bimface/bimface_model.ts:285](https://github.com/youkaisteve/bim-operator/blob/dd4687d/src/providers/bimface/bimface_model.ts#L285)*
+*Defined in [src/providers/bimface/bimface_model.ts:285](https://github.com/youkaisteve/bim-operator/blob/24828e5/src/providers/bimface/bimface_model.ts#L285)*
 
 选中构件
 
@@ -767,7 +767,7 @@ ___
 
 *Implementation of [IBim3DModel](../interfaces/_interface_.ibim3dmodel.md)*
 
-*Defined in [src/providers/bimface/bimface_model.ts:294](https://github.com/youkaisteve/bim-operator/blob/dd4687d/src/providers/bimface/bimface_model.ts#L294)*
+*Defined in [src/providers/bimface/bimface_model.ts:294](https://github.com/youkaisteve/bim-operator/blob/24828e5/src/providers/bimface/bimface_model.ts#L294)*
 
 根据条件选中构件
 
@@ -787,7 +787,7 @@ ___
 
 *Implementation of [IBim3DModel](../interfaces/_interface_.ibim3dmodel.md)*
 
-*Defined in [src/providers/bimface/bimface_model.ts:316](https://github.com/youkaisteve/bim-operator/blob/dd4687d/src/providers/bimface/bimface_model.ts#L316)*
+*Defined in [src/providers/bimface/bimface_model.ts:316](https://github.com/youkaisteve/bim-operator/blob/24828e5/src/providers/bimface/bimface_model.ts#L316)*
 
 设置构件ids
 
@@ -808,7 +808,7 @@ ___
 
 *Implementation of [IBim3DModel](../interfaces/_interface_.ibim3dmodel.md)*
 
-*Defined in [src/providers/bimface/bimface_model.ts:327](https://github.com/youkaisteve/bim-operator/blob/dd4687d/src/providers/bimface/bimface_model.ts#L327)*
+*Defined in [src/providers/bimface/bimface_model.ts:327](https://github.com/youkaisteve/bim-operator/blob/24828e5/src/providers/bimface/bimface_model.ts#L327)*
 
 根据条件设置构件颜色
 
@@ -829,7 +829,7 @@ ___
 
 *Implementation of [IBim3DModel](../interfaces/_interface_.ibim3dmodel.md)*
 
-*Defined in [src/providers/bimface/bimface_model.ts:388](https://github.com/youkaisteve/bim-operator/blob/dd4687d/src/providers/bimface/bimface_model.ts#L388)*
+*Defined in [src/providers/bimface/bimface_model.ts:388](https://github.com/youkaisteve/bim-operator/blob/24828e5/src/providers/bimface/bimface_model.ts#L388)*
 
 设置构件透明度, 包括半透明
 
@@ -850,7 +850,7 @@ ___
 
 *Implementation of [IBim3DModel](../interfaces/_interface_.ibim3dmodel.md)*
 
-*Defined in [src/providers/bimface/bimface_model.ts:218](https://github.com/youkaisteve/bim-operator/blob/dd4687d/src/providers/bimface/bimface_model.ts#L218)*
+*Defined in [src/providers/bimface/bimface_model.ts:218](https://github.com/youkaisteve/bim-operator/blob/24828e5/src/providers/bimface/bimface_model.ts#L218)*
 
 设置视点
 
@@ -868,7 +868,7 @@ ___
 
 ▸ **showComponents**(`componentIds?`: string[], `progressCallback?`: function): *Promise‹void›*
 
-*Defined in [src/providers/bimface/bimface_model.ts:369](https://github.com/youkaisteve/bim-operator/blob/dd4687d/src/providers/bimface/bimface_model.ts#L369)*
+*Defined in [src/providers/bimface/bimface_model.ts:369](https://github.com/youkaisteve/bim-operator/blob/24828e5/src/providers/bimface/bimface_model.ts#L369)*
 
 显示模型构件
 

@@ -1,4 +1,4 @@
-[@yzw/bim-operator - v1.6.1](../README.md) › [Globals](../globals.md) › ["enums"](../modules/_enums_.md) › [Bim3DPluginType](_enums_.bim3dplugintype.md)
+[@yzw/bim-operator - v1.7.0](../README.md) › [Globals](../globals.md) › ["enums"](../modules/_enums_.md) › [Bim3DPluginType](_enums_.bim3dplugintype.md)
 
 # Enumeration: Bim3DPluginType
 
@@ -16,6 +16,6 @@ Bim相关插件类型
 
 • **External**: = 0
 
-*Defined in [src/enums.ts:136](https://github.com/youkaisteve/bim-operator/blob/dd4687d/src/enums.ts#L136)*
+*Defined in [src/enums.ts:136](https://github.com/youkaisteve/bim-operator/blob/24828e5/src/enums.ts#L136)*
 
 外部构件插件
