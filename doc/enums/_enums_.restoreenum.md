@@ -1,4 +1,4 @@
-[@yzw/bim-operator - v1.7.0](../README.md) › [Globals](../globals.md) › ["enums"](../modules/_enums_.md) › [RestoreEnum](_enums_.restoreenum.md)
+[@yzw/bim-operator - v1.7.1](../README.md) › [Globals](../globals.md) › ["enums"](../modules/_enums_.md) › [RestoreEnum](_enums_.restoreenum.md)
 
 # Enumeration: RestoreEnum
 
@@ -23,7 +23,7 @@
 
 • **All**: = 0
 
-*Defined in [src/enums.ts:98](https://github.com/youkaisteve/bim-operator/blob/24828e5/src/enums.ts#L98)*
+*Defined in [src/enums.ts:98](https://github.com/youkaisteve/bim-operator/blob/b87a88f/src/enums.ts#L98)*
 
 全部
 
@@ -33,7 +33,7 @@ ___
 
 • **Blink**: = 32
 
-*Defined in [src/enums.ts:122](https://github.com/youkaisteve/bim-operator/blob/24828e5/src/enums.ts#L122)*
+*Defined in [src/enums.ts:122](https://github.com/youkaisteve/bim-operator/blob/b87a88f/src/enums.ts#L122)*
 
 强调状态
 
@@ -43,7 +43,7 @@ ___
 
 • **Color**: = 1
 
-*Defined in [src/enums.ts:102](https://github.com/youkaisteve/bim-operator/blob/24828e5/src/enums.ts#L102)*
+*Defined in [src/enums.ts:102](https://github.com/youkaisteve/bim-operator/blob/b87a88f/src/enums.ts#L102)*
 
 着色
 
@@ -53,7 +53,7 @@ ___
 
 • **FloorExplosion**: = 64
 
-*Defined in [src/enums.ts:126](https://github.com/youkaisteve/bim-operator/blob/24828e5/src/enums.ts#L126)*
+*Defined in [src/enums.ts:126](https://github.com/youkaisteve/bim-operator/blob/b87a88f/src/enums.ts#L126)*
 
 楼层爆炸
 
@@ -63,7 +63,7 @@ ___
 
 • **Isolate**: = 4
 
-*Defined in [src/enums.ts:110](https://github.com/youkaisteve/bim-operator/blob/24828e5/src/enums.ts#L110)*
+*Defined in [src/enums.ts:110](https://github.com/youkaisteve/bim-operator/blob/b87a88f/src/enums.ts#L110)*
 
 隔离
 
@@ -73,7 +73,7 @@ ___
 
 • **Room**: = 16
 
-*Defined in [src/enums.ts:118](https://github.com/youkaisteve/bim-operator/blob/24828e5/src/enums.ts#L118)*
+*Defined in [src/enums.ts:118](https://github.com/youkaisteve/bim-operator/blob/b87a88f/src/enums.ts#L118)*
 
 空间
 
@@ -83,7 +83,7 @@ ___
 
 • **Selection**: = 2
 
-*Defined in [src/enums.ts:106](https://github.com/youkaisteve/bim-operator/blob/24828e5/src/enums.ts#L106)*
+*Defined in [src/enums.ts:106](https://github.com/youkaisteve/bim-operator/blob/b87a88f/src/enums.ts#L106)*
 
 选择
 
@@ -93,6 +93,6 @@ ___
 
 • **Translucent**: = 8
 
-*Defined in [src/enums.ts:114](https://github.com/youkaisteve/bim-operator/blob/24828e5/src/enums.ts#L114)*
+*Defined in [src/enums.ts:114](https://github.com/youkaisteve/bim-operator/blob/b87a88f/src/enums.ts#L114)*
 
 半透明
