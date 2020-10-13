@@ -51,9 +51,9 @@ export default abstract class BimfaceBase {
             return;
         }
         return Promise.all(
-            plugins.map((plugin) => {
+            plugins.map(async (plugin) => {
                 if (plugin === Bim3DPluginType.External) {
-                    remoteLoad(BIMFACE_EXTERNAL_TDSLoader);
+                    await remoteLoad(BIMFACE_EXTERNAL_TDSLoader);
                 } else {
                     throw new Error(`plugin(${plugin}) is not supported`);
                 }

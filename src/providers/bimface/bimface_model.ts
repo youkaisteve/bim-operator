@@ -116,11 +116,8 @@ export default class Bimface3DModel extends BimfaceBase implements IBim3DModel, 
         this.dispose(options);
 
         await this.initSDK(options.sdk);
-        if (!CollectionUtils.isEmpty(options.plugins)) {
-            await this.initPlugin(options.plugins);
-        }
         const viewMetaData = await this.loadSDK(options);
-
+        await this.initPlugin(options.plugins);
         const domShow = document.getElementById(options.domId);
         let webAppConfig = new window.Glodon.Bimface.Application.WebApplication3DConfig();
         webAppConfig.domElement = domShow;
@@ -133,7 +130,7 @@ export default class Bimface3DModel extends BimfaceBase implements IBim3DModel, 
         this.viewer3D = this.app.getViewer();
         this.app.addView(viewMetaData.viewToken);
 
-        return new Promise((resolve) => {
+        return new Promise(async (resolve) => {
             this.viewer3D.addEventListener(window.Glodon.Bimface.Viewer.Viewer3DEvent.ViewAdded, resolve);
         });
     }
