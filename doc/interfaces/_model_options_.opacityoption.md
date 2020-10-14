@@ -1,4 +1,4 @@
-[@yzw/bim-operator - v1.7.1](../README.md) › [Globals](../globals.md) › ["model/options"](../modules/_model_options_.md) › [OpacityOption](_model_options_.opacityoption.md)
+[@yzw/bim-operator - v1.7.2](../README.md) › [Globals](../globals.md) › ["model/options"](../modules/_model_options_.md) › [OpacityOption](_model_options_.opacityoption.md)
 
 # Interface: OpacityOption
 
@@ -22,7 +22,7 @@
 
 • **modelId**? : *string*
 
-*Defined in [src/model/options.ts:35](https://github.com/youkaisteve/bim-operator/blob/b87a88f/src/model/options.ts#L35)*
+*Defined in [src/model/options.ts:35](https://github.com/youkaisteve/bim-operator/blob/e2ba6fb/src/model/options.ts#L35)*
 
 模型ID，用于在多模型状态下指定匹配范围为某个模型中的构件
 
@@ -32,7 +32,7 @@ ___
 
 • **opacity**: *number*
 
-*Defined in [src/model/options.ts:31](https://github.com/youkaisteve/bim-operator/blob/b87a88f/src/model/options.ts#L31)*
+*Defined in [src/model/options.ts:31](https://github.com/youkaisteve/bim-operator/blob/e2ba6fb/src/model/options.ts#L31)*
 
 透明度，取值范围[0, 1]，默认值为1
 
@@ -42,6 +42,6 @@ ___
 
 • **opacityType**: *[OpacityEnum](../enums/_enums_.opacityenum.md)*
 
-*Defined in [src/model/options.ts:27](https://github.com/youkaisteve/bim-operator/blob/b87a88f/src/model/options.ts#L27)*
+*Defined in [src/model/options.ts:27](https://github.com/youkaisteve/bim-operator/blob/e2ba6fb/src/model/options.ts#L27)*
 
 透明度类型

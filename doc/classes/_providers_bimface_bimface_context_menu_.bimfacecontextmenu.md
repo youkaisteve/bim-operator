@@ -1,4 +1,4 @@
-[@yzw/bim-operator - v1.7.1](../README.md) › [Globals](../globals.md) › ["providers/bimface/bimface_context_menu"](../modules/_providers_bimface_bimface_context_menu_.md) › [BimfaceContextMenu](_providers_bimface_bimface_context_menu_.bimfacecontextmenu.md)
+[@yzw/bim-operator - v1.7.2](../README.md) › [Globals](../globals.md) › ["providers/bimface/bimface_context_menu"](../modules/_providers_bimface_bimface_context_menu_.md) › [BimfaceContextMenu](_providers_bimface_bimface_context_menu_.bimfacecontextmenu.md)
 
 # Class: BimfaceContextMenu
 
@@ -61,7 +61,7 @@ bimface菜单管理，目前只支持两级结构
 
 \+ **new BimfaceContextMenu**(`context`: [IContext](../interfaces/_interface_.icontext.md)): *[BimfaceContextMenu](_providers_bimface_bimface_context_menu_.bimfacecontextmenu.md)*
 
-*Defined in [src/providers/bimface/bimface_context_menu.ts:19](https://github.com/youkaisteve/bim-operator/blob/b87a88f/src/providers/bimface/bimface_context_menu.ts#L19)*
+*Defined in [src/providers/bimface/bimface_context_menu.ts:19](https://github.com/youkaisteve/bim-operator/blob/e2ba6fb/src/providers/bimface/bimface_context_menu.ts#L19)*
 
 **Parameters:**
 
@@ -77,7 +77,7 @@ Name | Type |
 
 • **[KEY_PREFIX]**: *string*
 
-*Defined in [src/providers/bimface/bimface_context_menu.ts:18](https://github.com/youkaisteve/bim-operator/blob/b87a88f/src/providers/bimface/bimface_context_menu.ts#L18)*
+*Defined in [src/providers/bimface/bimface_context_menu.ts:18](https://github.com/youkaisteve/bim-operator/blob/e2ba6fb/src/providers/bimface/bimface_context_menu.ts#L18)*
 
 ___
 
@@ -85,7 +85,7 @@ ___
 
 • **[MENU_ROOT_DOM]**: *Element*
 
-*Defined in [src/providers/bimface/bimface_context_menu.ts:19](https://github.com/youkaisteve/bim-operator/blob/b87a88f/src/providers/bimface/bimface_context_menu.ts#L19)*
+*Defined in [src/providers/bimface/bimface_context_menu.ts:19](https://github.com/youkaisteve/bim-operator/blob/e2ba6fb/src/providers/bimface/bimface_context_menu.ts#L19)*
 
 ___
 
@@ -93,7 +93,7 @@ ___
 
 • **context**: *[IContext](../interfaces/_interface_.icontext.md)*
 
-*Defined in [src/providers/bimface/bimface_context_menu.ts:17](https://github.com/youkaisteve/bim-operator/blob/b87a88f/src/providers/bimface/bimface_context_menu.ts#L17)*
+*Defined in [src/providers/bimface/bimface_context_menu.ts:17](https://github.com/youkaisteve/bim-operator/blob/e2ba6fb/src/providers/bimface/bimface_context_menu.ts#L17)*
 
 ___
 
@@ -101,7 +101,7 @@ ___
 
 ▪ **contextMenuKeyPrefix**: *string* = "__bimface_context_menu_"
 
-*Defined in [src/providers/bimface/bimface_context_menu.ts:16](https://github.com/youkaisteve/bim-operator/blob/b87a88f/src/providers/bimface/bimface_context_menu.ts#L16)*
+*Defined in [src/providers/bimface/bimface_context_menu.ts:16](https://github.com/youkaisteve/bim-operator/blob/e2ba6fb/src/providers/bimface/bimface_context_menu.ts#L16)*
 
 ___
 
@@ -121,7 +121,7 @@ Defined in node_modules/@types/node/events.d.ts:18
 
 *Implementation of [IContextMenu](../interfaces/_interface_.icontextmenu.md)*
 
-*Defined in [src/providers/bimface/bimface_context_menu.ts:27](https://github.com/youkaisteve/bim-operator/blob/b87a88f/src/providers/bimface/bimface_context_menu.ts#L27)*
+*Defined in [src/providers/bimface/bimface_context_menu.ts:27](https://github.com/youkaisteve/bim-operator/blob/e2ba6fb/src/providers/bimface/bimface_context_menu.ts#L27)*
 
 **Parameters:**
 
@@ -166,7 +166,7 @@ ___
 
 ▸ **dispatchClickEvent**(`menuItem`: [ContextMenuItem](../interfaces/_model_context_menu_item_.contextmenuitem.md)): *void*
 
-*Defined in [src/providers/bimface/bimface_context_menu.ts:131](https://github.com/youkaisteve/bim-operator/blob/b87a88f/src/providers/bimface/bimface_context_menu.ts#L131)*
+*Defined in [src/providers/bimface/bimface_context_menu.ts:131](https://github.com/youkaisteve/bim-operator/blob/e2ba6fb/src/providers/bimface/bimface_context_menu.ts#L131)*
 
 触发菜单点击事件
 
@@ -219,7 +219,7 @@ ___
 
 ▸ **findContextMenu**(`contextMenuItems`: [ContextMenuItem](../interfaces/_model_context_menu_item_.contextmenuitem.md)[], `key`: string): *[ContextMenuItem](../interfaces/_model_context_menu_item_.contextmenuitem.md)*
 
-*Defined in [src/providers/bimface/bimface_context_menu.ts:79](https://github.com/youkaisteve/bim-operator/blob/b87a88f/src/providers/bimface/bimface_context_menu.ts#L79)*
+*Defined in [src/providers/bimface/bimface_context_menu.ts:79](https://github.com/youkaisteve/bim-operator/blob/e2ba6fb/src/providers/bimface/bimface_context_menu.ts#L79)*
 
 **Parameters:**
 
@@ -250,7 +250,7 @@ ___
 
 ▸ **initMenuRoot**(): *void*
 
-*Defined in [src/providers/bimface/bimface_context_menu.ts:50](https://github.com/youkaisteve/bim-operator/blob/b87a88f/src/providers/bimface/bimface_context_menu.ts#L50)*
+*Defined in [src/providers/bimface/bimface_context_menu.ts:50](https://github.com/youkaisteve/bim-operator/blob/e2ba6fb/src/providers/bimface/bimface_context_menu.ts#L50)*
 
 **Returns:** *void*
 
@@ -462,7 +462,7 @@ ___
 
 *Implementation of [IContextMenu](../interfaces/_interface_.icontextmenu.md)*
 
-*Defined in [src/providers/bimface/bimface_context_menu.ts:39](https://github.com/youkaisteve/bim-operator/blob/b87a88f/src/providers/bimface/bimface_context_menu.ts#L39)*
+*Defined in [src/providers/bimface/bimface_context_menu.ts:39](https://github.com/youkaisteve/bim-operator/blob/e2ba6fb/src/providers/bimface/bimface_context_menu.ts#L39)*
 
 **Parameters:**
 
@@ -526,7 +526,7 @@ ___
 
 ▸ **removeRecusive**(`contextMenuItems`: [ContextMenuItem](../interfaces/_model_context_menu_item_.contextmenuitem.md)[], `key`: string): *boolean*
 
-*Defined in [src/providers/bimface/bimface_context_menu.ts:62](https://github.com/youkaisteve/bim-operator/blob/b87a88f/src/providers/bimface/bimface_context_menu.ts#L62)*
+*Defined in [src/providers/bimface/bimface_context_menu.ts:62](https://github.com/youkaisteve/bim-operator/blob/e2ba6fb/src/providers/bimface/bimface_context_menu.ts#L62)*
 
 **Parameters:**
 
@@ -545,7 +545,7 @@ ___
 
 *Implementation of [IContextMenu](../interfaces/_interface_.icontextmenu.md)*
 
-*Defined in [src/providers/bimface/bimface_context_menu.ts:43](https://github.com/youkaisteve/bim-operator/blob/b87a88f/src/providers/bimface/bimface_context_menu.ts#L43)*
+*Defined in [src/providers/bimface/bimface_context_menu.ts:43](https://github.com/youkaisteve/bim-operator/blob/e2ba6fb/src/providers/bimface/bimface_context_menu.ts#L43)*
 
 **Returns:** *void*
 
@@ -555,7 +555,7 @@ ___
 
 ▸ **renderMenuItem**(`menuItem`: [ContextMenuItem](../interfaces/_model_context_menu_item_.contextmenuitem.md)): *void*
 
-*Defined in [src/providers/bimface/bimface_context_menu.ts:94](https://github.com/youkaisteve/bim-operator/blob/b87a88f/src/providers/bimface/bimface_context_menu.ts#L94)*
+*Defined in [src/providers/bimface/bimface_context_menu.ts:94](https://github.com/youkaisteve/bim-operator/blob/e2ba6fb/src/providers/bimface/bimface_context_menu.ts#L94)*
 
 **Parameters:**
 
