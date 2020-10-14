@@ -44,7 +44,7 @@ export interface RotateOption {
      */
     objectId: string;
     /**
-     * 坐标轴，只能是x,y,z
+     * 坐标轴，只能是x,y,z其中一个
      */
     axis: string;
     /**
