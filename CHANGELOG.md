@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.8.0](https://github.com/youkaisteve/bim-operator/compare/v1.7.2...v1.8.0) (2020-10-20)
+
+
+### Features
+
+* **bimface:** add interface of external manager ([59b2eb1](https://github.com/youkaisteve/bim-operator/commit/59b2eb14b33e5365e351ce3916e10515b3fcca95))
+
 ### [1.7.2](https://github.com/youkaisteve/bim-operator/compare/v1.7.1...v1.7.2) (2020-10-13)
 
 
