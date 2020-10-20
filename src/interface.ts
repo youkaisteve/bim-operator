@@ -5,6 +5,7 @@ import { IsolateOption, DrawingDisplayMode } from './enums';
 import { ComponentFilter } from './model/filter';
 import { HighlightOption } from './model';
 import CustomButton from './model/custom_button';
+import Position from './model/position';
 import { OffsetOption, OpacityOption, RotateOption, ScaleOption, TranslateOption } from './model/options';
 import ContextMenuItem from './model/context_menu_item';
 
@@ -250,6 +251,16 @@ export interface IExternal {
      * @param distance 移动选项
      */
     translate(objectId: string, option: TranslateOption);
+
+    /**
+     * 获取外部构件的世界坐标
+     * @param objectId 外部构件id
+     */
+    getPosition(objectId: string): Position;
+    /**
+     * 获取所有外部构件的ID
+     */
+    getAllObjectIds(): string[];
 }
 
 /**

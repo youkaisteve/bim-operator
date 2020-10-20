@@ -1,6 +1,7 @@
 import debugLog from '../../decorators/debug_log';
 import { IExternal } from '../../interface';
 import { RotateOption, OffsetOption, ScaleOption, TranslateOption } from '../../model';
+import Position from '../../model/position';
 
 /**
  * bimface外部构件
@@ -64,5 +65,18 @@ export default class BimfaceExternal implements IExternal {
     translate(objectId: string, option: TranslateOption) {
         this.externalMgr.setPosition(objectId, option);
         this.viewer3D.render();
+    }
+    /**
+     * 获取外部构件的世界坐标
+     * @param objectId 外部构件id
+     */
+    getPosition(objectId: string): Position {
+        return this.externalMgr.getPosition(objectId);
+    }
+    /**
+     * 获取所有外部构件的ID
+     */
+    getAllObjectIds(): string[] {
+        return this.externalMgr.getAllObjectIds();
     }
 }
