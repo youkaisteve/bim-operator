@@ -22,7 +22,7 @@
 
 • **x**: *number*
 
-*Defined in [src/model/position.ts:8](https://github.com/youkaisteve/bim-operator/blob/e2ba6fb/src/model/position.ts#L8)*
+*Defined in [src/model/position.ts:8](https://github.com/youkaisteve/bim-operator/blob/59b2eb1/src/model/position.ts#L8)*
 
 x
 
@@ -32,7 +32,7 @@ ___
 
 • **y**: *number*
 
-*Defined in [src/model/position.ts:12](https://github.com/youkaisteve/bim-operator/blob/e2ba6fb/src/model/position.ts#L12)*
+*Defined in [src/model/position.ts:12](https://github.com/youkaisteve/bim-operator/blob/59b2eb1/src/model/position.ts#L12)*
 
 y
 
@@ -42,6 +42,6 @@ ___
 
 • **z**? : *string*
 
-*Defined in [src/model/position.ts:16](https://github.com/youkaisteve/bim-operator/blob/e2ba6fb/src/model/position.ts#L16)*
+*Defined in [src/model/position.ts:16](https://github.com/youkaisteve/bim-operator/blob/59b2eb1/src/model/position.ts#L16)*
 
 z

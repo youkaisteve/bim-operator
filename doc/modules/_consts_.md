@@ -15,7 +15,7 @@
 
 • **BIMFACE_EXTERNAL_TDSLoader**: *"https://static.bimface.com/resources/ExternalObject/Loader/TDSLoader.js"* = "https://static.bimface.com/resources/ExternalObject/Loader/TDSLoader.js"
 
-*Defined in [src/consts.ts:5](https://github.com/youkaisteve/bim-operator/blob/e2ba6fb/src/consts.ts#L5)*
+*Defined in [src/consts.ts:5](https://github.com/youkaisteve/bim-operator/blob/59b2eb1/src/consts.ts#L5)*
 
 ___
 
@@ -23,6 +23,6 @@ ___
 
 • **BIMFACE_JS_SDK**: *"https://static.bimface.com/api/BimfaceSDKLoader/BimfaceSDKLoader@latest-release.js"* = "https://static.bimface.com/api/BimfaceSDKLoader/BimfaceSDKLoader@latest-release.js"
 
-*Defined in [src/consts.ts:4](https://github.com/youkaisteve/bim-operator/blob/e2ba6fb/src/consts.ts#L4)*
+*Defined in [src/consts.ts:4](https://github.com/youkaisteve/bim-operator/blob/59b2eb1/src/consts.ts#L4)*
 
 bimface js sdk的地址

@@ -25,7 +25,7 @@
 
 • **componentId**: *string | number*
 
-*Defined in [src/model/component.ts:10](https://github.com/youkaisteve/bim-operator/blob/e2ba6fb/src/model/component.ts#L10)*
+*Defined in [src/model/component.ts:10](https://github.com/youkaisteve/bim-operator/blob/59b2eb1/src/model/component.ts#L10)*
 
 构件id
 
@@ -35,7 +35,7 @@ ___
 
 • **componentName**: *string*
 
-*Defined in [src/model/component.ts:14](https://github.com/youkaisteve/bim-operator/blob/e2ba6fb/src/model/component.ts#L14)*
+*Defined in [src/model/component.ts:14](https://github.com/youkaisteve/bim-operator/blob/59b2eb1/src/model/component.ts#L14)*
 
 构件名称
 
@@ -47,7 +47,7 @@ ___
 
 *Inherited from [ModelBase](_model_base_.modelbase.md).[fileId](_model_base_.modelbase.md#fileid)*
 
-*Defined in [src/model/base.ts:8](https://github.com/youkaisteve/bim-operator/blob/e2ba6fb/src/model/base.ts#L8)*
+*Defined in [src/model/base.ts:8](https://github.com/youkaisteve/bim-operator/blob/59b2eb1/src/model/base.ts#L8)*
 
 单模型id
 
@@ -59,6 +59,6 @@ ___
 
 *Inherited from [ModelBase](_model_base_.modelbase.md).[integrateId](_model_base_.modelbase.md#optional-integrateid)*
 
-*Defined in [src/model/base.ts:12](https://github.com/youkaisteve/bim-operator/blob/e2ba6fb/src/model/base.ts#L12)*
+*Defined in [src/model/base.ts:12](https://github.com/youkaisteve/bim-operator/blob/59b2eb1/src/model/base.ts#L12)*
 
 组合模型id

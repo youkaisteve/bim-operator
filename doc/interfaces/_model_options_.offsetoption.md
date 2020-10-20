@@ -22,7 +22,7 @@
 
 • **x**: *number*
 
-*Defined in [src/model/options.ts:63](https://github.com/youkaisteve/bim-operator/blob/e2ba6fb/src/model/options.ts#L63)*
+*Defined in [src/model/options.ts:63](https://github.com/youkaisteve/bim-operator/blob/59b2eb1/src/model/options.ts#L63)*
 
 x轴移动的距离信息,单位：毫米
 
@@ -32,7 +32,7 @@ ___
 
 • **y**: *number*
 
-*Defined in [src/model/options.ts:67](https://github.com/youkaisteve/bim-operator/blob/e2ba6fb/src/model/options.ts#L67)*
+*Defined in [src/model/options.ts:67](https://github.com/youkaisteve/bim-operator/blob/59b2eb1/src/model/options.ts#L67)*
 
 y轴移动的距离信息,单位：毫米
 
@@ -42,6 +42,6 @@ ___
 
 • **z**: *number*
 
-*Defined in [src/model/options.ts:71](https://github.com/youkaisteve/bim-operator/blob/e2ba6fb/src/model/options.ts#L71)*
+*Defined in [src/model/options.ts:71](https://github.com/youkaisteve/bim-operator/blob/59b2eb1/src/model/options.ts#L71)*
 
 z轴移动的距离信息,单位：毫米

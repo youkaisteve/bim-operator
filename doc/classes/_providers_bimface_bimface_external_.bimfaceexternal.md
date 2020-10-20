@@ -28,6 +28,8 @@ bimface外部构件
 
 * [add](_providers_bimface_bimface_external_.bimfaceexternal.md#add)
 * [clear](_providers_bimface_bimface_external_.bimfaceexternal.md#clear)
+* [getAllObjectIds](_providers_bimface_bimface_external_.bimfaceexternal.md#getallobjectids)
+* [getPosition](_providers_bimface_bimface_external_.bimfaceexternal.md#getposition)
 * [offset](_providers_bimface_bimface_external_.bimfaceexternal.md#offset)
 * [removeById](_providers_bimface_bimface_external_.bimfaceexternal.md#removebyid)
 * [rotate](_providers_bimface_bimface_external_.bimfaceexternal.md#rotate)
@@ -41,7 +43,7 @@ bimface外部构件
 
 \+ **new BimfaceExternal**(`viewer3D`: any): *[BimfaceExternal](_providers_bimface_bimface_external_.bimfaceexternal.md)*
 
-*Defined in [src/providers/bimface/bimface_external.ts:12](https://github.com/youkaisteve/bim-operator/blob/e2ba6fb/src/providers/bimface/bimface_external.ts#L12)*
+*Defined in [src/providers/bimface/bimface_external.ts:13](https://github.com/youkaisteve/bim-operator/blob/59b2eb1/src/providers/bimface/bimface_external.ts#L13)*
 
 **Parameters:**
 
@@ -57,7 +59,7 @@ Name | Type |
 
 • **externalMgr**: *any*
 
-*Defined in [src/providers/bimface/bimface_external.ts:10](https://github.com/youkaisteve/bim-operator/blob/e2ba6fb/src/providers/bimface/bimface_external.ts#L10)*
+*Defined in [src/providers/bimface/bimface_external.ts:11](https://github.com/youkaisteve/bim-operator/blob/59b2eb1/src/providers/bimface/bimface_external.ts#L11)*
 
 ___
 
@@ -65,7 +67,7 @@ ___
 
 • **loader**: *any*
 
-*Defined in [src/providers/bimface/bimface_external.ts:11](https://github.com/youkaisteve/bim-operator/blob/e2ba6fb/src/providers/bimface/bimface_external.ts#L11)*
+*Defined in [src/providers/bimface/bimface_external.ts:12](https://github.com/youkaisteve/bim-operator/blob/59b2eb1/src/providers/bimface/bimface_external.ts#L12)*
 
 ___
 
@@ -73,7 +75,7 @@ ___
 
 • **viewer3D**: *any*
 
-*Defined in [src/providers/bimface/bimface_external.ts:12](https://github.com/youkaisteve/bim-operator/blob/e2ba6fb/src/providers/bimface/bimface_external.ts#L12)*
+*Defined in [src/providers/bimface/bimface_external.ts:13](https://github.com/youkaisteve/bim-operator/blob/59b2eb1/src/providers/bimface/bimface_external.ts#L13)*
 
 ## Methods
 
@@ -83,7 +85,7 @@ ___
 
 *Implementation of [IExternal](../interfaces/_interface_.iexternal.md)*
 
-*Defined in [src/providers/bimface/bimface_external.ts:24](https://github.com/youkaisteve/bim-operator/blob/e2ba6fb/src/providers/bimface/bimface_external.ts#L24)*
+*Defined in [src/providers/bimface/bimface_external.ts:25](https://github.com/youkaisteve/bim-operator/blob/59b2eb1/src/providers/bimface/bimface_external.ts#L25)*
 
 **Parameters:**
 
@@ -102,9 +104,43 @@ ___
 
 *Implementation of [IExternal](../interfaces/_interface_.iexternal.md)*
 
-*Defined in [src/providers/bimface/bimface_external.ts:36](https://github.com/youkaisteve/bim-operator/blob/e2ba6fb/src/providers/bimface/bimface_external.ts#L36)*
+*Defined in [src/providers/bimface/bimface_external.ts:37](https://github.com/youkaisteve/bim-operator/blob/59b2eb1/src/providers/bimface/bimface_external.ts#L37)*
 
 **Returns:** *void*
+
+___
+
+###  getAllObjectIds
+
+▸ **getAllObjectIds**(): *string[]*
+
+*Implementation of [IExternal](../interfaces/_interface_.iexternal.md)*
+
+*Defined in [src/providers/bimface/bimface_external.ts:79](https://github.com/youkaisteve/bim-operator/blob/59b2eb1/src/providers/bimface/bimface_external.ts#L79)*
+
+获取所有外部构件的ID
+
+**Returns:** *string[]*
+
+___
+
+###  getPosition
+
+▸ **getPosition**(`objectId`: string): *[Position](../interfaces/_model_position_.position.md)*
+
+*Implementation of [IExternal](../interfaces/_interface_.iexternal.md)*
+
+*Defined in [src/providers/bimface/bimface_external.ts:73](https://github.com/youkaisteve/bim-operator/blob/59b2eb1/src/providers/bimface/bimface_external.ts#L73)*
+
+获取外部构件的世界坐标
+
+**Parameters:**
+
+Name | Type | Description |
+------ | ------ | ------ |
+`objectId` | string | 外部构件id  |
+
+**Returns:** *[Position](../interfaces/_model_position_.position.md)*
 
 ___
 
@@ -114,7 +150,7 @@ ___
 
 *Implementation of [IExternal](../interfaces/_interface_.iexternal.md)*
 
-*Defined in [src/providers/bimface/bimface_external.ts:52](https://github.com/youkaisteve/bim-operator/blob/e2ba6fb/src/providers/bimface/bimface_external.ts#L52)*
+*Defined in [src/providers/bimface/bimface_external.ts:53](https://github.com/youkaisteve/bim-operator/blob/59b2eb1/src/providers/bimface/bimface_external.ts#L53)*
 
 **Parameters:**
 
@@ -133,7 +169,7 @@ ___
 
 *Implementation of [IExternal](../interfaces/_interface_.iexternal.md)*
 
-*Defined in [src/providers/bimface/bimface_external.ts:33](https://github.com/youkaisteve/bim-operator/blob/e2ba6fb/src/providers/bimface/bimface_external.ts#L33)*
+*Defined in [src/providers/bimface/bimface_external.ts:34](https://github.com/youkaisteve/bim-operator/blob/59b2eb1/src/providers/bimface/bimface_external.ts#L34)*
 
 **Parameters:**
 
@@ -151,7 +187,7 @@ ___
 
 *Implementation of [IExternal](../interfaces/_interface_.iexternal.md)*
 
-*Defined in [src/providers/bimface/bimface_external.ts:39](https://github.com/youkaisteve/bim-operator/blob/e2ba6fb/src/providers/bimface/bimface_external.ts#L39)*
+*Defined in [src/providers/bimface/bimface_external.ts:40](https://github.com/youkaisteve/bim-operator/blob/59b2eb1/src/providers/bimface/bimface_external.ts#L40)*
 
 **Parameters:**
 
@@ -170,7 +206,7 @@ ___
 
 *Implementation of [IExternal](../interfaces/_interface_.iexternal.md)*
 
-*Defined in [src/providers/bimface/bimface_external.ts:55](https://github.com/youkaisteve/bim-operator/blob/e2ba6fb/src/providers/bimface/bimface_external.ts#L55)*
+*Defined in [src/providers/bimface/bimface_external.ts:56](https://github.com/youkaisteve/bim-operator/blob/59b2eb1/src/providers/bimface/bimface_external.ts#L56)*
 
 **Parameters:**
 
@@ -185,18 +221,18 @@ ___
 
 ###  setPosition
 
-▸ **setPosition**(`objectId`: string, `position`: Position): *void*
+▸ **setPosition**(`objectId`: string, `position`: [Position](../interfaces/_model_position_.position.md)): *void*
 
 *Implementation of [IExternal](../interfaces/_interface_.iexternal.md)*
 
-*Defined in [src/providers/bimface/bimface_external.ts:61](https://github.com/youkaisteve/bim-operator/blob/e2ba6fb/src/providers/bimface/bimface_external.ts#L61)*
+*Defined in [src/providers/bimface/bimface_external.ts:62](https://github.com/youkaisteve/bim-operator/blob/59b2eb1/src/providers/bimface/bimface_external.ts#L62)*
 
 **Parameters:**
 
 Name | Type |
 ------ | ------ |
 `objectId` | string |
-`position` | Position |
+`position` | [Position](../interfaces/_model_position_.position.md) |
 
 **Returns:** *void*
 
@@ -208,7 +244,7 @@ ___
 
 *Implementation of [IExternal](../interfaces/_interface_.iexternal.md)*
 
-*Defined in [src/providers/bimface/bimface_external.ts:64](https://github.com/youkaisteve/bim-operator/blob/e2ba6fb/src/providers/bimface/bimface_external.ts#L64)*
+*Defined in [src/providers/bimface/bimface_external.ts:65](https://github.com/youkaisteve/bim-operator/blob/59b2eb1/src/providers/bimface/bimface_external.ts#L65)*
 
 **Parameters:**
 

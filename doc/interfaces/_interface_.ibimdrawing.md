@@ -25,7 +25,7 @@ Bim图纸操作
 
 ▸ **load**(`options`: any): *Promise‹void›*
 
-*Defined in [src/interface.ts:263](https://github.com/youkaisteve/bim-operator/blob/e2ba6fb/src/interface.ts#L263)*
+*Defined in [src/interface.ts:274](https://github.com/youkaisteve/bim-operator/blob/59b2eb1/src/interface.ts#L274)*
 
 加载模型
 
@@ -43,7 +43,7 @@ ___
 
 ▸ **setDisplayMode**(`model`: [DrawingDisplayMode](../enums/_enums_.drawingdisplaymode.md), `customOptions`: any): *void*
 
-*Defined in [src/interface.ts:271](https://github.com/youkaisteve/bim-operator/blob/e2ba6fb/src/interface.ts#L271)*
+*Defined in [src/interface.ts:282](https://github.com/youkaisteve/bim-operator/blob/59b2eb1/src/interface.ts#L282)*
 
 设置展示模式
 

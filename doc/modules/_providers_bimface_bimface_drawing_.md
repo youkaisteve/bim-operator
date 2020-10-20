@@ -18,4 +18,4 @@
 
 • **MULTI_FIELD**: *unique symbol* =  Symbol('Bimface#IsMultiField')
 
-*Defined in [src/providers/bimface/bimface_drawing.ts:6](https://github.com/youkaisteve/bim-operator/blob/e2ba6fb/src/providers/bimface/bimface_drawing.ts#L6)*
+*Defined in [src/providers/bimface/bimface_drawing.ts:6](https://github.com/youkaisteve/bim-operator/blob/59b2eb1/src/providers/bimface/bimface_drawing.ts#L6)*

@@ -16,6 +16,6 @@ Bim相关插件类型
 
 • **External**: = 0
 
-*Defined in [src/enums.ts:136](https://github.com/youkaisteve/bim-operator/blob/e2ba6fb/src/enums.ts#L136)*
+*Defined in [src/enums.ts:136](https://github.com/youkaisteve/bim-operator/blob/59b2eb1/src/enums.ts#L136)*
 
 外部构件插件
