@@ -1,4 +1,4 @@
-[@yzw/bim-operator - v1.7.2](../README.md) › [Globals](../globals.md) › ["model/context_menu_item"](../modules/_model_context_menu_item_.md) › [ContextMenuItem](_model_context_menu_item_.contextmenuitem.md)
+[@yzw/bim-operator - v1.8.0](../README.md) › [Globals](../globals.md) › ["model/context_menu_item"](../modules/_model_context_menu_item_.md) › [ContextMenuItem](_model_context_menu_item_.contextmenuitem.md)
 
 # Interface: ContextMenuItem
 
@@ -23,7 +23,7 @@
 
 • **children**: *[ContextMenuItem](_model_context_menu_item_.contextmenuitem.md)[]*
 
-*Defined in [src/model/context_menu_item.ts:20](https://github.com/youkaisteve/bim-operator/blob/59b2eb1/src/model/context_menu_item.ts#L20)*
+*Defined in [src/model/context_menu_item.ts:20](https://github.com/youkaisteve/bim-operator/blob/3313d73/src/model/context_menu_item.ts#L20)*
 
 子菜单
 
@@ -33,7 +33,7 @@ ___
 
 • **elementId**? : *string*
 
-*Defined in [src/model/context_menu_item.ts:16](https://github.com/youkaisteve/bim-operator/blob/59b2eb1/src/model/context_menu_item.ts#L16)*
+*Defined in [src/model/context_menu_item.ts:16](https://github.com/youkaisteve/bim-operator/blob/3313d73/src/model/context_menu_item.ts#L16)*
 
 渲染之后的HtmlElement Id
 
@@ -43,7 +43,7 @@ ___
 
 • **key**: *string*
 
-*Defined in [src/model/context_menu_item.ts:8](https://github.com/youkaisteve/bim-operator/blob/59b2eb1/src/model/context_menu_item.ts#L8)*
+*Defined in [src/model/context_menu_item.ts:8](https://github.com/youkaisteve/bim-operator/blob/3313d73/src/model/context_menu_item.ts#L8)*
 
 菜单主键，不能重复
 
@@ -53,6 +53,6 @@ ___
 
 • **text**: *string*
 
-*Defined in [src/model/context_menu_item.ts:12](https://github.com/youkaisteve/bim-operator/blob/59b2eb1/src/model/context_menu_item.ts#L12)*
+*Defined in [src/model/context_menu_item.ts:12](https://github.com/youkaisteve/bim-operator/blob/3313d73/src/model/context_menu_item.ts#L12)*
 
 菜单文本

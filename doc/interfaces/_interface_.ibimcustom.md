@@ -1,4 +1,4 @@
-[@yzw/bim-operator - v1.7.2](../README.md) › [Globals](../globals.md) › ["interface"](../modules/_interface_.md) › [IBimCustom](_interface_.ibimcustom.md)
+[@yzw/bim-operator - v1.8.0](../README.md) › [Globals](../globals.md) › ["interface"](../modules/_interface_.md) › [IBimCustom](_interface_.ibimcustom.md)
 
 # Interface: IBimCustom
 
@@ -25,7 +25,7 @@ Bim自定义
 
 ▸ **addCustomButtons**(`customButtons`: [CustomButton](_model_custom_button_.custombutton.md)[]): *void*
 
-*Defined in [src/interface.ts:293](https://github.com/youkaisteve/bim-operator/blob/59b2eb1/src/interface.ts#L293)*
+*Defined in [src/interface.ts:293](https://github.com/youkaisteve/bim-operator/blob/3313d73/src/interface.ts#L293)*
 
 自定义工具条按钮
 

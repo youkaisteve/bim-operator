@@ -1,4 +1,4 @@
-[@yzw/bim-operator - v1.7.2](../README.md) › [Globals](../globals.md) › ["model/options"](../modules/_model_options_.md) › [ScaleOption](_model_options_.scaleoption.md)
+[@yzw/bim-operator - v1.8.0](../README.md) › [Globals](../globals.md) › ["model/options"](../modules/_model_options_.md) › [ScaleOption](_model_options_.scaleoption.md)
 
 # Interface: ScaleOption
 
@@ -22,7 +22,7 @@
 
 • **x**: *number*
 
-*Defined in [src/model/options.ts:80](https://github.com/youkaisteve/bim-operator/blob/59b2eb1/src/model/options.ts#L80)*
+*Defined in [src/model/options.ts:80](https://github.com/youkaisteve/bim-operator/blob/3313d73/src/model/options.ts#L80)*
 
 x轴缩放倍数
 
@@ -32,7 +32,7 @@ ___
 
 • **y**: *number*
 
-*Defined in [src/model/options.ts:84](https://github.com/youkaisteve/bim-operator/blob/59b2eb1/src/model/options.ts#L84)*
+*Defined in [src/model/options.ts:84](https://github.com/youkaisteve/bim-operator/blob/3313d73/src/model/options.ts#L84)*
 
 y轴缩放倍数
 
@@ -42,6 +42,6 @@ ___
 
 • **z**: *number*
 
-*Defined in [src/model/options.ts:88](https://github.com/youkaisteve/bim-operator/blob/59b2eb1/src/model/options.ts#L88)*
+*Defined in [src/model/options.ts:88](https://github.com/youkaisteve/bim-operator/blob/3313d73/src/model/options.ts#L88)*
 
 z轴缩放倍数

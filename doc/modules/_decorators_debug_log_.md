@@ -1,4 +1,4 @@
-[@yzw/bim-operator - v1.7.2](../README.md) › [Globals](../globals.md) › ["decorators/debug_log"](_decorators_debug_log_.md)
+[@yzw/bim-operator - v1.8.0](../README.md) › [Globals](../globals.md) › ["decorators/debug_log"](_decorators_debug_log_.md)
 
 # External module: "decorators/debug_log"
 
@@ -14,7 +14,7 @@
 
 ▸ **debugLog**(`pattern?`: any): *any*
 
-*Defined in [src/decorators/debug_log.ts:8](https://github.com/youkaisteve/bim-operator/blob/59b2eb1/src/decorators/debug_log.ts#L8)*
+*Defined in [src/decorators/debug_log.ts:8](https://github.com/youkaisteve/bim-operator/blob/3313d73/src/decorators/debug_log.ts#L8)*
 
 调试日志，给class打上此标签后，会记录方法的调用以及入参
 

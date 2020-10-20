@@ -1,4 +1,4 @@
-[@yzw/bim-operator - v1.7.2](../README.md) › [Globals](../globals.md) › ["providers/bimface/bimface_context_menu"](_providers_bimface_bimface_context_menu_.md)
+[@yzw/bim-operator - v1.8.0](../README.md) › [Globals](../globals.md) › ["providers/bimface/bimface_context_menu"](_providers_bimface_bimface_context_menu_.md)
 
 # External module: "providers/bimface/bimface_context_menu"
 
@@ -19,7 +19,7 @@
 
 • **KEY_PREFIX**: *unique symbol* =  Symbol('Bimface#MenuKeyPrefix')
 
-*Defined in [src/providers/bimface/bimface_context_menu.ts:8](https://github.com/youkaisteve/bim-operator/blob/59b2eb1/src/providers/bimface/bimface_context_menu.ts#L8)*
+*Defined in [src/providers/bimface/bimface_context_menu.ts:8](https://github.com/youkaisteve/bim-operator/blob/3313d73/src/providers/bimface/bimface_context_menu.ts#L8)*
 
 ___
 
@@ -27,4 +27,4 @@ ___
 
 • **MENU_ROOT_DOM**: *unique symbol* =  Symbol('Bimface#MenuRootDom')
 
-*Defined in [src/providers/bimface/bimface_context_menu.ts:9](https://github.com/youkaisteve/bim-operator/blob/59b2eb1/src/providers/bimface/bimface_context_menu.ts#L9)*
+*Defined in [src/providers/bimface/bimface_context_menu.ts:9](https://github.com/youkaisteve/bim-operator/blob/3313d73/src/providers/bimface/bimface_context_menu.ts#L9)*

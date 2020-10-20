@@ -1,4 +1,4 @@
-[@yzw/bim-operator - v1.7.2](../README.md) › [Globals](../globals.md) › ["interface"](../modules/_interface_.md) › [IExternal](_interface_.iexternal.md)
+[@yzw/bim-operator - v1.8.0](../README.md) › [Globals](../globals.md) › ["interface"](../modules/_interface_.md) › [IExternal](_interface_.iexternal.md)
 
 # Interface: IExternal
 
@@ -33,7 +33,7 @@ bimface外部构件管理
 
 ▸ **add**(`name`: string, `url`: string): *Promise‹string›*
 
-*Defined in [src/interface.ts:210](https://github.com/youkaisteve/bim-operator/blob/59b2eb1/src/interface.ts#L210)*
+*Defined in [src/interface.ts:210](https://github.com/youkaisteve/bim-operator/blob/3313d73/src/interface.ts#L210)*
 
 添加外部构件
 
@@ -52,7 +52,7 @@ ___
 
 ▸ **clear**(): *void*
 
-*Defined in [src/interface.ts:219](https://github.com/youkaisteve/bim-operator/blob/59b2eb1/src/interface.ts#L219)*
+*Defined in [src/interface.ts:219](https://github.com/youkaisteve/bim-operator/blob/3313d73/src/interface.ts#L219)*
 
 清除所有构件
 
@@ -64,7 +64,7 @@ ___
 
 ▸ **getAllObjectIds**(): *string[]*
 
-*Defined in [src/interface.ts:263](https://github.com/youkaisteve/bim-operator/blob/59b2eb1/src/interface.ts#L263)*
+*Defined in [src/interface.ts:263](https://github.com/youkaisteve/bim-operator/blob/3313d73/src/interface.ts#L263)*
 
 获取所有外部构件的ID
 
@@ -76,7 +76,7 @@ ___
 
 ▸ **getPosition**(`objectId`: string): *[Position](_model_position_.position.md)*
 
-*Defined in [src/interface.ts:259](https://github.com/youkaisteve/bim-operator/blob/59b2eb1/src/interface.ts#L259)*
+*Defined in [src/interface.ts:259](https://github.com/youkaisteve/bim-operator/blob/3313d73/src/interface.ts#L259)*
 
 获取外部构件的世界坐标
 
@@ -94,7 +94,7 @@ ___
 
 ▸ **offset**(`objectId`: string, `option`: [OffsetOption](_model_options_.offsetoption.md)): *void*
 
-*Defined in [src/interface.ts:232](https://github.com/youkaisteve/bim-operator/blob/59b2eb1/src/interface.ts#L232)*
+*Defined in [src/interface.ts:232](https://github.com/youkaisteve/bim-operator/blob/3313d73/src/interface.ts#L232)*
 
 根据局部坐标移动外部构件(局部坐标就是相对坐标，根据构件的方向而改变)
 
@@ -113,7 +113,7 @@ ___
 
 ▸ **removeById**(`objectId`: string): *any*
 
-*Defined in [src/interface.ts:215](https://github.com/youkaisteve/bim-operator/blob/59b2eb1/src/interface.ts#L215)*
+*Defined in [src/interface.ts:215](https://github.com/youkaisteve/bim-operator/blob/3313d73/src/interface.ts#L215)*
 
 根据Id移除外部构件
 
@@ -131,7 +131,7 @@ ___
 
 ▸ **rotate**(`objectId`: string, `option`: [RotateOption](_model_options_.rotateoption.md)): *void*
 
-*Defined in [src/interface.ts:225](https://github.com/youkaisteve/bim-operator/blob/59b2eb1/src/interface.ts#L225)*
+*Defined in [src/interface.ts:225](https://github.com/youkaisteve/bim-operator/blob/3313d73/src/interface.ts#L225)*
 
 根据ID将外部构件沿着局部坐标系轴旋转
 
@@ -150,7 +150,7 @@ ___
 
 ▸ **scale**(`objectId`: string, `option`: [ScaleOption](_model_options_.scaleoption.md)): *void*
 
-*Defined in [src/interface.ts:239](https://github.com/youkaisteve/bim-operator/blob/59b2eb1/src/interface.ts#L239)*
+*Defined in [src/interface.ts:239](https://github.com/youkaisteve/bim-operator/blob/3313d73/src/interface.ts#L239)*
 
 根据ID对外部构件在局部坐标系下进行缩放，缩放中心为局部坐标原点
 
@@ -169,7 +169,7 @@ ___
 
 ▸ **setPosition**(`objectId`: string, `position`: [Position](_model_position_.position.md)): *any*
 
-*Defined in [src/interface.ts:246](https://github.com/youkaisteve/bim-operator/blob/59b2eb1/src/interface.ts#L246)*
+*Defined in [src/interface.ts:246](https://github.com/youkaisteve/bim-operator/blob/3313d73/src/interface.ts#L246)*
 
 设置外部构件的空间坐标
 
@@ -188,7 +188,7 @@ ___
 
 ▸ **translate**(`objectId`: string, `option`: [TranslateOption](_model_options_.translateoption.md)): *any*
 
-*Defined in [src/interface.ts:253](https://github.com/youkaisteve/bim-operator/blob/59b2eb1/src/interface.ts#L253)*
+*Defined in [src/interface.ts:253](https://github.com/youkaisteve/bim-operator/blob/3313d73/src/interface.ts#L253)*
 
 根据世界坐标移动外部构件(世界坐标也就是绝对坐标，不根据构件的方向而改变)
 
